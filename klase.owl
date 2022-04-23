@@ -1,4 +1,4 @@
-@prefix : <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#> .
+@prefix : <http://www.semanticweb.org/IZ/2022/Tim12/Klase#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -12,105 +12,137 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#hasComponent
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasComponent
 :hasComponent rdf:type owl:ObjectProperty ;
               rdfs:domain :Computer ;
               rdfs:range :ComputerComponent .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isGraphicsCardFasterThan
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan
 :isGraphicsCardFasterThan rdf:type owl:ObjectProperty ,
                                    owl:TransitiveProperty ;
                           rdfs:domain :GraphicsCard ;
                           rdfs:range :GraphicsCard .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isGraphicsCardMemoryMoreThan
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardMemoryMoreThan
 :isGraphicsCardMemoryMoreThan rdf:type owl:ObjectProperty ,
                                        owl:TransitiveProperty ;
                               rdfs:domain :Dedicated ;
                               rdfs:range :Dedicated .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isGraphicsCardPreferableThan
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan
 :isGraphicsCardPreferableThan rdf:type owl:ObjectProperty ;
                               rdfs:domain :GraphicsCard ;
                               rdfs:range :GraphicsCard .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isMotherboardAndRAMCompatible
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndRAMCompatible
 :isMotherboardAndRAMCompatible rdf:type owl:ObjectProperty ,
                                         owl:SymmetricProperty ;
                                rdfs:domain :Motherboard ;
                                rdfs:range :RAM .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isRAMFasterThan
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan
+:isProcessorFasterThan rdf:type owl:ObjectProperty ,
+                                owl:TransitiveProperty ;
+                       rdfs:domain :Processor ;
+                       rdfs:range :Processor .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorSocketCompatible
+:isProcessorSocketCompatible rdf:type owl:ObjectProperty ,
+                                      owl:SymmetricProperty ;
+                             rdfs:domain :Motherboard ;
+                             rdfs:range :Processor .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMFasterThan
 :isRAMFasterThan rdf:type owl:ObjectProperty ,
                           owl:TransitiveProperty ;
                  rdfs:domain :RAM ;
                  rdfs:range :RAM .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan
+:isStorageCapacityMoreThan rdf:type owl:ObjectProperty ,
+                                    owl:TransitiveProperty ;
+                           rdfs:domain :Storage ;
+                           rdfs:range :Storage .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan
+:isStorageCapacityPreferableThan rdf:type owl:ObjectProperty ,
+                                          owl:TransitiveProperty ;
+                                 rdfs:domain :Storage ;
+                                 rdfs:range :Storage .
+
+
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#ComputerName
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ComputerName
 :ComputerName rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
               rdfs:domain :Computer ;
               rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#ComputerProductCode
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ComputerProductCode
 :ComputerProductCode rdf:type owl:DatatypeProperty ;
                      rdfs:domain :Computer ;
                      rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#GraphicsCardMemory
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardMemory
 :GraphicsCardMemory rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Dedicated ;
                     rdfs:range xsd:int .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#GraphicsCardSpeed
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed
 :GraphicsCardSpeed rdf:type owl:DatatypeProperty ;
                    rdfs:domain :GraphicsCard ;
                    rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#MemoryType
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryType
 :MemoryType rdf:type owl:DatatypeProperty ;
             rdfs:domain :Motherboard ;
             rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#ProcessorCores
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores
 :ProcessorCores rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Processor ;
                 rdfs:range xsd:int .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#ProcessorFrequency
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency
 :ProcessorFrequency rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Processor ;
                     rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#ProcessorSocket
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket
 :ProcessorSocket rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Motherboard ;
+                 rdfs:domain :Motherboard ,
+                             :Processor ;
                  rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#RAMCapacity
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAMCapacity
 :RAMCapacity rdf:type owl:DatatypeProperty ;
              rdfs:domain :RAM ;
              rdfs:range xsd:int .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#StorageCapacity
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity
 :StorageCapacity rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Storage ;
                  rdfs:range xsd:int .
 
 
@@ -118,7 +150,7 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Adapter
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Adapter
 :Adapter rdf:type owl:Class ;
          owl:equivalentClass [ rdf:type owl:Class ;
                                owl:unionOf ( :EthernetCard
@@ -128,22 +160,27 @@
          rdfs:subClassOf :Hardware .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Alienware
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Alienware
 :Alienware rdf:type owl:Class ;
            rdfs:subClassOf :ComputerBrand .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#BluetoothCard
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BluetoothCard
 :BluetoothCard rdf:type owl:Class ;
                rdfs:subClassOf :WirelessCard .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Case
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Camera
+:Camera rdf:type owl:Class ;
+        rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Case
 :Case rdf:type owl:Class ;
       rdfs:subClassOf :Hardware .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Computer
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Computer
 :Computer rdf:type owl:Class ;
           owl:equivalentClass [ rdf:type owl:Class ;
                                 owl:unionOf ( :Desktop
@@ -152,7 +189,7 @@
                               ] .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#ComputerBrand
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ComputerBrand
 :ComputerBrand rdf:type owl:Class ;
                owl:equivalentClass [ rdf:type owl:Class ;
                                      owl:unionOf ( :Alienware
@@ -165,69 +202,94 @@
                                    ] .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#ComputerComponent
-:ComputerComponent rdf:type owl:Class .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ComputerComponent
+:ComputerComponent rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Class ;
+                                         owl:unionOf ( :Adapter
+                                                       :Camera
+                                                       :Case
+                                                       :Display
+                                                       :Fan
+                                                       :GraphicsCard
+                                                       :Headphones
+                                                       :Keyboard
+                                                       :Microphone
+                                                       :Motherboard
+                                                       :Port
+                                                       :PowerSupply
+                                                       :Processor
+                                                       :RAM
+                                                       :SoundCard
+                                                       :Speakers
+                                                       :Storage
+                                                     )
+                                       ] .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#DDR1
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#DDR1
 :DDR1 rdf:type owl:Class ;
       rdfs:subClassOf :DRAM .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#DDR2
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#DDR2
 :DDR2 rdf:type owl:Class ;
       rdfs:subClassOf :DRAM .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#DDR3
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#DDR3
 :DDR3 rdf:type owl:Class ;
       rdfs:subClassOf :DRAM .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#DDR4
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#DDR4
 :DDR4 rdf:type owl:Class ;
       rdfs:subClassOf :DRAM .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#DRAM
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#DRAM
 :DRAM rdf:type owl:Class ;
       rdfs:subClassOf :RAM .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Dedicated
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Dedicated
 :Dedicated rdf:type owl:Class ;
            rdfs:subClassOf :GraphicsCard ;
            owl:disjointWith :Integrated .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Dell
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Dell
 :Dell rdf:type owl:Class ;
       rdfs:subClassOf :ComputerBrand .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Desktop
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Desktop
 :Desktop rdf:type owl:Class ;
          rdfs:subClassOf :Computer ;
          owl:disjointWith :Laptop .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#EthernetCard
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Display
+:Display rdf:type owl:Class ;
+         rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#EthernetCard
 :EthernetCard rdf:type owl:Class ;
               rdfs:subClassOf :Adapter ;
               owl:disjointWith :WirelessCard .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Fan
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Fan
 :Fan rdf:type owl:Class ;
      rdfs:subClassOf :Hardware .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Fujitsu
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Fujitsu
 :Fujitsu rdf:type owl:Class ;
          rdfs:subClassOf :ComputerBrand .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#GraphicsCard
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCard
 :GraphicsCard rdf:type owl:Class ;
               owl:equivalentClass [ rdf:type owl:Class ;
                                     owl:unionOf ( :Dedicated
@@ -237,7 +299,13 @@
               rdfs:subClassOf :Hardware .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#HDMIPort
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#HDD
+:HDD rdf:type owl:Class ;
+     rdfs:subClassOf :Storage ;
+     owl:disjointWith :SSD .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#HDMIPort
 :HDMIPort rdf:type owl:Class ;
           rdfs:subClassOf :Port ;
           owl:disjointWith :HeadphonesPort ,
@@ -245,59 +313,69 @@
                            :USBPort .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#HP
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#HP
 :HP rdf:type owl:Class ;
     rdfs:subClassOf :ComputerBrand .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Hardware
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Hardware
 :Hardware rdf:type owl:Class ;
           rdfs:subClassOf :ComputerComponent .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#HeadphonesPort
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Headphones
+:Headphones rdf:type owl:Class ;
+            rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesPort
 :HeadphonesPort rdf:type owl:Class ;
                 rdfs:subClassOf :Port ;
                 owl:disjointWith :USBPort .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Integrated
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Integrated
 :Integrated rdf:type owl:Class ;
             rdfs:subClassOf :GraphicsCard .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Keyboard
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Keyboard
 :Keyboard rdf:type owl:Class ;
           rdfs:subClassOf :Hardware .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Laptop
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Laptop
 :Laptop rdf:type owl:Class ;
         rdfs:subClassOf :Computer .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Lenovo
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Lenovo
 :Lenovo rdf:type owl:Class ;
         rdfs:subClassOf :ComputerBrand .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#MSI
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MSI
 :MSI rdf:type owl:Class ;
      rdfs:subClassOf :ComputerBrand .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#MicrophonePort
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Microphone
+:Microphone rdf:type owl:Class ;
+            rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MicrophonePort
 :MicrophonePort rdf:type owl:Class ;
                 rdfs:subClassOf :Port ;
                 owl:disjointWith :USBPort .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Motherboard
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Motherboard
 :Motherboard rdf:type owl:Class ;
              rdfs:subClassOf :Hardware .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Port
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Port
 :Port rdf:type owl:Class ;
       owl:equivalentClass [ rdf:type owl:Class ;
                             owl:unionOf ( :HDMIPort
@@ -309,12 +387,17 @@
       rdfs:subClassOf :Hardware .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#PowerSupply
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupply
 :PowerSupply rdf:type owl:Class ;
              rdfs:subClassOf :Hardware .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#RAM
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Processor
+:Processor rdf:type owl:Class ;
+           rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAM
 :RAM rdf:type owl:Class ;
      owl:equivalentClass [ rdf:type owl:Class ;
                            owl:unionOf ( :DRAM
@@ -324,27 +407,52 @@
      rdfs:subClassOf :Hardware .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#SRAM
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SRAM
 :SRAM rdf:type owl:Class ;
       rdfs:subClassOf :RAM .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Software
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SSD
+:SSD rdf:type owl:Class ;
+     rdfs:subClassOf :Storage .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Software
 :Software rdf:type owl:Class ;
           rdfs:subClassOf :ComputerComponent .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#USBPort
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SoundCard
+:SoundCard rdf:type owl:Class ;
+           rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Speakers
+:Speakers rdf:type owl:Class ;
+          rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Storage
+:Storage rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Class ;
+                               owl:unionOf ( :HDD
+                                             :SSD
+                                           )
+                             ] ;
+         rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#USBPort
 :USBPort rdf:type owl:Class ;
          rdfs:subClassOf :Port .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#Wi-FiCard
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Wi-FiCard
 :Wi-FiCard rdf:type owl:Class ;
            rdfs:subClassOf :WirelessCard .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#WirelessCard
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#WirelessCard
 :WirelessCard rdf:type owl:Class ;
               owl:equivalentClass [ rdf:type owl:Class ;
                                     owl:unionOf ( :BluetoothCard
@@ -357,6 +465,28 @@
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Adapter
+                :Camera
+                :Case
+                :Display
+                :Fan
+                :GraphicsCard
+                :Headphones
+                :Keyboard
+                :Microphone
+                :Motherboard
+                :Port
+                :PowerSupply
+                :Processor
+                :RAM
+                :SoundCard
+                :Speakers
+                :Storage
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Alienware

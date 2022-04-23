@@ -1,20 +1,20 @@
-@prefix : <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#> .
+@prefix : <http://www.semanticweb.org/IZ/2022/Tim12/Instance#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/IZ/2022/Tim12/instance> .
+@base <http://www.semanticweb.org/IZ/2022/Tim12/Instance> .
 
-<http://www.semanticweb.org/IZ/2022/Tim12/instance> rdf:type owl:Ontology ;
-                                                     owl:imports <http://www.semanticweb.org/IZ/2022/Tim12/Klase> .
+<http://www.semanticweb.org/IZ/2022/Tim12/Instance> rdf:type owl:Ontology ;
+                                                                          owl:imports <http://www.semanticweb.org/IZ/2022/Tim12/Klase> .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isProcessorFasterThan
-<http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isProcessorFasterThan> rdf:type owl:ObjectProperty ,
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan
+<http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan> rdf:type owl:ObjectProperty ,
                                                                                                         owl:TransitiveProperty .
 
 
@@ -22,76 +22,136 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#DDR3-16GB
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR3-16GB
 :DDR3-16GB rdf:type owl:NamedIndividual ;
-           <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#RAMCapacity> 16 .
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAMCapacity> 16 .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#DDR3-64GB
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR3-64GB
 :DDR3-64GB rdf:type owl:NamedIndividual ;
-           <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isRAMFasterThan> :DDR4-16GB ;
-           <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#RAMCapacity> 64 .
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMFasterThan> :DDR4-16GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAMCapacity> 64 .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#DDR4-16GB
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR4-16GB
 :DDR4-16GB rdf:type owl:NamedIndividual ;
-           <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isRAMFasterThan> :DDR3-16GB ;
-           <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#RAMCapacity> 16 .
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMFasterThan> :DDR3-16GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAMCapacity> 16 .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#DDR4-64GB
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR4-64GB
 :DDR4-64GB rdf:type owl:NamedIndividual ;
-           <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isRAMFasterThan> :DDR3-64GB ;
-           <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#RAMCapacity> 64 .
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMFasterThan> :DDR3-64GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAMCapacity> 64 .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#Intel_HD_Graphics_530
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD-128GB
+:HDD-128GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-64GB ,
+                                                                                                              :SSD-64GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD-64GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 128 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD-256GB
+:HDD-256GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-128GB ,
+                                                                                                              :SSD-128GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD-128GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 256 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD-512GB
+:HDD-512GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-256GB ,
+                                                                                                              :SSD-256GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD-256GB ,
+                                                                                                                    :SSD-64GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 512 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD-64GB
+:HDD-64GB rdf:type owl:NamedIndividual ;
+          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 64 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Intel_HD_Graphics_530
 :Intel_HD_Graphics_530 rdf:type owl:NamedIndividual ;
-                       <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#GraphicsCardSpeed> "300 Mhz" .
+                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "300 Mhz" .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#Intel_UHD_Graphics_630
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Intel_UHD_Graphics_630
 :Intel_UHD_Graphics_630 rdf:type owl:NamedIndividual ;
-                        <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isGraphicsCardFasterThan> :Intel_HD_Graphics_530 ;
-                        <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isGraphicsCardPreferableThan> :Intel_HD_Graphics_530 ;
-                        <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#GraphicsCardSpeed> "350 Mhz" .
+                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :Intel_HD_Graphics_530 ;
+                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :Intel_HD_Graphics_530 ;
+                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "350 Mhz" .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#NVIDIA_GeForce_GTX_1060
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#NVIDIA_GeForce_GTX_1060
 :NVIDIA_GeForce_GTX_1060 rdf:type owl:NamedIndividual ;
-                         <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isGraphicsCardFasterThan> :NVIDIA_GeForce_GTX_950 ;
-                         <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isGraphicsCardMemoryMoreThan> :NVIDIA_GeForce_GTX_950 ;
-                         <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isGraphicsCardPreferableThan> :NVIDIA_GeForce_GTX_950 ;
-                         <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#GraphicsCardMemory> 6 ;
-                         <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#GraphicsCardSpeed> "1500 MHz" .
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :NVIDIA_GeForce_GTX_950 ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardMemoryMoreThan> :NVIDIA_GeForce_GTX_950 ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :NVIDIA_GeForce_GTX_950 ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardMemory> 6 ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "1500 MHz" .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#NVIDIA_GeForce_GTX_950
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#NVIDIA_GeForce_GTX_950
 :NVIDIA_GeForce_GTX_950 rdf:type owl:NamedIndividual ;
-                        <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isGraphicsCardFasterThan> :Intel_UHD_Graphics_630 ;
-                        <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#isGraphicsCardPreferableThan> :Intel_UHD_Graphics_630 ;
-                        <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#GraphicsCardMemory> 2 ;
-                        <http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-2#GraphicsCardSpeed> "500 Mhz" .
+                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :Intel_UHD_Graphics_630 ;
+                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :Intel_UHD_Graphics_630 ;
+                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardMemory> 2 ;
+                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "500 Mhz" .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#PC_Alienware_Aurora_R5_DPCWXT01_Silver
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Alienware_Aurora_R5_DPCWXT01_Silver
 :PC_Alienware_Aurora_R5_DPCWXT01_Silver rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#PC_Alienware_Aurora_R7_AR7-0545_Silver
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Alienware_Aurora_R7_AR7-0545_Silver
 :PC_Alienware_Aurora_R7_AR7-0545_Silver rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#PC_DELL_Inspiron_3250_FDDOST315S_Black
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_DELL_Inspiron_3250_FDDOST315S_Black
 :PC_DELL_Inspiron_3250_FDDOST315S_Black rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#PC_HP_Pavilion_550_550230na_T1G76EA_Black
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_HP_Pavilion_550_550230na_T1G76EA_Black
 :PC_HP_Pavilion_550_550230na_T1G76EA_Black rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#PC_Fujitsu_ESPRIMO_D_D556/E85+_VFY:D0556P75BOGB?3YNBD_Black
-<http://www.semanticweb.org/minja/ontologies/2022/3/untitled-ontology-4#PC_Fujitsu_ESPRIMO_D_D556/E85+_VFY:D0556P75BOGB?3YNBD_Black> rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD-128GB
+:SSD-128GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-64GB ,
+                                                                                                              :SSD-64GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD-512GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 128 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD-256GB
+:SSD-256GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-128GB ,
+                                                                                                              :SSD-128GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :SSD-128GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 256 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD-512GB
+:SSD-512GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-256GB ,
+                                                                                                              :SSD-256GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :SSD-256GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 512 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD-64GB
+:SSD-64GB rdf:type owl:NamedIndividual ;
+          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD-256GB ;
+          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 64 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Fujitsu_ESPRIMO_D_D556/E85+_VFY:D0556P75BOGB?3YNBD_Black
+<http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Fujitsu_ESPRIMO_D_D556/E85+_VFY:D0556P75BOGB?3YNBD_Black> rdf:type owl:NamedIndividual .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

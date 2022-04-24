@@ -7,7 +7,7 @@
 @base <http://www.semanticweb.org/IZ/2022/Tim12/Instance> .
 
 <http://www.semanticweb.org/IZ/2022/Tim12/Instance> rdf:type owl:Ontology ;
-                                                                          owl:imports <http://www.semanticweb.org/IZ/2022/Tim12/Klase> .
+                                                     owl:imports <http://www.semanticweb.org/IZ/2022/Tim12/Klase> .
 
 #################################################################
 #    Object Properties
@@ -15,7 +15,7 @@
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan
 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan> rdf:type owl:ObjectProperty ,
-                                                                                                        owl:TransitiveProperty .
+                                                                                owl:TransitiveProperty .
 
 
 #################################################################
@@ -45,10 +45,124 @@
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAMCapacity> 64 .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display-AW3423DW
+:Display-AW3423DW rdf:type owl:NamedIndividual ,
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#OLED> ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayBiggerThan> :Display-S2721DGF ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayMorePreferableThan> :Display-S2721DGF ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayRefreshRateMoreThan> :Display-S2721DGF ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayResolutionMoreThan> :Display-S2721DGF ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayRefreshRate> "175Hz" ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayResolution> "3440×1440" ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplaySize> "34\"" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display-CRG5
+:Display-CRG5 rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#VA> ;
+              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayMorePreferableThan> :Display-Sceptre ;
+              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayRefreshRateMoreThan> :Display-Sceptre ,
+                                                                                            :Display-V-Line ;
+              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayRefreshRate> "144Hz" ;
+              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayResolution> "1920 x 1080" ;
+              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplaySize> "24\"" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display-S2721DGF
+:Display-S2721DGF rdf:type owl:NamedIndividual ,
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#IPS> ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayBiggerThan> :Display-CRG5 ,
+                                                                                       :Display-Sceptre ,
+                                                                                       :Display-V-Line ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayMorePreferableThan> :Display-CRG5 ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayRefreshRateMoreThan> :Display-CRG5 ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayResolutionMoreThan> :Display-CRG5 ,
+                                                                                               :Display-Sceptre ,
+                                                                                               :Display-V-Line ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayRefreshRate> "165Hz" ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayResolution> "2560 x 1440" ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplaySize> "27\"" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display-Sceptre
+:Display-Sceptre rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#OLED> ;
+                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayMorePreferableThan> :Display-V-Line ;
+                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayRefreshRate> "75Hz" ;
+                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayResolution> "1920 x 1080" ;
+                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplaySize> "24\"" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display-V-Line
+:Display-V-Line rdf:type owl:NamedIndividual ,
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TN> ;
+                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayRefreshRate> "75Hz" ;
+                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayResolution> "1920 x 1080" ;
+                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplaySize> "24\"" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan-ARCTICP12
+:Fan-ARCTICP12 rdf:type owl:NamedIndividual ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isFanMorePowerfulThan> :Fan-Sahara ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacity> "56CFM" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan-CP3
+:Fan-CP3 rdf:type owl:NamedIndividual ;
+         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isFanMorePowerfulThan> :Fan-DN120 ;
+         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacity> "43CFM" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan-DN120
+:Fan-DN120 rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isFanMorePowerfulThan> :Fan-KB23 ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacity> "42CFM" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan-KB23
+:Fan-KB23 rdf:type owl:NamedIndividual ;
+          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacity> "35CFM" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan-Sahara
+:Fan-Sahara rdf:type owl:NamedIndividual ;
+            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isFanMorePowerfulThan> :Fan-CP3 ;
+            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacity> "46CFM" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard-Intel_HD_Graphics_530
+:GraphicsCard-Intel_HD_Graphics_530 rdf:type owl:NamedIndividual ;
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "300 Mhz" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard-Intel_UHD_Graphics_630
+:GraphicsCard-Intel_UHD_Graphics_630 rdf:type owl:NamedIndividual ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :GraphicsCard-Intel_HD_Graphics_530 ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :GraphicsCard-Intel_HD_Graphics_530 ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "350 Mhz" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard-NVIDIA_GeForce_GTX_1060
+:GraphicsCard-NVIDIA_GeForce_GTX_1060 rdf:type owl:NamedIndividual ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardMemoryMoreThan> :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardMemory> 6 ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "1500 MHz" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard-NVIDIA_GeForce_GTX_950
+:GraphicsCard-NVIDIA_GeForce_GTX_950 rdf:type owl:NamedIndividual ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :GraphicsCard-Intel_UHD_Graphics_630 ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :GraphicsCard-Intel_UHD_Graphics_630 ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardMemory> 2 ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "500 Mhz" .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD-128GB
 :HDD-128GB rdf:type owl:NamedIndividual ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-64GB ,
-                                                                                                              :SSD-64GB ;
+                                                                                      :SSD-64GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD-64GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 128 .
 
@@ -56,7 +170,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD-256GB
 :HDD-256GB rdf:type owl:NamedIndividual ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-128GB ,
-                                                                                                              :SSD-128GB ;
+                                                                                      :SSD-128GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD-128GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 256 .
 
@@ -64,9 +178,9 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD-512GB
 :HDD-512GB rdf:type owl:NamedIndividual ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-256GB ,
-                                                                                                              :SSD-256GB ;
+                                                                                      :SSD-256GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD-256GB ,
-                                                                                                                    :SSD-64GB ;
+                                                                                            :SSD-64GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 512 .
 
 
@@ -75,55 +189,113 @@
           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 64 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Intel_HD_Graphics_530
-:Intel_HD_Graphics_530 rdf:type owl:NamedIndividual ;
-                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "300 Mhz" .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDMIPort
+:HDMIPort rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Intel_UHD_Graphics_630
-:Intel_UHD_Graphics_630 rdf:type owl:NamedIndividual ;
-                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :Intel_HD_Graphics_530 ;
-                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :Intel_HD_Graphics_530 ;
-                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "350 Mhz" .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HeadphonesPort
+:HeadphonesPort rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#NVIDIA_GeForce_GTX_1060
-:NVIDIA_GeForce_GTX_1060 rdf:type owl:NamedIndividual ;
-                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :NVIDIA_GeForce_GTX_950 ;
-                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardMemoryMoreThan> :NVIDIA_GeForce_GTX_950 ;
-                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :NVIDIA_GeForce_GTX_950 ;
-                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardMemory> 6 ;
-                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "1500 MHz" .
-
-
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#NVIDIA_GeForce_GTX_950
-:NVIDIA_GeForce_GTX_950 rdf:type owl:NamedIndividual ;
-                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :Intel_UHD_Graphics_630 ;
-                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :Intel_UHD_Graphics_630 ;
-                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardMemory> 2 ;
-                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "500 Mhz" .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#MicrophonePort
+:MicrophonePort rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Alienware_Aurora_R5_DPCWXT01_Silver
-:PC_Alienware_Aurora_R5_DPCWXT01_Silver rdf:type owl:NamedIndividual .
+:PC_Alienware_Aurora_R5_DPCWXT01_Silver rdf:type owl:NamedIndividual ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasComponent> :PowerSupply-RM850 .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Alienware_Aurora_R7_AR7-0545_Silver
-:PC_Alienware_Aurora_R7_AR7-0545_Silver rdf:type owl:NamedIndividual .
+:PC_Alienware_Aurora_R7_AR7-0545_Silver rdf:type owl:NamedIndividual ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasComponent> :PowerSupply-XPS8500 .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_DELL_Inspiron_3250_FDDOST315S_Black
-:PC_DELL_Inspiron_3250_FDDOST315S_Black rdf:type owl:NamedIndividual .
+:PC_DELL_Inspiron_3250_FDDOST315S_Black rdf:type owl:NamedIndividual ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasComponent> :PowerSupply-ITXAK-L1 .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_HP_Pavilion_550_550230na_T1G76EA_Black
-:PC_HP_Pavilion_550_550230na_T1G76EA_Black rdf:type owl:NamedIndividual .
+:PC_HP_Pavilion_550_550230na_T1G76EA_Black rdf:type owl:NamedIndividual ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasComponent> :PowerSupply-HU180 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply-HU180
+:PowerSupply-HU180 rdf:type owl:NamedIndividual ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency> "47Hz/63Hz" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E> "1x PCI-Express 6" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyVoltage> "90V/264V" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyWattPower> "180W" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply-ITXAK-L1
+:PowerSupply-ITXAK-L1 rdf:type owl:NamedIndividual ;
+                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan> :PowerSupply-HU180 ;
+                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency> "47Hz/63Hz" ;
+                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E> "1x PCI-Express 6" ;
+                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyVoltage> "90V/264V" ;
+                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyWattPower> "200W" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply-L280E
+:PowerSupply-L280E rdf:type owl:NamedIndividual ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan> :PowerSupply-ITXAK-L1 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency> "47Hz/63Hz" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E> "1x PCI-Express 6" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyVoltage> "90V/264V" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyWattPower> "280W" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply-RM850
+:PowerSupply-RM850 rdf:type owl:NamedIndividual ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan> :PowerSupply-XPS8500 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency> "50Hz/60Hz" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E> "2x PCI-Express 6+2" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyVoltage> "100V/240V" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyWattPower> "850W" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply-XPS8500
+:PowerSupply-XPS8500 rdf:type owl:NamedIndividual ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan> :PowerSupply-L280E ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency> "50Hz/60Hz" ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E> "2x PCI-Express 6+2" ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyVoltage> "100V/240V" ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyWattPower> "460W" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Processor-i3-6100
+:Processor-i3-6100 rdf:type owl:NamedIndividual ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 2 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> "3.7 GHz" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Processor-i5-6400
+:Processor-i5-6400 rdf:type owl:NamedIndividual ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan> :Processor-i3-6100 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 4 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> "2.7 GHz" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Processor-i5-8400
+:Processor-i5-8400 rdf:type owl:NamedIndividual ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan> :Processor-i5-6400 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 6 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> "2.8 GHz" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Processor-i7-8700
+:Processor-i7-8700 rdf:type owl:NamedIndividual ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan> :Processor-i5-8400 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 6 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> "3.2 GHz" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD-128GB
 :SSD-128GB rdf:type owl:NamedIndividual ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-64GB ,
-                                                                                                              :SSD-64GB ;
+                                                                                      :SSD-64GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD-512GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 128 .
 
@@ -131,7 +303,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD-256GB
 :SSD-256GB rdf:type owl:NamedIndividual ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-128GB ,
-                                                                                                              :SSD-128GB ;
+                                                                                      :SSD-128GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :SSD-128GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 256 .
 
@@ -139,7 +311,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD-512GB
 :SSD-512GB rdf:type owl:NamedIndividual ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-256GB ,
-                                                                                                              :SSD-256GB ;
+                                                                                      :SSD-256GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :SSD-256GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 512 .
 
@@ -150,8 +322,47 @@
           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 64 .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-JBLQuantum
+:Speakers-JBLQuantum rdf:type owl:NamedIndividual ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers-Z240 ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "30W" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-Tytan2.1
+:Speakers-Tytan2.1 rdf:type owl:NamedIndividual ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers-Z313 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "60W" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-Z240
+:Speakers-Z240 rdf:type owl:NamedIndividual ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "20W" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-Z313
+:Speakers-Z313 rdf:type owl:NamedIndividual ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers-JBLQuantum ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "50W" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-Z333
+:Speakers-Z333 rdf:type owl:NamedIndividual ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers-Tytan2.1 ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "80W" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-2.0
+:USBPort-2.0 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-3.2
+:USBPort-3.2 rdf:type owl:NamedIndividual ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortFasterThan> :USBPort-2.0 .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Fujitsu_ESPRIMO_D_D556/E85+_VFY:D0556P75BOGB?3YNBD_Black
-<http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Fujitsu_ESPRIMO_D_D556/E85+_VFY:D0556P75BOGB?3YNBD_Black> rdf:type owl:NamedIndividual .
+<http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Fujitsu_ESPRIMO_D_D556/E85+_VFY:D0556P75BOGB?3YNBD_Black> rdf:type owl:NamedIndividual ;
+                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasComponent> :PowerSupply-L280E .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

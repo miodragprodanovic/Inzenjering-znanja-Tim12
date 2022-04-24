@@ -12,10 +12,52 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan
+:areSpeakersMorePowerfulThan rdf:type owl:ObjectProperty ,
+                                      owl:TransitiveProperty ;
+                             rdfs:domain :Speakers ;
+                             rdfs:range :Speakers .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasComponent
 :hasComponent rdf:type owl:ObjectProperty ;
               rdfs:domain :Computer ;
               rdfs:range :ComputerComponent .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayBiggerThan
+:isDisplayBiggerThan rdf:type owl:ObjectProperty ,
+                              owl:TransitiveProperty ;
+                     rdfs:domain :Display ;
+                     rdfs:range :Display .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayMorePreferableThan
+:isDisplayMorePreferableThan rdf:type owl:ObjectProperty ,
+                                      owl:TransitiveProperty ;
+                             rdfs:domain :Display ;
+                             rdfs:range :Display .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayRefreshRateMoreThan
+:isDisplayRefreshRateMoreThan rdf:type owl:ObjectProperty ,
+                                       owl:TransitiveProperty ;
+                              rdfs:domain :Display ;
+                              rdfs:range :Display .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayResolutionMoreThan
+:isDisplayResolutionMoreThan rdf:type owl:ObjectProperty ,
+                                      owl:TransitiveProperty ;
+                             rdfs:domain :Display ;
+                             rdfs:range :Display .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isFanMorePowerfulThan
+:isFanMorePowerfulThan rdf:type owl:ObjectProperty ,
+                                owl:TransitiveProperty ;
+                       rdfs:domain :Fan ;
+                       rdfs:range :Fan .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan
@@ -33,7 +75,8 @@
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan
-:isGraphicsCardPreferableThan rdf:type owl:ObjectProperty ;
+:isGraphicsCardPreferableThan rdf:type owl:ObjectProperty ,
+                                       owl:TransitiveProperty ;
                               rdfs:domain :GraphicsCard ;
                               rdfs:range :GraphicsCard .
 
@@ -43,6 +86,20 @@
                                         owl:SymmetricProperty ;
                                rdfs:domain :Motherboard ;
                                rdfs:range :RAM .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible
+:isPowerSupplyAndGraphicsCardCompatible rdf:type owl:ObjectProperty ,
+                                                 owl:SymmetricProperty ;
+                                        rdfs:domain :PowerSupply ;
+                                        rdfs:range :Dedicated .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan
+:isPowerSupplyStrongerThan rdf:type owl:ObjectProperty ,
+                                    owl:TransitiveProperty ;
+                           rdfs:domain :PowerSupply ;
+                           rdfs:range :PowerSupply .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan
@@ -80,6 +137,13 @@
                                  rdfs:range :Storage .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortFasterThan
+:isUSBPortFasterThan rdf:type owl:ObjectProperty ,
+                              owl:TransitiveProperty ;
+                     rdfs:domain :USBPort ;
+                     rdfs:range :USBPort .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -95,6 +159,30 @@
 :ComputerProductCode rdf:type owl:DatatypeProperty ;
                      rdfs:domain :Computer ;
                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayRefreshRate
+:DisplayRefreshRate rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Display ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayResolution
+:DisplayResolution rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Display ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplaySize
+:DisplaySize rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Display ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacity
+:FanAirFlowCapacity rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Fan ;
+                    rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardMemory
@@ -113,6 +201,30 @@
 :MemoryType rdf:type owl:DatatypeProperty ;
             rdfs:domain :Motherboard ;
             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency
+:PowerSupplyFrequency rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :PowerSupply ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E
+:PowerSupplyPCI-E rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :PowerSupply ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyVoltage
+:PowerSupplyVoltage rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :PowerSupply ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyWattPower
+:PowerSupplyWattPower rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :PowerSupply ;
+                      rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores
@@ -138,6 +250,12 @@
 :RAMCapacity rdf:type owl:DatatypeProperty ;
              rdfs:domain :RAM ;
              rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower
+:SpeakersWattPower rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Speakers ;
+                   rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity
@@ -270,6 +388,11 @@
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Display
 :Display rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Class ;
+                               owl:unionOf ( :LED
+                                             :OLED
+                                           )
+                             ] ;
          rdfs:subClassOf :Hardware .
 
 
@@ -334,6 +457,11 @@
                 owl:disjointWith :USBPort .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#IPS
+:IPS rdf:type owl:Class ;
+     rdfs:subClassOf :LED .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Integrated
 :Integrated rdf:type owl:Class ;
             rdfs:subClassOf :GraphicsCard .
@@ -342,6 +470,18 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Keyboard
 :Keyboard rdf:type owl:Class ;
           rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#LED
+:LED rdf:type owl:Class ;
+     owl:equivalentClass [ rdf:type owl:Class ;
+                           owl:unionOf ( :IPS
+                                         :TN
+                                         :VA
+                                       )
+                         ] ;
+     rdfs:subClassOf :Display ;
+     owl:disjointWith :OLED .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Laptop
@@ -373,6 +513,11 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Motherboard
 :Motherboard rdf:type owl:Class ;
              rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OLED
+:OLED rdf:type owl:Class ;
+      rdfs:subClassOf :Display .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Port
@@ -442,9 +587,19 @@
          rdfs:subClassOf :Hardware .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#TN
+:TN rdf:type owl:Class ;
+    rdfs:subClassOf :LED .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#USBPort
 :USBPort rdf:type owl:Class ;
          rdfs:subClassOf :Port .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#VA
+:VA rdf:type owl:Class ;
+    rdfs:subClassOf :LED .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Wi-FiCard
@@ -504,6 +659,14 @@
                 :DDR2
                 :DDR3
                 :DDR4
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :IPS
+                :TN
+                :VA
               )
 ] .
 

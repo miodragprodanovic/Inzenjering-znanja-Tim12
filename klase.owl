@@ -12,11 +12,53 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BTX
+:BTX rdf:type owl:ObjectProperty ;
+     rdfs:subPropertyOf :hasMotherboard ;
+     rdfs:domain :Computer ;
+     rdfs:range :BTX .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#LPX
+:LPX rdf:type owl:ObjectProperty ;
+     rdfs:subPropertyOf :hasMotherboard ;
+     rdfs:domain :Computer ;
+     rdfs:range :LPX .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MiniITX
+:MiniITX rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasMotherboard ;
+         rdfs:domain :Computer ;
+         rdfs:range :MiniITX .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PicoBTX
+:PicoBTX rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasMotherboard ;
+         rdfs:domain :Computer ;
+         rdfs:range :PicoBTX .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan
 :areSpeakersMorePowerfulThan rdf:type owl:ObjectProperty ,
                                       owl:TransitiveProperty ;
                              rdfs:domain :Speakers ;
                              rdfs:range :Speakers .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasAT
+:hasAT rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :hasMotherboard ;
+       rdfs:domain :Computer ;
+       rdfs:range :AT .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasATX
+:hasATX rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :hasMotherboard ;
+        rdfs:domain :Computer ;
+        rdfs:range :ATX .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasAdapter
@@ -407,29 +449,76 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndDedicatedGraphicsCardCompatible
 :isMotherboardAndDedicatedGraphicsCardCompatible rdf:type owl:ObjectProperty ,
                                                           owl:SymmetricProperty ;
-                                                 rdfs:domain :Motherboard ;
-                                                 rdfs:range :Dedicated .
+                                                 rdfs:domain [ rdf:type owl:Class ;
+                                                               owl:unionOf ( :Dedicated
+                                                                             :Motherboard
+                                                                           )
+                                                             ] ;
+                                                 rdfs:range [ rdf:type owl:Class ;
+                                                              owl:unionOf ( :Dedicated
+                                                                            :Motherboard
+                                                                          )
+                                                            ] .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndPowerSupplyCompatible
+:isMotherboardAndPowerSupplyCompatible rdf:type owl:ObjectProperty ,
+                                                owl:SymmetricProperty ;
+                                       rdfs:domain [ rdf:type owl:Class ;
+                                                     owl:unionOf ( :Motherboard
+                                                                   :PowerSupply
+                                                                 )
+                                                   ] ;
+                                       rdfs:range [ rdf:type owl:Class ;
+                                                    owl:unionOf ( :Motherboard
+                                                                  :PowerSupply
+                                                                )
+                                                  ] .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndProcessorCompatible
 :isMotherboardAndProcessorCompatible rdf:type owl:ObjectProperty ,
                                               owl:SymmetricProperty ;
-                                     rdfs:domain :Motherboard ;
-                                     rdfs:range :Processor .
+                                     rdfs:domain [ rdf:type owl:Class ;
+                                                   owl:unionOf ( :Motherboard
+                                                                 :Processor
+                                                               )
+                                                 ] ;
+                                     rdfs:range [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :Motherboard
+                                                                :Processor
+                                                              )
+                                                ] .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndRAMCompatible
 :isMotherboardAndRAMCompatible rdf:type owl:ObjectProperty ,
                                         owl:SymmetricProperty ;
-                               rdfs:domain :Motherboard ;
-                               rdfs:range :RAM .
+                               rdfs:domain [ rdf:type owl:Class ;
+                                             owl:unionOf ( :Motherboard
+                                                           :RAM
+                                                         )
+                                           ] ;
+                               rdfs:range [ rdf:type owl:Class ;
+                                            owl:unionOf ( :Motherboard
+                                                          :RAM
+                                                        )
+                                          ] .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible
 :isPowerSupplyAndGraphicsCardCompatible rdf:type owl:ObjectProperty ,
                                                  owl:SymmetricProperty ;
-                                        rdfs:domain :PowerSupply ;
-                                        rdfs:range :Dedicated .
+                                        rdfs:domain [ rdf:type owl:Class ;
+                                                      owl:unionOf ( :Dedicated
+                                                                    :PowerSupply
+                                                                  )
+                                                    ] ;
+                                        rdfs:range [ rdf:type owl:Class ;
+                                                     owl:unionOf ( :Dedicated
+                                                                   :PowerSupply
+                                                                 )
+                                                   ] .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan
@@ -540,6 +629,12 @@
                    rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardPowerConnectors
+:GraphicsCardPowerConnectors rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :Dedicated ;
+                             rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed
 :GraphicsCardSpeed rdf:type owl:DatatypeProperty ;
                    rdfs:domain :GraphicsCard ;
@@ -552,10 +647,34 @@
             rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardDDRSuport
+:MotherboardDDRSuport rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Motherboard ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardPCI-E
+:MotherboardPCI-E rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Motherboard ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardPowerSupply
+:MotherboardPowerSupply rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency
 :PowerSupplyFrequency rdf:type owl:DatatypeProperty ;
                       rdfs:domain :PowerSupply ;
                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyMotherboardPins
+:PowerSupplyMotherboardPins rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :PowerSupply ;
+                            rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E
@@ -625,6 +744,16 @@
 #    Classes
 #################################################################
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AT
+:AT rdf:type owl:Class ;
+    rdfs:subClassOf :Motherboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ATX
+:ATX rdf:type owl:Class ;
+     rdfs:subClassOf :Motherboard .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Adapter
 :Adapter rdf:type owl:Class ;
          owl:equivalentClass [ rdf:type owl:Class ;
@@ -633,6 +762,11 @@
                                            )
                              ] ;
          rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BTX
+:BTX rdf:type owl:Class ;
+     rdfs:subClassOf :Motherboard .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BluetoothCard
@@ -812,6 +946,11 @@
      owl:disjointWith :OLED .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#LPX
+:LPX rdf:type owl:Class ;
+     rdfs:subClassOf :Motherboard .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Laptop
 :Laptop rdf:type owl:Class ;
         rdfs:subClassOf :Computer .
@@ -828,14 +967,33 @@
                 owl:disjointWith :USBPort .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MiniITX
+:MiniITX rdf:type owl:Class ;
+         rdfs:subClassOf :Motherboard .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Motherboard
 :Motherboard rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:unionOf ( :AT
+                                                 :ATX
+                                                 :BTX
+                                                 :LPX
+                                                 :MiniITX
+                                                 :PicoBTX
+                                               )
+                                 ] ;
              rdfs:subClassOf :Hardware .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OLED
 :OLED rdf:type owl:Class ;
       rdfs:subClassOf :Display .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PicoBTX
+:PicoBTX rdf:type owl:Class ;
+         rdfs:subClassOf :Motherboard .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Port
@@ -954,6 +1112,17 @@
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AT
+                :ATX
+                :BTX
+                :LPX
+                :MiniITX
+                :PicoBTX
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Adapter

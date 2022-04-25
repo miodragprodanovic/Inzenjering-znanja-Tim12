@@ -29,6 +29,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBluetoothCard
 :hasBluetoothCard rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :hasWirelessCard ;
+                  rdf:type owl:FunctionalProperty ;
                   rdfs:domain :Computer ;
                   rdfs:range :BluetoothCard .
 
@@ -46,6 +47,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCamera
 :hasCamera rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :hasComponent ;
+           rdf:type owl:FunctionalProperty ;
            rdfs:domain :Computer ;
            rdfs:range :Camera .
 
@@ -53,6 +55,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase
 :hasCase rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf :hasComponent ;
+         rdf:type owl:FunctionalProperty ;
          rdfs:domain :Computer ;
          rdfs:range :Case .
 
@@ -101,6 +104,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDedicated
 :hasDedicated rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :hasGraphicsCard ;
+              rdf:type owl:FunctionalProperty ;
               rdfs:domain :Computer ;
               rdfs:range :Dedicated .
 
@@ -108,6 +112,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDisplay
 :hasDisplay rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :hasComponent ;
+            rdf:type owl:FunctionalProperty ;
             rdfs:domain :Computer ;
             rdfs:range :Display .
 
@@ -115,6 +120,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard
 :hasEthernetCard rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasAdapter ;
+                 rdf:type owl:FunctionalProperty ;
                  rdfs:domain :Computer ;
                  rdfs:range :EthernetCard .
 
@@ -143,6 +149,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDMIPort
 :hasHDMIPort rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasPort ;
+             rdf:type owl:FunctionalProperty ;
              rdfs:domain :Computer ;
              rdfs:range :HDMIPort .
 
@@ -150,6 +157,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphones
 :hasHeadphones rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :hasComponent ;
+               rdf:type owl:FunctionalProperty ;
                rdfs:domain :Computer ;
                rdfs:range :Headphones .
 
@@ -157,6 +165,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort
 :hasHeadphonesPort rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasPort ;
+                   rdf:type owl:FunctionalProperty ;
                    rdfs:domain :Computer ;
                    rdfs:range :HeadphonesPort .
 
@@ -171,6 +180,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated
 :hasIntegrated rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :hasGraphicsCard ;
+               rdf:type owl:FunctionalProperty ;
                rdfs:domain :Computer ;
                rdfs:range :Integrated .
 
@@ -178,6 +188,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasKeyboard
 :hasKeyboard rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasComponent ;
+             rdf:type owl:FunctionalProperty ;
              rdfs:domain :Computer ;
              rdfs:range :Keyboard .
 
@@ -192,6 +203,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophone
 :hasMicrophone rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :hasComponent ;
+               rdf:type owl:FunctionalProperty ;
                rdfs:domain :Computer ;
                rdfs:range :Microphone .
 
@@ -199,6 +211,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort
 :hasMicrophonePort rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasPort ;
+                   rdf:type owl:FunctionalProperty ;
                    rdfs:domain :Computer ;
                    rdfs:range :MicrophonePort .
 
@@ -206,6 +219,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMotherboard
 :hasMotherboard rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasComponent ;
+                rdf:type owl:FunctionalProperty ;
                 rdfs:domain :Computer ;
                 rdfs:range :Motherboard .
 
@@ -227,6 +241,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply
 :hasPowerSupply rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasComponent ;
+                rdf:type owl:FunctionalProperty ;
                 rdfs:domain :Computer ;
                 rdfs:range :PowerSupply .
 
@@ -234,6 +249,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor
 :hasProcessor rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :hasComponent ;
+              rdf:type owl:FunctionalProperty ;
               rdfs:domain :Computer ;
               rdfs:range :Processor .
 
@@ -262,6 +278,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSoundCard
 :hasSoundCard rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :hasComponent ;
+              rdf:type owl:FunctionalProperty ;
               rdfs:domain :Computer ;
               rdfs:range :SoundCard .
 
@@ -269,6 +286,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSpeakers
 :hasSpeakers rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasComponent ;
+             rdf:type owl:FunctionalProperty ;
              rdfs:domain :Computer ;
              rdfs:range :Speakers .
 
@@ -294,6 +312,20 @@
             rdfs:range :USBPort .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0
+:hasUSBPort2.0 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasUSBPort ;
+               rdfs:domain :Computer ;
+               rdfs:range :USBPort2.0 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2
+:hasUSBPort3.2 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasUSBPort ;
+               rdfs:domain :Computer ;
+               rdfs:range :USBPort3.2 .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasVA
 :hasVA rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf :hasLED ;
@@ -304,6 +336,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard
 :hasWi-FiCard rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :hasWirelessCard ;
+              rdf:type owl:FunctionalProperty ;
               rdfs:domain :Computer ;
               rdfs:range :Wi-FiCard .
 
@@ -413,11 +446,18 @@
                        rdfs:range :Processor .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMFasterThan
-:isRAMFasterThan rdf:type owl:ObjectProperty ,
-                          owl:TransitiveProperty ;
-                 rdfs:domain :RAM ;
-                 rdfs:range :RAM .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMMorePreferableThan
+:isRAMMorePreferableThan rdf:type owl:ObjectProperty ,
+                                  owl:TransitiveProperty ;
+                         rdfs:domain :RAM ;
+                         rdfs:range :RAM .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMStorageMoreThan
+:isRAMStorageMoreThan rdf:type owl:ObjectProperty ,
+                               owl:TransitiveProperty ;
+                      rdfs:domain :RAM ;
+                      rdfs:range :RAM .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan
@@ -434,11 +474,11 @@
                                  rdfs:range :Storage .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortFasterThan
-:isUSBPortFasterThan rdf:type owl:ObjectProperty ,
-                              owl:TransitiveProperty ;
-                     rdfs:domain :USBPort ;
-                     rdfs:range :USBPort .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan
+:isUSBPortMorePreferedThan rdf:type owl:ObjectProperty ,
+                                    owl:TransitiveProperty ;
+                           rdfs:domain :USBPort ;
+                           rdfs:range :USBPort .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard
@@ -872,7 +912,23 @@
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#USBPort
 :USBPort rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Class ;
+                               owl:unionOf ( :USBPort2.0
+                                             :USBPort3.2
+                                           )
+                             ] ;
          rdfs:subClassOf :Port .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#USBPort2.0
+:USBPort2.0 rdf:type owl:Class ;
+            rdfs:subClassOf :USBPort ;
+            owl:disjointWith :USBPort3.2 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#USBPort3.2
+:USBPort3.2 rdf:type owl:Class ;
+            rdfs:subClassOf :USBPort .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#VA

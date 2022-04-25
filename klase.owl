@@ -19,10 +19,300 @@
                              rdfs:range :Speakers .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasAdapter
+:hasAdapter rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasComponent ;
+            rdfs:domain :Computer ;
+            rdfs:range :Adapter .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBluetoothCard
+:hasBluetoothCard rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasWirelessCard ;
+                  rdfs:domain :Computer ;
+                  rdfs:range :BluetoothCard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand
+:hasBrand rdf:type owl:ObjectProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Computer
+                                      :ComputerComponent
+                                    )
+                      ] ;
+          rdfs:range :ComputerBrand .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCamera
+:hasCamera rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasComponent ;
+           rdfs:domain :Computer ;
+           rdfs:range :Camera .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase
+:hasCase rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasComponent ;
+         rdfs:domain :Computer ;
+         rdfs:range :Case .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasComponent
 :hasComponent rdf:type owl:ObjectProperty ;
               rdfs:domain :Computer ;
               rdfs:range :ComputerComponent .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR1
+:hasDDR1 rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasDRAM ;
+         rdfs:domain :Computer ;
+         rdfs:range :DDR1 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR2
+:hasDDR2 rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasDRAM ;
+         rdfs:domain :Computer ;
+         rdfs:range :DDR2 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR3
+:hasDDR3 rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasDRAM ;
+         rdfs:domain :Computer ;
+         rdfs:range :DDR3 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR4
+:hasDDR4 rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasDRAM ;
+         rdfs:domain :Computer ;
+         rdfs:range :DDR4 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDRAM
+:hasDRAM rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasRAM ;
+         rdfs:domain :Computer ;
+         rdfs:range :DRAM .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDedicated
+:hasDedicated rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasGraphicsCard ;
+              rdfs:domain :Computer ;
+              rdfs:range :Dedicated .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDisplay
+:hasDisplay rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasComponent ;
+            rdfs:domain :Computer ;
+            rdfs:range :Display .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard
+:hasEthernetCard rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasAdapter ;
+                 rdfs:domain :Computer ;
+                 rdfs:range :EthernetCard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan
+:hasFan rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :hasComponent ;
+        rdfs:domain :Computer ;
+        rdfs:range :Fan .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasGraphicsCard
+:hasGraphicsCard rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasComponent ;
+                 rdfs:domain :Computer ;
+                 rdfs:range :GraphicsCard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD
+:hasHDD rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :hasStorage ;
+        rdfs:domain :Computer ;
+        rdfs:range :HDD .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDMIPort
+:hasHDMIPort rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasPort ;
+             rdfs:domain :Computer ;
+             rdfs:range :HDMIPort .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphones
+:hasHeadphones rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasComponent ;
+               rdfs:domain :Computer ;
+               rdfs:range :Headphones .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort
+:hasHeadphonesPort rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasPort ;
+                   rdfs:domain :Computer ;
+                   rdfs:range :HeadphonesPort .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIPS
+:hasIPS rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :hasLED ;
+        rdfs:domain :Computer ;
+        rdfs:range :IPS .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated
+:hasIntegrated rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasGraphicsCard ;
+               rdfs:domain :Computer ;
+               rdfs:range :Integrated .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasKeyboard
+:hasKeyboard rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasComponent ;
+             rdfs:domain :Computer ;
+             rdfs:range :Keyboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasLED
+:hasLED rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :hasDisplay ;
+        rdfs:domain :Computer ;
+        rdfs:range :LED .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophone
+:hasMicrophone rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasComponent ;
+               rdfs:domain :Computer ;
+               rdfs:range :Microphone .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort
+:hasMicrophonePort rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasPort ;
+                   rdfs:domain :Computer ;
+                   rdfs:range :MicrophonePort .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMotherboard
+:hasMotherboard rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasComponent ;
+                rdfs:domain :Computer ;
+                rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOLED
+:hasOLED rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasDisplay ;
+         rdfs:domain :Computer ;
+         rdfs:range :OLED .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPort
+:hasPort rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasComponent ;
+         rdfs:domain :Computer ;
+         rdfs:range :Port .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply
+:hasPowerSupply rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasComponent ;
+                rdfs:domain :Computer ;
+                rdfs:range :PowerSupply .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor
+:hasProcessor rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasComponent ;
+              rdfs:domain :Computer ;
+              rdfs:range :Processor .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasRAM
+:hasRAM rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :hasComponent ;
+        rdfs:domain :Computer ;
+        rdfs:range :RAM .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSRAM
+:hasSRAM rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasRAM ;
+         rdfs:domain :Computer ;
+         rdfs:range :SRAM .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSSD
+:hasSSD rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :hasStorage ;
+        rdfs:domain :Computer ;
+        rdfs:range :SSD .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSoundCard
+:hasSoundCard rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasComponent ;
+              rdfs:domain :Computer ;
+              rdfs:range :SoundCard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSpeakers
+:hasSpeakers rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasComponent ;
+             rdfs:domain :Computer ;
+             rdfs:range :Speakers .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasStorage
+:hasStorage rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasComponent ;
+            rdfs:domain :Computer ;
+            rdfs:range :Storage .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasTN
+:hasTN rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :hasLED ;
+       rdfs:domain :Computer ;
+       rdfs:range :TN .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort
+:hasUSBPort rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasPort ;
+            rdfs:domain :Computer ;
+            rdfs:range :USBPort .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasVA
+:hasVA rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :hasLED ;
+       rdfs:domain :Computer ;
+       rdfs:range :VA .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard
+:hasWi-FiCard rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasWirelessCard ;
+              rdfs:domain :Computer ;
+              rdfs:range :Wi-FiCard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWirelessCard
+:hasWirelessCard rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasAdapter ;
+                 rdfs:domain :Computer ;
+                 rdfs:range :WirelessCard .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayBiggerThan
@@ -81,6 +371,20 @@
                               rdfs:range :GraphicsCard .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndDedicatedGraphicsCardCompatible
+:isMotherboardAndDedicatedGraphicsCardCompatible rdf:type owl:ObjectProperty ,
+                                                          owl:SymmetricProperty ;
+                                                 rdfs:domain :Motherboard ;
+                                                 rdfs:range :Dedicated .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndProcessorCompatible
+:isMotherboardAndProcessorCompatible rdf:type owl:ObjectProperty ,
+                                              owl:SymmetricProperty ;
+                                     rdfs:domain :Motherboard ;
+                                     rdfs:range :Processor .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndRAMCompatible
 :isMotherboardAndRAMCompatible rdf:type owl:ObjectProperty ,
                                         owl:SymmetricProperty ;
@@ -109,13 +413,6 @@
                        rdfs:range :Processor .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorSocketCompatible
-:isProcessorSocketCompatible rdf:type owl:ObjectProperty ,
-                                      owl:SymmetricProperty ;
-                             rdfs:domain :Motherboard ;
-                             rdfs:range :Processor .
-
-
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMFasterThan
 :isRAMFasterThan rdf:type owl:ObjectProperty ,
                           owl:TransitiveProperty ;
@@ -142,6 +439,12 @@
                               owl:TransitiveProperty ;
                      rdfs:domain :USBPort ;
                      rdfs:range :USBPort .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard
+:processorHasIntegratedGraphicsCard rdf:type owl:ObjectProperty ;
+                                    rdfs:domain :Processor ;
+                                    rdfs:range :Integrated .
 
 
 #################################################################
@@ -189,6 +492,12 @@
 :GraphicsCardMemory rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Dedicated ;
                     rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardPCI-E
+:GraphicsCardPCI-E rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Dedicated ;
+                   rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed
@@ -241,8 +550,11 @@
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket
 :ProcessorSocket rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Motherboard ,
-                             :Processor ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :Motherboard
+                                             :Processor
+                                           )
+                             ] ;
                  rdfs:range xsd:string .
 
 
@@ -264,6 +576,11 @@
                  rdfs:range xsd:int .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard
+:processorHasIntegratedGraphicsCard rdf:type owl:DatatypeProperty ;
+                                    rdfs:range xsd:boolean .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -276,11 +593,6 @@
                                            )
                              ] ;
          rdfs:subClassOf :Hardware .
-
-
-###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Alienware
-:Alienware rdf:type owl:Class ;
-           rdfs:subClassOf :ComputerBrand .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BluetoothCard
@@ -308,16 +620,7 @@
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ComputerBrand
-:ComputerBrand rdf:type owl:Class ;
-               owl:equivalentClass [ rdf:type owl:Class ;
-                                     owl:unionOf ( :Alienware
-                                                   :Dell
-                                                   :Fujitsu
-                                                   :HP
-                                                   :Lenovo
-                                                   :MSI
-                                                 )
-                                   ] .
+:ComputerBrand rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ComputerComponent
@@ -375,11 +678,6 @@
            owl:disjointWith :Integrated .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Dell
-:Dell rdf:type owl:Class ;
-      rdfs:subClassOf :ComputerBrand .
-
-
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Desktop
 :Desktop rdf:type owl:Class ;
          rdfs:subClassOf :Computer ;
@@ -407,11 +705,6 @@
      rdfs:subClassOf :Hardware .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Fujitsu
-:Fujitsu rdf:type owl:Class ;
-         rdfs:subClassOf :ComputerBrand .
-
-
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCard
 :GraphicsCard rdf:type owl:Class ;
               owl:equivalentClass [ rdf:type owl:Class ;
@@ -434,11 +727,6 @@
           owl:disjointWith :HeadphonesPort ,
                            :MicrophonePort ,
                            :USBPort .
-
-
-###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#HP
-:HP rdf:type owl:Class ;
-    rdfs:subClassOf :ComputerBrand .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Hardware
@@ -487,16 +775,6 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Laptop
 :Laptop rdf:type owl:Class ;
         rdfs:subClassOf :Computer .
-
-
-###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Lenovo
-:Lenovo rdf:type owl:Class ;
-        rdfs:subClassOf :ComputerBrand .
-
-
-###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MSI
-:MSI rdf:type owl:Class ;
-     rdfs:subClassOf :ComputerBrand .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Microphone
@@ -644,12 +922,9 @@
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Alienware
-                :Dell
-                :Fujitsu
-                :HP
-                :Lenovo
-                :MSI
+  owl:members ( :Computer
+                :ComputerBrand
+                :ComputerComponent
               )
 ] .
 

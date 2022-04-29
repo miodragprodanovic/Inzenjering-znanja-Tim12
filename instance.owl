@@ -327,7 +327,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard-Intel_HD_Graphics_530
 :GraphicsCard-Intel_HD_Graphics_530 rdf:type owl:NamedIndividual ;
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Intel ;
-                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "300 Mhz" .
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> 300 .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard-Intel_UHD_Graphics_630
@@ -335,7 +335,7 @@
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Intel ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :GraphicsCard-Intel_HD_Graphics_530 ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :GraphicsCard-Intel_HD_Graphics_530 ;
-                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "350 Mhz" .
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> 350 .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard-NVIDIA_GeForce_GTX_1060
@@ -347,7 +347,7 @@
                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardMemory> 6 ;
                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardPCI-E> "3.0 ×16" ;
                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardPowerConnectors> "6-pin to 8-pin" ;
-                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "1500 MHz" .
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> 1500 .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard-NVIDIA_GeForce_GTX_950
@@ -358,7 +358,7 @@
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardMemory> 2 ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardPCI-E> "3.0 x16" ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardPowerConnectors> "6-pin" ;
-                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> "500 Mhz" .
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> 500 .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD-128GB

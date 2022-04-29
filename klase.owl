@@ -98,7 +98,7 @@
 :hasCase rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf :hasComponent ;
          rdf:type owl:FunctionalProperty ;
-         rdfs:domain :Computer ;
+         rdfs:domain :Desktop ;
          rdfs:range :Case .
 
 
@@ -638,7 +638,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed
 :GraphicsCardSpeed rdf:type owl:DatatypeProperty ;
                    rdfs:domain :GraphicsCard ;
-                   rdfs:range xsd:string .
+                   rdfs:range xsd:int .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryType
@@ -764,9 +764,209 @@
          rdfs:subClassOf :Hardware .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AvarageDDR1
+:AvarageDDR1 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :DDR1
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :RAMCapacity ;
+                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                               owl:onDatatype xsd:integer ;
+                                                                               owl:withRestrictions ( [ xsd:minExclusive 8
+                                                                                                      ]
+                                                                                                      [ xsd:maxInclusive 16
+                                                                                                      ]
+                                                                                                    )
+                                                                             ]
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :DDR1 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AvarageDDR2
+:AvarageDDR2 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :DDR2
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :RAMCapacity ;
+                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                               owl:onDatatype xsd:integer ;
+                                                                               owl:withRestrictions ( [ xsd:minExclusive 8
+                                                                                                      ]
+                                                                                                      [ xsd:maxInclusive 16
+                                                                                                      ]
+                                                                                                    )
+                                                                             ]
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :DDR2 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AvarageDDR3
+:AvarageDDR3 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :DDR3
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :RAMCapacity ;
+                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                               owl:onDatatype xsd:integer ;
+                                                                               owl:withRestrictions ( [ xsd:minExclusive 8
+                                                                                                      ]
+                                                                                                      [ xsd:maxInclusive 16
+                                                                                                      ]
+                                                                                                    )
+                                                                             ]
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :DDR3 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AvarageDDR4
+:AvarageDDR4 rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :DDR4
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :RAMCapacity ;
+                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                               owl:onDatatype xsd:integer ;
+                                                                               owl:withRestrictions ( [ xsd:minExclusive 8
+                                                                                                      ]
+                                                                                                      [ xsd:maxInclusive 16
+                                                                                                      ]
+                                                                                                    )
+                                                                             ]
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :DDR4 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AvarageDedicatedGraphicsCard
+:AvarageDedicatedGraphicsCard rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( :Dedicated
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty :GraphicsCardSpeed ;
+                                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                owl:onDatatype xsd:integer ;
+                                                                                                owl:withRestrictions ( [ xsd:minInclusive 1000
+                                                                                                                       ]
+                                                                                                                       [ xsd:maxExclusive 1200
+                                                                                                                       ]
+                                                                                                                     )
+                                                                                              ]
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
+                              rdfs:subClassOf :Dedicated .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BTX
 :BTX rdf:type owl:Class ;
      rdfs:subClassOf :Motherboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BadDDR1
+:BadDDR1 rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :DDR1
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :RAMCapacity ;
+                                                      owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                           owl:onDatatype xsd:integer ;
+                                                                           owl:withRestrictions ( [ xsd:minExclusive 4
+                                                                                                  ]
+                                                                                                  [ xsd:maxInclusive 8
+                                                                                                  ]
+                                                                                                )
+                                                                         ]
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:subClassOf :DDR1 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BadDDR2
+:BadDDR2 rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :DDR2
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :RAMCapacity ;
+                                                      owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                           owl:onDatatype xsd:integer ;
+                                                                           owl:withRestrictions ( [ xsd:minExclusive 4
+                                                                                                  ]
+                                                                                                  [ xsd:maxInclusive 8
+                                                                                                  ]
+                                                                                                )
+                                                                         ]
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:subClassOf :DDR2 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BadDDR3
+:BadDDR3 rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :DDR3
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :RAMCapacity ;
+                                                      owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                           owl:onDatatype xsd:integer ;
+                                                                           owl:withRestrictions ( [ xsd:minExclusive 4
+                                                                                                  ]
+                                                                                                  [ xsd:maxInclusive 8
+                                                                                                  ]
+                                                                                                )
+                                                                         ]
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:subClassOf :DDR3 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BadDDR4
+:BadDDR4 rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :DDR4
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :RAMCapacity ;
+                                                      owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                           owl:onDatatype xsd:integer ;
+                                                                           owl:withRestrictions ( [ xsd:minExclusive 4
+                                                                                                  ]
+                                                                                                  [ xsd:maxInclusive 8
+                                                                                                  ]
+                                                                                                )
+                                                                         ]
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:subClassOf :DDR4 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BadDedicatedGraphicsCard
+:BadDedicatedGraphicsCard rdf:type owl:Class ;
+                          owl:equivalentClass [ owl:intersectionOf ( :Dedicated
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty :GraphicsCardSpeed ;
+                                                                       owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                            owl:onDatatype xsd:integer ;
+                                                                                            owl:withRestrictions ( [ xsd:minInclusive 800
+                                                                                                                   ]
+                                                                                                                   [ xsd:maxExclusive 1000
+                                                                                                                   ]
+                                                                                                                 )
+                                                                                          ]
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ] ;
+                          rdfs:subClassOf :Dedicated .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BluetoothCard
@@ -877,6 +1077,106 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Fan
 :Fan rdf:type owl:Class ;
      rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GoodDDR1
+:GoodDDR1 rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :DDR1
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :RAMCapacity ;
+                                                       owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                            owl:onDatatype xsd:integer ;
+                                                                            owl:withRestrictions ( [ xsd:minExclusive 16
+                                                                                                   ]
+                                                                                                   [ xsd:maxInclusive 32
+                                                                                                   ]
+                                                                                                 )
+                                                                          ]
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf :DDR1 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GoodDDR2
+:GoodDDR2 rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :DDR2
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :RAMCapacity ;
+                                                       owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                            owl:onDatatype xsd:integer ;
+                                                                            owl:withRestrictions ( [ xsd:minExclusive 16
+                                                                                                   ]
+                                                                                                   [ xsd:maxInclusive 32
+                                                                                                   ]
+                                                                                                 )
+                                                                          ]
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf :DDR2 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GoodDDR3
+:GoodDDR3 rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :DDR3
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :RAMCapacity ;
+                                                       owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                            owl:onDatatype xsd:integer ;
+                                                                            owl:withRestrictions ( [ xsd:minExclusive 16
+                                                                                                   ]
+                                                                                                   [ xsd:maxInclusive 32
+                                                                                                   ]
+                                                                                                 )
+                                                                          ]
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf :DDR3 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GoodDDR4
+:GoodDDR4 rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :DDR4
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :RAMCapacity ;
+                                                       owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                            owl:onDatatype xsd:integer ;
+                                                                            owl:withRestrictions ( [ xsd:minExclusive 16
+                                                                                                   ]
+                                                                                                   [ xsd:maxInclusive 32
+                                                                                                   ]
+                                                                                                 )
+                                                                          ]
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf :DDR4 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GoodDedicatedGraphicsCard
+:GoodDedicatedGraphicsCard rdf:type owl:Class ;
+                           owl:equivalentClass [ owl:intersectionOf ( :Dedicated
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty :GraphicsCardSpeed ;
+                                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                             owl:onDatatype xsd:integer ;
+                                                                                             owl:withRestrictions ( [ xsd:minInclusive 1200
+                                                                                                                    ]
+                                                                                                                    [ xsd:maxExclusive 1500
+                                                                                                                    ]
+                                                                                                                  )
+                                                                                           ]
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ] ;
+                           rdfs:subClassOf :Dedicated .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCard
@@ -1018,6 +1318,96 @@
            rdfs:subClassOf :Hardware .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProfessionalDDR1
+:ProfessionalDDR1 rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :DDR1
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :RAMCapacity ;
+                                                               owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                    owl:onDatatype xsd:integer ;
+                                                                                    owl:withRestrictions ( [ xsd:minInclusive 64
+                                                                                                           ]
+                                                                                                         )
+                                                                                  ]
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf :DDR1 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProfessionalDDR2
+:ProfessionalDDR2 rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :DDR2
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :RAMCapacity ;
+                                                               owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                    owl:onDatatype xsd:integer ;
+                                                                                    owl:withRestrictions ( [ xsd:minInclusive 64
+                                                                                                           ]
+                                                                                                         )
+                                                                                  ]
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf :DDR2 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProfessionalDDR3
+:ProfessionalDDR3 rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :DDR3
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :RAMCapacity ;
+                                                               owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                    owl:onDatatype xsd:integer ;
+                                                                                    owl:withRestrictions ( [ xsd:minInclusive 64
+                                                                                                           ]
+                                                                                                         )
+                                                                                  ]
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf :DDR3 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProfessionalDDR4
+:ProfessionalDDR4 rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :DDR4
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :RAMCapacity ;
+                                                               owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                    owl:onDatatype xsd:integer ;
+                                                                                    owl:withRestrictions ( [ xsd:minInclusive 64
+                                                                                                           ]
+                                                                                                         )
+                                                                                  ]
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf :DDR4 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProfessionalDedicatedGraphicsCard
+:ProfessionalDedicatedGraphicsCard rdf:type owl:Class ;
+                                   owl:equivalentClass [ owl:intersectionOf ( :Dedicated
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty :GraphicsCardSpeed ;
+                                                                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                     owl:onDatatype xsd:integer ;
+                                                                                                     owl:withRestrictions ( [ xsd:minInclusive 1500
+                                                                                                                            ]
+                                                                                                                          )
+                                                                                                   ]
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ] ;
+                                   rdfs:subClassOf :Dedicated .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAM
 :RAM rdf:type owl:Class ;
      owl:equivalentClass [ rdf:type owl:Class ;
@@ -1026,6 +1416,96 @@
                                        )
                          ] ;
      rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ReallyBadDDR1
+:ReallyBadDDR1 rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :DDR1
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :RAMCapacity ;
+                                                            owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                 owl:onDatatype xsd:integer ;
+                                                                                 owl:withRestrictions ( [ xsd:maxInclusive 4
+                                                                                                        ]
+                                                                                                      )
+                                                                               ]
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf :DDR1 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ReallyBadDDR2
+:ReallyBadDDR2 rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :DDR2
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :RAMCapacity ;
+                                                            owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                 owl:onDatatype xsd:integer ;
+                                                                                 owl:withRestrictions ( [ xsd:maxInclusive 4
+                                                                                                        ]
+                                                                                                      )
+                                                                               ]
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf :DDR2 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ReallyBadDDR3
+:ReallyBadDDR3 rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :DDR3
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :RAMCapacity ;
+                                                            owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                 owl:onDatatype xsd:integer ;
+                                                                                 owl:withRestrictions ( [ xsd:maxInclusive 4
+                                                                                                        ]
+                                                                                                      )
+                                                                               ]
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf :DDR3 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ReallyBadDDR4
+:ReallyBadDDR4 rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :DDR4
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :RAMCapacity ;
+                                                            owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                 owl:onDatatype xsd:integer ;
+                                                                                 owl:withRestrictions ( [ xsd:maxInclusive 4
+                                                                                                        ]
+                                                                                                      )
+                                                                               ]
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf :DDR4 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ReallyBadDedicatedGraphicsCard
+:ReallyBadDedicatedGraphicsCard rdf:type owl:Class ;
+                                owl:equivalentClass [ owl:intersectionOf ( :Dedicated
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty :GraphicsCardSpeed ;
+                                                                             owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                  owl:onDatatype xsd:integer ;
+                                                                                                  owl:withRestrictions ( [ xsd:maxExclusive 800
+                                                                                                                         ]
+                                                                                                                       )
+                                                                                                ]
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ] ;
+                                rdfs:subClassOf :Dedicated .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SRAM
@@ -1142,6 +1622,16 @@
                 :SoundCard
                 :Speakers
                 :Storage
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AvarageDedicatedGraphicsCard
+                :BadDedicatedGraphicsCard
+                :GoodDedicatedGraphicsCard
+                :ProfessionalDedicatedGraphicsCard
+                :ReallyBadDedicatedGraphicsCard
               )
 ] .
 

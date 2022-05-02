@@ -399,6 +399,48 @@
 :HeadphonesPort rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard-Ergonomic-Logitech-Ergo-K860
+:Keyboard-Ergonomic-Logitech-Ergo-K860 rdf:type owl:NamedIndividual ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard-Mechanical-Ducky-Shine-7-Gunmetal-RGB-LED-Double-Shot-PBT ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard-Gaming-Corsair-K100-RGB ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard-Membrane-Razer-Cynosa-v2 ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "false"^^xsd:boolean ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard-Flexible-Sungwoo-Black
+:Keyboard-Flexible-Sungwoo-Black rdf:type owl:NamedIndividual ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard-Membrane-Razer-Cynosa-v2 ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard-Mechanical-Ducky-Shine-7-Gunmetal-RGB-LED-Double-Shot-PBT ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "false"^^xsd:boolean ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard-Gaming-Corsair-K100-RGB
+:Keyboard-Gaming-Corsair-K100-RGB rdf:type owl:NamedIndividual ;
+                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard-Ergonomic-Logitech-Ergo-K860 ;
+                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard-Flexible-Sungwoo-Black ;
+                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard-Ergonomic-Logitech-Ergo-K860 ;
+                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "true"^^xsd:boolean ;
+                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard-Mechanical-Ducky-Shine-7-Gunmetal-RGB-LED-Double-Shot-PBT
+:Keyboard-Mechanical-Ducky-Shine-7-Gunmetal-RGB-LED-Double-Shot-PBT rdf:type owl:NamedIndividual ;
+                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard-Membrane-Razer-Cynosa-v2 ;
+                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard-Membrane-Razer-Cynosa-v2 ;
+                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard-Gaming-Corsair-K100-RGB ;
+                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "true"^^xsd:boolean ;
+                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard-Membrane-Razer-Cynosa-v2
+:Keyboard-Membrane-Razer-Cynosa-v2 rdf:type owl:NamedIndividual ;
+                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard-Flexible-Sungwoo-Black ;
+                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "false"^^xsd:boolean ;
+                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "true"^^xsd:boolean .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#MicrophonePort
 :MicrophonePort rdf:type owl:NamedIndividual .
 
@@ -524,6 +566,7 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase> :Case-3040 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR4> :DDR4-8GB ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDedicated> :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasErgonomicKeyboard> :Keyboard-Ergonomic-Logitech-Ergo-K860 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard-ST1000BT32 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan-ARCTICP12 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD> :HDD-512GB ;
@@ -554,6 +597,7 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDMIPort> :HDMIPort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_UHD_Graphics_630 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMechanicalKeyboard> :Keyboard-Mechanical-Ducky-Shine-7-Gunmetal-RGB-LED-Double-Shot-PBT ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply-XPS8500 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor-i5-8400 ;
@@ -579,6 +623,7 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIPS> :Display-S2721DGF ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_HD_Graphics_530 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMembraneKeyboard> :Keyboard-Membrane-Razer-Cynosa-v2 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply-ITXAK-L1 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor-i5-6400 ;
@@ -597,6 +642,7 @@
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR3> :DDR3-16GB ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard-USB31000SPTB ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan-Sahara ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFlexibleKeyboard> :Keyboard-Flexible-Sungwoo-Black ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD> :HDD-128GB ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDMIPort> :HDMIPort ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
@@ -870,6 +916,7 @@
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR4> :DDR4-8GB ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard-ST2000SPEXI ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan-KB23 ;
+                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasGamingKeyboard> :Keyboard-Gaming-Corsair-K100-RGB ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_HD_Graphics_530 ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;

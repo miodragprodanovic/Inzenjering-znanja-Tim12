@@ -68,6 +68,13 @@
             rdfs:range :Adapter .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan
+:hasBetterKeystrokeThan rdf:type owl:ObjectProperty ,
+                                 owl:TransitiveProperty ;
+                        rdfs:domain :Keyboard ;
+                        rdfs:range :Keyboard .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBluetoothCard
 :hasBluetoothCard rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :hasWirelessCard ;
@@ -159,6 +166,13 @@
             rdfs:range :Display .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasErgonomicKeyboard
+:hasErgonomicKeyboard rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasKeyboard ;
+                      rdfs:domain :Computer ;
+                      rdfs:range :ErgonomicKeyboard .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard
 :hasEthernetCard rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasAdapter ;
@@ -172,6 +186,20 @@
         rdfs:subPropertyOf :hasComponent ;
         rdfs:domain :Computer ;
         rdfs:range :Fan .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFlexibleKeyboard
+:hasFlexibleKeyboard rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasKeyboard ;
+                     rdfs:domain :Computer ;
+                     rdfs:range :FlexibleKeyboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasGamingKeyboard
+:hasGamingKeyboard rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasKeyboard ;
+                   rdfs:domain :Computer ;
+                   rdfs:range :GamingKeyboard .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasGraphicsCard
@@ -240,6 +268,20 @@
         rdfs:subPropertyOf :hasDisplay ;
         rdfs:domain :Computer ;
         rdfs:range :LED .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMechanicalKeyboard
+:hasMechanicalKeyboard rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasKeyboard ;
+                       rdfs:domain :Computer ;
+                       rdfs:range :MechanicalKeyboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMembraneKeyboard
+:hasMembraneKeyboard rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasKeyboard ;
+                     rdfs:domain :Computer ;
+                     rdfs:range :MembraneKeyboard .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophone
@@ -446,6 +488,20 @@
                               rdfs:range :GraphicsCard .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan
+:isKeyboardMoreComfortableThan rdf:type owl:ObjectProperty ,
+                                        owl:TransitiveProperty ;
+                               rdfs:domain :Keyboard ;
+                               rdfs:range :Keyboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan
+:isKeyboardMoreDurableThan rdf:type owl:ObjectProperty ,
+                                    owl:TransitiveProperty ;
+                           rdfs:domain :Keyboard ;
+                           rdfs:range :Keyboard .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndDedicatedGraphicsCardCompatible
 :isMotherboardAndDedicatedGraphicsCardCompatible rdf:type owl:ObjectProperty ,
                                                           owl:SymmetricProperty ;
@@ -641,6 +697,12 @@
                    rdfs:range xsd:int .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit
+:KeyboardBacklit rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Keyboard ;
+                 rdfs:range xsd:boolean .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryType
 :MemoryType rdf:type owl:DatatypeProperty ;
             rdfs:domain :Motherboard ;
@@ -727,6 +789,12 @@
 :SpeakersWattPower rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Speakers ;
                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant
+:SpillResistant rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Keyboard ;
+                rdfs:range xsd:boolean .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity
@@ -1068,6 +1136,11 @@
          rdfs:subClassOf :Hardware .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ErgonomicKeyboard
+:ErgonomicKeyboard rdf:type owl:Class ;
+                   rdfs:subClassOf :Keyboard .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#EthernetCard
 :EthernetCard rdf:type owl:Class ;
               rdfs:subClassOf :Adapter ;
@@ -1077,6 +1150,16 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Fan
 :Fan rdf:type owl:Class ;
      rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#FlexibleKeyboard
+:FlexibleKeyboard rdf:type owl:Class ;
+                  rdfs:subClassOf :Keyboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GamingKeyboard
+:GamingKeyboard rdf:type owl:Class ;
+                rdfs:subClassOf :Keyboard .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GoodDDR1
@@ -1231,6 +1314,14 @@
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Keyboard
 :Keyboard rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Class ;
+                                owl:unionOf ( :ErgonomicKeyboard
+                                              :FlexibleKeyboard
+                                              :GamingKeyboard
+                                              :MechanicalKeyboard
+                                              :MembraneKeyboard
+                                            )
+                              ] ;
           rdfs:subClassOf :Hardware .
 
 
@@ -1254,6 +1345,17 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Laptop
 :Laptop rdf:type owl:Class ;
         rdfs:subClassOf :Computer .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MechanicalKeyboard
+:MechanicalKeyboard rdf:type owl:Class ;
+                    rdfs:subClassOf :Keyboard ;
+                    owl:disjointWith :MembraneKeyboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MembraneKeyboard
+:MembraneKeyboard rdf:type owl:Class ;
+                  rdfs:subClassOf :Keyboard .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Microphone

@@ -395,6 +395,43 @@
 :HDMIPort rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones-Closed-Back-Beyerdynamic-DT-770-PRO
+:Headphones-Closed-Back-Beyerdynamic-DT-770-PRO rdf:type owl:NamedIndividual ;
+                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones-On-Ear-AKG-Y400 ;
+                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones-On-Ear-AKG-Y400 ;
+                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "100 - 10000 Hz" ;
+                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "250 ohms" ;
+                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "100.45 dB" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones-On-Ear-AKG-Y400
+:Headphones-On-Ear-AKG-Y400 rdf:type owl:NamedIndividual ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones-Closed-Back-Beyerdynamic-DT-770-PRO ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones-Open-Back-Philips-Fidelio-X2HR ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "20 - 20000 Hz" ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "32 ohms" ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "106 dB" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones-Open-Back-Philips-Fidelio-X2HR
+:Headphones-Open-Back-Philips-Fidelio-X2HR rdf:type owl:NamedIndividual ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones-Closed-Back-Beyerdynamic-DT-770-PRO ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones-On-Ear-AKG-Y400 ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "5 - 40000 Hz" ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "30 ohms" ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "100 dB" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones-Over-Ear-Sony-WH-1000XM4
+:Headphones-Over-Ear-Sony-WH-1000XM4 rdf:type owl:NamedIndividual ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones-Open-Back-Philips-Fidelio-X2HR ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones-Open-Back-Philips-Fidelio-X2HR ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones-Closed-Back-Beyerdynamic-DT-770-PRO ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "16 ohms" ,
+                                                                                                          "4 - 40000 Hz" ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "105 dB" .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HeadphonesPort
 :HeadphonesPort rdf:type owl:NamedIndividual .
 
@@ -610,6 +647,7 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_HD_Graphics_530 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOLED> :Display-AW3423DW ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOpenBackHeadphones> :Headphones-Open-Back-Philips-Fidelio-X2HR ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply-RM850 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor-i3-6100 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSSD> :SSD-256GB ;
@@ -625,6 +663,7 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBluetoothCard> <http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi/BluetoothCard-AX210> ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Alienware ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase> :Case-CA-H510B-B1 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasClosedBackHeadphones> :Headphones-Closed-Back-Beyerdynamic-DT-770-PRO ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR4> :DDR4-8GB ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDedicated> :GraphicsCard-NVIDIA_GeForce_GTX_1060 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard-BCM5719-4P ;
@@ -663,6 +702,7 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasLaserMouse> :Mouse-Logitech-M510 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMembraneKeyboard> :Keyboard-Membrane-Razer-Cynosa-v2 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOverEarHeadphones> :Headphones-Over-Ear-Sony-WH-1000XM4 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply-ITXAK-L1 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor-i5-6400 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSpeakers> :Speakers-Z240 ;
@@ -969,6 +1009,7 @@
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_HD_Graphics_530 ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOLED> :Display-Sceptre ;
+                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOnEarHeadphones> :Headphones-On-Ear-AKG-Y400 ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply-L280E ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor-i5-6400 ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSSD> :SSD-128GB ;

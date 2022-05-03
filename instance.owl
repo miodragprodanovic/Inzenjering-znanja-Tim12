@@ -558,6 +558,41 @@
                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA1151" .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse-Logitech-M510
+:Mouse-Logitech-M510 rdf:type owl:NamedIndividual ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Logitech ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse-Pro-X ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 1000 ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "125 Hz" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse-Logitech-MX-Master-3
+:Mouse-Logitech-MX-Master-3 rdf:type owl:NamedIndividual ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Logitech ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse-Logitech-M510 ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse-Logitech-M510 ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 4000 ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "125 Hz" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse-Optical-Razer-Pro-Click
+:Mouse-Optical-Razer-Pro-Click rdf:type owl:NamedIndividual ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse-Logitech-M510 ,
+                                                                                                         :Mouse-Logitech-MX-Master-3 ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse-Logitech-MX-Master-3 ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 16000 ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "500 Hz" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse-Pro-X
+:Mouse-Pro-X rdf:type owl:NamedIndividual ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse-Optical-Razer-Pro-Click ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse-Optical-Razer-Pro-Click ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse-Optical-Razer-Pro-Click ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 25600 ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "1000 Hz" .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Alienware_Aurora_R5_DPCWXT01_Silver
 :PC_Alienware_Aurora_R5_DPCWXT01_Silver rdf:type owl:NamedIndividual ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasATX> :Motherboard-B365M ;
@@ -569,6 +604,7 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasErgonomicKeyboard> :Keyboard-Ergonomic-Logitech-Ergo-K860 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard-ST1000BT32 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan-ARCTICP12 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasGamingMouse> :Mouse-Pro-X ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD> :HDD-512GB ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_HD_Graphics_530 ;
@@ -599,6 +635,7 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_UHD_Graphics_630 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMechanicalKeyboard> :Keyboard-Mechanical-Ducky-Shine-7-Gunmetal-RGB-LED-Double-Shot-PBT ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOpticalMouse> :Mouse-Optical-Razer-Pro-Click ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply-XPS8500 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor-i5-8400 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSSD> :SSD-128GB ;
@@ -623,6 +660,7 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIPS> :Display-S2721DGF ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_HD_Graphics_530 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasLaserMouse> :Mouse-Logitech-M510 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMembraneKeyboard> :Keyboard-Membrane-Razer-Cynosa-v2 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply-ITXAK-L1 ;
@@ -801,34 +839,43 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-JBLQuantum
 :Speakers-JBLQuantum rdf:type owl:NamedIndividual ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers-Z240 ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterFrequencyResponseRangeThan> :Speakers-Z240 ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-JBL ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersFrequencyResponse> "60 - 20000 Hz" ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "30W" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-Tytan2.1
 :Speakers-Tytan2.1 rdf:type owl:NamedIndividual ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers-Z313 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterFrequencyResponseRangeThan> :Speakers-Z313 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Trust ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersFrequencyResponse> "20 - 20000 Hz" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "60W" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-Z240
 :Speakers-Z240 rdf:type owl:NamedIndividual ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Logitech ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersFrequencyResponse> "200 - 20000 Hz" ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "20W" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-Z313
 :Speakers-Z313 rdf:type owl:NamedIndividual ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers-JBLQuantum ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterFrequencyResponseRangeThan> :Speakers-Z333 ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Logitech ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersFrequencyResponse> "48 - 20000 Hz" ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "50W" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-Z333
 :Speakers-Z333 rdf:type owl:NamedIndividual ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers-Tytan2.1 ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterFrequencyResponseRangeThan> :Speakers-JBLQuantum ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Logitech ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersFrequencyResponse> "55 - 20000 Hz" ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "80W" .
 
 
@@ -914,6 +961,7 @@
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Fujitsu ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase> :Case-CA-H52FW-01 ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR4> :DDR4-8GB ;
+                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasErgonomicMouse> :Mouse-Logitech-MX-Master-3 ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard-ST2000SPEXI ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan-KB23 ;
                                                                                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasGamingKeyboard> :Keyboard-Gaming-Corsair-K100-RGB ;

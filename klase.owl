@@ -68,11 +68,25 @@
             rdfs:range :Adapter .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterFrequencyResponseRangeThan
+:hasBetterFrequencyResponseRangeThan rdf:type owl:ObjectProperty ,
+                                              owl:TransitiveProperty ;
+                                     rdfs:domain :Speakers ;
+                                     rdfs:range :Speakers .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan
 :hasBetterKeystrokeThan rdf:type owl:ObjectProperty ,
                                  owl:TransitiveProperty ;
                         rdfs:domain :Keyboard ;
                         rdfs:range :Keyboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan
+:hasBetterPollingRateThan rdf:type owl:ObjectProperty ,
+                                   owl:TransitiveProperty ;
+                          rdfs:domain :Mouse ;
+                          rdfs:range :Mouse .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBluetoothCard
@@ -173,6 +187,13 @@
                       rdfs:range :ErgonomicKeyboard .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasErgonomicMouse
+:hasErgonomicMouse rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasMouse ;
+                   rdfs:domain :Computer ;
+                   rdfs:range :ErgonomicMouse .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard
 :hasEthernetCard rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasAdapter ;
@@ -200,6 +221,13 @@
                    rdfs:subPropertyOf :hasKeyboard ;
                    rdfs:domain :Computer ;
                    rdfs:range :GamingKeyboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasGamingMouse
+:hasGamingMouse rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasMouse ;
+                rdfs:domain :Computer ;
+                rdfs:range :GamingMouse .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasGraphicsCard
@@ -255,6 +283,14 @@
                rdfs:range :Integrated .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasJoystick
+:hasJoystick rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasPointingDevice ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain :Computer ;
+             rdfs:range :Joystick .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasKeyboard
 :hasKeyboard rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasComponent ;
@@ -268,6 +304,13 @@
         rdfs:subPropertyOf :hasDisplay ;
         rdfs:domain :Computer ;
         rdfs:range :LED .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasLaserMouse
+:hasLaserMouse rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasMouse ;
+               rdfs:domain :Computer ;
+               rdfs:range :LaserMouse .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMechanicalKeyboard
@@ -308,11 +351,34 @@
                 rdfs:range :Motherboard .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMouse
+:hasMouse rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :hasPointingDevice ;
+          rdf:type owl:FunctionalProperty ;
+          rdfs:domain :Computer ;
+          rdfs:range :Mouse .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOLED
 :hasOLED rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf :hasDisplay ;
          rdfs:domain :Computer ;
          rdfs:range :OLED .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOpticalMouse
+:hasOpticalMouse rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasMouse ;
+                 rdfs:domain :Computer ;
+                 rdfs:range :OpticalMouse .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPointingDevice
+:hasPointingDevice rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasComponent ;
+                   rdf:type owl:FunctionalProperty ;
+                   rdfs:domain :Computer ;
+                   rdfs:range :PointingDevice .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPort
@@ -489,8 +555,9 @@
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan
-:isKeyboardMoreComfortableThan rdf:type owl:ObjectProperty ,
-                                        owl:TransitiveProperty ;
+:isKeyboardMoreComfortableThan rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :isMoreComfortableThan ;
+                               rdf:type owl:TransitiveProperty ;
                                rdfs:domain :Keyboard ;
                                rdfs:range :Keyboard .
 
@@ -500,6 +567,14 @@
                                     owl:TransitiveProperty ;
                            rdfs:domain :Keyboard ;
                            rdfs:range :Keyboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMoreComfortableThan
+:isMoreComfortableThan rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdf:type owl:TransitiveProperty ;
+                       rdfs:domain :Hardware ;
+                       rdfs:range :Hardware .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndDedicatedGraphicsCardCompatible
@@ -560,6 +635,21 @@
                                                           :RAM
                                                         )
                                           ] .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan
+:isMouseMoreComfortableThan rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :isMoreComfortableThan ;
+                            rdf:type owl:TransitiveProperty ;
+                            rdfs:domain :Mouse ;
+                            rdfs:range :Mouse .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan
+:isMouseMoreSensitivThan rdf:type owl:ObjectProperty ,
+                                  owl:TransitiveProperty ;
+                         rdfs:domain :Mouse ;
+                         rdfs:range :Mouse .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible
@@ -703,6 +793,12 @@
                  rdfs:range xsd:boolean .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardKeystroke
+:KeyboardKeystroke rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Keyboard ;
+                   rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryType
 :MemoryType rdf:type owl:DatatypeProperty ;
             rdfs:domain :Motherboard ;
@@ -725,6 +821,18 @@
 :MotherboardPowerSupply rdf:type owl:DatatypeProperty ;
                         rdfs:domain :Motherboard ;
                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI
+:MouseDPI rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Mouse ;
+          rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate
+:MousePollingRate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Mouse ;
+                  rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency
@@ -783,6 +891,12 @@
 :RAMCapacity rdf:type owl:DatatypeProperty ;
              rdfs:domain :RAM ;
              rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersFrequencyResponse
+:SpeakersFrequencyResponse rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :Speakers ;
+                           rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower
@@ -1068,23 +1182,8 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ComputerComponent
 :ComputerComponent rdf:type owl:Class ;
                    owl:equivalentClass [ rdf:type owl:Class ;
-                                         owl:unionOf ( :Adapter
-                                                       :Camera
-                                                       :Case
-                                                       :Display
-                                                       :Fan
-                                                       :GraphicsCard
-                                                       :Headphones
-                                                       :Keyboard
-                                                       :Microphone
-                                                       :Motherboard
-                                                       :Port
-                                                       :PowerSupply
-                                                       :Processor
-                                                       :RAM
-                                                       :SoundCard
-                                                       :Speakers
-                                                       :Storage
+                                         owl:unionOf ( :Hardware
+                                                       :Software
                                                      )
                                        ] .
 
@@ -1141,6 +1240,11 @@
                    rdfs:subClassOf :Keyboard .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ErgonomicMouse
+:ErgonomicMouse rdf:type owl:Class ;
+                rdfs:subClassOf :Mouse .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#EthernetCard
 :EthernetCard rdf:type owl:Class ;
               rdfs:subClassOf :Adapter ;
@@ -1160,6 +1264,11 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GamingKeyboard
 :GamingKeyboard rdf:type owl:Class ;
                 rdfs:subClassOf :Keyboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GamingMouse
+:GamingMouse rdf:type owl:Class ;
+             rdfs:subClassOf :Mouse .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GoodDDR1
@@ -1288,6 +1397,27 @@
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Hardware
 :Hardware rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Class ;
+                                owl:unionOf ( :Adapter
+                                              :Camera
+                                              :Case
+                                              :Display
+                                              :Fan
+                                              :GraphicsCard
+                                              :Headphones
+                                              :Keyboard
+                                              :Microphone
+                                              :Motherboard
+                                              :PointingDevice
+                                              :Port
+                                              :PowerSupply
+                                              :Processor
+                                              :RAM
+                                              :SoundCard
+                                              :Speakers
+                                              :Storage
+                                            )
+                              ] ;
           rdfs:subClassOf :ComputerComponent .
 
 
@@ -1310,6 +1440,12 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Integrated
 :Integrated rdf:type owl:Class ;
             rdfs:subClassOf :GraphicsCard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Joystick
+:Joystick rdf:type owl:Class ;
+          rdfs:subClassOf :PointingDevice ;
+          owl:disjointWith :Mouse .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Keyboard
@@ -1345,6 +1481,11 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Laptop
 :Laptop rdf:type owl:Class ;
         rdfs:subClassOf :Computer .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#LaserMouse
+:LaserMouse rdf:type owl:Class ;
+            rdfs:subClassOf :Mouse .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MechanicalKeyboard
@@ -1388,14 +1529,29 @@
              rdfs:subClassOf :Hardware .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Mouse
+:Mouse rdf:type owl:Class ;
+       rdfs:subClassOf :PointingDevice .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OLED
 :OLED rdf:type owl:Class ;
       rdfs:subClassOf :Display .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OpticalMouse
+:OpticalMouse rdf:type owl:Class ;
+              rdfs:subClassOf :Mouse .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PicoBTX
 :PicoBTX rdf:type owl:Class ;
          rdfs:subClassOf :Motherboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PointingDevice
+:PointingDevice rdf:type owl:Class ;
+                rdfs:subClassOf :Hardware .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Port

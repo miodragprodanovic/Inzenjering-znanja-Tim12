@@ -313,6 +313,109 @@
         rdfs:range :IPS .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledApplication
+:hasInstalledApplication rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Computer ;
+                         rdfs:range :ApplicationSoftware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledFirefox
+:hasInstalledFirefox rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasInstalledWebBrowser ;
+                     rdfs:domain :Computer ;
+                     rdfs:range :Firefox .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledGoogleChrome
+:hasInstalledGoogleChrome rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :hasInstalledWebBrowser ;
+                          rdfs:domain :Computer ;
+                          rdfs:range :GoogleChrome .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledLinux
+:hasInstalledLinux rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasInstalledOperatingSystem ;
+                   rdfs:domain :Computer ;
+                   rdfs:range :Linux .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledMacOS
+:hasInstalledMacOS rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasInstalledOperatingSystem ;
+                   rdfs:domain :Computer ;
+                   rdfs:range :MacOS .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledMicrosoftEdge
+:hasInstalledMicrosoftEdge rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :hasInstalledWebBrowser ;
+                           rdfs:domain :Computer ;
+                           rdfs:range :MicrosoftEdge .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledMicrosoftExcel
+:hasInstalledMicrosoftExcel rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :hasInstalledSpreadsheedSoftware ;
+                            rdfs:domain :Computer ;
+                            rdfs:range :MicrosoftExcel .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledMicrosoftPowerPoint
+:hasInstalledMicrosoftPowerPoint rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :hasInstalledPresentationSoftware ;
+                                 rdfs:domain :Computer ;
+                                 rdfs:range :MicrosoftPowerPoint .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledMultimediaSoftware
+:hasInstalledMultimediaSoftware rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :hasInstalledApplication ;
+                                rdfs:domain :Computer ;
+                                rdfs:range :MultimediaSoftware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledOperatingSystem
+:hasInstalledOperatingSystem rdf:type owl:ObjectProperty ;
+                             rdfs:domain :Computer ;
+                             rdfs:range :OperatingSystem .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledPresentationSoftware
+:hasInstalledPresentationSoftware rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf :hasInstalledApplication ;
+                                  rdfs:domain :Computer ;
+                                  rdfs:range :PresentationSoftware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledSpreadsheedSoftware
+:hasInstalledSpreadsheedSoftware rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :hasInstalledApplication ;
+                                 rdfs:domain :Computer ;
+                                 rdfs:range :SpreadsheetSoftware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledVLCMedia
+:hasInstalledVLCMedia rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasInstalledMultimediaSoftware ;
+                      rdfs:domain :Computer ;
+                      rdfs:range :VLCMedia .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledWebBrowser
+:hasInstalledWebBrowser rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasInstalledApplication ;
+                        rdfs:domain :Computer ;
+                        rdfs:range :WebBrowser .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledWindows
+:hasInstalledWindows rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasInstalledOperatingSystem ;
+                     rdfs:domain :Computer ;
+                     rdfs:range :Windows .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated
 :hasIntegrated rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :hasGraphicsCard ;
@@ -876,6 +979,18 @@
                    rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#LinuxVersion
+:LinuxVersion rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Linux ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MacOSVersion
+:MacOSVersion rdf:type owl:DatatypeProperty ;
+              rdfs:domain :MacOS ;
+              rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryType
 :MemoryType rdf:type owl:DatatypeProperty ;
             rdfs:domain :Motherboard ;
@@ -994,6 +1109,12 @@
                  rdfs:range xsd:int .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#WindowsVersion
+:WindowsVersion rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Windows ;
+                rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard
 :processorHasIntegratedGraphicsCard rdf:type owl:DatatypeProperty ;
                                     rdfs:range xsd:boolean .
@@ -1021,6 +1142,19 @@
                                            )
                              ] ;
          rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ApplicationSoftware
+:ApplicationSoftware rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Class ;
+                                           owl:unionOf ( :MultimediaSoftware
+                                                         :PresentationSoftware
+                                                         :SpreadsheetSoftware
+                                                         :WebBrowser
+                                                       )
+                                         ] ;
+                     rdfs:subClassOf :Software ;
+                     owl:disjointWith :SystemSoftware .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AvarageDDR1
@@ -1339,6 +1473,11 @@
      rdfs:subClassOf :Hardware .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Firefox
+:Firefox rdf:type owl:Class ;
+         rdfs:subClassOf :WebBrowser .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#FlexibleKeyboard
 :FlexibleKeyboard rdf:type owl:Class ;
                   rdfs:subClassOf :Keyboard .
@@ -1452,6 +1591,11 @@
                                                  rdf:type owl:Class
                                                ] ;
                            rdfs:subClassOf :Dedicated .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GoogleChrome
+:GoogleChrome rdf:type owl:Class ;
+              rdfs:subClassOf :WebBrowser .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCard
@@ -1578,6 +1722,16 @@
             rdfs:subClassOf :Mouse .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Linux
+:Linux rdf:type owl:Class ;
+       rdfs:subClassOf :OperatingSystem .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MacOS
+:MacOS rdf:type owl:Class ;
+       rdfs:subClassOf :OperatingSystem .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MechanicalKeyboard
 :MechanicalKeyboard rdf:type owl:Class ;
                     rdfs:subClassOf :Keyboard ;
@@ -1598,6 +1752,21 @@
 :MicrophonePort rdf:type owl:Class ;
                 rdfs:subClassOf :Port ;
                 owl:disjointWith :USBPort .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MicrosoftEdge
+:MicrosoftEdge rdf:type owl:Class ;
+               rdfs:subClassOf :WebBrowser .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MicrosoftExcel
+:MicrosoftExcel rdf:type owl:Class ;
+                rdfs:subClassOf :SpreadsheetSoftware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MicrosoftPowerPoint
+:MicrosoftPowerPoint rdf:type owl:Class ;
+                     rdfs:subClassOf :PresentationSoftware .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MiniITX
@@ -1624,6 +1793,11 @@
        rdfs:subClassOf :PointingDevice .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MultimediaSoftware
+:MultimediaSoftware rdf:type owl:Class ;
+                    rdfs:subClassOf :ApplicationSoftware .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OLED
 :OLED rdf:type owl:Class ;
       rdfs:subClassOf :Display .
@@ -1638,6 +1812,17 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OpenBackHeadphones
 :OpenBackHeadphones rdf:type owl:Class ;
                     rdfs:subClassOf :Headphones .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OperatingSystem
+:OperatingSystem rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( :Linux
+                                                     :MacOS
+                                                     :Windows
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf :SystemSoftware .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OpticalMouse
@@ -1680,6 +1865,11 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupply
 :PowerSupply rdf:type owl:Class ;
              rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PresentationSoftware
+:PresentationSoftware rdf:type owl:Class ;
+                      rdfs:subClassOf :ApplicationSoftware .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Processor
@@ -1889,6 +2079,11 @@
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Software
 :Software rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Class ;
+                                owl:unionOf ( :ApplicationSoftware
+                                              :SystemSoftware
+                                            )
+                              ] ;
           rdfs:subClassOf :ComputerComponent .
 
 
@@ -1902,6 +2097,11 @@
           rdfs:subClassOf :Hardware .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpreadsheetSoftware
+:SpreadsheetSoftware rdf:type owl:Class ;
+                     rdfs:subClassOf :ApplicationSoftware .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Storage
 :Storage rdf:type owl:Class ;
          owl:equivalentClass [ rdf:type owl:Class ;
@@ -1910,6 +2110,11 @@
                                            )
                              ] ;
          rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SystemSoftware
+:SystemSoftware rdf:type owl:Class ;
+                rdfs:subClassOf :Software .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#TN
@@ -1943,9 +2148,24 @@
     rdfs:subClassOf :LED .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#VLCMedia
+:VLCMedia rdf:type owl:Class ;
+          rdfs:subClassOf :MultimediaSoftware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#WebBrowser
+:WebBrowser rdf:type owl:Class ;
+            rdfs:subClassOf :ApplicationSoftware .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Wi-FiCard
 :Wi-FiCard rdf:type owl:Class ;
            rdfs:subClassOf :WirelessCard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Windows
+:Windows rdf:type owl:Class ;
+         rdfs:subClassOf :OperatingSystem .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#WirelessCard
@@ -2026,6 +2246,14 @@
   owl:members ( :IPS
                 :TN
                 :VA
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Linux
+                :MacOS
+                :Windows
               )
 ] .
 

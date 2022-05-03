@@ -630,6 +630,21 @@
              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "1000 Hz" .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystem-Windows-10-Pro
+:OperatingSystem-Windows-10-Pro rdf:type owl:NamedIndividual ;
+                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#WindowsVersion> "10 Pro" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystemLinuxUbuntu
+:OperatingSystemLinuxUbuntu rdf:type owl:NamedIndividual ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LinuxVersion> "Ubuntu" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystemMacOS11
+:OperatingSystemMacOS11 rdf:type owl:NamedIndividual ;
+                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MacOSVersion> "11"^^xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Alienware_Aurora_R5_DPCWXT01_Silver
 :PC_Alienware_Aurora_R5_DPCWXT01_Silver rdf:type owl:NamedIndividual ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasATX> :Motherboard-B365M ;
@@ -644,6 +659,7 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasGamingMouse> :Mouse-Pro-X ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD> :HDD-512GB ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledOperatingSystem> :OperatingSystemLinuxUbuntu ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_HD_Graphics_530 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOLED> :Display-AW3423DW ;
@@ -671,6 +687,7 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD> :HDD-256GB ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDMIPort> :HDMIPort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledOperatingSystem> :OperatingSystem-Windows-10-Pro ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_UHD_Graphics_630 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMechanicalKeyboard> :Keyboard-Mechanical-Ducky-Shine-7-Gunmetal-RGB-LED-Double-Shot-PBT ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
@@ -698,6 +715,7 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDMIPort> :HDMIPort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIPS> :Display-S2721DGF ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledOperatingSystem> :OperatingSystemMacOS11 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_HD_Graphics_530 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasLaserMouse> :Mouse-Logitech-M510 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMembraneKeyboard> :Keyboard-Membrane-Razer-Cynosa-v2 ;

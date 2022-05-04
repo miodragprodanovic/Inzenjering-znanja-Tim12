@@ -13,6 +13,10 @@
 #    Annotation properties
 #################################################################
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#AngleOfVisibility
+:AngleOfVisibility rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#LanguagesHeTranslate
 :LanguagesHeTranslate rdf:type owl:AnnotationProperty .
 
@@ -25,8 +29,16 @@
 :TranslatorsName rdf:type owl:AnnotationProperty .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#TypeOfFocus
+:TypeOfFocus rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#UtilityName
 :UtilityName rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#VideoResolution
+:VideoResolution rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#giveMoreOptionsThan
@@ -35,6 +47,10 @@
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#isBetterInCompressionThan
 :isBetterInCompressionThan rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#isCameraBetterThan
+:isCameraBetterThan rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#isMoreComplicatedThan
@@ -582,6 +598,37 @@
 :CCleaner rdf:type owl:NamedIndividual ;
           :OperatingSystemsItRunsOn "Windows, Android, macOS" ;
           :UtilityName "CCleaner" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera-Logitech_C505e
+:Camera-Logitech_C505e rdf:type owl:NamedIndividual ;
+                       :AngleOfVisibility 60 ;
+                       :TypeOfFocus "Fixed" ;
+                       :VideoResolution "1280 x 720" ;
+                       :isCameraBetterThan :Camera-Trust_SpotLight_Pro .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera-Logitech_Rally_Plus
+:Camera-Logitech_Rally_Plus rdf:type owl:NamedIndividual ;
+                            :AngleOfVisibility 90 ;
+                            :TypeOfFocus "Auto" ;
+                            :VideoResolution "4096 x 2160" ;
+                            :isCameraBetterThan :Camera-Natec_Lori_Plus_NKI-1672 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera-Natec_Lori_Plus_NKI-1672
+:Camera-Natec_Lori_Plus_NKI-1672 rdf:type owl:NamedIndividual ;
+                                 :AngleOfVisibility 65 ;
+                                 :TypeOfFocus "Auto" ;
+                                 :VideoResolution "1920 x 1080" ;
+                                 :isCameraBetterThan :Camera-Logitech_C505e .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera-Trust_SpotLight_Pro
+:Camera-Trust_SpotLight_Pro rdf:type owl:NamedIndividual ;
+                            :AngleOfVisibility 45 ;
+                            :TypeOfFocus "Fixed" ;
+                            :VideoResolution "640 x 480" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Case-3040

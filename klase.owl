@@ -672,6 +672,12 @@
                            rdfs:range :Utilities .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isCameraBetterThan
+:isCameraBetterThan rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Camera ;
+                    rdfs:range :Camera .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayBiggerThan
 :isDisplayBiggerThan rdf:type owl:ObjectProperty ,
                               owl:TransitiveProperty ;
@@ -905,6 +911,12 @@
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AngleOfVisibility
+:AngleOfVisibility rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Camera ;
+                   rdfs:range xsd:int .
+
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ComputerName
 :ComputerName rdf:type owl:DatatypeProperty ;
@@ -1145,10 +1157,22 @@
                  rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfFocus
+:TypeOfFocus rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Camera ;
+             rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#UtilityName
 :UtilityName rdf:type owl:DatatypeProperty ;
              rdfs:domain :Utilities ;
              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#VideoResolution
+:VideoResolution rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Camera ;
+                 rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#WindowsVersion

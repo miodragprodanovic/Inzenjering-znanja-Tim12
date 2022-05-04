@@ -55,6 +55,12 @@
                              rdfs:range :Speakers .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#giveMoreOptionsThan
+:giveMoreOptionsThan rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Utilities ;
+                     rdfs:range :Utilities .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasAT
 :hasAT rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf :hasMotherboard ;
@@ -660,6 +666,12 @@
                  rdfs:range :WirelessCard .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isBetterInCompressionThan
+:isBetterInCompressionThan rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Utilities ;
+                           rdfs:range :Utilities .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayBiggerThan
 :isDisplayBiggerThan rdf:type owl:ObjectProperty ,
                               owl:TransitiveProperty ;
@@ -737,6 +749,12 @@
                        rdf:type owl:TransitiveProperty ;
                        rdfs:domain :Hardware ;
                        rdfs:range :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMoreComplicatedThan
+:isMoreComplicatedThan rdf:type owl:ObjectProperty ;
+                       rdfs:domain :ProgramTranslators ;
+                       rdfs:range :ProgramTranslators .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndDedicatedGraphicsCardCompatible
@@ -979,6 +997,12 @@
                    rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#LanguagesHeTranslate
+:LanguagesHeTranslate rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :ProgramTranslators ;
+                      rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#LinuxVersion
 :LinuxVersion rdf:type owl:DatatypeProperty ;
               rdfs:domain :Linux ;
@@ -1025,6 +1049,12 @@
 :MousePollingRate rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Mouse ;
                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OperatingSystemsItRunsOn
+:OperatingSystemsItRunsOn rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :Utilities ;
+                          rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency
@@ -1107,6 +1137,18 @@
 :StorageCapacity rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Storage ;
                  rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#TranslatorsName
+:TranslatorsName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :ProgramTranslators ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#UtilityName
+:UtilityName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Utilities ;
+             rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#WindowsVersion
@@ -1452,6 +1494,13 @@
          rdfs:subClassOf :Hardware .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Drivers
+:Drivers rdf:type owl:Class ;
+         rdfs:subClassOf :SystemSoftware ;
+         owl:disjointWith :ProgramTranslators ,
+                          :Utilities .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ErgonomicKeyboard
 :ErgonomicKeyboard rdf:type owl:Class ;
                    rdfs:subClassOf :Keyboard .
@@ -1695,6 +1744,11 @@
           rdfs:subClassOf :Hardware .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardDrivers
+:KeyboardDrivers rdf:type owl:Class ;
+                 rdfs:subClassOf :Drivers .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#LED
 :LED rdf:type owl:Class ;
      owl:equivalentClass [ rdf:type owl:Class ;
@@ -1774,6 +1828,11 @@
          rdfs:subClassOf :Motherboard .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ModemDrivers
+:ModemDrivers rdf:type owl:Class ;
+              rdfs:subClassOf :Drivers .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Motherboard
 :Motherboard rdf:type owl:Class ;
              owl:equivalentClass [ rdf:type owl:Class ;
@@ -1788,9 +1847,19 @@
              rdfs:subClassOf :Hardware .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardDrivers
+:MotherboardDrivers rdf:type owl:Class ;
+                    rdfs:subClassOf :Drivers .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Mouse
 :Mouse rdf:type owl:Class ;
        rdfs:subClassOf :PointingDevice .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDrivers
+:MouseDrivers rdf:type owl:Class ;
+              rdfs:subClassOf :Drivers .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MultimediaSoftware
@@ -1822,7 +1891,7 @@
                                                      :Windows
                                                    )
                                      ] ;
-                 rdfs:subClassOf :SystemSoftware .
+                 rdfs:subClassOf :Software .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OpticalMouse
@@ -1870,6 +1939,11 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PresentationSoftware
 :PresentationSoftware rdf:type owl:Class ;
                       rdfs:subClassOf :ApplicationSoftware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PrintDrivers
+:PrintDrivers rdf:type owl:Class ;
+              rdfs:subClassOf :Drivers .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Processor
@@ -1965,6 +2039,12 @@
                                                          rdf:type owl:Class
                                                        ] ;
                                    rdfs:subClassOf :Dedicated .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProgramTranslators
+:ProgramTranslators rdf:type owl:Class ;
+                    rdfs:subClassOf :SystemSoftware ;
+                    owl:disjointWith :Utilities .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAM
@@ -2092,6 +2172,11 @@
            rdfs:subClassOf :Hardware .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SoundcardDrivers
+:SoundcardDrivers rdf:type owl:Class ;
+                  rdfs:subClassOf :Drivers .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Speakers
 :Speakers rdf:type owl:Class ;
           rdfs:subClassOf :Hardware .
@@ -2143,6 +2228,11 @@
             rdfs:subClassOf :USBPort .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Utilities
+:Utilities rdf:type owl:Class ;
+           rdfs:subClassOf :SystemSoftware .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#VA
 :VA rdf:type owl:Class ;
     rdfs:subClassOf :LED .
@@ -2151,6 +2241,11 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#VLCMedia
 :VLCMedia rdf:type owl:Class ;
           rdfs:subClassOf :MultimediaSoftware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#VideoDrivers
+:VideoDrivers rdf:type owl:Class ;
+              rdfs:subClassOf :Drivers .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#WebBrowser

@@ -114,23 +114,40 @@
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#CCleaner
-:CCleaner rdf:type owl:NamedIndividual .
+:CCleaner rdf:type owl:NamedIndividual ;
+          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#OperatingSystemsItRunsOn> "Windows, Android, macOS" ;
+          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#UtilityName> "CCleaner" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera-Logitech_C505e
-:Camera-Logitech_C505e rdf:type owl:NamedIndividual .
+:Camera-Logitech_C505e rdf:type owl:NamedIndividual ;
+                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isCameraBetterThan> :Camera-Trust_SpotLight_Pro ;
+                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#AngleOfVisibility> 60 ;
+                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfFocus> "Fixed" ;
+                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#VideoResolution> "1280x720" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera-Logitech_Rally_Plus
-:Camera-Logitech_Rally_Plus rdf:type owl:NamedIndividual .
+:Camera-Logitech_Rally_Plus rdf:type owl:NamedIndividual ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isCameraBetterThan> :Camera-Natec_Lori_Plus_NKI-1672 ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#AngleOfVisibility> 90 ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfFocus> "Auto" ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#VideoResolution> "4096x2160" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera-Natec_Lori_Plus_NKI-1672
-:Camera-Natec_Lori_Plus_NKI-1672 rdf:type owl:NamedIndividual .
+:Camera-Natec_Lori_Plus_NKI-1672 rdf:type owl:NamedIndividual ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isCameraBetterThan> :Camera-Logitech_C505e ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#AngleOfVisibility> 65 ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfFocus> "Auto" ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#VideoResolution> "1920x1080" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera-Trust_SpotLight_Pro
-:Camera-Trust_SpotLight_Pro rdf:type owl:NamedIndividual .
+:Camera-Trust_SpotLight_Pro rdf:type owl:NamedIndividual ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#AngleOfVisibility> 45 ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfFocus> "Fixed" ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#VideoResolution> "640x480" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Case-3040
@@ -853,11 +870,16 @@
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#ProgramTranslator-Asembler
-:ProgramTranslator-Asembler rdf:type owl:NamedIndividual .
+:ProgramTranslator-Asembler rdf:type owl:NamedIndividual ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMoreComplicatedThan> :ProgramTranslator-Compiler ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LanguagesHeTranslate> "Simbolic language" ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TranslatorsName> "Asembler" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#ProgramTranslator-Compiler
-:ProgramTranslator-Compiler rdf:type owl:NamedIndividual .
+:ProgramTranslator-Compiler rdf:type owl:NamedIndividual ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LanguagesHeTranslate> "Basic, Pascal, C, C++, C#, Java, Fortran" ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TranslatorsName> "Compiler" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD-128GB
@@ -1008,11 +1030,17 @@
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#WinRar
-:WinRar rdf:type owl:NamedIndividual .
+:WinRar rdf:type owl:NamedIndividual ;
+        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isBetterInCompressionThan> :WinZip ;
+        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#OperatingSystemsItRunsOn> "Windows, Android" ;
+        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#UtilityName> "WinRar" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#WinZip
-:WinZip rdf:type owl:NamedIndividual .
+:WinZip rdf:type owl:NamedIndividual ;
+        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#giveMoreOptionsThan> :WinRar ;
+        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#OperatingSystemsItRunsOn> "Windows, iOS, macOS, Android" ;
+        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#UtilityName> "WinZip" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Fujitsu_ESPRIMO_D_D556/E85+_VFY:D0556P75BOGB?3YNBD_Black

@@ -1,14 +1,8 @@
 package protage.example.protage.model;
-
-import javax.persistence.*;
 import java.util.ArrayList;
 
-@Entity
-@Table(name="getBetterComponent")
+
 public class GetBetterComponent {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
     private ArrayList<Adapter> Adapters;
     private Camera Camera;
     private Case Case;
@@ -38,8 +32,7 @@ public class GetBetterComponent {
 
     public GetBetterComponent(){}
 
-    public GetBetterComponent(long id, ArrayList<Adapter> adapters, protage.example.protage.model.Camera camera, protage.example.protage.model.Case aCase, protage.example.protage.model.Display display, ArrayList<Driver> drivers, protage.example.protage.model.Fan fan, ArrayList<GraphicsCard> graphicsCards, protage.example.protage.model.Headphones headphones, protage.example.protage.model.Keyboard keyboard, protage.example.protage.model.Microphone microphone, protage.example.protage.model.Motherboard motherboard, ArrayList<MultimediaSoftware> multimediaSoftwares, protage.example.protage.model.OperatingSystem operatingSystem, protage.example.protage.model.PointingDevice pointingDevice, ArrayList<Port> ports, protage.example.protage.model.PowerSupply powerSupply, ArrayList<PresentationSoftware> presentationSoftwares, protage.example.protage.model.Processor processor, protage.example.protage.model.ProgramTranslator programTranslator, protage.example.protage.model.RAM RAM, protage.example.protage.model.SoundCard soundCard, protage.example.protage.model.Speakers speakers, ArrayList<SpreadsheetSoftware> spreadsheetSoftwares, ArrayList<Storage> storages, ArrayList<Utility> utilities, String whatToUpgrade) {
-        this.id = id;
+    public GetBetterComponent(ArrayList<Adapter> adapters, protage.example.protage.model.Camera camera, protage.example.protage.model.Case aCase, protage.example.protage.model.Display display, ArrayList<Driver> drivers, protage.example.protage.model.Fan fan, ArrayList<GraphicsCard> graphicsCards, protage.example.protage.model.Headphones headphones, protage.example.protage.model.Keyboard keyboard, protage.example.protage.model.Microphone microphone, protage.example.protage.model.Motherboard motherboard, ArrayList<MultimediaSoftware> multimediaSoftwares, protage.example.protage.model.OperatingSystem operatingSystem, protage.example.protage.model.PointingDevice pointingDevice, ArrayList<Port> ports, protage.example.protage.model.PowerSupply powerSupply, ArrayList<PresentationSoftware> presentationSoftwares, protage.example.protage.model.Processor processor, protage.example.protage.model.ProgramTranslator programTranslator, protage.example.protage.model.RAM RAM, protage.example.protage.model.SoundCard soundCard, protage.example.protage.model.Speakers speakers, ArrayList<SpreadsheetSoftware> spreadsheetSoftwares, ArrayList<Storage> storages, ArrayList<Utility> utilities, String whatToUpgrade) {
         Adapters = adapters;
         Camera = camera;
         Case = aCase;
@@ -66,14 +59,6 @@ public class GetBetterComponent {
         Storages = storages;
         Utilities = utilities;
         WhatToUpgrade = whatToUpgrade;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public ArrayList<Adapter> getAdapters() {

@@ -119,284 +119,284 @@
           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#UtilityName> "CCleaner" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera-Logitech_C505e
-:Camera-Logitech_C505e rdf:type owl:NamedIndividual ;
-                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isCameraBetterThan> :Camera-Trust_SpotLight_Pro ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera_Logitech_C505e
+:Camera_Logitech_C505e rdf:type owl:NamedIndividual ;
+                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isCameraBetterThan> :Camera_Trust_SpotLight_Pro ;
                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#AngleOfVisibility> 60 ;
                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfFocus> "Fixed" ;
                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#VideoResolution> "1280x720" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera-Logitech_Rally_Plus
-:Camera-Logitech_Rally_Plus rdf:type owl:NamedIndividual ;
-                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isCameraBetterThan> :Camera-Natec_Lori_Plus_NKI-1672 ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera_Logitech_Rally_Plus
+:Camera_Logitech_Rally_Plus rdf:type owl:NamedIndividual ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isCameraBetterThan> :Camera_Natec_Lori_Plus_NKI_1672 ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#AngleOfVisibility> 90 ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfFocus> "Auto" ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#VideoResolution> "4096x2160" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera-Natec_Lori_Plus_NKI-1672
-:Camera-Natec_Lori_Plus_NKI-1672 rdf:type owl:NamedIndividual ;
-                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isCameraBetterThan> :Camera-Logitech_C505e ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera_Natec_Lori_Plus_NKI_1672
+:Camera_Natec_Lori_Plus_NKI_1672 rdf:type owl:NamedIndividual ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isCameraBetterThan> :Camera_Logitech_C505e ;
                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#AngleOfVisibility> 65 ;
                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfFocus> "Auto" ;
                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#VideoResolution> "1920x1080" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera-Trust_SpotLight_Pro
-:Camera-Trust_SpotLight_Pro rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera_Trust_SpotLight_Pro
+:Camera_Trust_SpotLight_Pro rdf:type owl:NamedIndividual ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#AngleOfVisibility> 45 ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfFocus> "Fixed" ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#VideoResolution> "640x480" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Case-3040
-:Case-3040 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Case_3040
+:Case_3040 rdf:type owl:NamedIndividual ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Dell .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Case-CA-H510B-B1
-:Case-CA-H510B-B1 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Case_CA_H510B_B1
+:Case_CA_H510B_B1 rdf:type owl:NamedIndividual ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Dell .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Case-CA-H510B-W1
-:Case-CA-H510B-W1 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Case_CA_H510B_W1
+:Case_CA_H510B_W1 rdf:type owl:NamedIndividual ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Alienware .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Case-CA-H52FW-01
-:Case-CA-H52FW-01 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Case_CA_H52FW_01
+:Case_CA_H52FW_01 rdf:type owl:NamedIndividual ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Fujitsu .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Case-H510
-:Case-H510 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Case_H510
+:Case_H510 rdf:type owl:NamedIndividual ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Lenovo .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR3-16GB
-:DDR3-16GB rdf:type owl:NamedIndividual ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMMorePreferableThan> :DDR4-8GB ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMStorageMoreThan> :DDR3-8GB ,
-                                                                                 :DDR4-8GB ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR3_16GB
+:DDR3_16GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMMorePreferableThan> :DDR4_8GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMStorageMoreThan> :DDR3_8GB ,
+                                                                                 :DDR4_8GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAMCapacity> 16 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR3-64GB
-:DDR3-64GB rdf:type owl:NamedIndividual ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMMorePreferableThan> :DDR4-16GB ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMStorageMoreThan> :DDR3-16GB ,
-                                                                                 :DDR4-16GB ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR3_64GB
+:DDR3_64GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMMorePreferableThan> :DDR4_16GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMStorageMoreThan> :DDR3_16GB ,
+                                                                                 :DDR4_16GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAMCapacity> 64 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR3-8GB
-:DDR3-8GB rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR3_8GB
+:DDR3_8GB rdf:type owl:NamedIndividual ;
           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAMCapacity> 8 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR4-16GB
-:DDR4-16GB rdf:type owl:NamedIndividual ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMMorePreferableThan> :DDR3-16GB ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMStorageMoreThan> :DDR3-8GB ,
-                                                                                 :DDR4-8GB ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR4_16GB
+:DDR4_16GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMMorePreferableThan> :DDR3_16GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMStorageMoreThan> :DDR3_8GB ,
+                                                                                 :DDR4_8GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAMCapacity> 16 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR4-64GB
-:DDR4-64GB rdf:type owl:NamedIndividual ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMMorePreferableThan> :DDR3-64GB ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMStorageMoreThan> :DDR3-16GB ,
-                                                                                 :DDR4-16GB ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR4_64GB
+:DDR4_64GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMMorePreferableThan> :DDR3_64GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMStorageMoreThan> :DDR3_16GB ,
+                                                                                 :DDR4_16GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAMCapacity> 64 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR4-8GB
-:DDR4-8GB rdf:type owl:NamedIndividual ;
-          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMMorePreferableThan> :DDR3-8GB ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#DDR4_8GB
+:DDR4_8GB rdf:type owl:NamedIndividual ;
+          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isRAMMorePreferableThan> :DDR3_8GB ;
           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAMCapacity> 8 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display-AW3423DW
-:Display-AW3423DW rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display_AW3423DW
+:Display_AW3423DW rdf:type owl:NamedIndividual ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Alienware ;
-                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayBiggerThan> :Display-S2721DGF ;
-                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayMorePreferableThan> :Display-S2721DGF ;
-                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayRefreshRateMoreThan> :Display-S2721DGF ;
-                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayResolutionMoreThan> :Display-S2721DGF ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayBiggerThan> :Display_S2721DGF ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayMorePreferableThan> :Display_S2721DGF ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayRefreshRateMoreThan> :Display_S2721DGF ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayResolutionMoreThan> :Display_S2721DGF ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayRefreshRate> "175Hz" ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayResolution> "3440×1440" ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplaySize> "34\"" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display-CRG5
-:Display-CRG5 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display_CRG5
+:Display_CRG5 rdf:type owl:NamedIndividual ;
               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Samsung ;
-              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayMorePreferableThan> :Display-Sceptre ;
-              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayRefreshRateMoreThan> :Display-Sceptre ,
-                                                                                            :Display-V-Line ;
+              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayMorePreferableThan> :Display_Sceptre ;
+              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayRefreshRateMoreThan> :Display_Sceptre ,
+                                                                                            :Display_V_Line ;
               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayRefreshRate> "144Hz" ;
               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayResolution> "1920 x 1080" ;
               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplaySize> "24\"" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display-S2721DGF
-:Display-S2721DGF rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display_S2721DGF
+:Display_S2721DGF rdf:type owl:NamedIndividual ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Dell ;
-                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayBiggerThan> :Display-CRG5 ,
-                                                                                       :Display-Sceptre ,
-                                                                                       :Display-V-Line ;
-                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayMorePreferableThan> :Display-CRG5 ;
-                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayRefreshRateMoreThan> :Display-CRG5 ;
-                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayResolutionMoreThan> :Display-CRG5 ,
-                                                                                               :Display-Sceptre ,
-                                                                                               :Display-V-Line ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayBiggerThan> :Display_CRG5 ,
+                                                                                       :Display_Sceptre ,
+                                                                                       :Display_V_Line ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayMorePreferableThan> :Display_CRG5 ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayRefreshRateMoreThan> :Display_CRG5 ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayResolutionMoreThan> :Display_CRG5 ,
+                                                                                               :Display_Sceptre ,
+                                                                                               :Display_V_Line ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayRefreshRate> "165Hz" ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayResolution> "2560 x 1440" ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplaySize> "27\"" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display-Sceptre
-:Display-Sceptre rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display_Sceptre
+:Display_Sceptre rdf:type owl:NamedIndividual ;
                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Dell ;
-                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayMorePreferableThan> :Display-V-Line ;
+                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isDisplayMorePreferableThan> :Display_V_Line ;
                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayRefreshRate> "75Hz" ;
                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayResolution> "1920 x 1080" ;
                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplaySize> "24\"" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display-V-Line
-:Display-V-Line rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Display_V_Line
+:Display_V_Line rdf:type owl:NamedIndividual ;
                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Philips ;
                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayRefreshRate> "75Hz" ;
                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayResolution> "1920 x 1080" ;
                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplaySize> "24\"" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#EthernetCard-BCM5719-4P
-:EthernetCard-BCM5719-4P rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#EthernetCard_BCM5719_4P
+:EthernetCard_BCM5719_4P rdf:type owl:NamedIndividual ;
                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Dell .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#EthernetCard-BCM5720-2P
-:EthernetCard-BCM5720-2P rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#EthernetCard_BCM5720_2P
+:EthernetCard_BCM5720_2P rdf:type owl:NamedIndividual ;
                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-TP-LINK .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#EthernetCard-ST1000BT32
-:EthernetCard-ST1000BT32 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#EthernetCard_ST1000BT32
+:EthernetCard_ST1000BT32 rdf:type owl:NamedIndividual ;
                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-TP-LINK .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#EthernetCard-ST2000SPEXI
-:EthernetCard-ST2000SPEXI rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#EthernetCard_ST2000SPEXI
+:EthernetCard_ST2000SPEXI rdf:type owl:NamedIndividual ;
                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-TP-LINK .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#EthernetCard-USB31000SPTB
-:EthernetCard-USB31000SPTB rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#EthernetCard_USB31000SPTB
+:EthernetCard_USB31000SPTB rdf:type owl:NamedIndividual ;
                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Philips .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan-ARCTICP12
-:Fan-ARCTICP12 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan_ARCTICP12
+:Fan_ARCTICP12 rdf:type owl:NamedIndividual ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Arctic ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isFanMorePowerfulThan> :Fan-Sahara ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isFanMorePowerfulThan> :Fan_Sahara ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacity> "56CFM" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan-CP3
-:Fan-CP3 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan_CP3
+:Fan_CP3 rdf:type owl:NamedIndividual ;
          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-CP3 ;
-         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isFanMorePowerfulThan> :Fan-DN120 ;
+         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isFanMorePowerfulThan> :Fan_DN120 ;
          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacity> "43CFM" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan-DN120
-:Fan-DN120 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan_DN120
+:Fan_DN120 rdf:type owl:NamedIndividual ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-PCCooler ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isFanMorePowerfulThan> :Fan-KB23 ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isFanMorePowerfulThan> :Fan_KB23 ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacity> "42CFM" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan-KB23
-:Fan-KB23 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan_KB23
+:Fan_KB23 rdf:type owl:NamedIndividual ;
           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-GIM ;
           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacity> "35CFM" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan-Sahara
-:Fan-Sahara rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Fan_Sahara
+:Fan_Sahara rdf:type owl:NamedIndividual ;
             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Sahara ;
-            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isFanMorePowerfulThan> :Fan-CP3 ;
+            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isFanMorePowerfulThan> :Fan_CP3 ;
             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacity> "46CFM" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard-Intel_HD_Graphics_530
-:GraphicsCard-Intel_HD_Graphics_530 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard_Intel_HD_Graphics_530
+:GraphicsCard_Intel_HD_Graphics_530 rdf:type owl:NamedIndividual ;
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Intel ;
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> 300 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard-Intel_UHD_Graphics_630
-:GraphicsCard-Intel_UHD_Graphics_630 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard_Intel_UHD_Graphics_630
+:GraphicsCard_Intel_UHD_Graphics_630 rdf:type owl:NamedIndividual ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Intel ;
-                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :GraphicsCard-Intel_HD_Graphics_530 ;
-                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :GraphicsCard-Intel_HD_Graphics_530 ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :GraphicsCard_Intel_HD_Graphics_530 ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :GraphicsCard_Intel_HD_Graphics_530 ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> 350 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard-NVIDIA_GeForce_GTX_1060
-:GraphicsCard-NVIDIA_GeForce_GTX_1060 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard_NVIDIA_GeForce_GTX_1060
+:GraphicsCard_NVIDIA_GeForce_GTX_1060 rdf:type owl:NamedIndividual ;
                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Nvidia ;
-                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
-                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardMemoryMoreThan> :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
-                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardMemoryMoreThan> :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardMemory> 6 ;
                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardPCI-E> "3.0 ×16" ;
                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardPowerConnectors> "6-pin to 8-pin" ;
                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> 1500 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard-NVIDIA_GeForce_GTX_950
-:GraphicsCard-NVIDIA_GeForce_GTX_950 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard_NVIDIA_GeForce_GTX_950
+:GraphicsCard_NVIDIA_GeForce_GTX_950 rdf:type owl:NamedIndividual ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Nvidia ;
-                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :GraphicsCard-Intel_UHD_Graphics_630 ;
-                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :GraphicsCard-Intel_UHD_Graphics_630 ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardFasterThan> :GraphicsCard_Intel_UHD_Graphics_630 ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isGraphicsCardPreferableThan> :GraphicsCard_Intel_UHD_Graphics_630 ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardMemory> 2 ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardPCI-E> "3.0 x16" ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardPowerConnectors> "6-pin" ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeed> 500 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD-128GB
-:HDD-128GB rdf:type owl:NamedIndividual ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-64GB ,
-                                                                                      :SSD-64GB ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD-64GB ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD_128GB
+:HDD_128GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD_64GB ,
+                                                                                      :SSD_64GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD_64GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 128 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD-256GB
-:HDD-256GB rdf:type owl:NamedIndividual ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-128GB ,
-                                                                                      :SSD-128GB ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD-128GB ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD_256GB
+:HDD_256GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD_128GB ,
+                                                                                      :SSD_128GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD_128GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 256 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD-512GB
-:HDD-512GB rdf:type owl:NamedIndividual ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-256GB ,
-                                                                                      :SSD-256GB ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD-256GB ,
-                                                                                            :SSD-64GB ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD_512GB
+:HDD_512GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD_256GB ,
+                                                                                      :SSD_256GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD_256GB ,
+                                                                                            :SSD_64GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 512 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD-64GB
-:HDD-64GB rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HDD_64GB
+:HDD_64GB rdf:type owl:NamedIndividual ;
           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 64 .
 
 
@@ -404,85 +404,85 @@
 :HDMIPort rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones-Closed-Back-Beyerdynamic-DT-770-PRO
-:Headphones-Closed-Back-Beyerdynamic-DT-770-PRO rdf:type owl:NamedIndividual ;
-                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones-On-Ear-AKG-Y400 ;
-                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones-On-Ear-AKG-Y400 ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HeadphonesPort
+:HeadphonesPort rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_Closed_Back_Beyerdynamic_DT_770_PRO
+:Headphones_Closed_Back_Beyerdynamic_DT_770_PRO rdf:type owl:NamedIndividual ;
+                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_On_Ear_AKG_Y400 ;
+                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_On_Ear_AKG_Y400 ;
                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "100 - 10000 Hz" ;
                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "250 ohms" ;
                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "100.45 dB" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones-On-Ear-AKG-Y400
-:Headphones-On-Ear-AKG-Y400 rdf:type owl:NamedIndividual ;
-                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones-Closed-Back-Beyerdynamic-DT-770-PRO ;
-                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones-Open-Back-Philips-Fidelio-X2HR ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_On_Ear_AKG_Y400
+:Headphones_On_Ear_AKG_Y400 rdf:type owl:NamedIndividual ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_Closed_Back_Beyerdynamic_DT_770_PRO ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_Open_Back_Philips_Fidelio_X2HR ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "20 - 20000 Hz" ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "32 ohms" ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "106 dB" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones-Open-Back-Philips-Fidelio-X2HR
-:Headphones-Open-Back-Philips-Fidelio-X2HR rdf:type owl:NamedIndividual ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones-Closed-Back-Beyerdynamic-DT-770-PRO ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones-On-Ear-AKG-Y400 ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_Open_Back_Philips_Fidelio_X2HR
+:Headphones_Open_Back_Philips_Fidelio_X2HR rdf:type owl:NamedIndividual ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_Closed_Back_Beyerdynamic_DT_770_PRO ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_On_Ear_AKG_Y400 ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "5 - 40000 Hz" ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "30 ohms" ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "100 dB" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones-Over-Ear-Sony-WH-1000XM4
-:Headphones-Over-Ear-Sony-WH-1000XM4 rdf:type owl:NamedIndividual ;
-                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones-Open-Back-Philips-Fidelio-X2HR ;
-                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones-Open-Back-Philips-Fidelio-X2HR ;
-                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones-Closed-Back-Beyerdynamic-DT-770-PRO ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_Over_Ear_Sony_WH_1000XM4
+:Headphones_Over_Ear_Sony_WH_1000XM4 rdf:type owl:NamedIndividual ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_Open_Back_Philips_Fidelio_X2HR ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_Open_Back_Philips_Fidelio_X2HR ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_Closed_Back_Beyerdynamic_DT_770_PRO ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "16 ohms" ,
                                                                                                           "4 - 40000 Hz" ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "105 dB" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#HeadphonesPort
-:HeadphonesPort rdf:type owl:NamedIndividual .
-
-
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard-Ergonomic-Logitech-Ergo-K860
-:Keyboard-Ergonomic-Logitech-Ergo-K860 rdf:type owl:NamedIndividual ;
-                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard-Mechanical-Ducky-Shine-7-Gunmetal-RGB-LED-Double-Shot-PBT ;
-                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard-Gaming-Corsair-K100-RGB ;
-                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard-Membrane-Razer-Cynosa-v2 ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Ergonomic_Logitech_Ergo_K860
+:Keyboard_Ergonomic_Logitech_Ergo_K860 rdf:type owl:NamedIndividual ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Mechanical_Ducky_Shine_7_Gunmetal_RGB_LED_Double_Shot_PBT ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Gaming_Corsair_K100_RGB ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard_Membrane_Razer_Cynosa_v2 ;
                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "false"^^xsd:boolean ;
                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "false"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard-Flexible-Sungwoo-Black
-:Keyboard-Flexible-Sungwoo-Black rdf:type owl:NamedIndividual ;
-                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard-Membrane-Razer-Cynosa-v2 ;
-                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard-Mechanical-Ducky-Shine-7-Gunmetal-RGB-LED-Double-Shot-PBT ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Flexible_Sungwoo_Black
+:Keyboard_Flexible_Sungwoo_Black rdf:type owl:NamedIndividual ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Membrane_Razer_Cynosa_v2 ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Mechanical_Ducky_Shine_7_Gunmetal_RGB_LED_Double_Shot_PBT ;
                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "false"^^xsd:boolean ;
                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "true"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard-Gaming-Corsair-K100-RGB
-:Keyboard-Gaming-Corsair-K100-RGB rdf:type owl:NamedIndividual ;
-                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard-Ergonomic-Logitech-Ergo-K860 ;
-                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard-Flexible-Sungwoo-Black ;
-                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard-Ergonomic-Logitech-Ergo-K860 ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Gaming_Corsair_K100_RGB
+:Keyboard_Gaming_Corsair_K100_RGB rdf:type owl:NamedIndividual ;
+                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Ergonomic_Logitech_Ergo_K860 ;
+                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Flexible_Sungwoo_Black ;
+                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard_Ergonomic_Logitech_Ergo_K860 ;
                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "true"^^xsd:boolean ;
                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "false"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard-Mechanical-Ducky-Shine-7-Gunmetal-RGB-LED-Double-Shot-PBT
-:Keyboard-Mechanical-Ducky-Shine-7-Gunmetal-RGB-LED-Double-Shot-PBT rdf:type owl:NamedIndividual ;
-                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard-Membrane-Razer-Cynosa-v2 ;
-                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard-Membrane-Razer-Cynosa-v2 ;
-                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard-Gaming-Corsair-K100-RGB ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Mechanical_Ducky_Shine_7_Gunmetal_RGB_LED_Double_Shot_PBT
+:Keyboard_Mechanical_Ducky_Shine_7_Gunmetal_RGB_LED_Double_Shot_PBT rdf:type owl:NamedIndividual ;
+                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Membrane_Razer_Cynosa_v2 ;
+                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Membrane_Razer_Cynosa_v2 ;
+                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard_Gaming_Corsair_K100_RGB ;
                                                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "true"^^xsd:boolean ;
                                                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "false"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard-Membrane-Razer-Cynosa-v2
-:Keyboard-Membrane-Razer-Cynosa-v2 rdf:type owl:NamedIndividual ;
-                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard-Flexible-Sungwoo-Black ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Membrane_Razer_Cynosa_v2
+:Keyboard_Membrane_Razer_Cynosa_v2 rdf:type owl:NamedIndividual ;
+                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard_Flexible_Sungwoo_Black ;
                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "false"^^xsd:boolean ;
                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "true"^^xsd:boolean .
 
@@ -491,157 +491,152 @@
 :MicrophonePort rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Motherboard-B365M
-:Motherboard-B365M rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Motherboard_B365M
+:Motherboard_B365M rdf:type owl:NamedIndividual ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Gigabyte ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndDedicatedGraphicsCardCompatible> :GraphicsCard-NVIDIA_GeForce_GTX_1060 ,
-                                                                                                                    :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndPowerSupplyCompatible> :PowerSupply-HU180 ,
-                                                                                                          :PowerSupply-ITXAK-L1 ,
-                                                                                                          :PowerSupply-L280E ,
-                                                                                                          :PowerSupply-RM850 ,
-                                                                                                          :PowerSupply-XPS8500 ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndProcessorCompatible> :Processor-i3-6100 ,
-                                                                                                        :Processor-i5-6400 ,
-                                                                                                        :Processor-i5-8400 ,
-                                                                                                        :Processor-i7-8700 ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndRAMCompatible> :DDR4-16GB ,
-                                                                                                  :DDR4-64GB ,
-                                                                                                  :DDR4-8GB ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndDedicatedGraphicsCardCompatible> :GraphicsCard_NVIDIA_GeForce_GTX_1060 ,
+                                                                                                                    :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndPowerSupplyCompatible> :PowerSupply_HU180 ,
+                                                                                                          :PowerSupply_ITXAK_L1 ,
+                                                                                                          :PowerSupply_L280E ,
+                                                                                                          :PowerSupply_RM850 ,
+                                                                                                          :PowerSupply_XPS8500 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndProcessorCompatible> :Processor_i3_6100 ,
+                                                                                                        :Processor_i5_6400 ,
+                                                                                                        :Processor_i5_8400 ,
+                                                                                                        :Processor_i7_8700 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndRAMCompatible> :DDR4_16GB ,
+                                                                                                  :DDR4_64GB ,
+                                                                                                  :DDR4_8GB ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardDDRSuport> "DDR4" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardPCI-E> "3.0 x16" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardPowerSupply> "24-pin" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA 1151" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Motherboard-B550-F
-:Motherboard-B550-F rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Motherboard_B550_F
+:Motherboard_B550_F rdf:type owl:NamedIndividual ;
                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-ASUS ;
-                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndPowerSupplyCompatible> :PowerSupply-HU180 ,
-                                                                                                           :PowerSupply-ITXAK-L1 ,
-                                                                                                           :PowerSupply-L280E ,
-                                                                                                           :PowerSupply-RM850 ,
-                                                                                                           :PowerSupply-XPS8500 ;
-                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndProcessorCompatible> :Processor-i3-6100 ,
-                                                                                                         :Processor-i5-6400 ,
-                                                                                                         :Processor-i5-8400 ,
-                                                                                                         :Processor-i7-8700 ;
-                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndRAMCompatible> :DDR4-16GB ,
-                                                                                                   :DDR4-64GB ,
-                                                                                                   :DDR4-8GB ;
+                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndPowerSupplyCompatible> :PowerSupply_HU180 ,
+                                                                                                           :PowerSupply_ITXAK_L1 ,
+                                                                                                           :PowerSupply_L280E ,
+                                                                                                           :PowerSupply_RM850 ,
+                                                                                                           :PowerSupply_XPS8500 ;
+                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndProcessorCompatible> :Processor_i3_6100 ,
+                                                                                                         :Processor_i5_6400 ,
+                                                                                                         :Processor_i5_8400 ,
+                                                                                                         :Processor_i7_8700 ;
+                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndRAMCompatible> :DDR4_16GB ,
+                                                                                                   :DDR4_64GB ,
+                                                                                                   :DDR4_8GB ;
                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardDDRSuport> "DDR4" ;
                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardPCI-E> "4.0 x16" ;
                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardPowerSupply> "24-pin" ;
                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "AM4" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Motherboard-H110M-K
-:Motherboard-H110M-K rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Motherboard_H110M_K
+:Motherboard_H110M_K rdf:type owl:NamedIndividual ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-ASUS ;
-                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndDedicatedGraphicsCardCompatible> :GraphicsCard-NVIDIA_GeForce_GTX_1060 ,
-                                                                                                                      :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
-                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndPowerSupplyCompatible> :PowerSupply-HU180 ,
-                                                                                                            :PowerSupply-ITXAK-L1 ,
-                                                                                                            :PowerSupply-L280E ,
-                                                                                                            :PowerSupply-RM850 ,
-                                                                                                            :PowerSupply-XPS8500 ;
-                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndProcessorCompatible> :Processor-i3-6100 ,
-                                                                                                          :Processor-i5-6400 ,
-                                                                                                          :Processor-i5-8400 ,
-                                                                                                          :Processor-i7-8700 ;
-                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndRAMCompatible> :DDR4-16GB ,
-                                                                                                    :DDR4-64GB ,
-                                                                                                    :DDR4-8GB ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndDedicatedGraphicsCardCompatible> :GraphicsCard_NVIDIA_GeForce_GTX_1060 ,
+                                                                                                                      :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndPowerSupplyCompatible> :PowerSupply_HU180 ,
+                                                                                                            :PowerSupply_ITXAK_L1 ,
+                                                                                                            :PowerSupply_L280E ,
+                                                                                                            :PowerSupply_RM850 ,
+                                                                                                            :PowerSupply_XPS8500 ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndProcessorCompatible> :Processor_i3_6100 ,
+                                                                                                          :Processor_i5_6400 ,
+                                                                                                          :Processor_i5_8400 ,
+                                                                                                          :Processor_i7_8700 ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndRAMCompatible> :DDR4_16GB ,
+                                                                                                    :DDR4_64GB ,
+                                                                                                    :DDR4_8GB ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardDDRSuport> "DDR4" ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardPCI-E> "3.0 x16" ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardPowerSupply> "24-pin" ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA1151" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Motherboard-Z390
-:Motherboard-Z390 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Motherboard_Z390
+:Motherboard_Z390 rdf:type owl:NamedIndividual ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Gigabyte ;
-                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndDedicatedGraphicsCardCompatible> :GraphicsCard-NVIDIA_GeForce_GTX_1060 ,
-                                                                                                                   :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
-                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndPowerSupplyCompatible> :PowerSupply-HU180 ,
-                                                                                                         :PowerSupply-ITXAK-L1 ,
-                                                                                                         :PowerSupply-L280E ,
-                                                                                                         :PowerSupply-RM850 ,
-                                                                                                         :PowerSupply-XPS8500 ;
-                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndProcessorCompatible> :Processor-i3-6100 ,
-                                                                                                       :Processor-i5-6400 ,
-                                                                                                       :Processor-i5-8400 ,
-                                                                                                       :Processor-i7-8700 ;
-                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndRAMCompatible> :DDR3-16GB ,
-                                                                                                 :DDR3-64GB ,
-                                                                                                 :DDR3-8GB ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndDedicatedGraphicsCardCompatible> :GraphicsCard_NVIDIA_GeForce_GTX_1060 ,
+                                                                                                                   :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndPowerSupplyCompatible> :PowerSupply_HU180 ,
+                                                                                                         :PowerSupply_ITXAK_L1 ,
+                                                                                                         :PowerSupply_L280E ,
+                                                                                                         :PowerSupply_RM850 ,
+                                                                                                         :PowerSupply_XPS8500 ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndProcessorCompatible> :Processor_i3_6100 ,
+                                                                                                       :Processor_i5_6400 ,
+                                                                                                       :Processor_i5_8400 ,
+                                                                                                       :Processor_i7_8700 ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndRAMCompatible> :DDR3_16GB ,
+                                                                                                 :DDR3_64GB ,
+                                                                                                 :DDR3_8GB ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardPCI-E> "3.0 x16" ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardPowerSupply> "24-pin" ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "DDR3" ,
                                                                                    "LGA1151" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Motherboard-Z390-P
-:Motherboard-Z390-P rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Motherboard_Z390_P
+:Motherboard_Z390_P rdf:type owl:NamedIndividual ;
                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-ASUS ;
-                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndDedicatedGraphicsCardCompatible> :GraphicsCard-NVIDIA_GeForce_GTX_1060 ,
-                                                                                                                     :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
-                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndPowerSupplyCompatible> :PowerSupply-HU180 ,
-                                                                                                           :PowerSupply-ITXAK-L1 ,
-                                                                                                           :PowerSupply-L280E ,
-                                                                                                           :PowerSupply-RM850 ,
-                                                                                                           :PowerSupply-XPS8500 ;
-                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndProcessorCompatible> :Processor-i3-6100 ,
-                                                                                                         :Processor-i5-6400 ,
-                                                                                                         :Processor-i5-8400 ,
-                                                                                                         :Processor-i7-8700 ;
-                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndRAMCompatible> :DDR4-16GB ,
-                                                                                                   :DDR4-64GB ,
-                                                                                                   :DDR4-8GB ;
+                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndDedicatedGraphicsCardCompatible> :GraphicsCard_NVIDIA_GeForce_GTX_1060 ,
+                                                                                                                     :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
+                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndPowerSupplyCompatible> :PowerSupply_HU180 ,
+                                                                                                           :PowerSupply_ITXAK_L1 ,
+                                                                                                           :PowerSupply_L280E ,
+                                                                                                           :PowerSupply_RM850 ,
+                                                                                                           :PowerSupply_XPS8500 ;
+                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndProcessorCompatible> :Processor_i3_6100 ,
+                                                                                                         :Processor_i5_6400 ,
+                                                                                                         :Processor_i5_8400 ,
+                                                                                                         :Processor_i7_8700 ;
+                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMotherboardAndRAMCompatible> :DDR4_16GB ,
+                                                                                                   :DDR4_64GB ,
+                                                                                                   :DDR4_8GB ;
                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardDDRSuport> "DDR4" ;
                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardPCI-E> "3.0 x16" ;
                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardPowerSupply> "24-pin" ;
                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA1151" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse-Logitech-M510
-:Mouse-Logitech-M510 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse_Logitech_M510
+:Mouse_Logitech_M510 rdf:type owl:NamedIndividual ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Logitech ;
-                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse-Pro-X ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Pro_X ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 1000 ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "125 Hz" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse-Logitech-MX-Master-3
-:Mouse-Logitech-MX-Master-3 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse_Logitech_MX_Master_3
+:Mouse_Logitech_MX_Master_3 rdf:type owl:NamedIndividual ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Logitech ;
-                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse-Logitech-M510 ;
-                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse-Logitech-M510 ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Logitech_M510 ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Logitech_M510 ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 4000 ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "125 Hz" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse-Optical-Razer-Pro-Click
-:Mouse-Optical-Razer-Pro-Click rdf:type owl:NamedIndividual ;
-                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse-Logitech-M510 ,
-                                                                                                         :Mouse-Logitech-MX-Master-3 ;
-                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse-Logitech-MX-Master-3 ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse_Optical_Razer_Pro_Click
+:Mouse_Optical_Razer_Pro_Click rdf:type owl:NamedIndividual ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse_Logitech_M510 ,
+                                                                                                         :Mouse_Logitech_MX_Master_3 ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Logitech_MX_Master_3 ;
                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 16000 ;
                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "500 Hz" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse-Pro-X
-:Mouse-Pro-X rdf:type owl:NamedIndividual ;
-             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse-Optical-Razer-Pro-Click ;
-             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse-Optical-Razer-Pro-Click ;
-             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse-Optical-Razer-Pro-Click ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse_Pro_X
+:Mouse_Pro_X rdf:type owl:NamedIndividual ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse_Optical_Razer_Pro_Click ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Optical_Razer_Pro_Click ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Optical_Razer_Pro_Click ;
              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 25600 ;
              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "1000 Hz" .
-
-
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystem-Windows-10-Pro
-:OperatingSystem-Windows-10-Pro rdf:type owl:NamedIndividual ;
-                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#WindowsVersion> "10 Pro" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystemLinuxUbuntu
@@ -654,119 +649,149 @@
                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MacOSVersion> "11"^^xsd:string .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystem_Windows_10_Pro
+:OperatingSystem_Windows_10_Pro rdf:type owl:NamedIndividual ;
+                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#WindowsVersion> "10 Pro" .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Alienware_Aurora_R5_DPCWXT01_Silver
 :PC_Alienware_Aurora_R5_DPCWXT01_Silver rdf:type owl:NamedIndividual ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasATX> :Motherboard-B365M ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBluetoothCard> <http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi/BluetoothCard-AC1200> ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasATX> :Motherboard_B365M ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBluetoothCard> :WiFi_BluetoothCard_AC1200 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Alienware ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase> :Case-3040 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR4> :DDR4-8GB ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDedicated> :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasErgonomicKeyboard> :Keyboard-Ergonomic-Logitech-Ergo-K860 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard-ST1000BT32 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan-ARCTICP12 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasGamingMouse> :Mouse-Pro-X ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD> :HDD-512GB ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase> :Case_3040 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR4> :DDR4_8GB ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDedicated> :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasErgonomicKeyboard> :Keyboard_Ergonomic_Logitech_Ergo_K860 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard_ST1000BT32 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan_ARCTICP12 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasGamingMouse> :Mouse_Pro_X ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD> :HDD_512GB ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledOperatingSystem> :OperatingSystemLinuxUbuntu ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_HD_Graphics_530 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard_Intel_HD_Graphics_530 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOLED> :Display-AW3423DW ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOpenBackHeadphones> :Headphones-Open-Back-Philips-Fidelio-X2HR ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply-RM850 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor-i3-6100 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSSD> :SSD-256GB ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSpeakers> :Speakers-JBLQuantum ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort-2.0x6 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort-3.2x7 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> <http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi/BluetoothCard-AC1200> .
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOLED> :Display_AW3423DW ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOpenBackHeadphones> :Headphones_Open_Back_Philips_Fidelio_X2HR ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply_RM850 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor_i3_6100 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSSD> :SSD_256GB ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSpeakers> :Speakers_JBLQuantum ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort_2x6 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort_32x7 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFi_BluetoothCard_AC1200 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Alienware_Aurora_R7_AR7-0545_Silver
-:PC_Alienware_Aurora_R7_AR7-0545_Silver rdf:type owl:NamedIndividual ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasATX> :Motherboard-H110M-K ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBluetoothCard> <http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi/BluetoothCard-AX210> ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Alienware_Aurora_R7_AR7_0545_Silver
+:PC_Alienware_Aurora_R7_AR7_0545_Silver rdf:type owl:NamedIndividual ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasATX> :Motherboard_H110M_K ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBluetoothCard> :WiFi_BluetoothCard_AX210 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Alienware ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase> :Case-CA-H510B-B1 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasClosedBackHeadphones> :Headphones-Closed-Back-Beyerdynamic-DT-770-PRO ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR4> :DDR4-8GB ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDedicated> :GraphicsCard-NVIDIA_GeForce_GTX_1060 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard-BCM5719-4P ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan-CP3 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD> :HDD-256GB ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase> :Case_CA_H510B_B1 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasClosedBackHeadphones> :Headphones_Closed_Back_Beyerdynamic_DT_770_PRO ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR4> :DDR4_8GB ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDedicated> :GraphicsCard_NVIDIA_GeForce_GTX_1060 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard_BCM5719_4P ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan_CP3 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD> :HDD_256GB ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDMIPort> :HDMIPort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledOperatingSystem> :OperatingSystem-Windows-10-Pro ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_UHD_Graphics_630 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMechanicalKeyboard> :Keyboard-Mechanical-Ducky-Shine-7-Gunmetal-RGB-LED-Double-Shot-PBT ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledOperatingSystem> :OperatingSystem_Windows_10_Pro ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard_Intel_UHD_Graphics_630 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMechanicalKeyboard> :Keyboard_Mechanical_Ducky_Shine_7_Gunmetal_RGB_LED_Double_Shot_PBT ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOpticalMouse> :Mouse-Optical-Razer-Pro-Click ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply-XPS8500 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor-i5-8400 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSSD> :SSD-128GB ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSpeakers> :Speakers-Tytan2.1 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort-2.0x6 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort-3.2x7 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasVA> :Display-CRG5 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> <http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi/BluetoothCard-AX210> .
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOpticalMouse> :Mouse_Optical_Razer_Pro_Click ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply_XPS8500 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor_i5_8400 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSSD> :SSD_128GB ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSpeakers> :Speakers_Tytan21 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort_2x6 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort_32x7 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasVA> :Display_CRG5 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFi_BluetoothCard_AX210 .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_DELL_Inspiron_3250_FDDOST315S_Black
 :PC_DELL_Inspiron_3250_FDDOST315S_Black rdf:type owl:NamedIndividual ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasATX> :Motherboard-Z390 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBluetoothCard> <http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi/BluetoothCard-AX3000> ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasATX> :Motherboard_Z390 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBluetoothCard> :WiFi_BluetoothCard_AX3000 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Dell ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase> :Case-CA-H510B-W1 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR3> :DDR3-8GB ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard-BCM5720-2P ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan-DN120 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD> :HDD-256GB ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase> :Case_CA_H510B_W1 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR3> :DDR3_8GB ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard_BCM5720_2P ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan_DN120 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD> :HDD_256GB ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDMIPort> :HDMIPort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIPS> :Display-S2721DGF ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIPS> :Display_S2721DGF ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledOperatingSystem> :OperatingSystemMacOS11 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_HD_Graphics_530 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasLaserMouse> :Mouse-Logitech-M510 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMembraneKeyboard> :Keyboard-Membrane-Razer-Cynosa-v2 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard_Intel_HD_Graphics_530 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasLaserMouse> :Mouse_Logitech_M510 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMembraneKeyboard> :Keyboard_Membrane_Razer_Cynosa_v2 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOverEarHeadphones> :Headphones-Over-Ear-Sony-WH-1000XM4 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply-ITXAK-L1 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor-i5-6400 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSpeakers> :Speakers-Z240 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort-2.0x4 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort-3.2x2 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> <http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi/BluetoothCard-AX3000> .
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOverEarHeadphones> :Headphones_Over_Ear_Sony_WH_1000XM4 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply_ITXAK_L1 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor_i5_6400 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSpeakers> :Speakers_Z240 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort_2x4 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort_32x2 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFi_BluetoothCard_AX3000 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Fujitsu_ESPRIMO_D_D556E85_VFYD0556P75BOGB3YNBD_Black
+:PC_Fujitsu_ESPRIMO_D_D556E85_VFYD0556P75BOGB3YNBD_Black rdf:type owl:NamedIndividual ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasATX> :Motherboard_B550_F ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBluetoothCard> :BluetoothCard-HC-05 ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Fujitsu ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase> :Case_CA_H52FW_01 ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR4> :DDR4_8GB ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasErgonomicMouse> :Mouse_Logitech_MX_Master_3 ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard_ST2000SPEXI ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan_KB23 ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasGamingKeyboard> :Keyboard_Gaming_Corsair_K100_RGB ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard_Intel_HD_Graphics_530 ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOLED> :Display_Sceptre ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOnEarHeadphones> :Headphones_On_Ear_AKG_Y400 ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply_L280E ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor_i5_6400 ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSSD> :SSD_128GB ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSpeakers> :Speakers_Z313 ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort_2x4 ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort_32x4 ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFiCard_FS_N600 .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_HP_Pavilion_550_550230na_T1G76EA_Black
 :PC_HP_Pavilion_550_550230na_T1G76EA_Black rdf:type owl:NamedIndividual ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasATX> :Motherboard-Z390 ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasATX> :Motherboard_Z390 ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBluetoothCard> :BluetoothCard-P560G ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-HP ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase> :Case-H510 ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR3> :DDR3-16GB ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard-USB31000SPTB ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan-Sahara ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFlexibleKeyboard> :Keyboard-Flexible-Sungwoo-Black ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD> :HDD-128GB ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase> :Case_H510 ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR3> :DDR3_16GB ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard_USB31000SPTB ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan_Sahara ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFlexibleKeyboard> :Keyboard_Flexible_Sungwoo_Black ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD> :HDD_128GB ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDMIPort> :HDMIPort ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_HD_Graphics_530 ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard_Intel_HD_Graphics_530 ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply-HU180 ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor-i3-6100 ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSpeakers> :Speakers-Z333 ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasTN> :Display-V-Line ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort-2.0x2 ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort-3.2x4 ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFiCard-PCE-AC88 .
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply_HU180 ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor_i3_6100 ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSpeakers> :Speakers_Z333 ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasTN> :Display_V_Line ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort_2x2 ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort_32x4 ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFiCard_PCE_AC88 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply-HU180
-:PowerSupply-HU180 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply_HU180
+:PowerSupply_HU180 rdf:type owl:NamedIndividual ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Dell ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible> :GraphicsCard-NVIDIA_GeForce_GTX_1060 ,
-                                                                                                           :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible> :GraphicsCard_NVIDIA_GeForce_GTX_1060 ,
+                                                                                                           :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency> "47Hz/63Hz" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyMotherboardPins> "20+4-pin" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E> "1x PCI-Express 6" ;
@@ -774,12 +799,12 @@
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyWattPower> "180W" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply-ITXAK-L1
-:PowerSupply-ITXAK-L1 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply_ITXAK_L1
+:PowerSupply_ITXAK_L1 rdf:type owl:NamedIndividual ;
                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Akyga ;
-                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible> :GraphicsCard-NVIDIA_GeForce_GTX_1060 ,
-                                                                                                              :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
-                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan> :PowerSupply-HU180 ;
+                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible> :GraphicsCard_NVIDIA_GeForce_GTX_1060 ,
+                                                                                                              :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
+                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan> :PowerSupply_HU180 ;
                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency> "47Hz/63Hz" ;
                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyMotherboardPins> "24-pin" ;
                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E> "1x PCI-Express 6" ;
@@ -787,12 +812,12 @@
                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyWattPower> "200W" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply-L280E
-:PowerSupply-L280E rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply_L280E
+:PowerSupply_L280E rdf:type owl:NamedIndividual ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Dell ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible> :GraphicsCard-NVIDIA_GeForce_GTX_1060 ,
-                                                                                                           :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan> :PowerSupply-ITXAK-L1 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible> :GraphicsCard_NVIDIA_GeForce_GTX_1060 ,
+                                                                                                           :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan> :PowerSupply_ITXAK_L1 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency> "47Hz/63Hz" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyMotherboardPins> "24-pin" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E> "1x PCI-Express 6" ;
@@ -800,12 +825,12 @@
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyWattPower> "280W" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply-RM850
-:PowerSupply-RM850 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply_RM850
+:PowerSupply_RM850 rdf:type owl:NamedIndividual ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Corsair ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible> :GraphicsCard-NVIDIA_GeForce_GTX_1060 ,
-                                                                                                           :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan> :PowerSupply-XPS8500 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible> :GraphicsCard_NVIDIA_GeForce_GTX_1060 ,
+                                                                                                           :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan> :PowerSupply_XPS8500 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency> "50Hz/60Hz" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyMotherboardPins> "20+4-pin" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E> "2x PCI-Express 6+2" ;
@@ -813,12 +838,12 @@
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyWattPower> "850W" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply-XPS8500
-:PowerSupply-XPS8500 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply_XPS8500
+:PowerSupply_XPS8500 rdf:type owl:NamedIndividual ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Dell ;
-                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible> :GraphicsCard-NVIDIA_GeForce_GTX_1060 ,
-                                                                                                             :GraphicsCard-NVIDIA_GeForce_GTX_950 ;
-                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan> :PowerSupply-L280E ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible> :GraphicsCard_NVIDIA_GeForce_GTX_1060 ,
+                                                                                                             :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan> :PowerSupply_L280E ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency> "50Hz/60Hz" ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyMotherboardPins> "24-pin" ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E> "2x PCI-Express 6+2" ;
@@ -826,207 +851,222 @@
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyWattPower> "460W" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Processor-i3-6100
-:Processor-i3-6100 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Processor_i3_6100
+:Processor_i3_6100 rdf:type owl:NamedIndividual ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Intel ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> :GraphicsCard-Intel_HD_Graphics_530 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> :GraphicsCard_Intel_HD_Graphics_530 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 2 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> "3.7 GHz" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA 1151" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> "true"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Processor-i5-6400
-:Processor-i5-6400 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Processor_i5_6400
+:Processor_i5_6400 rdf:type owl:NamedIndividual ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Intel ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan> :Processor-i3-6100 ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> :GraphicsCard-Intel_HD_Graphics_530 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan> :Processor_i3_6100 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> :GraphicsCard_Intel_HD_Graphics_530 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 4 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> "2.7 GHz" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA 1151" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> "true"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Processor-i5-8400
-:Processor-i5-8400 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Processor_i5_8400
+:Processor_i5_8400 rdf:type owl:NamedIndividual ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Intel ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan> :Processor-i5-6400 ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> :GraphicsCard-Intel_UHD_Graphics_630 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan> :Processor_i5_6400 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> :GraphicsCard_Intel_UHD_Graphics_630 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 6 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> "2.8 GHz" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA 1151" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> "true"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Processor-i7-8700
-:Processor-i7-8700 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Processor_i7_8700
+:Processor_i7_8700 rdf:type owl:NamedIndividual ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Intel ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan> :Processor-i5-8400 ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> :GraphicsCard-Intel_UHD_Graphics_630 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan> :Processor_i5_8400 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> :GraphicsCard_Intel_UHD_Graphics_630 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 6 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> "3.2 GHz" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA 1151" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> "true"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#ProgramTranslator-Asembler
-:ProgramTranslator-Asembler rdf:type owl:NamedIndividual ;
-                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMoreComplicatedThan> :ProgramTranslator-Compiler ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#ProgramTranslator_Asembler
+:ProgramTranslator_Asembler rdf:type owl:NamedIndividual ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMoreComplicatedThan> :ProgramTranslator_Compiler ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LanguagesHeTranslate> "Simbolic language" ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TranslatorsName> "Asembler" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#ProgramTranslator-Compiler
-:ProgramTranslator-Compiler rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#ProgramTranslator_Compiler
+:ProgramTranslator_Compiler rdf:type owl:NamedIndividual ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LanguagesHeTranslate> "Basic, Pascal, C, C++, C#, Java, Fortran" ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TranslatorsName> "Compiler" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD-128GB
-:SSD-128GB rdf:type owl:NamedIndividual ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-64GB ,
-                                                                                      :SSD-64GB ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD-512GB ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD_128GB
+:SSD_128GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD_64GB ,
+                                                                                      :SSD_64GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD_512GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 128 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD-256GB
-:SSD-256GB rdf:type owl:NamedIndividual ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-128GB ,
-                                                                                      :SSD-128GB ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :SSD-128GB ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD_256GB
+:SSD_256GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD_128GB ,
+                                                                                      :SSD_128GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :SSD_128GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 256 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD-512GB
-:SSD-512GB rdf:type owl:NamedIndividual ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD-256GB ,
-                                                                                      :SSD-256GB ;
-           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :SSD-256GB ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD_512GB
+:SSD_512GB rdf:type owl:NamedIndividual ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan> :HDD_256GB ,
+                                                                                      :SSD_256GB ;
+           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :SSD_256GB ;
            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 512 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD-64GB
-:SSD-64GB rdf:type owl:NamedIndividual ;
-          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD-256GB ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SSD_64GB
+:SSD_64GB rdf:type owl:NamedIndividual ;
+          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD_256GB ;
           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 64 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-JBLQuantum
-:Speakers-JBLQuantum rdf:type owl:NamedIndividual ;
-                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers-Z240 ;
-                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterFrequencyResponseRangeThan> :Speakers-Z240 ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers_JBLQuantum
+:Speakers_JBLQuantum rdf:type owl:NamedIndividual ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers_Z240 ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterFrequencyResponseRangeThan> :Speakers_Z240 ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-JBL ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersFrequencyResponse> "60 - 20000 Hz" ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "30W" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-Tytan2.1
-:Speakers-Tytan2.1 rdf:type owl:NamedIndividual ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers-Z313 ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterFrequencyResponseRangeThan> :Speakers-Z313 ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Trust ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersFrequencyResponse> "20 - 20000 Hz" ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "60W" .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers_Tytan21
+:Speakers_Tytan21 rdf:type owl:NamedIndividual ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers_Z313 ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterFrequencyResponseRangeThan> :Speakers_Z313 ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Trust ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersFrequencyResponse> "20 - 20000 Hz" ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "60W" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-Z240
-:Speakers-Z240 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers_Z240
+:Speakers_Z240 rdf:type owl:NamedIndividual ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Logitech ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersFrequencyResponse> "200 - 20000 Hz" ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "20W" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-Z313
-:Speakers-Z313 rdf:type owl:NamedIndividual ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers-JBLQuantum ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterFrequencyResponseRangeThan> :Speakers-Z333 ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers_Z313
+:Speakers_Z313 rdf:type owl:NamedIndividual ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers_JBLQuantum ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterFrequencyResponseRangeThan> :Speakers_Z333 ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Logitech ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersFrequencyResponse> "48 - 20000 Hz" ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "50W" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers-Z333
-:Speakers-Z333 rdf:type owl:NamedIndividual ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers-Tytan2.1 ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterFrequencyResponseRangeThan> :Speakers-JBLQuantum ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers_Z333
+:Speakers_Z333 rdf:type owl:NamedIndividual ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areSpeakersMorePowerfulThan> :Speakers_Tytan21 ;
+               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterFrequencyResponseRangeThan> :Speakers_JBLQuantum ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Logitech ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersFrequencyResponse> "55 - 20000 Hz" ;
                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersWattPower> "80W" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-2.0x1
-:USBPort-2.0x1 rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort_2x1
+:USBPort_2x1 rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-2.0x2
-:USBPort-2.0x2 rdf:type owl:NamedIndividual ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort-3.2x1 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort_2x2
+:USBPort_2x2 rdf:type owl:NamedIndividual ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort_32x1 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-2.0x3
-:USBPort-2.0x3 rdf:type owl:NamedIndividual ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort-3.2x2 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort_2x3
+:USBPort_2x3 rdf:type owl:NamedIndividual ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort_32x2 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-2.0x4
-:USBPort-2.0x4 rdf:type owl:NamedIndividual ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort-3.2x3 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort_2x4
+:USBPort_2x4 rdf:type owl:NamedIndividual ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort_32x3 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-2.0x5
-:USBPort-2.0x5 rdf:type owl:NamedIndividual ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort-3.2x4 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort_2x5
+:USBPort_2x5 rdf:type owl:NamedIndividual ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort_32x4 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-2.0x6
-:USBPort-2.0x6 rdf:type owl:NamedIndividual ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort-3.2x5 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort_2x6
+:USBPort_2x6 rdf:type owl:NamedIndividual ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort_32x5 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-3.2x1
-:USBPort-3.2x1 rdf:type owl:NamedIndividual ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort-2.0x1 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort_32x1
+:USBPort_32x1 rdf:type owl:NamedIndividual ;
+              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort_2x1 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-3.2x2
-:USBPort-3.2x2 rdf:type owl:NamedIndividual ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort-2.0x2 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort_32x2
+:USBPort_32x2 rdf:type owl:NamedIndividual ;
+              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort_2x2 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-3.2x3
-:USBPort-3.2x3 rdf:type owl:NamedIndividual ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort-2.0x3 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort_32x3
+:USBPort_32x3 rdf:type owl:NamedIndividual ;
+              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort_2x3 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-3.2x4
-:USBPort-3.2x4 rdf:type owl:NamedIndividual ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort-2.0x4 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort_32x4
+:USBPort_32x4 rdf:type owl:NamedIndividual ;
+              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort_2x4 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-3.2x5
-:USBPort-3.2x5 rdf:type owl:NamedIndividual ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort-2.0x5 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort_32x5
+:USBPort_32x5 rdf:type owl:NamedIndividual ;
+              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort_2x5 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-3.2x6
-:USBPort-3.2x6 rdf:type owl:NamedIndividual ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort-2.0x6 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort_32x6
+:USBPort_32x6 rdf:type owl:NamedIndividual ;
+              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort_2x6 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort-3.2x7
-:USBPort-3.2x7 rdf:type owl:NamedIndividual ;
-               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort-3.2x6 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#USBPort_32x7
+:USBPort_32x7 rdf:type owl:NamedIndividual ;
+              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isUSBPortMorePreferedThan> :USBPort_32x6 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFiCard-FS-N600
-:WiFiCard-FS-N600 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFiCard_FS_N600
+:WiFiCard_FS_N600 rdf:type owl:NamedIndividual ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-TP-LINK .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFiCard-PCE-AC88
-:WiFiCard-PCE-AC88 rdf:type owl:NamedIndividual ;
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFiCard_PCE_AC88
+:WiFiCard_PCE_AC88 rdf:type owl:NamedIndividual ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-TP-LINK .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi_BluetoothCard_AC1200
+:WiFi_BluetoothCard_AC1200 rdf:type owl:NamedIndividual ;
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-TP-LINK .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi_BluetoothCard_AX210
+:WiFi_BluetoothCard_AX210 rdf:type owl:NamedIndividual ;
+                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Philips .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi_BluetoothCard_AX3000
+:WiFi_BluetoothCard_AX3000 rdf:type owl:NamedIndividual ;
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Samsung .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#WinRar
@@ -1041,46 +1081,6 @@
         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#giveMoreOptionsThan> :WinRar ;
         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#OperatingSystemsItRunsOn> "Windows, iOS, macOS, Android" ;
         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#UtilityName> "WinZip" .
-
-
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Fujitsu_ESPRIMO_D_D556/E85+_VFY:D0556P75BOGB?3YNBD_Black
-<http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Fujitsu_ESPRIMO_D_D556/E85+_VFY:D0556P75BOGB?3YNBD_Black> rdf:type owl:NamedIndividual ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasATX> :Motherboard-B550-F ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBluetoothCard> :BluetoothCard-HC-05 ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Fujitsu ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCase> :Case-CA-H52FW-01 ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasDDR4> :DDR4-8GB ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasErgonomicMouse> :Mouse-Logitech-MX-Master-3 ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasEthernetCard> :EthernetCard-ST2000SPEXI ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasFan> :Fan-KB23 ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasGamingKeyboard> :Keyboard-Gaming-Corsair-K100-RGB ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard-Intel_HD_Graphics_530 ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOLED> :Display-Sceptre ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOnEarHeadphones> :Headphones-On-Ear-AKG-Y400 ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply> :PowerSupply-L280E ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor-i5-6400 ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSSD> :SSD-128GB ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSpeakers> :Speakers-Z313 ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort-2.0x4 ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort-3.2x4 ;
-                                                                                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFiCard-FS-N600 .
-
-
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi/BluetoothCard-AC1200
-<http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi/BluetoothCard-AC1200> rdf:type owl:NamedIndividual ;
-                                                                              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-TP-LINK .
-
-
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi/BluetoothCard-AX210
-<http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi/BluetoothCard-AX210> rdf:type owl:NamedIndividual ;
-                                                                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Philips .
-
-
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi/BluetoothCard-AX3000
-<http://www.semanticweb.org/IZ/2022/Tim12/Instance#WiFi/BluetoothCard-AX3000> rdf:type owl:NamedIndividual ;
-                                                                              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Samsung .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

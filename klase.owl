@@ -144,6 +144,13 @@
           rdfs:range :ComputerBrand .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBuzzer
+:hasBuzzer rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasSpeakers ;
+           rdfs:domain :Computer ;
+           rdfs:range :Buzzer .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasCamera
 :hasCamera rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :hasComponent ;
@@ -312,6 +319,13 @@
                    rdfs:range :HeadphonesPort .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHomeTheater
+:hasHomeTheater rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasSpeakers ;
+                rdfs:domain :Computer ;
+                rdfs:range :HomeTheater .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIPS
 :hasIPS rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf :hasLED ;
@@ -430,6 +444,13 @@
                rdfs:range :Integrated .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInternal
+:hasInternal rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasSpeakers ;
+             rdfs:domain :Computer ;
+             rdfs:range :Internal .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasJoystick
 :hasJoystick rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasPointingDevice ;
@@ -506,6 +527,13 @@
           rdfs:range :Mouse .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMultimedia
+:hasMultimedia rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasSpeakers ;
+               rdfs:domain :Computer ;
+               rdfs:range :Multimedia .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOLED
 :hasOLED rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf :hasDisplay ;
@@ -556,6 +584,13 @@
          rdfs:range :Port .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPortable
+:hasPortable rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasSpeakers ;
+             rdfs:domain :Computer ;
+             rdfs:range :Portable .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasPowerSupply
 :hasPowerSupply rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasComponent ;
@@ -601,6 +636,13 @@
               rdfs:range :SoundCard .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSoundbar
+:hasSoundbar rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasSpeakers ;
+             rdfs:domain :Computer ;
+             rdfs:range :Soundbar .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSpeakers
 :hasSpeakers rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasComponent ;
@@ -614,6 +656,13 @@
             rdfs:subPropertyOf :hasComponent ;
             rdfs:domain :Computer ;
             rdfs:range :Storage .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSurroundSound
+:hasSurroundSound rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasSpeakers ;
+                  rdfs:domain :Computer ;
+                  rdfs:range :SurroundSound .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasTN
@@ -952,7 +1001,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacity
 :FanAirFlowCapacity rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Fan ;
-                    rdfs:range xsd:string .
+                    rdfs:range xsd:int .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardMemory
@@ -1323,6 +1372,86 @@
                               rdfs:subClassOf :Dedicated .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AvarageFan
+:AvarageFan rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( :Fan
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :FanAirFlowCapacity ;
+                                                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                              owl:onDatatype xsd:integer ;
+                                                                              owl:withRestrictions ( [ xsd:minExclusive 30
+                                                                                                     ]
+                                                                                                     [ xsd:maxInclusive 35
+                                                                                                     ]
+                                                                                                   )
+                                                                            ]
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:subClassOf :Fan .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AvarageHDD
+:AvarageHDD rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( :HDD
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :StorageCapacity ;
+                                                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                              owl:onDatatype xsd:integer ;
+                                                                              owl:withRestrictions ( [ xsd:minInclusive 128
+                                                                                                     ]
+                                                                                                     [ xsd:maxExclusive 256
+                                                                                                     ]
+                                                                                                   )
+                                                                            ]
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:subClassOf :HDD .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AvarageIntegratedGraphicsCard
+:AvarageIntegratedGraphicsCard rdf:type owl:Class ;
+                               owl:equivalentClass [ owl:intersectionOf ( :Integrated
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :GraphicsCardSpeed ;
+                                                                            owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                 owl:onDatatype xsd:integer ;
+                                                                                                 owl:withRestrictions ( [ xsd:minExclusive 300
+                                                                                                                        ]
+                                                                                                                        [ xsd:maxInclusive 400
+                                                                                                                        ]
+                                                                                                                      )
+                                                                                               ]
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                               rdfs:subClassOf :Integrated .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AvarageSSD
+:AvarageSSD rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( :SSD
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :StorageCapacity ;
+                                                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                              owl:onDatatype xsd:integer ;
+                                                                              owl:withRestrictions ( [ xsd:minInclusive 128
+                                                                                                     ]
+                                                                                                     [ xsd:maxExclusive 256
+                                                                                                     ]
+                                                                                                   )
+                                                                            ]
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:subClassOf :SSD .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BTX
 :BTX rdf:type owl:Class ;
      rdfs:subClassOf :Motherboard .
@@ -1428,9 +1557,94 @@
                           rdfs:subClassOf :Dedicated .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BadFan
+:BadFan rdf:type owl:Class ;
+        owl:equivalentClass [ owl:intersectionOf ( :Fan
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :FanAirFlowCapacity ;
+                                                     owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                          owl:onDatatype xsd:integer ;
+                                                                          owl:withRestrictions ( [ xsd:minExclusive 25
+                                                                                                 ]
+                                                                                                 [ xsd:maxInclusive 30
+                                                                                                 ]
+                                                                                               )
+                                                                        ]
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+        rdfs:subClassOf :Fan .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BadHDD
+:BadHDD rdf:type owl:Class ;
+        owl:equivalentClass [ owl:intersectionOf ( :HDD
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :StorageCapacity ;
+                                                     owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                          owl:onDatatype xsd:integer ;
+                                                                          owl:withRestrictions ( [ xsd:minInclusive 64
+                                                                                                 ]
+                                                                                                 [ xsd:maxExclusive 128
+                                                                                                 ]
+                                                                                               )
+                                                                        ]
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+        rdfs:subClassOf :HDD .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BadIntegratedGraphicsCard
+:BadIntegratedGraphicsCard rdf:type owl:Class ;
+                           owl:equivalentClass [ owl:intersectionOf ( :Integrated
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty :GraphicsCardSpeed ;
+                                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                             owl:onDatatype xsd:integer ;
+                                                                                             owl:withRestrictions ( [ xsd:minExclusive 200
+                                                                                                                    ]
+                                                                                                                    [ xsd:maxInclusive 300
+                                                                                                                    ]
+                                                                                                                  )
+                                                                                           ]
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ] ;
+                           rdfs:subClassOf :Integrated .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BadSSD
+:BadSSD rdf:type owl:Class ;
+        owl:equivalentClass [ owl:intersectionOf ( :SSD
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :StorageCapacity ;
+                                                     owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                          owl:onDatatype xsd:integer ;
+                                                                          owl:withRestrictions ( [ xsd:minInclusive 64
+                                                                                                 ]
+                                                                                                 [ xsd:maxExclusive 128
+                                                                                                 ]
+                                                                                               )
+                                                                        ]
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+        rdfs:subClassOf :SSD .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#BluetoothCard
 :BluetoothCard rdf:type owl:Class ;
                rdfs:subClassOf :WirelessCard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Buzzer
+:Buzzer rdf:type owl:Class ;
+        rdfs:subClassOf :Speakers .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Camera
@@ -1523,6 +1737,26 @@
          rdfs:subClassOf :SystemSoftware ;
          owl:disjointWith :ProgramTranslators ,
                           :Utilities .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#DualCore
+:DualCore rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :Processor
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :ProcessorCores ;
+                                                       owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                            owl:onDatatype xsd:integer ;
+                                                                            owl:withRestrictions ( [ xsd:minInclusive 2
+                                                                                                   ]
+                                                                                                   [ xsd:maxInclusive 2
+                                                                                                   ]
+                                                                                                 )
+                                                                          ]
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf :Processor .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ErgonomicKeyboard
@@ -1666,6 +1900,86 @@
                            rdfs:subClassOf :Dedicated .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GoodFan
+:GoodFan rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :Fan
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :FanAirFlowCapacity ;
+                                                      owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                           owl:onDatatype xsd:integer ;
+                                                                           owl:withRestrictions ( [ xsd:minExclusive 35
+                                                                                                  ]
+                                                                                                  [ xsd:maxInclusive 40
+                                                                                                  ]
+                                                                                                )
+                                                                         ]
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:subClassOf :Fan .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GoodHDD
+:GoodHDD rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :HDD
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :StorageCapacity ;
+                                                      owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                           owl:onDatatype xsd:integer ;
+                                                                           owl:withRestrictions ( [ xsd:minInclusive 256
+                                                                                                  ]
+                                                                                                  [ xsd:maxExclusive 512
+                                                                                                  ]
+                                                                                                )
+                                                                         ]
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:subClassOf :HDD .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GoodIntegratedGraphicsCard
+:GoodIntegratedGraphicsCard rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( :Integrated
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :GraphicsCardSpeed ;
+                                                                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                              owl:onDatatype xsd:integer ;
+                                                                                              owl:withRestrictions ( [ xsd:minExclusive 400
+                                                                                                                     ]
+                                                                                                                     [ xsd:maxInclusive 500
+                                                                                                                     ]
+                                                                                                                   )
+                                                                                            ]
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] ;
+                            rdfs:subClassOf :Integrated .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GoodSSD
+:GoodSSD rdf:type owl:Class ;
+         owl:equivalentClass [ owl:intersectionOf ( :SSD
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :StorageCapacity ;
+                                                      owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                           owl:onDatatype xsd:integer ;
+                                                                           owl:withRestrictions ( [ xsd:minInclusive 256
+                                                                                                  ]
+                                                                                                  [ xsd:maxExclusive 512
+                                                                                                  ]
+                                                                                                )
+                                                                         ]
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+         rdfs:subClassOf :SSD .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GoogleChrome
 :GoogleChrome rdf:type owl:Class ;
               rdfs:subClassOf :WebBrowser .
@@ -1739,6 +2053,31 @@
                 owl:disjointWith :USBPort .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#HexaCore
+:HexaCore rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :Processor
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :ProcessorCores ;
+                                                       owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                            owl:onDatatype xsd:integer ;
+                                                                            owl:withRestrictions ( [ xsd:minInclusive 6
+                                                                                                   ]
+                                                                                                   [ xsd:maxInclusive 6
+                                                                                                   ]
+                                                                                                 )
+                                                                          ]
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf :Processor .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#HomeTheater
+:HomeTheater rdf:type owl:Class ;
+             rdfs:subClassOf :Speakers .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#IPS
 :IPS rdf:type owl:Class ;
      rdfs:subClassOf :LED .
@@ -1747,6 +2086,11 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Integrated
 :Integrated rdf:type owl:Class ;
             rdfs:subClassOf :GraphicsCard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Internal
+:Internal rdf:type owl:Class ;
+          rdfs:subClassOf :Speakers .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Joystick
@@ -1886,6 +2230,29 @@
               rdfs:subClassOf :Drivers .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MultiCore
+:MultiCore rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :Processor
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :ProcessorCores ;
+                                                        owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                             owl:onDatatype xsd:integer ;
+                                                                             owl:withRestrictions ( [ xsd:minExclusive 8
+                                                                                                    ]
+                                                                                                  )
+                                                                           ]
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf :Processor .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Multimedia
+:Multimedia rdf:type owl:Class ;
+            rdfs:subClassOf :Speakers .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MultimediaSoftware
 :MultimediaSoftware rdf:type owl:Class ;
                     rdfs:subClassOf :ApplicationSoftware .
@@ -1894,6 +2261,26 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OLED
 :OLED rdf:type owl:Class ;
       rdfs:subClassOf :Display .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OctaCore
+:OctaCore rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :Processor
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :ProcessorCores ;
+                                                       owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                            owl:onDatatype xsd:integer ;
+                                                                            owl:withRestrictions ( [ xsd:minInclusive 8
+                                                                                                   ]
+                                                                                                   [ xsd:maxInclusive 8
+                                                                                                   ]
+                                                                                                 )
+                                                                          ]
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf :Processor .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OnEarHeadphones
@@ -1953,6 +2340,11 @@
                                         )
                           ] ;
       rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Portable
+:Portable rdf:type owl:Class ;
+          rdfs:subClassOf :Speakers .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupply
@@ -2065,10 +2457,106 @@
                                    rdfs:subClassOf :Dedicated .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProfessionalFan
+:ProfessionalFan rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( :Fan
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :FanAirFlowCapacity ;
+                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                   owl:onDatatype xsd:integer ;
+                                                                                   owl:withRestrictions ( [ xsd:minExclusive 40
+                                                                                                          ]
+                                                                                                          [ xsd:maxInclusive 45
+                                                                                                          ]
+                                                                                                        )
+                                                                                 ]
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf :Fan .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProfessionalHDD
+:ProfessionalHDD rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( :HDD
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :StorageCapacity ;
+                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                   owl:onDatatype xsd:integer ;
+                                                                                   owl:withRestrictions ( [ xsd:minInclusive 512
+                                                                                                          ]
+                                                                                                        )
+                                                                                 ]
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf :HDD .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProfessionalIntegratedGraphicsCard
+:ProfessionalIntegratedGraphicsCard rdf:type owl:Class ;
+                                    owl:equivalentClass [ owl:intersectionOf ( :Integrated
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty :GraphicsCardSpeed ;
+                                                                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                      owl:onDatatype xsd:integer ;
+                                                                                                      owl:withRestrictions ( [ xsd:minExclusive 500
+                                                                                                                             ]
+                                                                                                                             [ xsd:maxInclusive 600
+                                                                                                                             ]
+                                                                                                                           )
+                                                                                                    ]
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                    rdfs:subClassOf :Integrated .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProfessionalSSD
+:ProfessionalSSD rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( :SSD
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :StorageCapacity ;
+                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                   owl:onDatatype xsd:integer ;
+                                                                                   owl:withRestrictions ( [ xsd:minInclusive 512
+                                                                                                          ]
+                                                                                                        )
+                                                                                 ]
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf :SSD .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProgramTranslators
 :ProgramTranslators rdf:type owl:Class ;
                     rdfs:subClassOf :SystemSoftware ;
                     owl:disjointWith :Utilities .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#QuadCore
+:QuadCore rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :Processor
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :ProcessorCores ;
+                                                       owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                            owl:onDatatype xsd:integer ;
+                                                                            owl:withRestrictions ( [ xsd:minInclusive 4
+                                                                                                   ]
+                                                                                                   [ xsd:maxInclusive 4
+                                                                                                   ]
+                                                                                                 )
+                                                                          ]
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf :Processor .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAM
@@ -2171,6 +2659,80 @@
                                 rdfs:subClassOf :Dedicated .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ReallyBadFan
+:ReallyBadFan rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :Fan
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :FanAirFlowCapacity ;
+                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                owl:onDatatype xsd:integer ;
+                                                                                owl:withRestrictions ( [ xsd:maxInclusive 25
+                                                                                                       ]
+                                                                                                     )
+                                                                              ]
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :Fan .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ReallyBadHDD
+:ReallyBadHDD rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :HDD
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :StorageCapacity ;
+                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                owl:onDatatype xsd:integer ;
+                                                                                owl:withRestrictions ( [ xsd:maxExclusive 64
+                                                                                                       ]
+                                                                                                     )
+                                                                              ]
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :HDD .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ReallyBadIntegratedGraphicsCard
+:ReallyBadIntegratedGraphicsCard rdf:type owl:Class ;
+                                 owl:equivalentClass [ owl:intersectionOf ( :Integrated
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty :GraphicsCardSpeed ;
+                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                   owl:onDatatype xsd:integer ;
+                                                                                                   owl:withRestrictions ( [ xsd:minExclusive 100
+                                                                                                                          ]
+                                                                                                                          [ xsd:maxInclusive 200
+                                                                                                                          ]
+                                                                                                                        )
+                                                                                                 ]
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ] ;
+                                 rdfs:subClassOf :Integrated .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ReallyBadSSD
+:ReallyBadSSD rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :SSD
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :StorageCapacity ;
+                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                owl:onDatatype xsd:integer ;
+                                                                                owl:withRestrictions ( [ xsd:maxExclusive 64
+                                                                                                       ]
+                                                                                                     )
+                                                                              ]
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :SSD .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SRAM
 :SRAM rdf:type owl:Class ;
       rdfs:subClassOf :RAM .
@@ -2179,6 +2741,26 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SSD
 :SSD rdf:type owl:Class ;
      rdfs:subClassOf :Storage .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SingleCore
+:SingleCore rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( :Processor
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :ProcessorCores ;
+                                                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                              owl:onDatatype xsd:integer ;
+                                                                              owl:withRestrictions ( [ xsd:minInclusive 1
+                                                                                                     ]
+                                                                                                     [ xsd:maxInclusive 1
+                                                                                                     ]
+                                                                                                   )
+                                                                            ]
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:subClassOf :Processor .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Software
@@ -2194,6 +2776,11 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SoundCard
 :SoundCard rdf:type owl:Class ;
            rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Soundbar
+:Soundbar rdf:type owl:Class ;
+          rdfs:subClassOf :Speakers .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SoundcardDrivers
@@ -2219,6 +2806,11 @@
                                            )
                              ] ;
          rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SurroundSound
+:SurroundSound rdf:type owl:Class ;
+               rdfs:subClassOf :Speakers .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SystemSoftware
@@ -2345,6 +2937,58 @@
 
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AvarageFan
+                :BadFan
+                :GoodFan
+                :ProfessionalFan
+                :ReallyBadFan
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AvarageHDD
+                :BadHDD
+                :GoodHDD
+                :ProfessionalHDD
+                :ReallyBadHDD
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AvarageIntegratedGraphicsCard
+                :BadIntegratedGraphicsCard
+                :GoodIntegratedGraphicsCard
+                :ProfessionalIntegratedGraphicsCard
+                :ReallyBadIntegratedGraphicsCard
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AvarageSSD
+                :BadSSD
+                :GoodSSD
+                :ProfessionalSSD
+                :ReallyBadSSD
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Buzzer
+                :HomeTheater
+                :Internal
+                :Multimedia
+                :Portable
+                :Soundbar
+                :SurroundSound
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Computer
                 :ComputerBrand
                 :ComputerComponent
@@ -2357,6 +3001,17 @@
                 :DDR2
                 :DDR3
                 :DDR4
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DualCore
+                :HexaCore
+                :MultiCore
+                :OctaCore
+                :QuadCore
+                :SingleCore
               )
 ] .
 

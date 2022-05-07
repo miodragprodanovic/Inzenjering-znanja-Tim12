@@ -9,7 +9,8 @@ public class GetBetterComponent {
     private Display Display;
     private ArrayList<Driver> Drivers;
     private Fan Fan;
-    private ArrayList<GraphicsCard> GraphicsCards;
+    private Dedicated Dedicated;
+    private Integrated Integrated;
     private Headphones Headphones;
     private Keyboard Keyboard;
     private Microphone Microphone;
@@ -32,14 +33,15 @@ public class GetBetterComponent {
 
     public GetBetterComponent(){}
 
-    public GetBetterComponent(ArrayList<Adapter> adapters, protage.example.protage.model.Camera camera, protage.example.protage.model.Case aCase, protage.example.protage.model.Display display, ArrayList<Driver> drivers, protage.example.protage.model.Fan fan, ArrayList<GraphicsCard> graphicsCards, protage.example.protage.model.Headphones headphones, protage.example.protage.model.Keyboard keyboard, protage.example.protage.model.Microphone microphone, protage.example.protage.model.Motherboard motherboard, ArrayList<MultimediaSoftware> multimediaSoftwares, protage.example.protage.model.OperatingSystem operatingSystem, protage.example.protage.model.PointingDevice pointingDevice, ArrayList<Port> ports, protage.example.protage.model.PowerSupply powerSupply, ArrayList<PresentationSoftware> presentationSoftwares, protage.example.protage.model.Processor processor, protage.example.protage.model.ProgramTranslator programTranslator, protage.example.protage.model.RAM RAM, protage.example.protage.model.SoundCard soundCard, protage.example.protage.model.Speakers speakers, ArrayList<SpreadsheetSoftware> spreadsheetSoftwares, ArrayList<Storage> storages, ArrayList<Utility> utilities, String whatToUpgrade) {
+    public GetBetterComponent(ArrayList<Adapter> adapters, protage.example.protage.model.Camera camera, protage.example.protage.model.Case aCase, protage.example.protage.model.Display display, ArrayList<Driver> drivers, protage.example.protage.model.Fan fan, protage.example.protage.model.Dedicated dedicated, protage.example.protage.model.Integrated integrated, protage.example.protage.model.Headphones headphones, protage.example.protage.model.Keyboard keyboard, protage.example.protage.model.Microphone microphone, protage.example.protage.model.Motherboard motherboard, ArrayList<MultimediaSoftware> multimediaSoftwares, protage.example.protage.model.OperatingSystem operatingSystem, protage.example.protage.model.PointingDevice pointingDevice, ArrayList<Port> ports, protage.example.protage.model.PowerSupply powerSupply, ArrayList<PresentationSoftware> presentationSoftwares, protage.example.protage.model.Processor processor, protage.example.protage.model.ProgramTranslator programTranslator, protage.example.protage.model.RAM RAM, protage.example.protage.model.SoundCard soundCard, protage.example.protage.model.Speakers speakers, ArrayList<SpreadsheetSoftware> spreadsheetSoftwares, ArrayList<Storage> storages, ArrayList<Utility> utilities, String whatToUpgrade) {
         Adapters = adapters;
         Camera = camera;
         Case = aCase;
         Display = display;
         Drivers = drivers;
         Fan = fan;
-        GraphicsCards = graphicsCards;
+        Dedicated = dedicated;
+        Integrated = integrated;
         Headphones = headphones;
         Keyboard = keyboard;
         Microphone = microphone;
@@ -109,12 +111,20 @@ public class GetBetterComponent {
         Fan = fan;
     }
 
-    public ArrayList<GraphicsCard> getGraphicsCards() {
-        return GraphicsCards;
+    public protage.example.protage.model.Dedicated getDedicated() {
+        return Dedicated;
     }
 
-    public void setGraphicsCards(ArrayList<GraphicsCard> graphicsCards) {
-        GraphicsCards = graphicsCards;
+    public void setDedicated(protage.example.protage.model.Dedicated dedicated) {
+        Dedicated = dedicated;
+    }
+
+    public protage.example.protage.model.Integrated getIntegrated() {
+        return Integrated;
+    }
+
+    public void setIntegrated(protage.example.protage.model.Integrated integrated) {
+        Integrated = integrated;
     }
 
     public protage.example.protage.model.Headphones getHeadphones() {

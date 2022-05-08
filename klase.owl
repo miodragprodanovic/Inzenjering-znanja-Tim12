@@ -1239,6 +1239,44 @@
 #    Classes
 #################################################################
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AM4Motherboard
+:AM4Motherboard rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( :Motherboard
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :ProcessorSocket ;
+                                                             owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                  owl:onDatatype xsd:string ;
+                                                                                  owl:withRestrictions ( [ xsd:pattern "AM4"
+                                                                                                         ]
+                                                                                                       )
+                                                                                ]
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf :Motherboard ;
+                owl:disjointWith :LGA1151Motherboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AM4Processor
+:AM4Processor rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :Processor
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :ProcessorSocket ;
+                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                owl:onDatatype xsd:string ;
+                                                                                owl:withRestrictions ( [ xsd:pattern "AM4"
+                                                                                                       ]
+                                                                                                     )
+                                                                              ]
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :Processor ;
+              owl:disjointWith :LGA1151Processor .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#AT
 :AT rdf:type owl:Class ;
     rdfs:subClassOf :Motherboard .
@@ -2129,6 +2167,42 @@
      owl:disjointWith :OLED .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#LGA1151Motherboard
+:LGA1151Motherboard rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( :Motherboard
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :ProcessorSocket ;
+                                                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                      owl:onDatatype xsd:string ;
+                                                                                      owl:withRestrictions ( [ xsd:pattern "LGA1151"
+                                                                                                             ]
+                                                                                                           )
+                                                                                    ]
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf :Motherboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#LGA1151Processor
+:LGA1151Processor rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :Processor
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :ProcessorSocket ;
+                                                               owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                    owl:onDatatype xsd:string ;
+                                                                                    owl:withRestrictions ( [ xsd:pattern "LGA1151"
+                                                                                                           ]
+                                                                                                         )
+                                                                                  ]
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf :Processor .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#LPX
 :LPX rdf:type owl:Class ;
      rdfs:subClassOf :Motherboard .
@@ -2887,6 +2961,78 @@
                                                 )
                                   ] ;
               rdfs:subClassOf :Adapter .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#20_Pin_PowerSupply
+<http://www.semanticweb.org/IZ/2022/Tim12/Klase#20_Pin_PowerSupply> rdf:type owl:Class ;
+                                                                    owl:equivalentClass [ owl:intersectionOf ( :PowerSupply
+                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty :PowerSupplyMotherboardPins ;
+                                                                                                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                      owl:unionOf ( [ rdf:type rdfs:Datatype ;
+                                                                                                                                                      owl:onDatatype xsd:string ;
+                                                                                                                                                      owl:withRestrictions ( [ xsd:pattern "20-pin"
+                                                                                                                                                                             ]
+                                                                                                                                                                           )
+                                                                                                                                                    ]
+                                                                                                                                                    [ rdf:type rdfs:Datatype ;
+                                                                                                                                                      owl:onDatatype xsd:string ;
+                                                                                                                                                      owl:withRestrictions ( [ xsd:pattern "20_4-pin"
+                                                                                                                                                                             ]
+                                                                                                                                                                           )
+                                                                                                                                                    ]
+                                                                                                                                                  )
+                                                                                                                                    ]
+                                                                                                               ]
+                                                                                                             ) ;
+                                                                                          rdf:type owl:Class
+                                                                                        ] ;
+                                                                    rdfs:subClassOf :PowerSupply .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#24_Pin_Motherboard
+<http://www.semanticweb.org/IZ/2022/Tim12/Klase#24_Pin_Motherboard> rdf:type owl:Class ;
+                                                                    owl:equivalentClass [ owl:intersectionOf ( :Motherboard
+                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty :MotherboardPowerSupply ;
+                                                                                                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                      owl:onDatatype xsd:string ;
+                                                                                                                                      owl:withRestrictions ( [ xsd:pattern "24-pin"
+                                                                                                                                                             ]
+                                                                                                                                                           )
+                                                                                                                                    ]
+                                                                                                               ]
+                                                                                                             ) ;
+                                                                                          rdf:type owl:Class
+                                                                                        ] ;
+                                                                    rdfs:subClassOf :Motherboard .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#24_Pin_PowerSupply
+<http://www.semanticweb.org/IZ/2022/Tim12/Klase#24_Pin_PowerSupply> rdf:type owl:Class ;
+                                                                    owl:equivalentClass [ owl:intersectionOf ( :PowerSupply
+                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty :PowerSupplyMotherboardPins ;
+                                                                                                                 owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                      owl:unionOf ( [ rdf:type rdfs:Datatype ;
+                                                                                                                                                      owl:onDatatype xsd:string ;
+                                                                                                                                                      owl:withRestrictions ( [ xsd:pattern "20_4-pin"
+                                                                                                                                                                             ]
+                                                                                                                                                                           )
+                                                                                                                                                    ]
+                                                                                                                                                    [ rdf:type rdfs:Datatype ;
+                                                                                                                                                      owl:onDatatype xsd:string ;
+                                                                                                                                                      owl:withRestrictions ( [ xsd:pattern "24-pin"
+                                                                                                                                                                             ]
+                                                                                                                                                                           )
+                                                                                                                                                    ]
+                                                                                                                                                  )
+                                                                                                                                    ]
+                                                                                                               ]
+                                                                                                             ) ;
+                                                                                          rdf:type owl:Class
+                                                                                        ] ;
+                                                                    rdfs:subClassOf :PowerSupply .
 
 
 #################################################################

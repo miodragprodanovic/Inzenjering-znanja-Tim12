@@ -511,7 +511,7 @@
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardDDRSuport> "DDR4" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardPCI-E> "3.0 x16" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardPowerSupply> "24-pin" ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA 1151" .
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA1151" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Motherboard_B550_F
@@ -793,7 +793,7 @@
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible> :GraphicsCard_NVIDIA_GeForce_GTX_1060 ,
                                                                                                            :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency> "47Hz/63Hz" ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyMotherboardPins> "20+4-pin" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyMotherboardPins> "20_4-pin" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E> "1x PCI-Express 6" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyVoltage> "90V/264V" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyWattPower> "180W" .
@@ -832,7 +832,7 @@
                                                                                                            :GraphicsCard_NVIDIA_GeForce_GTX_950 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyStrongerThan> :PowerSupply_XPS8500 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency> "50Hz/60Hz" ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyMotherboardPins> "20+4-pin" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyMotherboardPins> "20_4-pin" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E> "2x PCI-Express 6+2" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyVoltage> "100V/240V" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyWattPower> "850W" .
@@ -857,7 +857,7 @@
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> :GraphicsCard_Intel_HD_Graphics_530 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 2 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> "3.7 GHz" ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA 1151" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA1151" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> "true"^^xsd:boolean .
 
 
@@ -868,7 +868,7 @@
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> :GraphicsCard_Intel_HD_Graphics_530 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 4 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> "2.7 GHz" ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA 1151" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA1151" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> "true"^^xsd:boolean .
 
 
@@ -879,7 +879,7 @@
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> :GraphicsCard_Intel_UHD_Graphics_630 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 6 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> "2.8 GHz" ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA 1151" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA1151" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> "true"^^xsd:boolean .
 
 
@@ -890,7 +890,7 @@
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> :GraphicsCard_Intel_UHD_Graphics_630 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 6 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> "3.2 GHz" ;
-                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA 1151" ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA1151" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> "true"^^xsd:boolean .
 
 

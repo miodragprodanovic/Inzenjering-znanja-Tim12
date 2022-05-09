@@ -365,6 +365,14 @@
             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacity> 46 .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#G3415
+:G3415 rdf:type owl:NamedIndividual ;
+       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPrinterBetterThan> :Printer-HP_Laser_M203DN_G3Q46A ;
+       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryOfPrinter> "256MB" ;
+       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ResolutionOfScanner> "1200 x 1200 dpi" ;
+       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfPrinter> "Multifunctional" .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#GraphicsCard_Intel_HD_Graphics_530
 :GraphicsCard_Intel_HD_Graphics_530 rdf:type owl:NamedIndividual ;
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Intel ;
@@ -957,6 +965,93 @@
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyPCI-E> "2x PCI-Express 6+2" ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyVoltage> "100V/240V" ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyWattPower> "460W" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Printer-CANON_InkJet_Pixma_MG_2550S
+:Printer-CANON_InkJet_Pixma_MG_2550S rdf:type owl:NamedIndividual ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryOfPrinter> "60MB" ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ResolutionOfScanner> "600 x 1200 dpi" ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfPrinter> "InkJet" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Printer-CANON_MG_3650
+:Printer-CANON_MG_3650 rdf:type owl:NamedIndividual ;
+                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPrinterBetterThan> :Printer-CANON_Pixma_TS3350_BK ;
+                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryOfPrinter> "86MB" ;
+                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ResolutionOfScanner> "1200 x 2400 dpi" ;
+                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfPrinter> "Multifunctional" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Printer-CANON_Pixma_TS3350_BK
+:Printer-CANON_Pixma_TS3350_BK rdf:type owl:NamedIndividual ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPrinterBetterThan> :Printer-CANON_InkJet_Pixma_MG_2550S ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryOfPrinter> "60MB" ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ResolutionOfScanner> "600 x 1200 dpi" ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfPrinter> "Multifunctional" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Printer-Canon_Pixma_G640
+:Printer-Canon_Pixma_G640 rdf:type owl:NamedIndividual ;
+                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPrinterBetterThan> :Printer-EPSON_L805_ITS ;
+                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryOfPrinter> "256MB" ;
+                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ResolutionOfScanner> "600 x 1200 dpi" ;
+                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfPrinter> "Multifunctional" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Printer-EPSON_L805_ITS
+:Printer-EPSON_L805_ITS rdf:type owl:NamedIndividual ;
+                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPrinterBetterThan> :Printer-Epson_EcoTank_M3170 ;
+                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryOfPrinter> "10MB" ;
+                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ResolutionOfScanner> "1200x2400 px" ;
+                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfPrinter> "InkJet" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Printer-Epson_EcoTank_M3170
+:Printer-Epson_EcoTank_M3170 rdf:type owl:NamedIndividual ;
+                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPrinterBetterThan> :Printer-HP_Laser_M203DN_G3Q46A ;
+                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryOfPrinter> "2MB" ;
+                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ResolutionOfScanner> "1200 x 2400 px" ;
+                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfPrinter> "Multifunctional" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Printer-HP_Laser_107A_4ZB77A
+:Printer-HP_Laser_107A_4ZB77A rdf:type owl:NamedIndividual ;
+                              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPrinterBetterThan> :Printer-Kyocera_Ecosys_FS-1040 ;
+                              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryOfPrinter> "64MB" ;
+                              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ResolutionOfScanner> "1200 x 1200 dpi" ;
+                              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfPrinter> "Laser" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Printer-HP_Laser_M203DN_G3Q46A
+:Printer-HP_Laser_M203DN_G3Q46A rdf:type owl:NamedIndividual ;
+                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPrinterBetterThan> :Printer-Xerox_B230V_DNI ;
+                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryOfPrinter> "256MB" ;
+                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ResolutionOfScanner> "1200 x 1200 dpi" ;
+                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfPrinter> "Laser" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Printer-HP_Laser_MFP_M28W
+:Printer-HP_Laser_MFP_M28W rdf:type owl:NamedIndividual ;
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPrinterBetterThan> :Printer-HP_Laser_107A_4ZB77A ;
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryOfPrinter> "84MB" ;
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ResolutionOfScanner> "to 1200 dpi" ;
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfPrinter> "Laser" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Printer-Kyocera_Ecosys_FS-1040
+:Printer-Kyocera_Ecosys_FS-1040 rdf:type owl:NamedIndividual ;
+                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPrinterBetterThan> :Printer-CANON_MG_3650 ;
+                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryOfPrinter> "32 MB" ;
+                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ResolutionOfScanner> "1200 x 2400 dpi" ;
+                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfPrinter> "Laser" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Printer-Xerox_B230V_DNI
+:Printer-Xerox_B230V_DNI rdf:type owl:NamedIndividual ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPrinterBetterThan> :Printer-HP_Laser_MFP_M28W ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryOfPrinter> "256MB" ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ResolutionOfScanner> "600x1200 dpi" ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfPrinter> "Laser" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Processor_i3_6100

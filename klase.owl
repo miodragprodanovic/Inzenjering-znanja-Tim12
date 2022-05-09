@@ -928,6 +928,12 @@
                            rdfs:range :PowerSupply .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPrinterBetterThan
+:isPrinterBetterThan rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Printer ;
+                     rdfs:range :Printer .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isProcessorFasterThan
 :isProcessorFasterThan rdf:type owl:ObjectProperty ,
                                 owl:TransitiveProperty ;
@@ -1108,6 +1114,12 @@
               rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryOfPrinter
+:MemoryOfPrinter rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Printer ;
+                 rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MemoryType
 :MemoryType rdf:type owl:DatatypeProperty ;
             rdfs:domain :Motherboard ;
@@ -1214,6 +1226,12 @@
              rdfs:range xsd:int .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ResolutionOfScanner
+:ResolutionOfScanner rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Printer ;
+                     rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Sensitivity
 :Sensitivity rdf:type owl:DatatypeProperty ;
              rdfs:domain :Microphone ;
@@ -1254,6 +1272,12 @@
 :TypeOfFocus rdf:type owl:DatatypeProperty ;
              rdfs:domain :Camera ;
              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfPrinter
+:TypeOfPrinter rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Printer ;
+               rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#UtilityName
@@ -2478,6 +2502,11 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PrintDrivers
 :PrintDrivers rdf:type owl:Class ;
               rdfs:subClassOf :Drivers .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Printer
+:Printer rdf:type owl:Class ;
+         rdfs:subClassOf :Hardware .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Processor

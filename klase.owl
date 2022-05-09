@@ -955,6 +955,12 @@
                       rdfs:range :RAM .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isScannerBetterThan
+:isScannerBetterThan rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Scanner ;
+                     rdfs:range :Scanner .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan
 :isSoundCardBetterThan rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf owl:topObjectProperty ;
@@ -1103,6 +1109,12 @@
                       rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#LightSourceOfScanner
+:LightSourceOfScanner rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Scanner ;
+                      rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#LinuxVersion
 :LinuxVersion rdf:type owl:DatatypeProperty ;
               rdfs:domain :Linux ;
@@ -1167,6 +1179,12 @@
 :OperatingSystemsItRunsOn rdf:type owl:DatatypeProperty ;
                           rdfs:domain :Utilities ;
                           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OpticalResolutionOfScanner
+:OpticalResolutionOfScanner rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :Scanner ;
+                            rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#PowerSupplyFrequency
@@ -1278,6 +1296,12 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfPrinter
 :TypeOfPrinter rdf:type owl:DatatypeProperty ;
                rdfs:domain :Printer ;
+               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfScanner
+:TypeOfScanner rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Scanner ;
                rdfs:range xsd:string .
 
 
@@ -2889,6 +2913,11 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SSD
 :SSD rdf:type owl:Class ;
      rdfs:subClassOf :Storage .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Scanner
+:Scanner rdf:type owl:Class ;
+         rdfs:subClassOf :Hardware .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SingleCore

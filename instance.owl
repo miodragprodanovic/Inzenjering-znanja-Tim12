@@ -1331,6 +1331,77 @@
           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 64 .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Scanner-BROTHER_Wi-Fi_DS-820W
+:Scanner-BROTHER_Wi-Fi_DS-820W rdf:type owl:NamedIndividual ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isScannerBetterThan> :Scanner-XL-SCAN_Barcode_Scanner ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LightSourceOfScanner> "RGB LED" ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#OpticalResolutionOfScanner> "600 dpi" ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfScanner> "For documents" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Scanner-CANON_imageFORMULA
+:Scanner-CANON_imageFORMULA rdf:type owl:NamedIndividual ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isScannerBetterThan> :Scanner-Fujitsu_Image_Scanner_SP-1120N ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LightSourceOfScanner> "RGB LED" ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#OpticalResolutionOfScanner> "600dpi" ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfScanner> "With automatic paper feed" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Scanner-Epson_WorkForce_DS-360W
+:Scanner-Epson_WorkForce_DS-360W rdf:type owl:NamedIndividual ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isScannerBetterThan> :Scanner-BROTHER_Wi-Fi_DS-820W ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LightSourceOfScanner> "RGB LED" ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#OpticalResolutionOfScanner> "600 dpi" ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfScanner> "For documents with ADF" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Scanner-FUJITSU_FI-7800
+:Scanner-FUJITSU_FI-7800 rdf:type owl:NamedIndividual ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isScannerBetterThan> :Scanner-FUJITSU_fi-7700_A3_DuplexColor ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LightSourceOfScanner> "White LED (4x)" ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#OpticalResolutionOfScanner> "600 x 600 dpi" ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfScanner> "ADF/ Manual Feed" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Scanner-FUJITSU_fi-7300NX
+:Scanner-FUJITSU_fi-7300NX rdf:type owl:NamedIndividual ;
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isScannerBetterThan> :Scanner-CANON_imageFORMULA ;
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LightSourceOfScanner> "White LED x2" ;
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#OpticalResolutionOfScanner> "600 x 600 dpi" ;
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfScanner> "For documents with ADF" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Scanner-FUJITSU_fi-7700_A3_DuplexColor
+:Scanner-FUJITSU_fi-7700_A3_DuplexColor rdf:type owl:NamedIndividual ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isScannerBetterThan> :Scanner-RANGE_VISION_3D_Spectrum ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LightSourceOfScanner> "White LED lamp" ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#OpticalResolutionOfScanner> "600 x 600 dpi" ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfScanner> "For documents with ADF" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Scanner-Fujitsu_Image_Scanner_SP-1120N
+:Scanner-Fujitsu_Image_Scanner_SP-1120N rdf:type owl:NamedIndividual ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isScannerBetterThan> :Scanner-Epson_WorkForce_DS-360W ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LightSourceOfScanner> "RGB LED" ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#OpticalResolutionOfScanner> "600 x 600 dpi" ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfScanner> "For documents with ADF" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Scanner-RANGE_VISION_3D_Spectrum
+:Scanner-RANGE_VISION_3D_Spectrum rdf:type owl:NamedIndividual ;
+                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isScannerBetterThan> :Scanner-FUJITSU_fi-7300NX ;
+                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LightSourceOfScanner> "600x600 dpi" ,
+                                                                                                        "LED" ;
+                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfScanner> "For documents with ADF" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Scanner-XL-SCAN_Barcode_Scanner
+:Scanner-XL-SCAN_Barcode_Scanner rdf:type owl:NamedIndividual ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LightSourceOfScanner> "RGB" ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#OpticalResolutionOfScanner> "400 dpi" ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfScanner> "Manual" .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-AUDIOQUEST_USB_Dragonfly
 :SoundCard-AUDIOQUEST_USB_Dragonfly rdf:type owl:NamedIndividual ;
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-Asus_5.1_Xonar_SE .

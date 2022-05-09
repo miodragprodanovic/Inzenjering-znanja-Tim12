@@ -837,6 +837,34 @@
                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA1151" .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse_Ergonomic_Logitech_MX_Master_2S
+:Mouse_Ergonomic_Logitech_MX_Master_2S rdf:type owl:NamedIndividual ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Gaming_Corsair_SABRE_RGB_PRO ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Laser_Lenovo_Yoga ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 2800 ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "125 Hz" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse_Gaming_Corsair_SABRE_RGB_PRO
+:Mouse_Gaming_Corsair_SABRE_RGB_PRO rdf:type owl:NamedIndividual ;
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse_Pro_X ;
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Logitech_MX_Master_3 ;
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Optical_Razer_Pro_Click ;
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 19200 ;
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "8000 Hz" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse_Laser_Lenovo_Yoga
+:Mouse_Laser_Lenovo_Yoga rdf:type owl:NamedIndividual ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse_Ergonomic_Logitech_MX_Master_2S ,
+                                                                                                   :Mouse_Logitech_M510 ,
+                                                                                                   :Mouse_Logitech_MX_Master_3 ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Optical_Razer_Pro_Click ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Logitech_M510 ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 1600 ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "250 Hz" .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse_Logitech_M510
 :Mouse_Logitech_M510 rdf:type owl:NamedIndividual ;
                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Logitech ;
@@ -849,15 +877,23 @@
 :Mouse_Logitech_MX_Master_3 rdf:type owl:NamedIndividual ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Logitech ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Logitech_M510 ;
-                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Logitech_M510 ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Optical_Microsoft_Classic_Intelli ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 4000 ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "125 Hz" .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse_Optical_Microsoft_Classic_Intelli
+:Mouse_Optical_Microsoft_Classic_Intelli rdf:type owl:NamedIndividual ;
+                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse_Optical_Razer_Pro_Click ;
+                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Ergonomic_Logitech_MX_Master_2S ;
+                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 3200 ;
+                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "500 Hz" .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse_Optical_Razer_Pro_Click
 :Mouse_Optical_Razer_Pro_Click rdf:type owl:NamedIndividual ;
-                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse_Logitech_M510 ,
-                                                                                                         :Mouse_Logitech_MX_Master_3 ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse_Laser_Lenovo_Yoga ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Optical_Microsoft_Classic_Intelli ;
                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Logitech_MX_Master_3 ;
                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 16000 ;
                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "500 Hz" .
@@ -865,26 +901,56 @@
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse_Pro_X
 :Mouse_Pro_X rdf:type owl:NamedIndividual ;
-             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse_Optical_Razer_Pro_Click ;
-             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Optical_Razer_Pro_Click ;
-             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Optical_Razer_Pro_Click ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse_Optical_Microsoft_Classic_Intelli ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Laser_Lenovo_Yoga ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Gaming_Corsair_SABRE_RGB_PRO ;
              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 25600 ;
              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "1000 Hz" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystemLinuxUbuntu
-:OperatingSystemLinuxUbuntu rdf:type owl:NamedIndividual ;
-                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LinuxVersion> "Ubuntu" .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystem_Linux_Mint
+:OperatingSystem_Linux_Mint rdf:type owl:NamedIndividual ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LinuxVersion> "Mint"^^xsd:string .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystemMacOS11
-:OperatingSystemMacOS11 rdf:type owl:NamedIndividual ;
-                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MacOSVersion> "11"^^xsd:string .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystem_Linux_Ubuntu
+:OperatingSystem_Linux_Ubuntu rdf:type owl:NamedIndividual ;
+                              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#LinuxVersion> "Ubuntu" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystem_MacOS_10.14
+:OperatingSystem_MacOS_10.14 rdf:type owl:NamedIndividual ;
+                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MacOSVersion> "10.14"^^xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystem_MacOS_10.3
+:OperatingSystem_MacOS_10.3 rdf:type owl:NamedIndividual ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MacOSVersion> "10.3"^^xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystem_MacOS_11
+:OperatingSystem_MacOS_11 rdf:type owl:NamedIndividual ;
+                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MacOSVersion> "11"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystem_Windows_10_Pro
 :OperatingSystem_Windows_10_Pro rdf:type owl:NamedIndividual ;
                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#WindowsVersion> "10 Pro" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystem_Windows_7_Ultimate
+:OperatingSystem_Windows_7_Ultimate rdf:type owl:NamedIndividual ;
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#WindowsVersion> "7 Ultimate"^^xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystem_Windows_8_Enterprise
+:OperatingSystem_Windows_8_Enterprise rdf:type owl:NamedIndividual ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#WindowsVersion> "8 Enterprise"^^xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#OperatingSystem_Windows_XP_Professional
+:OperatingSystem_Windows_XP_Professional rdf:type owl:NamedIndividual ;
+                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#WindowsVersion> "XP Professional"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Alienware_Aurora_R5_DPCWXT01_Silver
@@ -901,7 +967,7 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasGamingMouse> :Mouse_Pro_X ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDD> :HDD_512GB ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledOperatingSystem> :OperatingSystemLinuxUbuntu ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledOperatingSystem> :OperatingSystem_Linux_Ubuntu ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard_Intel_HD_Graphics_530 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMicrophonePort> :MicrophonePort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMultimedia> :Speakers_JBLQuantum ;
@@ -957,7 +1023,7 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHDMIPort> :HDMIPort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasHeadphonesPort> :HeadphonesPort ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIPS> :Display_S2721DGF ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledOperatingSystem> :OperatingSystemMacOS11 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasInstalledOperatingSystem> :OperatingSystem_MacOS_11 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasIntegrated> :GraphicsCard_Intel_HD_Graphics_530 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasLaserMouse> :Mouse_Logitech_M510 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasMembraneKeyboard> :Keyboard_Membrane_Razer_Cynosa_v2 ;

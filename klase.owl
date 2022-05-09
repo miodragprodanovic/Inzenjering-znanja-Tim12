@@ -798,6 +798,18 @@
                            rdfs:range :Keyboard .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMicrophoneBetterRegistringDifferentVolumesOfSoundsThan
+:isMicrophoneBetterRegistringDifferentVolumesOfSoundsThan rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain :Microphone ;
+                                                          rdfs:range :Microphone .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMicrophoneBetterRegistringSilentVoicesThan
+:isMicrophoneBetterRegistringSilentVoicesThan rdf:type owl:ObjectProperty ;
+                                              rdfs:domain :Microphone ;
+                                              rdfs:range :Microphone .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMoreComfortableThan
 :isMoreComfortableThan rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf owl:topObjectProperty ;
@@ -1004,6 +1016,12 @@
                     rdfs:range xsd:int .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#FrequencyResponse
+:FrequencyResponse rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Microphone ;
+                   rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardMemory
 :GraphicsCardMemory rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Dedicated ;
@@ -1080,6 +1098,12 @@
 :MemoryType rdf:type owl:DatatypeProperty ;
             rdfs:domain :Motherboard ;
             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MicrophoneType
+:MicrophoneType rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Microphone ;
+                rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#MotherboardDDRSuport
@@ -1174,6 +1198,12 @@
 :RAMCapacity rdf:type owl:DatatypeProperty ;
              rdfs:domain :RAM ;
              rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Sensitivity
+:Sensitivity rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Microphone ;
+             rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpeakersFrequencyResponse

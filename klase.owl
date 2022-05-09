@@ -942,6 +942,13 @@
                       rdfs:range :RAM .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan
+:isSoundCardBetterThan rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:domain :SoundCard ;
+                       rdfs:range :SoundCard .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityMoreThan
 :isStorageCapacityMoreThan rdf:type owl:ObjectProperty ,
                                     owl:TransitiveProperty ;

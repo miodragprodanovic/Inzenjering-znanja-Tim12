@@ -10,6 +10,14 @@
                                                      owl:imports <http://www.semanticweb.org/IZ/2022/Tim12/Klase> .
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMicrophoneBetterRegistringSilentVoicesThan
+<http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMicrophoneBetterRegistringSilentVoicesThan> rdfs:subPropertyOf <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMoreComfortableThan> .
+
+
+#################################################################
 #    Individuals
 #################################################################
 
@@ -1011,6 +1019,40 @@
 :SSD_64GB rdf:type owl:NamedIndividual ;
           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isStorageCapacityPreferableThan> :HDD_256GB ;
           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacity> 64 .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-AUDIOQUEST_USB_Dragonfly
+:SoundCard-AUDIOQUEST_USB_Dragonfly rdf:type owl:NamedIndividual ;
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-Asus_5.1_Xonar_SE .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-AUDIOQUEST_USB_Dragonfly_24-bit
+:SoundCard-AUDIOQUEST_USB_Dragonfly_24-bit rdf:type owl:NamedIndividual ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-AUDIOQUEST_USB_Dragonfly .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-Asus_5.1_Xonar_SE
+:SoundCard-Asus_5.1_Xonar_SE rdf:type owl:NamedIndividual ;
+                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-S-Box_USB .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-FAST_ASIA_USB_7.1
+:SoundCard-FAST_ASIA_USB_7.1 rdf:type owl:NamedIndividual ;
+                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-Gembird_USB_5.1_3D .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-Gembird_USB_5.1_3D
+:SoundCard-Gembird_USB_5.1_3D rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-S-Box_USB
+:SoundCard-S-Box_USB rdf:type owl:NamedIndividual ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-X-Wave_Bluetooth_Transmiter .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-X-Wave_Bluetooth_Transmiter
+:SoundCard-X-Wave_Bluetooth_Transmiter rdf:type owl:NamedIndividual ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-FAST_ASIA_USB_7.1 .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers_JBLQuantum

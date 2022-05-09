@@ -783,6 +783,13 @@
                               rdfs:range :GraphicsCard .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isJoystickBetterThan
+:isJoystickBetterThan rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain :Joystick ;
+                      rdfs:range :Joystick .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan
 :isKeyboardMoreComfortableThan rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf :isMoreComfortableThan ;

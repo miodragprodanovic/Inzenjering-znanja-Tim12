@@ -130,7 +130,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Camera-Kiyo_RZ19
 :Camera-Kiyo_RZ19 rdf:type owl:NamedIndividual ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isCameraBetterThan> :Camera_Natec_Lori_Plus_NKI_1672 ;
-                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#AngleOfVisibility> 81.6 ;
+                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#AngleOfVisibility> "81"^^xsd:int ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfFocus> "Automatic and manual" ;
                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#VideoResolution> "2688 x 1520" .
 
@@ -440,36 +440,116 @@
 :HeadphonesPort rdf:type owl:NamedIndividual .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_Closed_Back_AKG_N700NC_M2
+:Headphones_Closed_Back_AKG_N700NC_M2 rdf:type owl:NamedIndividual ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_On_Ear_JBL_Live_460NC_Wireless ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_Closed_Back_Beyerdynamic_DT_770_PRO ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_On_Ear_Audio_Technica_ATH_M60x ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "80 - 12000 Hz" ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "16 ohms" ;
+                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "101 dB" .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_Closed_Back_Beyerdynamic_DT_770_PRO
 :Headphones_Closed_Back_Beyerdynamic_DT_770_PRO rdf:type owl:NamedIndividual ;
-                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_On_Ear_AKG_Y400 ;
-                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_On_Ear_AKG_Y400 ;
+                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_Closed_Back_AKG_N700NC_M2 ;
+                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_Closed_Back_Bose_QuietComfort_35 ;
+                                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_Closed_Back_Bose_QuietComfort_35 ;
                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "100 - 10000 Hz" ;
                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "250 ohms" ;
                                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "100.45 dB" .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_Closed_Back_Bose_QuietComfort_35
+:Headphones_Closed_Back_Bose_QuietComfort_35 rdf:type owl:NamedIndividual ;
+                                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_Open_Back_Philips_Fidelio_X2HR ;
+                                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_On_Ear_AKG_Y400 ;
+                                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "200 - 8000 Hz" ;
+                                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "55.61 ohms" ;
+                                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "100.18 dB" .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_On_Ear_AKG_Y400
 :Headphones_On_Ear_AKG_Y400 rdf:type owl:NamedIndividual ;
-                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_Closed_Back_Beyerdynamic_DT_770_PRO ;
-                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_Open_Back_Philips_Fidelio_X2HR ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_On_Ear_Audio_Technica_ATH_M60x ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_Over_Ear_Anker_Soundcore_Life_Q30_Wireless ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_Closed_Back_AKG_N700NC_M2 ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "20 - 20000 Hz" ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "32 ohms" ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "106 dB" .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_On_Ear_Audio_Technica_ATH_M60x
+:Headphones_On_Ear_Audio_Technica_ATH_M60x rdf:type owl:NamedIndividual ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_On_Ear_JBL_Live_460NC_Wireless ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_On_Ear_JBL_Live_460NC_Wireless ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "15 - 28000 Hz" ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "38 ohms" ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "102 dB" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_On_Ear_JBL_Live_460NC_Wireless
+:Headphones_On_Ear_JBL_Live_460NC_Wireless rdf:type owl:NamedIndividual ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_On_Ear_AKG_Y400 ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_On_Ear_AKG_Y400 ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_Open_Back_Sennheiser_HD_800_S ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "18 - 20000 HZ" ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "32 ohms" ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "96 dB" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_Open_Back_Astro_A40_TR
+:Headphones_Open_Back_Astro_A40_TR rdf:type owl:NamedIndividual ;
+                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_Open_Back_Sennheiser_HD_800_S ;
+                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_Closed_Back_AKG_N700NC_M2 ;
+                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "40 - 15000 Hz" ;
+                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "59.6 ohms" ;
+                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "102.21 dB" .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_Open_Back_Philips_Fidelio_X2HR
 :Headphones_Open_Back_Philips_Fidelio_X2HR rdf:type owl:NamedIndividual ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_Closed_Back_Beyerdynamic_DT_770_PRO ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_On_Ear_AKG_Y400 ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_Over_Ear_Anker_Soundcore_Life_Q30_Wireless ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_Open_Back_Sennheiser_HD_800_S ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_Open_Back_Astro_A40_TR ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "5 - 40000 Hz" ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "30 ohms" ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "100 dB" .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_Open_Back_Sennheiser_HD_800_S
+:Headphones_Open_Back_Sennheiser_HD_800_S rdf:type owl:NamedIndividual ;
+                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_Closed_Back_Beyerdynamic_DT_770_PRO ;
+                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_On_Ear_Audio_Technica_ATH_M60x ;
+                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_Open_Back_Philips_Fidelio_X2HR ;
+                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "10 - 30000 Hz" ;
+                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "300 ohms" ;
+                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "100.09 dB" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_Over_Ear_Anker_Soundcore_Life_Q30_Wireless
+:Headphones_Over_Ear_Anker_Soundcore_Life_Q30_Wireless rdf:type owl:NamedIndividual ;
+                                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_Over_Ear_HiFiMan_Edition_XS ;
+                                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_Open_Back_Astro_A40_TR ;
+                                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_Over_Ear_HiFiMan_Edition_XS ;
+                                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "20 - 20000 Hz" ;
+                                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "16 ohms" ;
+                                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "82 dB" .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_Over_Ear_HiFiMan_Edition_XS
+:Headphones_Over_Ear_HiFiMan_Edition_XS rdf:type owl:NamedIndividual ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_Open_Back_Astro_A40_TR ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_Over_Ear_Sony_WH_1000XM4 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_Over_Ear_Sony_WH_1000XM4 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse> "8 - 50000 Hz" ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "18 ohms" ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "92 dB" .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Headphones_Over_Ear_Sony_WH_1000XM4
 :Headphones_Over_Ear_Sony_WH_1000XM4 rdf:type owl:NamedIndividual ;
-                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_Open_Back_Philips_Fidelio_X2HR ;
+                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#areHeadphonesMoreComfortableThan> :Headphones_Closed_Back_Bose_QuietComfort_35 ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterHeadphonesFrequencyResponseRangeThan> :Headphones_Open_Back_Philips_Fidelio_X2HR ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterNoiseIsolationThan> :Headphones_Closed_Back_Beyerdynamic_DT_770_PRO ;
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesImpedance> "16 ohms" ,
@@ -501,19 +581,37 @@
                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isJoystickBetterThan> :Joystick-Logitech_943 .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Ergonomic_Kinesis_Freestyle_Edge_RGB
+:Keyboard_Ergonomic_Kinesis_Freestyle_Edge_RGB rdf:type owl:NamedIndividual ;
+                                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Mechanical_Ducky_Shine_7_Gunmetal_RGB_LED_Double_Shot_PBT ;
+                                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Mechanical_SteelSeries_Apex_Pro ;
+                                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard_Ergonomic_Logitech_Ergo_K860 ;
+                                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "false"^^xsd:boolean ;
+                                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "false"^^xsd:boolean .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Ergonomic_Logitech_Ergo_K860
 :Keyboard_Ergonomic_Logitech_Ergo_K860 rdf:type owl:NamedIndividual ;
-                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Mechanical_Ducky_Shine_7_Gunmetal_RGB_LED_Double_Shot_PBT ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Ergonomic_Kinesis_Freestyle_Edge_RGB ;
                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Gaming_Corsair_K100_RGB ;
-                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard_Membrane_Razer_Cynosa_v2 ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard_Membrane_Logitech_G213 ;
                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "false"^^xsd:boolean ;
                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "false"^^xsd:boolean .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Flexible_Fly_Way
+:Keyboard_Flexible_Fly_Way rdf:type owl:NamedIndividual ;
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Flexible_Sungwoo_Black ;
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Flexible_Sungwoo_Black ;
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "false"^^xsd:boolean ;
+                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "true"^^xsd:boolean .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Flexible_Sungwoo_Black
 :Keyboard_Flexible_Sungwoo_Black rdf:type owl:NamedIndividual ;
-                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Membrane_Razer_Cynosa_v2 ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Membrane_Logitech_G213 ;
                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Mechanical_Ducky_Shine_7_Gunmetal_RGB_LED_Double_Shot_PBT ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard_Gaming_EVGA_Z12 ;
                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "false"^^xsd:boolean ;
                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "true"^^xsd:boolean .
 
@@ -521,19 +619,46 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Gaming_Corsair_K100_RGB
 :Keyboard_Gaming_Corsair_K100_RGB rdf:type owl:NamedIndividual ;
                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Ergonomic_Logitech_Ergo_K860 ;
-                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Flexible_Sungwoo_Black ;
-                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard_Ergonomic_Logitech_Ergo_K860 ;
+                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Flexible_Fly_Way ;
+                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard_Mechanical_SteelSeries_Apex_Pro ;
                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "true"^^xsd:boolean ;
                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "false"^^xsd:boolean .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Gaming_EVGA_Z12
+:Keyboard_Gaming_EVGA_Z12 rdf:type owl:NamedIndividual ;
+                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Flexible_Fly_Way ;
+                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Membrane_Razer_Cynosa_v2 ;
+                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard_Flexible_Fly_Way ;
+                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "true"^^xsd:boolean ;
+                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "false"^^xsd:boolean .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Mechanical_Ducky_Shine_7_Gunmetal_RGB_LED_Double_Shot_PBT
 :Keyboard_Mechanical_Ducky_Shine_7_Gunmetal_RGB_LED_Double_Shot_PBT rdf:type owl:NamedIndividual ;
-                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Membrane_Razer_Cynosa_v2 ;
-                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Membrane_Razer_Cynosa_v2 ;
+                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Gaming_EVGA_Z12 ;
+                                                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Membrane_Logitech_G213 ;
                                                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard_Gaming_Corsair_K100_RGB ;
                                                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "true"^^xsd:boolean ;
                                                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Mechanical_SteelSeries_Apex_Pro
+:Keyboard_Mechanical_SteelSeries_Apex_Pro rdf:type owl:NamedIndividual ;
+                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Gaming_Corsair_K100_RGB ;
+                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Ergonomic_Logitech_Ergo_K860 ;
+                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard_Ergonomic_Kinesis_Freestyle_Edge_RGB ;
+                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "true"^^xsd:boolean ;
+                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Membrane_Logitech_G213
+:Keyboard_Membrane_Logitech_G213 rdf:type owl:NamedIndividual ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterKeystrokeThan> :Keyboard_Membrane_Razer_Cynosa_v2 ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreComfortableThan> :Keyboard_Gaming_EVGA_Z12 ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isKeyboardMoreDurableThan> :Keyboard_Membrane_Razer_Cynosa_v2 ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#KeyboardBacklit> "false"^^xsd:boolean ;
+                                 <http://www.semanticweb.org/IZ/2022/Tim12/Klase#SpillResistant> "true"^^xsd:boolean .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Membrane_Razer_Cynosa_v2
@@ -1058,6 +1183,16 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-Asus_5.1_Xonar_SE
 :SoundCard-Asus_5.1_Xonar_SE rdf:type owl:NamedIndividual ;
                              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-S-Box_USB .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-Creative_Sound_Blaster_Z
+:SoundCard-Creative_Sound_Blaster_Z rdf:type owl:NamedIndividual ;
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-AUDIOQUEST_USB_Dragonfly_24-bit .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-EVGA_NU_Audio_Card
+:SoundCard-EVGA_NU_Audio_Card rdf:type owl:NamedIndividual ;
+                              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-Creative_Sound_Blaster_Z .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-FAST_ASIA_USB_7.1

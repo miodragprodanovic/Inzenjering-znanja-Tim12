@@ -952,6 +952,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan
 :isSoundCardBetterThan rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdf:type owl:TransitiveProperty ;
                        rdfs:domain :SoundCard ;
                        rdfs:range :SoundCard .
 

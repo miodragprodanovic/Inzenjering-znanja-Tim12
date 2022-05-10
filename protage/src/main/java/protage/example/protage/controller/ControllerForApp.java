@@ -1,5 +1,6 @@
 package protage.example.protage.controller;
 
+import jdk.javadoc.internal.doclets.formats.html.markup.Head;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.springframework.http.HttpStatus;
@@ -9,6 +10,7 @@ import protage.example.protage.Jena.Jena;
 import protage.example.protage.model.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.security.Key;
 import java.util.ArrayList;
 
 
@@ -20,7 +22,17 @@ public class ControllerForApp {
 
         if(getBetterComponentBody.getWhatToUpgrade().equals("ethernetCard")){        }
         else if(getBetterComponentBody.getWhatToUpgrade().equals("wirelessCard")){}
-        else if(getBetterComponentBody.getWhatToUpgrade().equals("camera")){}
+        else if(getBetterComponentBody.getWhatToUpgrade().equals("camera")){
+            String queryString =
+                    "PREFIX ins:<http://www.semanticweb.org/IZ/2022/Tim12/Instance#>"+
+                            "PREFIX kls:<http://www.semanticweb.org/IZ/2022/Tim12/Klase#>"+
+                            "SELECT ?x WHERE { ?x kls:isCameraBetterThanThan ins:"+getBetterComponentBody.getCamera()+".}";
+            ArrayList<String> better = Jena.execQuery(queryString);
+            ArrayList<String> result = new ArrayList<String>();
+            result.add("----BETTER CAMERA----");
+            result.addAll(better);
+            return new ResponseEntity<ArrayList<String>>(result, HttpStatus.OK);
+        }
         else if(getBetterComponentBody.getWhatToUpgrade().equals("case")){}
         else if(getBetterComponentBody.getWhatToUpgrade().equals("display")){
             String queryString =
@@ -150,9 +162,75 @@ public class ControllerForApp {
             result.addAll(preferable);
             return new ResponseEntity<ArrayList<String>>(result, HttpStatus.OK);
         }
-        else if(getBetterComponentBody.getWhatToUpgrade().equals("headphones")){}
-        else if(getBetterComponentBody.getWhatToUpgrade().equals("keyboard")){}
-        else if(getBetterComponentBody.getWhatToUpgrade().equals("microphone")){}
+        else if(getBetterComponentBody.getWhatToUpgrade().equals("headphones")){
+            String queryString =
+                    "PREFIX ins:<http://www.semanticweb.org/IZ/2022/Tim12/Instance#>"+
+                            "PREFIX kls:<http://www.semanticweb.org/IZ/2022/Tim12/Klase#>"+
+                            "SELECT ?x WHERE { ?x kls:areHeadphonesMoreComfortableThan ins:"+getBetterComponentBody.getHeadphones()+".}";
+            ArrayList<String> comfortable = Jena.execQuery(queryString);
+            queryString =
+                    "PREFIX ins:<http://www.semanticweb.org/IZ/2022/Tim12/Instance#>"+
+                            "PREFIX kls:<http://www.semanticweb.org/IZ/2022/Tim12/Klase#>"+
+                            "SELECT ?x WHERE { ?x kls:hasBetterHeadphonesFrequencyResponseRangeThan ins:"+getBetterComponentBody.getHeadphones()+".}";
+            ArrayList<String> betterFrequencyResponse = Jena.execQuery(queryString);
+            queryString =
+                    "PREFIX ins:<http://www.semanticweb.org/IZ/2022/Tim12/Instance#>"+
+                            "PREFIX kls:<http://www.semanticweb.org/IZ/2022/Tim12/Klase#>"+
+                            "SELECT ?x WHERE { ?x kls:hasBetterNoiseIsolationThan ins:"+getBetterComponentBody.getHeadphones()+".}";
+            ArrayList<String> betterNoiseIsolation = Jena.execQuery(queryString);
+            ArrayList<String> result = new ArrayList<String>();
+            result.add("----COMFORTABLE----");
+            result.addAll(comfortable);
+            result.add("----BETTER FREQUENCY RESPONSE----");
+            result.addAll(betterFrequencyResponse);
+            result.add("----BETTER NOISE ISOLATION----");
+            result.addAll(betterNoiseIsolation);
+            return new ResponseEntity<ArrayList<String>>(result, HttpStatus.OK);
+        }
+        else if(getBetterComponentBody.getWhatToUpgrade().equals("keyboard")){
+            String queryString =
+                    "PREFIX ins:<http://www.semanticweb.org/IZ/2022/Tim12/Instance#>"+
+                            "PREFIX kls:<http://www.semanticweb.org/IZ/2022/Tim12/Klase#>"+
+                            "SELECT ?x WHERE { ?x kls:hasBetterKeystrokeThan ins:"+getBetterComponentBody.getKeyboard()+".}";
+            ArrayList<String> betterKeystroke = Jena.execQuery(queryString);
+            queryString =
+                    "PREFIX ins:<http://www.semanticweb.org/IZ/2022/Tim12/Instance#>"+
+                            "PREFIX kls:<http://www.semanticweb.org/IZ/2022/Tim12/Klase#>"+
+                            "SELECT ?x WHERE { ?x kls:isKeyboardMoreComfortableThan ins:"+getBetterComponentBody.getKeyboard()+".}";
+            ArrayList<String> comfortable = Jena.execQuery(queryString);
+            queryString =
+                    "PREFIX ins:<http://www.semanticweb.org/IZ/2022/Tim12/Instance#>"+
+                            "PREFIX kls:<http://www.semanticweb.org/IZ/2022/Tim12/Klase#>"+
+                            "SELECT ?x WHERE { ?x kls:isKeyboardMoreDurableThan ins:"+getBetterComponentBody.getKeyboard()+".}";
+            ArrayList<String> durable = Jena.execQuery(queryString);
+            ArrayList<String> result = new ArrayList<String>();
+            result.add("----BETTER KEYSTROKE----");
+            result.addAll(betterKeystroke);
+            result.add("----MORE COMFORTABLE----");
+            result.addAll(comfortable);
+            result.add("----MORE DURABLE----");
+            result.addAll(durable);
+            return new ResponseEntity<ArrayList<String>>(result, HttpStatus.OK);
+        }
+        else if(getBetterComponentBody.getWhatToUpgrade().equals("microphone")){
+            String queryString =
+                    "PREFIX ins:<http://www.semanticweb.org/IZ/2022/Tim12/Instance#>"+
+                            "PREFIX kls:<http://www.semanticweb.org/IZ/2022/Tim12/Klase#>"+
+                            "SELECT ?x WHERE { ?x kls:isMicrophoneBetterRegistringSilentVoicesThan ins:"+getBetterComponentBody.getMicrophone()+".}";
+            ArrayList<String> silent = Jena.execQuery(queryString);
+            queryString =
+                    "PREFIX ins:<http://www.semanticweb.org/IZ/2022/Tim12/Instance#>"+
+                            "PREFIX kls:<http://www.semanticweb.org/IZ/2022/Tim12/Klase#>"+
+                            "SELECT ?x WHERE { ?x kls:isMicrophoneBetterRegistringDifferentVolumesOfSoundsThan ins:"+getBetterComponentBody.getMicrophone()+".}";
+            ArrayList<String> differentVolumes = Jena.execQuery(queryString);
+
+            ArrayList<String> result = new ArrayList<String>();
+            result.add("----BETTER REGISTRING SILENT VOICES----");
+            result.addAll(silent);
+            result.add("----BETTER REGISTRING DIFFERENT VOLUMES----");
+            result.addAll(differentVolumes);
+            return new ResponseEntity<ArrayList<String>>(result, HttpStatus.OK);
+        }
         else if(getBetterComponentBody.getWhatToUpgrade().equals("motherboard")){}
         else if(getBetterComponentBody.getWhatToUpgrade().equals("pointingDevice")){}
         else if(getBetterComponentBody.getWhatToUpgrade().equals("powerSupply")){
@@ -349,6 +427,11 @@ public class ControllerForApp {
         ArrayList<SpreadsheetSoftware> spreadsheetSoftwares = new ArrayList<SpreadsheetSoftware>();
         ArrayList<Storage> storages = new ArrayList<Storage>();
         ArrayList<Utility> utilities = new ArrayList<Utility>();
+        ArrayList<Camera> cameras = new ArrayList<Camera>();
+        ArrayList<Headphones> headphones = new ArrayList<Headphones>();
+        ArrayList<Keyboard> keyboards = new ArrayList<Keyboard>();
+        ArrayList<Microphone> microphones = new ArrayList<Microphone>();
+
         adapters.add(Adapter.WiFi_BluetoothCard_AX210);
         adapters.add(Adapter.EthernetCard_BCM5719_4P);
         ports.add(Port.USBPort_2x2);
@@ -359,18 +442,52 @@ public class ControllerForApp {
         storages.add(Storage.SSD_256GB);
         utilities.add(Utility.CCleaner);
         utilities.add(Utility.WinZip);
+        cameras.add(Camera.Camera_Logitech_C505e);
+        cameras.add(Camera.Camera_Logitech_Rally_Plus);
+        cameras.add(Camera.Camera_Natec_Lori_Plus_NKI_1672);
+        cameras.add(Camera.Camera_Trust_SpotLight_Pro);
+        cameras.add(Camera.Camera_Kiyo_RZ19);
+        cameras.add(Camera.Camera_Trust_Iris_4k);
+        headphones.add(Headphones.Headphones_On_Ear_AKG_Y400);
+        headphones.add(Headphones.Headphones_On_Ear_Audio_Technica_ATH_M60x);
+        headphones.add(Headphones.Headphones_Closed_Back_AKG_N700NC_M2);
+        headphones.add(Headphones.Headphones_Closed_Back_Beyerdynamic_DT_770_PRO);
+        headphones.add(Headphones.Headphones_Closed_Bose_QuietComfort_35);
+        headphones.add(Headphones.Headphones_On_Ear_JBL_Live_460NC_Wireless);
+        headphones.add(Headphones.Headphones_Open_Back_Astro_A40_TR);
+        headphones.add(Headphones.Headphones_Open_Back_Philips_Fidelio_X2HR);
+        headphones.add(Headphones.Headphones_Open_Back_Sennheiser_HD_800_S);
+        headphones.add(Headphones.Headphones_Over_Ear_Anker_Soundcore_Life_Q30_Wireless);
+        headphones.add(Headphones.Headphones_Over_Ear_HiFiMan_Edition_XS);
+        headphones.add(Headphones.Headphones_Over_Ear_Sony_WH_1000XM4);
+        keyboards.add(Keyboard.Keyboard_Ergonomic_Logitech_Ergo_K860);
+        keyboards.add(Keyboard.Keyboard_Ergonomic_Kinesis_Freestyle_Edge_RGB);
+        keyboards.add(Keyboard.Keyboard_Flexible_Sungwoo_Black);
+        keyboards.add(Keyboard.Keyboard_Gaming_Corsair_K100_RGB);
+        keyboards.add(Keyboard.Keyboard_Flexible_Fly_Way);
+        keyboards.add(Keyboard.Keyboard_Gaming_EVGA_Z12);
+        keyboards.add(Keyboard.Keyboard_Mechanical_Ducky_Shine_7_Gunmetal_RGB_LED_Double_Shot_PBT);
+        keyboards.add(Keyboard.Keyboard_Mechanical_SteelSeries_Apex_Pro);
+        keyboards.add(Keyboard.Keyboard_Membrane_Logitech_G213);
+        keyboards.add(Keyboard.Keyboard_Membrane_Razer_Cynosa_v2);
+        microphones.add(Microphone.Microphone_Boya_BY_PM300);
+        microphones.add(Microphone.Microphone_Boya_BY_WM6S);
+        microphones.add(Microphone.Microphone_TRUST_GXT_239);
+        microphones.add(Microphone.Microphone_Razer_Seiren_Elite_RZ19);
+        microphones.add(Microphone.Microphone_Razer_Seiren_Emote_RZ19);
+        microphones.add(Microphone.Microphone_TRUST_STARZZ_21671);
 
         body.setAdapters(adapters);
-        body.setCamera(Camera.Camera_Logitech_C505e);
+        body.setCameras(cameras);
         body.setCase(Case.Case_3040);
         body.setDisplay(Display.Display_Sceptre);
         body.setDrivers(drivers);
         body.setFan(Fan.Fan_CP3);
         body.setDedicated(Dedicated.GraphicsCard_NVIDIA_GeForce_GTX_950);
         body.setIntegrated(Integrated.GraphicsCard_Intel_HD_Graphics_530);
-        body.setHeadphones(Headphones.Headphones_On_Ear_AKG_Y400);
-        body.setKeyboard(Keyboard.Keyboard_Ergonomic_Logitech_Ergo_K860);
-        body.setMicrophone(null);
+        body.setHeadphones(headphones);
+        body.setKeyboard(keyboards);
+        body.setMicrophone(microphones);
         body.setMotherboard(Motherboard.Motherboard_B365M);
         body.setMultimediaSoftwares(multimediaSoftwares);
         body.setOperatingSystem(OperatingSystem.OperatingSystem_Windows_10_Pro);

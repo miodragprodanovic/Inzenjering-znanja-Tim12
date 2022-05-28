@@ -43,4 +43,35 @@ public class Jena {
         }
         return null;
     }
+
+    public static String execQuery2(String queryString, String what) {
+
+        OntModel ontoModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_RULE_INF, null);
+        try {
+            InputStream in = FileManager.get().open("../instance.owl");
+            try {
+                OntDocumentManager dm = ontoModel.getDocumentManager();
+                dm.addAltEntry( "http://www.semanticweb.org/IZ/2022/Tim12/Klase", "file:../klase.owl" );
+                ontoModel.read("http://www.semanticweb.org/IZ/2022/Tim12/Klase", null, "TTL");
+                ontoModel.read(in, null, "TTL");
+                Query query = QueryFactory.create(queryString);
+                QueryExecution quer = QueryExecutionFactory.create(query, ontoModel);
+                ResultSet results = quer.execSelect();
+                ArrayList<String> list = new ArrayList<String>();
+                while (results.hasNext()) {
+                    QuerySolution solution = results.nextSolution();
+                    list.add(solution.get(what).toString().split("\\^")[0]);
+                }
+                return list.get(0);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } catch (JenaException je) {
+            System.err.println("ERROR" + je.getMessage());
+            je.printStackTrace();
+            System.exit(0);
+        }
+        return null;
+    }
 }

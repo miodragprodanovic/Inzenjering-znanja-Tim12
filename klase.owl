@@ -1043,6 +1043,12 @@
                     rdfs:range xsd:int .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacityString
+:FanAirFlowCapacityString rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :Fan ;
+                          rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#FrequencyResponse
 :FrequencyResponse rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Microphone ;
@@ -1071,6 +1077,12 @@
 :GraphicsCardSpeed rdf:type owl:DatatypeProperty ;
                    rdfs:domain :GraphicsCard ;
                    rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#GraphicsCardSpeedString
+:GraphicsCardSpeedString rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :GraphicsCard ;
+                         rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesFrequencyResponse
@@ -1265,6 +1277,12 @@
              rdfs:range xsd:int .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#RAMCapacityString
+:RAMCapacityString rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :RAM ;
+                   rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ResolutionOfScanner
 :ResolutionOfScanner rdf:type owl:DatatypeProperty ;
                      rdfs:domain :Printer ;
@@ -1299,6 +1317,12 @@
 :StorageCapacity rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Storage ;
                  rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#StorageCapacityString
+:StorageCapacityString rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Storage ;
+                       rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#TranslatorsName

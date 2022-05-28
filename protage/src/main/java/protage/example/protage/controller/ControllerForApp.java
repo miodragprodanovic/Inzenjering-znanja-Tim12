@@ -1,5 +1,9 @@
 package protage.example.protage.controller;
 
+import net.sourceforge.jFuzzyLogic.FIS;
+import net.sourceforge.jFuzzyLogic.FunctionBlock;
+import net.sourceforge.jFuzzyLogic.plot.JFuzzyChart;
+import net.sourceforge.jFuzzyLogic.rule.Variable;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.springframework.http.HttpStatus;
@@ -287,21 +291,124 @@ public class ControllerForApp {
 
     }
 
-    private ArrayList<String> getComponentDataTypes(String component){
+    private String getComponentDataTypes(String component, String what){
         String queryString =
-                "PREFIX ins:<http://www.semanticweb.org/IZ/2022/Tim12/Instance#>" +
-                        "PREFIX kls:<http://www.semanticweb.org/IZ/2022/Tim12/Klase#>" +
-                        "SELECT ?x { " +
-                        "<http://www.semanticweb.org/IZ/2022/Tim12/Instance#" + component+"> ?x }";
-        ArrayList<String> com = Jena.execQuery(queryString);
+                "PREFIX ins:<http://www.semanticweb.org/IZ/2022/Tim12/Instance#>"+
+                        "PREFIX kls:<http://www.semanticweb.org/IZ/2022/Tim12/Klase#>"+
+                        "SELECT ?param WHERE { ?x kls:Name \""+component+"\"^^<http://www.w3.org/2001/XMLSchema#string>." +
+                        "?x kls:"+what+" ?param .}" +
+                        "LIMIT 1";
+        String com = Jena.execQuery2(queryString, "param");
         return com;
     }
 
     @PostMapping("/getComputerPurpose")
     public ResponseEntity<ArrayList<String>> getComputerPurpose(@RequestBody GetBetterComponent getBetterComponentBody){
+        int RAMCapacity = 0;
+        int StorageCapacity = 0;
+        int GraphicsCardSpeed = 0;
+        int PowerSupplyWattPower = 0;
+        int FanAirFlowCapacity = 0;
+        int SpeakersWattPower = 0;
+        int Price = 0;
         if(getBetterComponentBody.getRAM() != null){
-            ArrayList<String> result = getComponentDataTypes(getBetterComponentBody.getRAM().toString());
+             RAMCapacity = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getRAM().toString(),"RAMCapacityString").split("G")[0]);
+             Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getRAM().toString(),"Price"));
         }
+        if(getBetterComponentBody.getDedicated() == null){
+            if(getBetterComponentBody.getIntegrated() != null){
+                GraphicsCardSpeed = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getIntegrated().toString(),"GraphicsCardSpeedString").split("M")[0]);
+                Price += 0;
+            }
+        }
+        else if(getBetterComponentBody.getDedicated() != null){
+            GraphicsCardSpeed = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getDedicated().toString(),"GraphicsCardSpeedString").split("M")[0]);
+            Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getDedicated().toString(),"Price"));
+        }
+        if(getBetterComponentBody.getStorages() != null){
+            for(Storage s: getBetterComponentBody.getStorages()) {
+                StorageCapacity  += Integer.parseInt(getComponentDataTypes(s.toString(), "StorageCapacityString").split("G")[0]);
+                Price += Integer.parseInt(getComponentDataTypes(s.toString(), "Price"));
+            }
+        }
+        if(getBetterComponentBody.getPowerSupply() != null){
+            PowerSupplyWattPower = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getPowerSupply().toString(),"PowerSupplyWattPower"));
+            Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getPowerSupply().toString(),"Price"));
+        }
+        if(getBetterComponentBody.getFan() != null){
+            FanAirFlowCapacity = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getFan().toString(),"FanAirFlowCapacityString").split("C")[0]);
+            Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getFan().toString(),"Price"));
+        }
+        if(getBetterComponentBody.getSpeakers() != null){
+            SpeakersWattPower = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"SpeakersWattPower"));
+            Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"Price"));
+        }
+
+        FIS fis = FIS.load("fl.fcl", true);
+
+        if (fis == null) {
+            System.err.println("Can't load file");
+            System.exit(1);
+        }
+        //FunctionBlock fb = fis.getFunctionBlock("sablon");
+        //JFuzzyChart.get().chart(fb);
+
+        if(RAMCapacity!=0){
+            fis.setVariable("RAMCapacity", RAMCapacity);
+        }
+        if(StorageCapacity!=0){
+            fis.setVariable("StorageCapacity", StorageCapacity);
+        }
+        else{
+            fis.setVariable("StorageCapacity", 1);
+        }
+        if(GraphicsCardSpeed!=0){
+            fis.setVariable("GraphicsCardSpeed", GraphicsCardSpeed);
+        }
+        else{
+            fis.setVariable("GraphicsCardSpeed", 50);
+        }
+        if(PowerSupplyWattPower!=0){
+            fis.setVariable("PowerSupplyWattPower", PowerSupplyWattPower);
+        }
+        else{
+            fis.setVariable("PowerSupplyWattPower", 50);
+        }
+        if(FanAirFlowCapacity!=0){
+            fis.setVariable("FanAirFlowCapacity", FanAirFlowCapacity);
+        }
+        else{
+            fis.setVariable("FanAirFlowCapacity", 6);
+        }
+        if(SpeakersWattPower!=0){
+            fis.setVariable("SpeakersWattPower", SpeakersWattPower);
+        }
+        else{
+            fis.setVariable("SpeakersWattPower", 1);
+        }
+        if(Price!=0){
+            fis.setVariable("Price", Price);
+        }
+
+
+        fis.evaluate();
+
+        Variable Home = fis.getFunctionBlock("sablon").getVariable("Home");
+        //JFuzzyChart.get().chart(Home, Home.getDefuzzifier(), true);
+        Variable Work = fis.getFunctionBlock("sablon").getVariable("Work");
+        //JFuzzyChart.get().chart(Work, Work.getDefuzzifier(), true);
+        Variable Gaming = fis.getFunctionBlock("sablon").getVariable("Gaming");
+        //JFuzzyChart.get().chart(Gaming, Gaming.getDefuzzifier(), true);
+        Variable Hosting = fis.getFunctionBlock("sablon").getVariable("Hosting");
+        //JFuzzyChart.get().chart(Hosting, Hosting.getDefuzzifier(), true);
+        Variable Mining = fis.getFunctionBlock("sablon").getVariable("Mining");
+        //JFuzzyChart.get().chart(Mining, Mining.getDefuzzifier(), true);
+        System.out.println("Home: "+ Home.getValue());
+        System.out.println("Work: "+ Work.getValue());
+        System.out.println("Gaming: "+ Gaming.getValue());
+        System.out.println("Hosting: "+ Hosting.getValue());
+        System.out.println("Mining: "+ Mining.getValue());
+
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

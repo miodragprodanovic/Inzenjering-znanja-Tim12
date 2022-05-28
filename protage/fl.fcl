@@ -1,0 +1,132 @@
+FUNCTION_BLOCK sablon
+
+VAR_INPUT               
+	RAMCapacity : REAL;
+	StorageCapacity : REAL;
+	SpeakersWattPower : REAL;
+	PowerSupplyWattPower : REAL;
+	GraphicsCardSpeed : REAL;
+	FanAirFlowCapacity : REAL;
+	Price : REAL;
+END_VAR
+
+VAR_OUTPUT              // izlazne varijable
+	Mining : REAL;
+	Home : REAL;
+	Gaming : REAL;
+	Work : REAL;
+	Hosting : REAL;
+END_VAR
+
+FUZZIFY RAMCapacity 
+	TERM Bad := (0, 1) (11, 1) (23, 0);
+	TERM Avarage := (20, 0) (33, 1) (46, 0);
+	TERM Good := (43, 0) (54, 1) (64, 0);
+END_FUZZIFY
+
+FUZZIFY StorageCapacity 
+	TERM Bad  := (20, 1) (150, 1) (350, 0);
+	TERM Avarage := (300, 0) (500, 1) (650, 0);
+	TERM Good := (600, 0) (850, 1) (1050, 0);
+END_FUZZIFY
+
+FUZZIFY SpeakersWattPower
+	TERM Bad  := (1, 1) (15, 1) (30, 0);
+	TERM Avarage := (25, 0) (40, 1) (60, 0);
+	TERM Good := (55, 0) (70, 1) (90, 0);
+END_FUZZIFY
+
+FUZZIFY PowerSupplyWattPower
+	TERM Bad  := (50, 1) (200, 1) (350, 0);
+	TERM Avarage := (300, 0) (500, 1) (650, 0);
+	TERM Good := (600, 0) (750, 1) (950, 0);
+END_FUZZIFY
+
+FUZZIFY GraphicsCardSpeed
+	TERM Bad  := (50, 1) (400, 1) (750, 0);
+	TERM Avarage := (600, 0) (950, 1) (1400, 0);
+	TERM Good := (1300, 0) (1750, 1) (2200, 0);
+END_FUZZIFY
+
+FUZZIFY FanAirFlowCapacity
+	TERM Bad  := (6, 1) (13, 1) (23, 0);
+	TERM Avarage := (20, 0) (33, 1) (43, 0);
+	TERM Good := (40, 0) (53, 1) (63, 0);
+END_FUZZIFY
+
+FUZZIFY Price
+	TERM Cheap:= (100, 0) (500, 1) (700, 0);
+	TERM Avarage:= (600, 0) (900, 1) (1200, 0);
+	TERM Expensive:= (1000, 0) (1600, 1) (2200, 0);
+END_FUZZIFY
+
+DEFUZZIFY Mining
+	TERM Bad := (0,0) (20,1) (33, 0);
+	TERM Avarage := (25,0) (45,1) (66, 0);
+	TERM Good := (58,0) (78,1) (100, 0);
+	METHOD : COG;		// 'Center Of Gravity' odn. centar mase (koristi se i MM odn. mean max)
+	DEFAULT := 0;		// podrazumevana vrednost (ukoliko nijedno pravilo nije aktivirano)
+END_DEFUZZIFY
+
+DEFUZZIFY Work 
+	TERM Bad  := (0,0) (20,1) (33, 0);
+	TERM Avarage  := (25,0) (45,1) (66, 0);
+	TERM Good  := (58,0) (78,1) (100, 0);
+	METHOD : COG;		// 'Center Of Gravity' odn. centar mase (koristi se i MM odn. mean max)
+	DEFAULT := 0;		// podrazumevana vrednost (ukoliko nijedno pravilo nije aktivirano)
+END_DEFUZZIFY
+
+DEFUZZIFY Home 
+	TERM Bad  := (0,0) (20,1) (33, 0);
+	TERM Avarage  := (25,0) (45,1) (66, 0);
+	TERM Good  := (58,0) (78,1) (100, 0);
+	METHOD : COG;		// 'Center Of Gravity' odn. centar mase (koristi se i MM odn. mean max)
+	DEFAULT := 0;		// podrazumevana vrednost (ukoliko nijedno pravilo nije aktivirano)
+END_DEFUZZIFY
+
+DEFUZZIFY Gaming 
+	TERM Bad  := (0,0) (20,1) (33, 0);
+	TERM Avarage  := (25,0) (45,1) (66, 0);
+	TERM Good  := (58,0) (78,1) (100, 0);
+	METHOD : COG;		// 'Center Of Gravity' odn. centar mase (koristi se i MM odn. mean max)
+	DEFAULT := 0;		// podrazumevana vrednost (ukoliko nijedno pravilo nije aktivirano)
+END_DEFUZZIFY
+
+DEFUZZIFY Hosting 
+	TERM Bad := (0,0) (20,1) (33, 0);
+	TERM Avarage := (25,0) (45,1) (66, 0);
+	TERM Good := (58,0) (78,1) (100, 0);
+	METHOD : COG;		// 'Center Of Gravity' odn. centar mase (koristi se i MM odn. mean max)
+	DEFAULT := 0;		// podrazumevana vrednost (ukoliko nijedno pravilo nije aktivirano)
+END_DEFUZZIFY
+
+RULEBLOCK blok1
+	AND : MIN;			// za konjunkciju se koristi minimum (samim tim sa za disjunkciju koristi maksimum)
+	ACT : MIN;			// za zaključivanje (implikaciju) je izabran minimum (Mamdani implikacija) (osim MIN koristi se i PROD)
+	ACCU : MAX;			// za kompoziciju je izabran maksimum (osim MAX koristi se i SUM)
+
+	RULE 1 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND Price IS Expensive THEN Home IS Bad;
+	
+	RULE 2 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND Price IS Expensive THEN Work IS Bad;
+
+	RULE 3 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND Price IS Expensive THEN Mining IS Bad;
+
+	RULE 4 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND Price IS Expensive THEN Hosting IS Bad;
+
+	RULE 5 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND Price IS Expensive THEN Gaming IS Bad;
+
+	RULE 6 : IF RAMCapacity IS Good AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Home IS Avarage;
+
+	RULE 7 : IF RAMCapacity IS Good AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Work IS Avarage;
+
+	RULE 8 : IF RAMCapacity IS Good AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Mining IS Bad;
+
+	RULE 9 : IF RAMCapacity IS Good AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Hosting IS Good;
+
+	RULE 10 : IF RAMCapacity IS Good AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Gaming IS Avarage;
+
+	
+END_RULEBLOCK
+
+END_FUNCTION_BLOCK
+

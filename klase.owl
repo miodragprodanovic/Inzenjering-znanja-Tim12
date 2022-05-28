@@ -1028,13 +1028,13 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplayResolution
 :DisplayResolution rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Display ;
-                   rdfs:range xsd:int .
+                   rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#DisplaySize
 :DisplaySize rdf:type owl:DatatypeProperty ;
              rdfs:domain :Display ;
-             rdfs:range xsd:string .
+             rdfs:range xsd:int .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#FanAirFlowCapacity
@@ -1173,6 +1173,16 @@
 :MousePollingRate rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Mouse ;
                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#Name
+:Name rdf:type owl:DatatypeProperty ;
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Computer
+                                  :ComputerComponent
+                                )
+                  ] ;
+      rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#OperatingSystemsItRunsOn

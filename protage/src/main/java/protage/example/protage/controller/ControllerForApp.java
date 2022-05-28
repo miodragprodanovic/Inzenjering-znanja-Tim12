@@ -286,4 +286,22 @@ public class ControllerForApp {
         return new ResponseEntity<GetBetterComponent>(body, HttpStatus.OK);
 
     }
+
+    private ArrayList<String> getComponentDataTypes(String component){
+        String queryString =
+                "PREFIX ins:<http://www.semanticweb.org/IZ/2022/Tim12/Instance#>" +
+                        "PREFIX kls:<http://www.semanticweb.org/IZ/2022/Tim12/Klase#>" +
+                        "SELECT ?x { " +
+                        "<http://www.semanticweb.org/IZ/2022/Tim12/Instance#" + component+"> ?x }";
+        ArrayList<String> com = Jena.execQuery(queryString);
+        return com;
+    }
+
+    @PostMapping("/getComputerPurpose")
+    public ResponseEntity<ArrayList<String>> getComputerPurpose(@RequestBody GetBetterComponent getBetterComponentBody){
+        if(getBetterComponentBody.getRAM() != null){
+            ArrayList<String> result = getComponentDataTypes(getBetterComponentBody.getRAM().toString());
+        }
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }

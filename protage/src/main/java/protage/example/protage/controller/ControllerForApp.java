@@ -14,12 +14,17 @@ import protage.example.protage.model.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.security.Key;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 public class ControllerForApp {
+
+    private static final DecimalFormat df = new DecimalFormat("0.00");
+
+
     @PostMapping("/getBetterComponent")
     public ResponseEntity<ArrayList<String>> getBetterComponent(@RequestBody GetBetterComponent getBetterComponentBody) {
 
@@ -350,8 +355,8 @@ public class ControllerForApp {
             System.err.println("Can't load file");
             System.exit(1);
         }
-        //FunctionBlock fb = fis.getFunctionBlock("sablon");
-        //JFuzzyChart.get().chart(fb);
+        FunctionBlock fb = fis.getFunctionBlock("sablon");
+        JFuzzyChart.get().chart(fb);
 
         if(RAMCapacity!=0){
             fis.setVariable("RAMCapacity", RAMCapacity);
@@ -394,21 +399,28 @@ public class ControllerForApp {
         fis.evaluate();
 
         Variable Home = fis.getFunctionBlock("sablon").getVariable("Home");
-        //JFuzzyChart.get().chart(Home, Home.getDefuzzifier(), true);
+        JFuzzyChart.get().chart(Home, Home.getDefuzzifier(), true);
         Variable Work = fis.getFunctionBlock("sablon").getVariable("Work");
-        //JFuzzyChart.get().chart(Work, Work.getDefuzzifier(), true);
+        JFuzzyChart.get().chart(Work, Work.getDefuzzifier(), true);
         Variable Gaming = fis.getFunctionBlock("sablon").getVariable("Gaming");
-        //JFuzzyChart.get().chart(Gaming, Gaming.getDefuzzifier(), true);
+        JFuzzyChart.get().chart(Gaming, Gaming.getDefuzzifier(), true);
         Variable Hosting = fis.getFunctionBlock("sablon").getVariable("Hosting");
-        //JFuzzyChart.get().chart(Hosting, Hosting.getDefuzzifier(), true);
+        JFuzzyChart.get().chart(Hosting, Hosting.getDefuzzifier(), true);
         Variable Mining = fis.getFunctionBlock("sablon").getVariable("Mining");
-        //JFuzzyChart.get().chart(Mining, Mining.getDefuzzifier(), true);
-        System.out.println("Home: "+ Home.getValue());
-        System.out.println("Work: "+ Work.getValue());
-        System.out.println("Gaming: "+ Gaming.getValue());
-        System.out.println("Hosting: "+ Hosting.getValue());
-        System.out.println("Mining: "+ Mining.getValue());
+        JFuzzyChart.get().chart(Mining, Mining.getDefuzzifier(), true);
+        System.out.println("Home: "+ Home.getValue()/100);
+        System.out.println("Work: "+ Work.getValue()/100);
+        System.out.println("Gaming: "+ Gaming.getValue()/100);
+        System.out.println("Hosting: "+ Hosting.getValue()/100);
+        System.out.println("Mining: "+ Mining.getValue()/100);
 
-        return new ResponseEntity<>(HttpStatus.OK);
+        ArrayList<String> respo = new ArrayList<String>();
+        respo.add("Home: "+ df.format(Home.getValue()/100));
+        respo.add("Work: "+ df.format(Work.getValue()/100));
+        respo.add("Gaming: "+ df.format(Gaming.getValue()/100));
+        respo.add("Hosting: "+ df.format(Hosting.getValue()/100));
+        respo.add("Mining: "+ df.format(Mining.getValue()/100));
+
+        return new ResponseEntity<ArrayList<String>>(respo,HttpStatus.OK);
     }
 }

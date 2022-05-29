@@ -21,7 +21,7 @@ END_VAR
 FUZZIFY RAMCapacity 
 	TERM Bad := (0, 1) (11, 1) (23, 0);
 	TERM Avarage := (20, 0) (33, 1) (46, 0);
-	TERM Good := (43, 0) (54, 1) (64, 0);
+	TERM Good := (43, 0) (54, 1) (66, 0);
 END_FUZZIFY
 
 FUZZIFY StorageCapacity 
@@ -124,6 +124,86 @@ RULEBLOCK blok1
 	RULE 9 : IF RAMCapacity IS Good AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Hosting IS Good;
 
 	RULE 10 : IF RAMCapacity IS Good AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Gaming IS Avarage;
+
+	RULE 11 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Expensive THEN Home IS Bad;
+
+	RULE 12 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Expensive THEN Work IS Good;
+
+	RULE 13 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Expensive THEN Mining IS Avarage;
+
+	RULE 14 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Expensive THEN Hosting IS Avarage;
+
+	RULE 15 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Expensive THEN Gaming IS Good;
+
+	RULE 16 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Home IS Bad;
+
+	RULE 17 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Work IS Avarage;
+
+	RULE 18 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Mining IS Bad;
+
+	RULE 19 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Hosting IS Good;
+
+	RULE 20 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Gaming IS Bad;
+
+	RULE 21 : IF RAMCapacity IS Bad AND StorageCapacity IS Avarage AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Home IS Avarage;
+
+	RULE 22 : IF RAMCapacity IS Bad AND StorageCapacity IS Avarage AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Work IS Bad;
+
+	RULE 23 : IF RAMCapacity IS Bad AND StorageCapacity IS Avarage AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Mining IS Good;
+
+	RULE 24 : IF RAMCapacity IS Bad AND StorageCapacity IS Avarage AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Hosting IS Bad;
+
+	RULE 25 : IF RAMCapacity IS Bad AND StorageCapacity IS Avarage AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Gaming IS Avarage;
+
+	RULE 26 : IF RAMCapacity IS Avarage AND StorageCapacity IS Bad AND SpeakersWattPower IS Avarage AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Avarage AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Home IS Avarage;
+
+	RULE 27 : IF RAMCapacity IS Avarage AND StorageCapacity IS Bad AND SpeakersWattPower IS Avarage AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Avarage AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Work IS Avarage;
+
+	RULE 28 : IF RAMCapacity IS Avarage AND StorageCapacity IS Bad AND SpeakersWattPower IS Avarage AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Avarage AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Mining IS Bad;
+
+	RULE 29 : IF RAMCapacity IS Avarage AND StorageCapacity IS Bad AND SpeakersWattPower IS Avarage AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Avarage AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Hosting IS Bad;
+
+	RULE 30 : IF RAMCapacity IS Avarage AND StorageCapacity IS Bad AND SpeakersWattPower IS Avarage AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Avarage AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Gaming IS Avarage;
+
+	RULE 31 : IF RAMCapacity IS Avarage AND StorageCapacity IS Good AND SpeakersWattPower IS Avarage AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Avarage AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Home IS Avarage;
+
+	RULE 32 : IF RAMCapacity IS Avarage AND StorageCapacity IS Good AND SpeakersWattPower IS Avarage AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Avarage AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Work IS Avarage;
+
+	RULE 33 : IF RAMCapacity IS Avarage AND StorageCapacity IS Good AND SpeakersWattPower IS Avarage AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Avarage AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Mining IS Avarage;
+
+	RULE 34 : IF RAMCapacity IS Avarage AND StorageCapacity IS Good AND SpeakersWattPower IS Avarage AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Avarage AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Hosting IS Avarage;
+
+	RULE 35 : IF RAMCapacity IS Avarage AND StorageCapacity IS Good AND SpeakersWattPower IS Avarage AND PowerSupplyWattPower IS Avarage AND GraphicsCardSpeed IS Avarage AND FanAirFlowCapacity IS Avarage AND Price IS Avarage THEN Gaming IS Avarage;
+
+	RULE 36 : IF RAMCapacity IS Avarage AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Home IS Avarage;
+
+	RULE 37 : IF RAMCapacity IS Avarage AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Work IS Avarage;
+
+	RULE 38 : IF RAMCapacity IS Avarage AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Mining IS Bad;
+
+	RULE 39 : IF RAMCapacity IS Avarage AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Hosting IS Avarage;
+
+	RULE 40 : IF RAMCapacity IS Avarage AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Gaming IS Avarage;
+
+	RULE 41 : IF RAMCapacity IS Bad AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Home IS Avarage;
+
+	RULE 42 : IF RAMCapacity IS Bad AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Work IS Avarage;
+
+	RULE 43 : IF RAMCapacity IS Bad AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Mining IS Bad;
+
+	RULE 44 : IF RAMCapacity IS Bad AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Hosting IS Bad;
+
+	RULE 45 : IF RAMCapacity IS Bad AND StorageCapacity IS Avarage AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Gaming IS Avarage;
+
+	RULE 46 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Home IS Good;
+
+	RULE 47 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Work IS Good;
+
+	RULE 48 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Mining IS Good;
+
+	RULE 49 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Hosting IS Good;
+
+	RULE 50 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Gaming IS Good;
 
 	
 END_RULEBLOCK

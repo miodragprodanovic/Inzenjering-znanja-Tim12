@@ -14,10 +14,11 @@ public class GetBetterComponent {
     private Headphones Headphones;
     private Keyboard Keyboard;
     private Microphone Microphone;
+    private Mouse Mouse;
+    private Joystick Joystick;
     private Motherboard Motherboard;
     private ArrayList<MultimediaSoftware> MultimediaSoftwares;
     private OperatingSystem OperatingSystem;
-    private PointingDevice PointingDevice;
     private ArrayList<Port> Ports;
     private PowerSupply PowerSupply;
     private ArrayList<PresentationSoftware> PresentationSoftwares;
@@ -33,7 +34,14 @@ public class GetBetterComponent {
 
     public GetBetterComponent(){}
 
-    public GetBetterComponent(ArrayList<Adapter> adapters, protage.example.protage.model.Camera camera, protage.example.protage.model.Case aCase, protage.example.protage.model.Display display, ArrayList<Driver> drivers, protage.example.protage.model.Fan fan, protage.example.protage.model.Dedicated dedicated, protage.example.protage.model.Integrated integrated, protage.example.protage.model.Headphones headphones, protage.example.protage.model.Keyboard keyboard, protage.example.protage.model.Microphone microphone, protage.example.protage.model.Motherboard motherboard, ArrayList<MultimediaSoftware> multimediaSoftwares, protage.example.protage.model.OperatingSystem operatingSystem, protage.example.protage.model.PointingDevice pointingDevice, ArrayList<Port> ports, protage.example.protage.model.PowerSupply powerSupply, ArrayList<PresentationSoftware> presentationSoftwares, protage.example.protage.model.Processor processor, protage.example.protage.model.ProgramTranslator programTranslator, protage.example.protage.model.RAM RAM, protage.example.protage.model.SoundCard soundCard, protage.example.protage.model.Speakers speakers, ArrayList<SpreadsheetSoftware> spreadsheetSoftwares, ArrayList<Storage> storages, ArrayList<Utility> utilities, String whatToUpgrade) {
+    public GetBetterComponent(ArrayList<Adapter> adapters, Camera camera, Case aCase, Display display, ArrayList<Driver> drivers,
+                              Fan fan, Dedicated dedicated, Integrated integrated, Headphones headphones, Joystick joystick,
+                              Keyboard keyboard, Microphone microphone, Motherboard motherboard, Mouse mouse,
+                              ArrayList<MultimediaSoftware> multimediaSoftwares, OperatingSystem operatingSystem,
+                              ArrayList<Port> ports, PowerSupply powerSupply, ArrayList<PresentationSoftware> presentationSoftwares,
+                              Processor processor, ProgramTranslator programTranslator, RAM RAM, SoundCard soundCard,
+                              Speakers speakers, ArrayList<SpreadsheetSoftware> spreadsheetSoftwares, ArrayList<Storage> storages,
+                              ArrayList<Utility> utilities, String whatToUpgrade) {
         Adapters = adapters;
         Camera = camera;
         Case = aCase;
@@ -43,12 +51,13 @@ public class GetBetterComponent {
         Dedicated = dedicated;
         Integrated = integrated;
         Headphones = headphones;
+        Joystick = joystick;
         Keyboard = keyboard;
         Microphone = microphone;
         Motherboard = motherboard;
+        Mouse = mouse;
         MultimediaSoftwares = multimediaSoftwares;
         OperatingSystem = operatingSystem;
-        PointingDevice = pointingDevice;
         Ports = ports;
         PowerSupply = powerSupply;
         PresentationSoftwares = presentationSoftwares;
@@ -71,27 +80,27 @@ public class GetBetterComponent {
         Adapters = adapters;
     }
 
-    public protage.example.protage.model.Camera getCamera() {
+    public Camera getCamera() {
         return Camera;
     }
 
-    public void setCamera(protage.example.protage.model.Camera camera) {
+    public void setCamera(Camera camera) {
         Camera = camera;
     }
 
-    public protage.example.protage.model.Case getCase() {
+    public Case getCase() {
         return Case;
     }
 
-    public void setCase(protage.example.protage.model.Case aCase) {
+    public void setCase(Case aCase) {
         Case = aCase;
     }
 
-    public protage.example.protage.model.Display getDisplay() {
+    public Display getDisplay() {
         return Display;
     }
 
-    public void setDisplay(protage.example.protage.model.Display display) {
+    public void setDisplay(Display display) {
         Display = display;
     }
 
@@ -103,60 +112,76 @@ public class GetBetterComponent {
         Drivers = drivers;
     }
 
-    public protage.example.protage.model.Fan getFan() {
+    public Fan getFan() {
         return Fan;
     }
 
-    public void setFan(protage.example.protage.model.Fan fan) {
+    public void setFan(Fan fan) {
         Fan = fan;
     }
 
-    public protage.example.protage.model.Dedicated getDedicated() {
+    public Dedicated getDedicated() {
         return Dedicated;
     }
 
-    public void setDedicated(protage.example.protage.model.Dedicated dedicated) {
+    public void setDedicated(Dedicated dedicated) {
         Dedicated = dedicated;
     }
 
-    public protage.example.protage.model.Integrated getIntegrated() {
+    public Integrated getIntegrated() {
         return Integrated;
     }
 
-    public void setIntegrated(protage.example.protage.model.Integrated integrated) {
+    public void setIntegrated(Integrated integrated) {
         Integrated = integrated;
     }
 
-    public protage.example.protage.model.Headphones getHeadphones() {
+    public Headphones getHeadphones() {
         return Headphones;
     }
 
-    public void setHeadphones(protage.example.protage.model.Headphones headphones) {
+    public void setHeadphones(Headphones headphones) {
         Headphones = headphones;
     }
 
-    public protage.example.protage.model.Keyboard getKeyboard() {
+    public Joystick getJoystick() {
+        return Joystick;
+    }
+
+    public void setJoystick(Joystick joystick) {
+        Joystick = joystick;
+    }
+
+    public Keyboard getKeyboard() {
         return Keyboard;
     }
 
-    public void setKeyboard(protage.example.protage.model.Keyboard keyboard) {
+    public void setKeyboard(Keyboard keyboard) {
         Keyboard = keyboard;
     }
 
-    public protage.example.protage.model.Microphone getMicrophone() {
+    public Microphone getMicrophone() {
         return Microphone;
     }
 
-    public void setMicrophone(protage.example.protage.model.Microphone microphone) {
+    public void setMicrophone(Microphone microphone) {
         Microphone = microphone;
     }
 
-    public protage.example.protage.model.Motherboard getMotherboard() {
+    public Motherboard getMotherboard() {
         return Motherboard;
     }
 
-    public void setMotherboard(protage.example.protage.model.Motherboard motherboard) {
+    public void setMotherboard(Motherboard motherboard) {
         Motherboard = motherboard;
+    }
+
+    public Mouse getMouse() {
+        return Mouse;
+    }
+
+    public void setMouse(Mouse mouse) {
+        Mouse = mouse;
     }
 
     public ArrayList<MultimediaSoftware> getMultimediaSoftwares() {
@@ -167,20 +192,12 @@ public class GetBetterComponent {
         MultimediaSoftwares = multimediaSoftwares;
     }
 
-    public protage.example.protage.model.OperatingSystem getOperatingSystem() {
+    public OperatingSystem getOperatingSystem() {
         return OperatingSystem;
     }
 
-    public void setOperatingSystem(protage.example.protage.model.OperatingSystem operatingSystem) {
+    public void setOperatingSystem(OperatingSystem operatingSystem) {
         OperatingSystem = operatingSystem;
-    }
-
-    public protage.example.protage.model.PointingDevice getPointingDevice() {
-        return PointingDevice;
-    }
-
-    public void setPointingDevice(protage.example.protage.model.PointingDevice pointingDevice) {
-        PointingDevice = pointingDevice;
     }
 
     public ArrayList<Port> getPorts() {
@@ -191,11 +208,11 @@ public class GetBetterComponent {
         Ports = ports;
     }
 
-    public protage.example.protage.model.PowerSupply getPowerSupply() {
+    public PowerSupply getPowerSupply() {
         return PowerSupply;
     }
 
-    public void setPowerSupply(protage.example.protage.model.PowerSupply powerSupply) {
+    public void setPowerSupply(PowerSupply powerSupply) {
         PowerSupply = powerSupply;
     }
 
@@ -207,43 +224,43 @@ public class GetBetterComponent {
         PresentationSoftwares = presentationSoftwares;
     }
 
-    public protage.example.protage.model.Processor getProcessor() {
+    public Processor getProcessor() {
         return Processor;
     }
 
-    public void setProcessor(protage.example.protage.model.Processor processor) {
+    public void setProcessor(Processor processor) {
         Processor = processor;
     }
 
-    public protage.example.protage.model.ProgramTranslator getProgramTranslator() {
+    public ProgramTranslator getProgramTranslator() {
         return ProgramTranslator;
     }
 
-    public void setProgramTranslator(protage.example.protage.model.ProgramTranslator programTranslator) {
+    public void setProgramTranslator(ProgramTranslator programTranslator) {
         ProgramTranslator = programTranslator;
     }
 
-    public protage.example.protage.model.RAM getRAM() {
+    public RAM getRAM() {
         return RAM;
     }
 
-    public void setRAM(protage.example.protage.model.RAM RAM) {
+    public void setRAM(RAM RAM) {
         this.RAM = RAM;
     }
 
-    public protage.example.protage.model.SoundCard getSoundCard() {
+    public SoundCard getSoundCard() {
         return SoundCard;
     }
 
-    public void setSoundCard(protage.example.protage.model.SoundCard soundCard) {
+    public void setSoundCard(SoundCard soundCard) {
         SoundCard = soundCard;
     }
 
-    public protage.example.protage.model.Speakers getSpeakers() {
+    public Speakers getSpeakers() {
         return Speakers;
     }
 
-    public void setSpeakers(protage.example.protage.model.Speakers speakers) {
+    public void setSpeakers(Speakers speakers) {
         Speakers = speakers;
     }
 

@@ -899,11 +899,11 @@
                             rdfs:range :Mouse .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan
-:isMouseMoreSensitivThan rdf:type owl:ObjectProperty ,
-                                  owl:TransitiveProperty ;
-                         rdfs:domain :Mouse ;
-                         rdfs:range :Mouse .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitiveThan
+:isMouseMoreSensitiveThan rdf:type owl:ObjectProperty ,
+                                   owl:TransitiveProperty ;
+                          rdfs:domain :Mouse ;
+                          rdfs:range :Mouse .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#isPowerSupplyAndGraphicsCardCompatible

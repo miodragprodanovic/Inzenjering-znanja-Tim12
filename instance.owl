@@ -662,28 +662,28 @@
                                      <http://www.semanticweb.org/IZ/2022/Tim12/Klase#HeadphonesSensitivity> "105 dB" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Joystick-Logitech_943
-:Joystick-Logitech_943 rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Joystick_Logitech_943
+:Joystick_Logitech_943 rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Joystick-Logitech_Extreme_3D_Pro
-:Joystick-Logitech_Extreme_3D_Pro rdf:type owl:NamedIndividual ;
-                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isJoystickBetterThan> :Joystick-THRUSTMASTER_USB-2960623 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Joystick_Logitech_Extreme_3D_Pro
+:Joystick_Logitech_Extreme_3D_Pro rdf:type owl:NamedIndividual ;
+                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isJoystickBetterThan> :Joystick_THRUSTMASTER_USB_2960623 .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Joystick-THRUSTMASTER_FCS_Space_Sim_Duo
-:Joystick-THRUSTMASTER_FCS_Space_Sim_Duo rdf:type owl:NamedIndividual ;
-                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isJoystickBetterThan> :Joystick-Logitech_Extreme_3D_Pro .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Joystick_THRUSTMASTER_FCS_Space_Sim_Duo
+:Joystick_THRUSTMASTER_FCS_Space_Sim_Duo rdf:type owl:NamedIndividual ;
+                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isJoystickBetterThan> :Joystick_Logitech_Extreme_3D_Pro .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Joystick-THRUSTMASTER_Hotas_Warthog_Flight_Stick
-:Joystick-THRUSTMASTER_Hotas_Warthog_Flight_Stick rdf:type owl:NamedIndividual ;
-                                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isJoystickBetterThan> :Joystick-THRUSTMASTER_FCS_Space_Sim_Duo .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Joystick_THRUSTMASTER_Hotas_Warthog_Flight_Stick
+:Joystick_THRUSTMASTER_Hotas_Warthog_Flight_Stick rdf:type owl:NamedIndividual ;
+                                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isJoystickBetterThan> :Joystick_THRUSTMASTER_FCS_Space_Sim_Duo .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Joystick-THRUSTMASTER_USB-2960623
-:Joystick-THRUSTMASTER_USB-2960623 rdf:type owl:NamedIndividual ;
-                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isJoystickBetterThan> :Joystick-Logitech_943 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Joystick_THRUSTMASTER_USB_2960623
+:Joystick_THRUSTMASTER_USB_2960623 rdf:type owl:NamedIndividual ;
+                                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isJoystickBetterThan> :Joystick_Logitech_943 .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Keyboard_Ergonomic_Kinesis_Freestyle_Edge_RGB
@@ -968,7 +968,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse_Ergonomic_Logitech_MX_Master_2S
 :Mouse_Ergonomic_Logitech_MX_Master_2S rdf:type owl:NamedIndividual ;
                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Gaming_Corsair_SABRE_RGB_PRO ;
-                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Laser_Lenovo_Yoga ;
+                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitiveThan> :Mouse_Laser_Lenovo_Yoga ;
                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 2800 ;
                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "125 Hz" .
 
@@ -977,7 +977,7 @@
 :Mouse_Gaming_Corsair_SABRE_RGB_PRO rdf:type owl:NamedIndividual ;
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse_Pro_X ;
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Logitech_MX_Master_3 ;
-                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Optical_Razer_Pro_Click ;
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitiveThan> :Mouse_Optical_Razer_Pro_Click ;
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 19200 ;
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "8000 Hz" .
 
@@ -988,7 +988,7 @@
                                                                                                    :Mouse_Logitech_M510 ,
                                                                                                    :Mouse_Logitech_MX_Master_3 ;
                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Optical_Razer_Pro_Click ;
-                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Logitech_M510 ;
+                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitiveThan> :Mouse_Logitech_M510 ;
                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 1600 ;
                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "250 Hz" .
 
@@ -1005,7 +1005,7 @@
 :Mouse_Logitech_MX_Master_3 rdf:type owl:NamedIndividual ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBrand> :Brand-Logitech ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Logitech_M510 ;
-                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Optical_Microsoft_Classic_Intelli ;
+                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitiveThan> :Mouse_Optical_Microsoft_Classic_Intelli ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 4000 ;
                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "125 Hz" .
 
@@ -1013,7 +1013,7 @@
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Mouse_Optical_Microsoft_Classic_Intelli
 :Mouse_Optical_Microsoft_Classic_Intelli rdf:type owl:NamedIndividual ;
                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse_Optical_Razer_Pro_Click ;
-                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Ergonomic_Logitech_MX_Master_2S ;
+                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitiveThan> :Mouse_Ergonomic_Logitech_MX_Master_2S ;
                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 3200 ;
                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "500 Hz" .
 
@@ -1022,7 +1022,7 @@
 :Mouse_Optical_Razer_Pro_Click rdf:type owl:NamedIndividual ;
                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse_Laser_Lenovo_Yoga ;
                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Optical_Microsoft_Classic_Intelli ;
-                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Logitech_MX_Master_3 ;
+                               <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitiveThan> :Mouse_Logitech_MX_Master_3 ;
                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 16000 ;
                                <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "500 Hz" .
 
@@ -1031,7 +1031,7 @@
 :Mouse_Pro_X rdf:type owl:NamedIndividual ;
              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasBetterPollingRateThan> :Mouse_Optical_Microsoft_Classic_Intelli ;
              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreComfortableThan> :Mouse_Laser_Lenovo_Yoga ;
-             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitivThan> :Mouse_Gaming_Corsair_SABRE_RGB_PRO ;
+             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isMouseMoreSensitiveThan> :Mouse_Gaming_Corsair_SABRE_RGB_PRO ;
              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MouseDPI> 25600 ;
              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#MousePollingRate> "1000 Hz" .
 
@@ -1219,7 +1219,7 @@
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasOverEarHeadphones> :Headphones_Over_Ear_HiFiMan_Edition_XS ;
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor_i7_8700 ;
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSSD> :SSD_256GB ;
-                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSoundCard> :SoundCard-Creative_Sound_Blaster_Z ;
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSoundCard> :SoundCard_Creative_Sound_Blaster_Z ;
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort_32x4 .
 
 
@@ -1587,48 +1587,48 @@
                                  <http://www.semanticweb.org/IZ/2022/Tim12/Klase#TypeOfScanner> "Manual" .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-AUDIOQUEST_USB_Dragonfly
-:SoundCard-AUDIOQUEST_USB_Dragonfly rdf:type owl:NamedIndividual ;
-                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-Asus_5.1_Xonar_SE .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard_AUDIOQUEST_USB_Dragonfly
+:SoundCard_AUDIOQUEST_USB_Dragonfly rdf:type owl:NamedIndividual ;
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard_Asus_5_1_Xonar_SE .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-AUDIOQUEST_USB_Dragonfly_24-bit
-:SoundCard-AUDIOQUEST_USB_Dragonfly_24-bit rdf:type owl:NamedIndividual ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-AUDIOQUEST_USB_Dragonfly .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard_AUDIOQUEST_USB_Dragonfly_24_bit
+:SoundCard_AUDIOQUEST_USB_Dragonfly_24_bit rdf:type owl:NamedIndividual ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard_AUDIOQUEST_USB_Dragonfly .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-Asus_5.1_Xonar_SE
-:SoundCard-Asus_5.1_Xonar_SE rdf:type owl:NamedIndividual ;
-                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-S-Box_USB .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard_Asus_5_1_Xonar_SE
+:SoundCard_Asus_5_1_Xonar_SE rdf:type owl:NamedIndividual ;
+                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard_S_Box_USB .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-Creative_Sound_Blaster_Z
-:SoundCard-Creative_Sound_Blaster_Z rdf:type owl:NamedIndividual ;
-                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-AUDIOQUEST_USB_Dragonfly_24-bit .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard_Creative_Sound_Blaster_Z
+:SoundCard_Creative_Sound_Blaster_Z rdf:type owl:NamedIndividual ;
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard_AUDIOQUEST_USB_Dragonfly_24_bit .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-EVGA_NU_Audio_Card
-:SoundCard-EVGA_NU_Audio_Card rdf:type owl:NamedIndividual ;
-                              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-Creative_Sound_Blaster_Z .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard_EVGA_NU_Audio_Card
+:SoundCard_EVGA_NU_Audio_Card rdf:type owl:NamedIndividual ;
+                              <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard_Creative_Sound_Blaster_Z .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-FAST_ASIA_USB_7.1
-:SoundCard-FAST_ASIA_USB_7.1 rdf:type owl:NamedIndividual ;
-                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-Gembird_USB_5.1_3D .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard_FAST_ASIA_USB_7_1
+:SoundCard_FAST_ASIA_USB_7_1 rdf:type owl:NamedIndividual ;
+                             <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard_Gembird_USB_5_1_3D .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-Gembird_USB_5.1_3D
-:SoundCard-Gembird_USB_5.1_3D rdf:type owl:NamedIndividual .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard_Gembird_USB_5_1_3D
+:SoundCard_Gembird_USB_5_1_3D rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-S-Box_USB
-:SoundCard-S-Box_USB rdf:type owl:NamedIndividual ;
-                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-X-Wave_Bluetooth_Transmiter .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard_S_Box_USB
+:SoundCard_S_Box_USB rdf:type owl:NamedIndividual ;
+                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard_X_Wave_Bluetooth_Transmitter .
 
 
-###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard-X-Wave_Bluetooth_Transmiter
-:SoundCard-X-Wave_Bluetooth_Transmiter rdf:type owl:NamedIndividual ;
-                                       <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard-FAST_ASIA_USB_7.1 .
+###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#SoundCard_X_Wave_Bluetooth_Transmitter
+:SoundCard_X_Wave_Bluetooth_Transmitter rdf:type owl:NamedIndividual ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#isSoundCardBetterThan> :SoundCard_FAST_ASIA_USB_7_1 .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#Speakers_JBLQuantum

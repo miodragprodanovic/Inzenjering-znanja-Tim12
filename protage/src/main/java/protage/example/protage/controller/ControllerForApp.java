@@ -346,7 +346,7 @@ public class ControllerForApp {
         return new ResponseEntity<>(body, HttpStatus.OK);
     }
 
-    private String getComponentDataTypes(String component, String what){
+    private String getComponentDataTypes(String component, String what) {
         String queryString =
                 "PREFIX ins:<http://www.semanticweb.org/IZ/2022/Tim12/Instance#>"+
                 "PREFIX kls:<http://www.semanticweb.org/IZ/2022/Tim12/Klase#>"+
@@ -358,7 +358,7 @@ public class ControllerForApp {
     }
 
     @PostMapping("/getComputerPurpose")
-    public ResponseEntity<ArrayList<String>> getComputerPurpose(@RequestBody GetBetterComponent getBetterComponentBody){
+    public ResponseEntity<ArrayList<String>> getComputerPurpose(@RequestBody GetBetterComponent getBetterComponentBody) {
         int RAMCapacity = 0;
         int StorageCapacity = 0;
         int GraphicsCardSpeed = 0;
@@ -408,40 +408,40 @@ public class ControllerForApp {
         FunctionBlock fb = fis.getFunctionBlock("sablon");
         JFuzzyChart.get().chart(fb);
 
-        if(RAMCapacity!=0){
+        if (RAMCapacity != 0) {
             fis.setVariable("RAMCapacity", RAMCapacity);
         }
-        if(StorageCapacity!=0){
+        if (StorageCapacity != 0) {
             fis.setVariable("StorageCapacity", StorageCapacity);
         }
-        else{
+        else {
             fis.setVariable("StorageCapacity", 1);
         }
-        if(GraphicsCardSpeed!=0){
+        if (GraphicsCardSpeed != 0) {
             fis.setVariable("GraphicsCardSpeed", GraphicsCardSpeed);
         }
-        else{
+        else {
             fis.setVariable("GraphicsCardSpeed", 50);
         }
-        if(PowerSupplyWattPower!=0){
+        if (PowerSupplyWattPower != 0) {
             fis.setVariable("PowerSupplyWattPower", PowerSupplyWattPower);
         }
-        else{
+        else {
             fis.setVariable("PowerSupplyWattPower", 50);
         }
-        if(FanAirFlowCapacity!=0){
+        if (FanAirFlowCapacity != 0) {
             fis.setVariable("FanAirFlowCapacity", FanAirFlowCapacity);
         }
-        else{
+        else {
             fis.setVariable("FanAirFlowCapacity", 6);
         }
-        if(SpeakersWattPower!=0){
+        if (SpeakersWattPower != 0) {
             fis.setVariable("SpeakersWattPower", SpeakersWattPower);
         }
-        else{
+        else {
             fis.setVariable("SpeakersWattPower", 1);
         }
-        if(Price!=0){
+        if (Price != 0) {
             fis.setVariable("Price", Price);
         }
 
@@ -458,19 +458,19 @@ public class ControllerForApp {
         JFuzzyChart.get().chart(Hosting, Hosting.getDefuzzifier(), true);
         Variable Mining = fis.getFunctionBlock("sablon").getVariable("Mining");
         JFuzzyChart.get().chart(Mining, Mining.getDefuzzifier(), true);
-        System.out.println("Home: "+ Home.getValue()/100);
-        System.out.println("Work: "+ Work.getValue()/100);
-        System.out.println("Gaming: "+ Gaming.getValue()/100);
-        System.out.println("Hosting: "+ Hosting.getValue()/100);
-        System.out.println("Mining: "+ Mining.getValue()/100);
+        System.out.println("Home: " + Home.getValue()/100);
+        System.out.println("Work: " + Work.getValue()/100);
+        System.out.println("Gaming: " + Gaming.getValue()/100);
+        System.out.println("Hosting: " + Hosting.getValue()/100);
+        System.out.println("Mining: " + Mining.getValue()/100);
 
-        ArrayList<String> respo = new ArrayList<String>();
-        respo.add("Home: "+ df.format(Home.getValue()/100));
-        respo.add("Work: "+ df.format(Work.getValue()/100));
-        respo.add("Gaming: "+ df.format(Gaming.getValue()/100));
-        respo.add("Hosting: "+ df.format(Hosting.getValue()/100));
-        respo.add("Mining: "+ df.format(Mining.getValue()/100));
+        ArrayList<String> respo = new ArrayList<>();
+        respo.add("Home: " + df.format(Home.getValue()/100));
+        respo.add("Work: " + df.format(Work.getValue()/100));
+        respo.add("Gaming: " + df.format(Gaming.getValue()/100));
+        respo.add("Hosting: " + df.format(Hosting.getValue()/100));
+        respo.add("Mining: " + df.format(Mining.getValue()/100));
 
-        return new ResponseEntity<ArrayList<String>>(respo,HttpStatus.OK);
+        return new ResponseEntity<>(respo, HttpStatus.OK);
     }
 }

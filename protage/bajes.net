@@ -1,0 +1,291 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     tree = "(C1,C2,C3,C4,C5,C6,C8,C9,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19)";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node Nece_da_se_upali
+{
+     label = "C1";
+     position = (17 11);
+     states = ("Da" "Ne");
+}
+
+node Upali_se_ali_ne_radi
+{
+     label = "C2";
+     position = (182 13);
+     states = ("Da" "Ne");
+}
+
+node Display_se_zamrzne
+{
+     label = "C3";
+     position = (348 15);
+     states = ("Da" "Ne");
+}
+
+node Nema_dovoljno_memorije
+{
+     label = "C4";
+     position = (513 21);
+     states = ("Da" "Ne");
+}
+
+node Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan
+{
+     label = "C5";
+     position = (663 8);
+     states = ("Da" "Ne");
+}
+
+node Blue_screen
+{
+     label = "C6";
+     position = (997 12);
+     states = ("Da" "Ne");
+}
+
+node Power_supply_error
+{
+     label = "C8";
+     position = (245 170);
+     states = ("Da" "Ne");
+}
+
+node Motherboard_error
+{
+     label = "C9";
+     position = (0 260);
+     states = ("Da" "Ne");
+}
+
+node Motherboard
+{
+     label = "C10";
+     position = (0 446);
+     states = ("Bad" "Average" "Good");
+}
+
+node Power_supply
+{
+     label = "C11";
+     position = (252 366);
+     states = ("Bad" "Average" "Good");
+}
+
+node RAM
+{
+     label = "C12";
+     position = (431 471);
+     states = ("Bad" "Average" "Good");
+}
+
+node Graphics_card
+{
+     label = "C13";
+     position = (736 475);
+     states = ("Bad" "Average" "Good");
+}
+
+node RAM_error
+{
+     label = "C14";
+     position = (499 252);
+     states = ("Da" "Ne");
+}
+
+node Graphics_card_error
+{
+     label = "C15";
+     position = (560 370);
+     states = ("Da" "Ne");
+}
+
+node Storage_error
+{
+     label = "C16";
+     position = (810 278);
+     states = ("Da" "Ne");
+}
+
+node Storage
+{
+     label = "C17";
+     position = (999 477);
+     states = ("Bad" "Average" "Good");
+}
+
+node Fan
+{
+     label = "C18";
+     position = (1050 360);
+     states = ("Bad" "Average" "Good");
+}
+
+node Fan_error
+{
+     label = "C19";
+     position = (1027 200);
+     states = ("Da" "Ne");
+}
+
+potential (Nece_da_se_upali)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Upali_se_ali_ne_radi)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Display_se_zamrzne)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Nema_dovoljno_memorije)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Blue_screen)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Power_supply_error | Display_se_zamrzne Upali_se_ali_ne_radi Nece_da_se_upali Power_supply)
+{
+ data = ((((( 0.9 0.1 )
+( 0.75 0.25 )
+( 0.6 0.4 ))
+(( 0.75 0.25 )
+( 0.6 0.4 )
+( 0.45 0.55 )))
+((( 0.75 0.25 )
+( 0.6 0.4 )
+( 0.45 0.55 ))
+(( 0.5 0.5 )
+( 0.4 0.6 )
+( 0.3 0.7 ))))
+(((( 0.75 0.25 )
+( 0.6 0.4 )
+( 0.45 0.55 ))
+(( 0.5 0.5 )
+( 0.4 0.6 )
+( 0.3 0.7 )))
+((( 0.5 0.5 )
+( 0.4 0.6 )
+( 0.3 0.7 ))
+(( 0.0 1.0 )
+( 0.0 1.0 )
+( 0.0 1.0 )))));
+}
+
+potential (Motherboard_error | Blue_screen Nece_da_se_upali Motherboard)
+{
+ data = (((( 0.75 0.25 )
+( 0.6 0.4 )
+( 0.45 0.55 ))
+(( 0.5 0.5 )
+( 0.4 0.6 )
+( 0.3 0.7 )))
+((( 0.5 0.5 )
+( 0.4 0.6 )
+( 0.3 0.7 ))
+(( 0.0 1.0 )
+( 0.0 1.0 )
+( 0.0 1.0 ))));
+}
+
+potential (Motherboard)
+{
+ data = ( 0.33333334 0.33333334 0.33333334 );
+}
+
+potential (Power_supply)
+{
+ data = ( 0.33333334 0.33333334 0.33333334 );
+}
+
+potential (RAM)
+{
+ data = ( 0.33333334 0.33333334 0.33333334 );
+}
+
+potential (Graphics_card)
+{
+ data = ( 0.33333334 0.33333334 0.33333334 );
+}
+
+potential (RAM_error | Nema_dovoljno_memorije Upali_se_ali_ne_radi RAM)
+{
+ data = (((( 1.0 0.0 )
+( 1.0 0.0 )
+( 1.0 0.0 ))
+(( 1.0 0.0 )
+( 1.0 0.0 )
+( 1.0 0.0 )))
+((( 0.5 0.5 )
+( 0.4 0.6 )
+( 0.3 0.7 ))
+(( 0.0 1.0 )
+( 0.0 1.0 )
+( 0.0 1.0 ))));
+}
+
+potential (Graphics_card_error | Upali_se_ali_ne_radi Graphics_card)
+{
+ data = ((( 0.33 0.67 )
+( 0.26 0.74 )
+( 0.2 0.8 ))
+(( 0.0 1.0 )
+( 0.0 1.0 )
+( 0.0 1.0 )));
+}
+
+potential (Storage_error | Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan Storage)
+{
+ data = ((( 1.0 0.0 )
+( 1.0 0.0 )
+( 1.0 0.0 ))
+(( 0.0 1.0 )
+( 0.0 1.0 )
+( 0.0 1.0 )));
+}
+
+potential (Storage)
+{
+ data = ( 0.33333334 0.33333334 0.33333334 );
+}
+
+potential (Fan)
+{
+ data = ( 0.33333334 0.33333334 0.33333334 );
+}
+
+potential (Fan_error | Blue_screen Display_se_zamrzne Fan)
+{
+ data = (((( 0.75 0.25 )
+( 0.6 0.4 )
+( 0.45 0.55 ))
+(( 0.5 0.5 )
+( 0.4 0.6 )
+( 0.3 0.7 )))
+((( 0.5 0.5 )
+( 0.4 0.6 )
+( 0.3 0.7 ))
+(( 0.0 1.0 )
+( 0.0 1.0 )
+( 0.0 1.0 ))));
+}
+

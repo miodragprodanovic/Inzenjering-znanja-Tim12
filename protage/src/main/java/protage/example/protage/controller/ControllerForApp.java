@@ -9,6 +9,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import protage.example.protage.Jena.Jena;
 import protage.example.protage.model.*;
+import unbbayes.io.NetIO;
+import unbbayes.prs.Node;
+import unbbayes.prs.bn.JunctionTreeAlgorithm;
+import unbbayes.prs.bn.ProbabilisticNetwork;
+import unbbayes.prs.bn.ProbabilisticNode;
+import unbbayes.util.extension.bn.inference.IInferenceAlgorithm;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -18,15 +25,7 @@ import java.util.List;
 import java.util.Objects;
 
 
-import unbbayes.io.BaseIO;
-import unbbayes.io.NetIO;
-import unbbayes.prs.Edge;
-import unbbayes.prs.Node;
-import unbbayes.prs.bn.JunctionTreeAlgorithm;
-import unbbayes.prs.bn.PotentialTable;
-import unbbayes.prs.bn.ProbabilisticNetwork;
-import unbbayes.prs.bn.ProbabilisticNode;
-import unbbayes.util.extension.bn.inference.IInferenceAlgorithm;
+
 
 
 @RestController
@@ -526,9 +525,13 @@ public class ControllerForApp {
             SpeakersWattPower = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"SpeakersWattPower"));
         }
 
-        ProbabilisticNetwork net = new ProbabilisticNetwork("example");
-        BaseIO io = new NetIO();
-        net = (ProbabilisticNetwork)io.load(new File("bajes.net"));
+        ProbabilisticNetwork net = null;
+        try {
+            net = (ProbabilisticNetwork)new NetIO().load(new File("bajes.net"));
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
 
         ProbabilisticNode Nece_da_se_upali = (ProbabilisticNode)net.getNode("Nece_da_se_upali");
         ProbabilisticNode Upali_se_ali_ne_radi = (ProbabilisticNode)net.getNode("Upali_se_ali_ne_radi");
@@ -633,6 +636,8 @@ public class ControllerForApp {
         Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan.getProbabilityFunction().setValue(1,1);
         Upali_se_ali_ne_radi.getProbabilityFunction().setValue(0,0);
         Upali_se_ali_ne_radi.getProbabilityFunction().setValue(1,1);
+        Blue_screen.getProbabilityFunction().setValue(0,0);
+        Blue_screen.getProbabilityFunction().setValue(1,1);
         for(String ss: simptomi) {
             if (ss.equals("Nece_da_se_upali")) {
                 Nece_da_se_upali.getProbabilityFunction().setValue(0,1);
@@ -653,6 +658,10 @@ public class ControllerForApp {
                 Upali_se_ali_ne_radi.getProbabilityFunction().setValue(0,1);
                 Upali_se_ali_ne_radi.getProbabilityFunction().setValue(1,0);
             }
+              else if (ss.equals("Blue_screen")) {
+                Blue_screen.getProbabilityFunction().setValue(0,1);
+                Blue_screen.getProbabilityFunction().setValue(1,0);
+            }
         }
 
 
@@ -665,15 +674,44 @@ public class ControllerForApp {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
+        ArrayList<Float> procenti = new ArrayList<Float>();
+        ArrayList<String> respo = new ArrayList<>();
         for (Node node : net.getNodes()) {
-            System.out.println(node.getName());
-            for (int i = 0; i < node.getStatesSize(); i++) {
-                System.out.println(node.getStateAt(i) + ": " + ((ProbabilisticNode)node).getMarginalAt(i));
+            if(node.getName().equals("Motherboard_error")||node.getName().equals("Power_supply_error")||node.getName().equals("RAM_error")||node.getName().equals("Graphics_card_error")||node.getName().equals("Storage_error")||node.getName().equals("Fan_error")) {
+                System.out.println(node.getName());
+                for (int i = 0; i < node.getStatesSize(); i++) {
+                    if(node.getStateAt(i).contains("Da")) {
+                        System.out.println(node.getStateAt(i) + ": " + ((ProbabilisticNode) node).getMarginalAt(i));
+                        procenti.add(((ProbabilisticNode) node).getMarginalAt(i)*100);
+                    }
+                }
+            }
+            else{
+                System.out.println(node.getName());
+                for (int i = 0; i < node.getStatesSize(); i++) {
+                    System.out.println(node.getStateAt(i) + ": " + ((ProbabilisticNode) node).getMarginalAt(i));
+                }
+            }
+        }
+        float ukupno = 0;
+        for(Float a: procenti){
+            ukupno += a;
+        }
+        int wa = 0;
+        for(Float a: procenti){
+            float novo = a*100/ukupno;
+            procenti.set(wa, novo);
+            wa = wa + 1;
+        }
+        int pro = 0;
+        for (int i=0;i<net.getNodes().size();i++) {
+            if(net.getNodes().get(i).getName().equals("Motherboard_error")||net.getNodes().get(i).getName().equals("Power_supply_error")||net.getNodes().get(i).getName().equals("RAM_error")||net.getNodes().get(i).getName().equals("Graphics_card_error")||net.getNodes().get(i).getName().equals("Storage_error")||net.getNodes().get(i).getName().equals("Fan_error")) {
+                respo.add(net.getNodes().get(i).getName());
+                respo.add(procenti.get(pro) + "%");
+                pro = pro + 1;
             }
         }
 
-        ArrayList<String> respo = new ArrayList<>();
 
         return new ResponseEntity<>(respo, HttpStatus.OK);
     }

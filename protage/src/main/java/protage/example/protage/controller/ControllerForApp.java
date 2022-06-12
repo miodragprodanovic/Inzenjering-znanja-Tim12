@@ -16,20 +16,16 @@ import unbbayes.prs.bn.ProbabilisticNetwork;
 import unbbayes.prs.bn.ProbabilisticNode;
 import unbbayes.util.extension.bn.inference.IInferenceAlgorithm;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
 
-
-
-
-@RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@RestController @CrossOrigin(origins = "http://localhost:4200")
 public class ControllerForApp {
     private static final DecimalFormat df = new DecimalFormat("0.00");
 
@@ -351,7 +347,7 @@ public class ControllerForApp {
         body.setProgramTranslator(ProgramTranslator.ProgramTranslator_Asembler);
         body.setRAM(RAM.DDR3_64GB);
         body.setSoundCard(SoundCard.SoundCard_FAST_ASIA_USB_7_1);
-        body.setSpeakers(Speakers.Speakers_Tytan21);
+        body.setSpeakers(Speakers.Speakers_Z313);
         body.setSpreadsheetSoftwares(spreadsheetSoftwares);
         body.setStorages(storages);
         body.setUtilities(utilities);
@@ -379,35 +375,35 @@ public class ControllerForApp {
         int FanAirFlowCapacity = 0;
         int SpeakersWattPower = 0;
         int Price = 0;
-        if(getBetterComponentBody.getRAM() != null){
+        if (getBetterComponentBody.getRAM() != null) {
              RAMCapacity = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getRAM().toString(),"RAMCapacityString").split("G")[0]);
              Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getRAM().toString(),"Price"));
         }
-        if(getBetterComponentBody.getDedicated() == null){
-            if(getBetterComponentBody.getIntegrated() != null){
+        if (getBetterComponentBody.getDedicated() == null) {
+            if (getBetterComponentBody.getIntegrated() != null) {
                 GraphicsCardSpeed = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getIntegrated().toString(),"GraphicsCardSpeedString").split("M")[0]);
                 Price += 0;
             }
         }
-        else if(getBetterComponentBody.getDedicated() != null){
+        else if (getBetterComponentBody.getDedicated() != null) {
             GraphicsCardSpeed = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getDedicated().toString(),"GraphicsCardSpeedString").split("M")[0]);
             Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getDedicated().toString(),"Price"));
         }
-        if(getBetterComponentBody.getStorages() != null){
-            for(Storage s: getBetterComponentBody.getStorages()) {
+        if (getBetterComponentBody.getStorages() != null) {
+            for (Storage s: getBetterComponentBody.getStorages()) {
                 StorageCapacity  += Integer.parseInt(getComponentDataTypes(s.toString(), "StorageCapacityString").split("G")[0]);
                 Price += Integer.parseInt(getComponentDataTypes(s.toString(), "Price"));
             }
         }
-        if(getBetterComponentBody.getPowerSupply() != null){
+        if (getBetterComponentBody.getPowerSupply() != null) {
             PowerSupplyWattPower = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getPowerSupply().toString(),"PowerSupplyWattPower"));
             Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getPowerSupply().toString(),"Price"));
         }
-        if(getBetterComponentBody.getFan() != null){
+        if (getBetterComponentBody.getFan() != null) {
             FanAirFlowCapacity = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getFan().toString(),"FanAirFlowCapacityString").split("C")[0]);
             Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getFan().toString(),"Price"));
         }
-        if(getBetterComponentBody.getSpeakers() != null){
+        if (getBetterComponentBody.getSpeakers() != null) {
             SpeakersWattPower = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"SpeakersWattPower"));
             Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"Price"));
         }
@@ -489,39 +485,40 @@ public class ControllerForApp {
 
     @PostMapping("/getComputerError")
     public ResponseEntity<ArrayList<String>> getComputerError(@RequestBody GetBetterComponent getBetterComponentBody) throws IOException {
-        List<String> simptomi = new ArrayList<String>();
-        for(String s : getBetterComponentBody.getWhatToUpgrade().split(";")){
-            simptomi.add(s);
-        }
+        List<String> simptomi = new ArrayList<>();
+
+        Collections.addAll(simptomi, getBetterComponentBody.getWhatToUpgrade().split(";"));
+
         int RAMCapacity = 0;
         int StorageCapacity = 0;
         int GraphicsCardSpeed = 0;
         int PowerSupplyWattPower = 0;
         int FanAirFlowCapacity = 0;
         int SpeakersWattPower = 0;
-        if(getBetterComponentBody.getRAM() != null){
+
+        if (getBetterComponentBody.getRAM() != null) {
             RAMCapacity = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getRAM().toString(),"RAMCapacityString").split("G")[0]);
         }
-        if(getBetterComponentBody.getDedicated() == null){
-            if(getBetterComponentBody.getIntegrated() != null){
+        if (getBetterComponentBody.getDedicated() == null) {
+            if (getBetterComponentBody.getIntegrated() != null) {
                 GraphicsCardSpeed = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getIntegrated().toString(),"GraphicsCardSpeedString").split("M")[0]);
             }
         }
-        else if(getBetterComponentBody.getDedicated() != null){
+        else if (getBetterComponentBody.getDedicated() != null) {
             GraphicsCardSpeed = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getDedicated().toString(),"GraphicsCardSpeedString").split("M")[0]);
         }
-        if(getBetterComponentBody.getStorages() != null){
-            for(Storage s: getBetterComponentBody.getStorages()) {
+        if (getBetterComponentBody.getStorages() != null) {
+            for (Storage s: getBetterComponentBody.getStorages()) {
                 StorageCapacity  += Integer.parseInt(getComponentDataTypes(s.toString(), "StorageCapacityString").split("G")[0]);
             }
         }
-        if(getBetterComponentBody.getPowerSupply() != null){
+        if (getBetterComponentBody.getPowerSupply() != null) {
             PowerSupplyWattPower = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getPowerSupply().toString(),"PowerSupplyWattPower"));
         }
-        if(getBetterComponentBody.getFan() != null){
+        if (getBetterComponentBody.getFan() != null) {
             FanAirFlowCapacity = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getFan().toString(),"FanAirFlowCapacityString").split("C")[0]);
         }
-        if(getBetterComponentBody.getSpeakers() != null){
+        if (getBetterComponentBody.getSpeakers() != null) {
             SpeakersWattPower = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"SpeakersWattPower"));
         }
 
@@ -554,12 +551,12 @@ public class ControllerForApp {
             Power_supply.getProbabilityFunction().setValue(1,0);
             Power_supply.getProbabilityFunction().setValue(2,0);
         }
-        else if(PowerSupplyWattPower >= 326 && PowerSupplyWattPower <= 625){
+        else if (PowerSupplyWattPower >= 326 && PowerSupplyWattPower <= 625) {
             Power_supply.getProbabilityFunction().setValue(0,0);
             Power_supply.getProbabilityFunction().setValue(1,1);
             Power_supply.getProbabilityFunction().setValue(2,0);
         }
-        else if(PowerSupplyWattPower >= 626){
+        else if (PowerSupplyWattPower >= 626) {
             Power_supply.getProbabilityFunction().setValue(0,0);
             Power_supply.getProbabilityFunction().setValue(1,0);
             Power_supply.getProbabilityFunction().setValue(2,1);
@@ -569,12 +566,12 @@ public class ControllerForApp {
             RAM.getProbabilityFunction().setValue(1,0);
             RAM.getProbabilityFunction().setValue(2,0);
         }
-        else if(RAMCapacity >= 22 && RAMCapacity <= 46){
+        else if (RAMCapacity >= 22 && RAMCapacity <= 46) {
             RAM.getProbabilityFunction().setValue(0,0);
             RAM.getProbabilityFunction().setValue(1,1);
             RAM.getProbabilityFunction().setValue(2,0);
         }
-        else if(RAMCapacity >= 47){
+        else if (RAMCapacity >= 47) {
             RAM.getProbabilityFunction().setValue(0,0);
             RAM.getProbabilityFunction().setValue(1,0);
             RAM.getProbabilityFunction().setValue(2,1);
@@ -584,12 +581,12 @@ public class ControllerForApp {
             Graphics_card.getProbabilityFunction().setValue(1,0);
             Graphics_card.getProbabilityFunction().setValue(2,0);
         }
-        else if(GraphicsCardSpeed >= 701 && GraphicsCardSpeed <= 1400){
+        else if (GraphicsCardSpeed >= 701 && GraphicsCardSpeed <= 1400) {
             Graphics_card.getProbabilityFunction().setValue(0,0);
             Graphics_card.getProbabilityFunction().setValue(1,1);
             Graphics_card.getProbabilityFunction().setValue(2,0);
         }
-        else if(GraphicsCardSpeed >= 1401){
+        else if (GraphicsCardSpeed >= 1401) {
             Graphics_card.getProbabilityFunction().setValue(0,0);
             Graphics_card.getProbabilityFunction().setValue(1,0);
             Graphics_card.getProbabilityFunction().setValue(2,1);
@@ -599,12 +596,12 @@ public class ControllerForApp {
             Storage.getProbabilityFunction().setValue(1,0);
             Storage.getProbabilityFunction().setValue(2,0);
         }
-        else if(StorageCapacity >= 326 && StorageCapacity <= 625){
+        else if (StorageCapacity >= 326 && StorageCapacity <= 625) {
             Storage.getProbabilityFunction().setValue(0,0);
             Storage.getProbabilityFunction().setValue(1,1);
             Storage.getProbabilityFunction().setValue(2,0);
         }
-        else if(StorageCapacity >= 626){
+        else if (StorageCapacity >= 626) {
             Storage.getProbabilityFunction().setValue(0,0);
             Storage.getProbabilityFunction().setValue(1,0);
             Storage.getProbabilityFunction().setValue(2,1);
@@ -614,16 +611,17 @@ public class ControllerForApp {
             Fan.getProbabilityFunction().setValue(1,0);
             Fan.getProbabilityFunction().setValue(2,0);
         }
-        else if(FanAirFlowCapacity >= 23 && FanAirFlowCapacity <= 42){
+        else if (FanAirFlowCapacity >= 23 && FanAirFlowCapacity <= 42) {
             Fan.getProbabilityFunction().setValue(0,0);
             Fan.getProbabilityFunction().setValue(1,1);
             Fan.getProbabilityFunction().setValue(2,0);
         }
-        else if(FanAirFlowCapacity >= 43){
+        else if (FanAirFlowCapacity >= 43) {
             Fan.getProbabilityFunction().setValue(0,0);
             Fan.getProbabilityFunction().setValue(1,0);
             Fan.getProbabilityFunction().setValue(2,1);
         }
+
         Nece_da_se_upali.getProbabilityFunction().setValue(0,0);
         Nece_da_se_upali.getProbabilityFunction().setValue(1,1);
         Upali_se_ali_ne_radi.getProbabilityFunction().setValue(0,0);
@@ -638,32 +636,35 @@ public class ControllerForApp {
         Upali_se_ali_ne_radi.getProbabilityFunction().setValue(1,1);
         Blue_screen.getProbabilityFunction().setValue(0,0);
         Blue_screen.getProbabilityFunction().setValue(1,1);
-        for(String ss: simptomi) {
-            if (ss.equals("Nece_da_se_upali")) {
-                Nece_da_se_upali.getProbabilityFunction().setValue(0,1);
-                Nece_da_se_upali.getProbabilityFunction().setValue(1,0);
-            } else if (ss.equals("Upali_se_ali_ne_radi")) {
-                Upali_se_ali_ne_radi.getProbabilityFunction().setValue(0,1);
-                Upali_se_ali_ne_radi.getProbabilityFunction().setValue(1,0);
-            } else if (ss.equals("Display_se_zamrzne")) {
-                Display_se_zamrzne.getProbabilityFunction().setValue(0,1);
-                Display_se_zamrzne.getProbabilityFunction().setValue(1,0);
-            } else if (ss.equals("Nema_dovoljno_memorije")) {
-                Nema_dovoljno_memorije.getProbabilityFunction().setValue(0,1);
-                Nema_dovoljno_memorije.getProbabilityFunction().setValue(1,0);
-            } else if (ss.equals("Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan")) {
-                Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan.getProbabilityFunction().setValue(0,1);
-                Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan.getProbabilityFunction().setValue(1,0);
-            } else if (ss.equals("Upali_se_ali_ne_radi")) {
-                Upali_se_ali_ne_radi.getProbabilityFunction().setValue(0,1);
-                Upali_se_ali_ne_radi.getProbabilityFunction().setValue(1,0);
-            }
-              else if (ss.equals("Blue_screen")) {
-                Blue_screen.getProbabilityFunction().setValue(0,1);
-                Blue_screen.getProbabilityFunction().setValue(1,0);
+
+        for (String ss: simptomi) {
+            switch (ss) {
+                case "Nece_da_se_upali":
+                    Nece_da_se_upali.getProbabilityFunction().setValue(0, 1);
+                    Nece_da_se_upali.getProbabilityFunction().setValue(1, 0);
+                    break;
+                case "Upali_se_ali_ne_radi":
+                    Upali_se_ali_ne_radi.getProbabilityFunction().setValue(0, 1);
+                    Upali_se_ali_ne_radi.getProbabilityFunction().setValue(1, 0);
+                    break;
+                case "Display_se_zamrzne":
+                    Display_se_zamrzne.getProbabilityFunction().setValue(0, 1);
+                    Display_se_zamrzne.getProbabilityFunction().setValue(1, 0);
+                    break;
+                case "Nema_dovoljno_memorije":
+                    Nema_dovoljno_memorije.getProbabilityFunction().setValue(0, 1);
+                    Nema_dovoljno_memorije.getProbabilityFunction().setValue(1, 0);
+                    break;
+                case "Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan":
+                    Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan.getProbabilityFunction().setValue(0, 1);
+                    Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan.getProbabilityFunction().setValue(1, 0);
+                    break;
+                case "Blue_screen":
+                    Blue_screen.getProbabilityFunction().setValue(0, 1);
+                    Blue_screen.getProbabilityFunction().setValue(1, 0);
+                    break;
             }
         }
-
 
         IInferenceAlgorithm algorithm = new JunctionTreeAlgorithm();
         algorithm.setNetwork(net);
@@ -677,16 +678,21 @@ public class ControllerForApp {
         ArrayList<Float> procenti = new ArrayList<Float>();
         ArrayList<String> respo = new ArrayList<>();
         for (Node node : net.getNodes()) {
-            if(node.getName().equals("Motherboard_error")||node.getName().equals("Power_supply_error")||node.getName().equals("RAM_error")||node.getName().equals("Graphics_card_error")||node.getName().equals("Storage_error")||node.getName().equals("Fan_error")) {
+            if (node.getName().equals("Motherboard_error")
+                    || node.getName().equals("Power_supply_error")
+                    || node.getName().equals("RAM_error")
+                    || node.getName().equals("Graphics_card_error")
+                    || node.getName().equals("Storage_error")
+                    || node.getName().equals("Fan_error")) {
                 System.out.println(node.getName());
                 for (int i = 0; i < node.getStatesSize(); i++) {
-                    if(node.getStateAt(i).contains("Da")) {
+                    if (node.getStateAt(i).contains("Da")) {
                         System.out.println(node.getStateAt(i) + ": " + ((ProbabilisticNode) node).getMarginalAt(i));
                         procenti.add(((ProbabilisticNode) node).getMarginalAt(i)*100);
                     }
                 }
             }
-            else{
+            else {
                 System.out.println(node.getName());
                 for (int i = 0; i < node.getStatesSize(); i++) {
                     System.out.println(node.getStateAt(i) + ": " + ((ProbabilisticNode) node).getMarginalAt(i));
@@ -698,20 +704,24 @@ public class ControllerForApp {
             ukupno += a;
         }
         int wa = 0;
-        for(Float a: procenti){
+        for (Float a: procenti) {
             float novo = a*100/ukupno;
             procenti.set(wa, novo);
             wa = wa + 1;
         }
         int pro = 0;
-        for (int i=0;i<net.getNodes().size();i++) {
-            if(net.getNodes().get(i).getName().equals("Motherboard_error")||net.getNodes().get(i).getName().equals("Power_supply_error")||net.getNodes().get(i).getName().equals("RAM_error")||net.getNodes().get(i).getName().equals("Graphics_card_error")||net.getNodes().get(i).getName().equals("Storage_error")||net.getNodes().get(i).getName().equals("Fan_error")) {
+        for (int i = 0; i < net.getNodes().size(); i++) {
+            if (net.getNodes().get(i).getName().equals("Motherboard_error")
+                    || net.getNodes().get(i).getName().equals("Power_supply_error")
+                    || net.getNodes().get(i).getName().equals("RAM_error")
+                    || net.getNodes().get(i).getName().equals("Graphics_card_error")
+                    || net.getNodes().get(i).getName().equals("Storage_error")
+                    || net.getNodes().get(i).getName().equals("Fan_error")) {
                 respo.add(net.getNodes().get(i).getName());
                 respo.add(procenti.get(pro) + "%");
                 pro = pro + 1;
             }
         }
-
 
         return new ResponseEntity<>(respo, HttpStatus.OK);
     }

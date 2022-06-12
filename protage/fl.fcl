@@ -205,6 +205,128 @@ RULEBLOCK blok1
 
     RULE 50 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Gaming IS Good;
 
+    RULE 51 : IF RAMCapacity IS Good THEN Home IS Bad;
+
+    RULE 52 : IF RAMCapacity IS Good THEN Gaming IS Good;
+
+    RULE 53 : IF RAMCapacity IS Good THEN Work IS Good;
+
+    RULE 54 : IF RAMCapacity IS Good THEN Hosting IS Good;
+
+    RULE 55 : IF RAMCapacity IS Average THEN Home IS Average;
+
+    RULE 56 : IF RAMCapacity IS Average AND Price IS Expensive THEN Gaming IS Bad;
+
+    RULE 57 : IF RAMCapacity IS Average AND Price IS Average THEN Gaming IS Average;
+
+    RULE 58 : IF RAMCapacity IS Average AND Price IS Cheap THEN Gaming IS Good;
+
+    RULE 59 : IF RAMCapacity IS Average THEN Work IS Bad;
+
+    RULE 60 : IF RAMCapacity IS Average AND Price IS Expensive THEN Hosting IS Bad;
+
+    RULE 61 : IF RAMCapacity IS Average AND Price IS Average THEN Hosting IS Bad;
+
+    RULE 62 : IF RAMCapacity IS Average AND Price IS Cheap THEN Hosting IS Average;
+
+    RULE 63 : IF RAMCapacity IS Bad THEN Home IS Good;
+
+    RULE 64 : IF RAMCapacity IS Bad THEN Gaming IS Bad;
+
+    RULE 65 : IF RAMCapacity IS Bad THEN Work IS Bad;
+
+    RULE 66 : IF RAMCapacity IS Bad THEN Hosting IS Bad;
+
+    RULE 67 : IF StorageCapacity IS Good AND Price IS Expensive THEN Mining IS Bad;
+
+    RULE 68 : IF StorageCapacity IS Good AND Price IS Average THEN Mining IS Average;
+
+    RULE 69 : IF StorageCapacity IS Good THEN Home IS Bad;
+
+    RULE 70 : IF StorageCapacity IS Good AND Price IS Expensive THEN Gaming IS Average;
+
+    RULE 71 : IF StorageCapacity IS Good AND Price IS Average THEN Gaming IS Good;
+
+    RULE 72 : IF StorageCapacity IS Good AND Price IS Cheap THEN Gaming IS Good;
+
+    RULE 73 : IF StorageCapacity IS Good THEN Work IS Good;
+
+    RULE 74 : IF StorageCapacity IS Good AND Price IS Expensive THEN Hosting IS Average;
+
+    RULE 75 : IF StorageCapacity IS Good AND Price IS Average THEN Hosting IS Good;
+
+    RULE 76 : IF StorageCapacity IS Good AND Price IS Cheap THEN Hosting IS Good;
+
+    RULE 77 : IF StorageCapacity IS Average AND Price IS Cheap THEN Mining IS Good;
+
+    RULE 78 : IF StorageCapacity IS Average THEN Home IS Average;
+
+    RULE 79 : IF StorageCapacity IS Average THEN Gaming IS Average;
+
+    RULE 80 : IF StorageCapacity IS Average THEN Work IS Bad;
+
+    RULE 81 : IF StorageCapacity IS Average THEN Hosting IS Bad;
+
+    RULE 82 : IF StorageCapacity IS Bad AND Price IS Cheap THEN Mining IS Good;
+
+    RULE 83 : IF StorageCapacity IS Bad THEN Home IS Good;
+
+    RULE 84 : IF StorageCapacity IS Bad THEN Gaming IS Bad;
+
+    RULE 85 : IF StorageCapacity IS Bad THEN Work IS Bad;
+
+    RULE 86 : IF StorageCapacity IS Bad THEN Hosting IS Bad;
+
+    RULE 87 : IF Price IS Expensive THEN Home IS Bad;
+
+    RULE 88 : IF Price IS Average THEN Home IS Average;
+
+    RULE 89 : IF Price IS Cheap THEN Home IS Good;
+
+    RULE 90 : IF SpeakersWattPower IS Good AND Price IS Expensive THEN Home IS Bad;
+
+    RULE 91 : IF SpeakersWattPower IS Good AND Price IS Average THEN Home IS Average;
+
+    RULE 92 : IF SpeakersWattPower IS Good AND Price IS Cheap THEN Home IS Good;
+
+    RULE 93 : IF SpeakersWattPower IS Good THEN Hosting IS Good;
+
+    RULE 94 : IF SpeakersWattPower IS Good AND Price IS Expensive THEN Work IS Bad;
+
+    RULE 95 : IF SpeakersWattPower IS Good AND Price IS Average THEN Work IS Average;
+
+    RULE 96 : IF SpeakersWattPower IS Good AND Price IS Cheap THEN Work IS Good;
+
+    RULE 97 : IF SpeakersWattPower IS Good AND Price IS Expensive THEN Gaming IS Average;
+
+    RULE 98 : IF SpeakersWattPower IS Good AND Price IS Average THEN Gaming IS Good;
+
+    RULE 99 : IF SpeakersWattPower IS Good AND Price IS Cheap THEN Gaming IS Good;
+
+    RULE 100 : IF SpeakersWattPower IS Average AND Price IS Expensive THEN Home IS Bad;
+
+    RULE 101 : IF SpeakersWattPower IS Average AND Price IS Average THEN Home IS Bad;
+
+    RULE 102 : IF SpeakersWattPower IS Average AND Price IS Cheap THEN Home IS Good;
+
+    RULE 103 : IF SpeakersWattPower IS Average AND Price IS Expensive THEN Hosting IS Bad;
+
+    RULE 104 : IF SpeakersWattPower IS Average AND Price IS Average THEN Hosting IS Average;
+
+    RULE 105 : IF SpeakersWattPower IS Average AND Price IS Cheap THEN Hosting IS Good;
+
+    RULE 106 : IF SpeakersWattPower IS Average AND Price IS Expensive THEN Work IS Bad;
+
+    RULE 107 : IF SpeakersWattPower IS Average AND Price IS Average THEN Work IS Good;
+
+    RULE 108 : IF SpeakersWattPower IS Average AND Price IS Cheap THEN Work IS Good;
+
+    RULE 109 : IF SpeakersWattPower IS Average AND Price IS Expensive THEN Gaming IS Bad;
+
+    RULE 110 : IF SpeakersWattPower IS Average AND Price IS Average THEN Gaming IS Bad;
+
+    RULE 111 : IF SpeakersWattPower IS Average AND Price IS Cheap THEN Gaming IS Average;
+
 END_RULEBLOCK
 
 END_FUNCTION_BLOCK

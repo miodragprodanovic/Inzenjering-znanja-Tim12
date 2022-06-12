@@ -54,12 +54,6 @@ FUZZIFY FanAirFlowCapacity
 	TERM Good := (40, 0) (53, 1) (63, 0);
 END_FUZZIFY
 
-FUZZIFY SSDCard
-	TERM Bad  := (120, 1) (180, 1) (250, 0);
-	TERM Average := (240, 0) (380, 1) (512, 0);
-	TERM Good := (500, 0) (2000, 1) (4000, 0);
-END_FUZZIFY
-
 FUZZIFY Price
 	TERM Cheap:= (100, 0) (500, 1) (700, 0);
 	TERM Average:= (600, 0) (900, 1) (1200, 0);
@@ -74,7 +68,7 @@ DEFUZZIFY Mining
 	DEFAULT := 0;		// podrazumevana vrednost (ukoliko nijedno pravilo nije aktivirano)
 END_DEFUZZIFY
 
-DEFUZZIFY Work
+DEFUZZIFY Work 
 	TERM Bad  := (0,0) (20,1) (33, 0);
 	TERM Average  := (25,0) (45,1) (66, 0);
 	TERM Good  := (58,0) (78,1) (100, 0);
@@ -111,105 +105,105 @@ RULEBLOCK blok1
 	ACT : MIN;			// za zaključivanje (implikaciju) je izabran minimum (Mamdani implikacija) (osim MIN koristi se i PROD)
 	ACCU : MAX;			// za kompoziciju je izabran maksimum (osim MAX koristi se i SUM)
 
-	RULE 1 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND SSDCard IS Bad AND Price IS Expensive THEN Home IS Bad;
+	RULE 1 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND Price IS Expensive THEN Home IS Bad;
 
-    RULE 2 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND SSDCard IS Bad AND Price IS Expensive THEN Work IS Bad;
+    RULE 2 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND Price IS Expensive THEN Work IS Bad;
 
-    RULE 3 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND SSDCard IS Bad AND Price IS Expensive THEN Mining IS Bad;
+    RULE 3 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND Price IS Expensive THEN Mining IS Bad;
 
-    RULE 4 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND SSDCard IS Bad AND Price IS Expensive THEN Hosting IS Bad;
+    RULE 4 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND Price IS Expensive THEN Hosting IS Bad;
 
-    RULE 5 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND SSDCard IS Bad AND Price IS Expensive THEN Gaming IS Bad;
+    RULE 5 : IF RAMCapacity IS Bad AND StorageCapacity IS Bad AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Bad AND Price IS Expensive THEN Gaming IS Bad;
 
-    RULE 6 : IF RAMCapacity IS Good AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Bad AND Price IS Cheap THEN Home IS Average;
+    RULE 6 : IF RAMCapacity IS Good AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Home IS Average;
 
-    RULE 7 : IF RAMCapacity IS Good AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Average AND Price IS Cheap THEN Work IS Average;
+    RULE 7 : IF RAMCapacity IS Good AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Work IS Average;
 
-    RULE 8 : IF RAMCapacity IS Good AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Bad AND Price IS Cheap THEN Mining IS Bad;
+    RULE 8 : IF RAMCapacity IS Good AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Mining IS Bad;
 
-    RULE 9 : IF RAMCapacity IS Good AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Average AND Price IS Cheap THEN Hosting IS Good;
+    RULE 9 : IF RAMCapacity IS Good AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Hosting IS Good;
 
-    RULE 10 : IF RAMCapacity IS Good AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Bad AND Price IS Cheap THEN Gaming IS Average;
+    RULE 10 : IF RAMCapacity IS Good AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Gaming IS Average;
 
-    RULE 11 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND SSDCard IS Bad AND Price IS Expensive THEN Home IS Bad;
+    RULE 11 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Expensive THEN Home IS Bad;
 
-    RULE 12 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND SSDCard IS Good AND Price IS Expensive THEN Work IS Good;
+    RULE 12 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Expensive THEN Work IS Good;
 
-    RULE 13 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND SSDCard IS Good AND Price IS Expensive THEN Mining IS Average;
+    RULE 13 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Expensive THEN Mining IS Average;
 
-    RULE 14 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND SSDCard IS Good AND Price IS Expensive THEN Hosting IS Average;
+    RULE 14 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Expensive THEN Hosting IS Average;
 
-    RULE 15 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND SSDCard IS Good AND Price IS Expensive THEN Gaming IS Good;
+    RULE 15 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Expensive THEN Gaming IS Good;
 
-    RULE 16 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Average AND SSDCard IS Bad AND Price IS Average THEN Home IS Bad;
+    RULE 16 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Average AND Price IS Average THEN Home IS Bad;
 
-    RULE 17 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Average AND SSDCard IS Average AND Price IS Average THEN Work IS Average;
+    RULE 17 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Average AND Price IS Average THEN Work IS Average;
 
-    RULE 18 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Average AND SSDCard IS Bad AND Price IS Average THEN Mining IS Bad;
+    RULE 18 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Average AND Price IS Average THEN Mining IS Bad;
 
-    RULE 19 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Average AND SSDCard IS Average AND Price IS Average THEN Hosting IS Good;
+    RULE 19 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Average AND Price IS Average THEN Hosting IS Good;
 
-    RULE 20 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Average AND SSDCard IS Bad AND Price IS Average THEN Gaming IS Bad;
+    RULE 20 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Average AND Price IS Average THEN Gaming IS Bad;
 
-    RULE 21 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Average AND SSDCard IS Bad AND Price IS Average THEN Home IS Average;
+    RULE 21 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Average AND Price IS Average THEN Home IS Average;
 
-    RULE 22 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Average AND SSDCard IS Bad AND Price IS Average THEN Work IS Bad;
+    RULE 22 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Average AND Price IS Average THEN Work IS Bad;
 
-    RULE 23 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Average AND SSDCard IS Average AND Price IS Average THEN Mining IS Good;
+    RULE 23 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Average AND Price IS Average THEN Mining IS Good;
 
-    RULE 24 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Average AND SSDCard IS Bad AND Price IS Average THEN Hosting IS Bad;
+    RULE 24 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Average AND Price IS Average THEN Hosting IS Bad;
 
-    RULE 25 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Average AND SSDCard IS Average AND Price IS Average THEN Gaming IS Average;
+    RULE 25 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Bad AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Average AND Price IS Average THEN Gaming IS Average;
 
-    RULE 26 : IF RAMCapacity IS Average AND StorageCapacity IS Bad AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND SSDCard IS Bad AND Price IS Average THEN Home IS Average;
+    RULE 26 : IF RAMCapacity IS Average AND StorageCapacity IS Bad AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND Price IS Average THEN Home IS Average;
 
-    RULE 27 : IF RAMCapacity IS Average AND StorageCapacity IS Bad AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND SSDCard IS Average AND Price IS Average THEN Work IS Average;
+    RULE 27 : IF RAMCapacity IS Average AND StorageCapacity IS Bad AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND Price IS Average THEN Work IS Average;
 
-    RULE 28 : IF RAMCapacity IS Average AND StorageCapacity IS Bad AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND SSDCard IS Bad AND Price IS Average THEN Mining IS Bad;
+    RULE 28 : IF RAMCapacity IS Average AND StorageCapacity IS Bad AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND Price IS Average THEN Mining IS Bad;
 
-    RULE 29 : IF RAMCapacity IS Average AND StorageCapacity IS Bad AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND SSDCard IS Bad AND Price IS Average THEN Hosting IS Bad;
+    RULE 29 : IF RAMCapacity IS Average AND StorageCapacity IS Bad AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND Price IS Average THEN Hosting IS Bad;
 
-    RULE 30 : IF RAMCapacity IS Average AND StorageCapacity IS Bad AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND SSDCard IS Bad AND Price IS Average THEN Gaming IS Average;
+    RULE 30 : IF RAMCapacity IS Average AND StorageCapacity IS Bad AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND Price IS Average THEN Gaming IS Average;
 
-    RULE 31 : IF RAMCapacity IS Average AND StorageCapacity IS Good AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND SSDCard IS Average AND Price IS Average THEN Home IS Average;
+    RULE 31 : IF RAMCapacity IS Average AND StorageCapacity IS Good AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND Price IS Average THEN Home IS Average;
 
-    RULE 32 : IF RAMCapacity IS Average AND StorageCapacity IS Good AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND SSDCard IS Average AND Price IS Average THEN Work IS Average;
+    RULE 32 : IF RAMCapacity IS Average AND StorageCapacity IS Good AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND Price IS Average THEN Work IS Average;
 
-    RULE 33 : IF RAMCapacity IS Average AND StorageCapacity IS Good AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND SSDCard IS Average AND Price IS Average THEN Mining IS Average;
+    RULE 33 : IF RAMCapacity IS Average AND StorageCapacity IS Good AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND Price IS Average THEN Mining IS Average;
 
-    RULE 34 : IF RAMCapacity IS Average AND StorageCapacity IS Good AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND SSDCard IS Average AND Price IS Average THEN Hosting IS Average;
+    RULE 34 : IF RAMCapacity IS Average AND StorageCapacity IS Good AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND Price IS Average THEN Hosting IS Average;
 
-    RULE 35 : IF RAMCapacity IS Average AND StorageCapacity IS Good AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND SSDCard IS Average AND Price IS Average THEN Gaming IS Average;
+    RULE 35 : IF RAMCapacity IS Average AND StorageCapacity IS Good AND SpeakersWattPower IS Average AND PowerSupplyWattPower IS Average AND GraphicsCardSpeed IS Average AND FanAirFlowCapacity IS Average AND Price IS Average THEN Gaming IS Average;
 
-    RULE 36 : IF RAMCapacity IS Average AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Bad AND Price IS Cheap THEN Home IS Average;
+    RULE 36 : IF RAMCapacity IS Average AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Home IS Average;
 
-    RULE 37 : IF RAMCapacity IS Average AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Average AND Price IS Cheap THEN Work IS Average;
+    RULE 37 : IF RAMCapacity IS Average AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Work IS Average;
 
-    RULE 38 : IF RAMCapacity IS Average AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Bad AND Price IS Cheap THEN Mining IS Bad;
+    RULE 38 : IF RAMCapacity IS Average AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Mining IS Bad;
 
-    RULE 39 : IF RAMCapacity IS Average AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Average AND Price IS Cheap THEN Hosting IS Average;
+    RULE 39 : IF RAMCapacity IS Average AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Hosting IS Average;
 
-    RULE 40 : IF RAMCapacity IS Average AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Bad AND Price IS Cheap THEN Gaming IS Average;
+    RULE 40 : IF RAMCapacity IS Average AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Gaming IS Average;
 
-    RULE 41 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Bad AND Price IS Cheap THEN Home IS Average;
+    RULE 41 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Home IS Average;
 
-    RULE 42 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Average AND Price IS Cheap THEN Work IS Average;
+    RULE 42 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Work IS Average;
 
-    RULE 43 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Average AND Price IS Cheap THEN Mining IS Bad;
+    RULE 43 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Mining IS Bad;
 
-    RULE 44 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Bad AND Price IS Cheap THEN Hosting IS Bad;
+    RULE 44 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Hosting IS Bad;
 
-    RULE 45 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND SSDCard IS Average AND Price IS Cheap THEN Gaming IS Average;
+    RULE 45 : IF RAMCapacity IS Bad AND StorageCapacity IS Average AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Bad AND GraphicsCardSpeed IS Bad AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Gaming IS Average;
 
-    RULE 46 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND SSDCard IS Good AND Price IS Cheap THEN Home IS Good;
+    RULE 46 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Home IS Good;
 
-    RULE 47 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND SSDCard IS Good AND Price IS Cheap THEN Work IS Good;
+    RULE 47 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Work IS Good;
 
-    RULE 48 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND SSDCard IS Good AND Price IS Cheap THEN Mining IS Good;
+    RULE 48 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Mining IS Good;
 
-    RULE 49 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND SSDCard IS Good AND Price IS Cheap THEN Hosting IS Good;
+    RULE 49 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Hosting IS Good;
 
-    RULE 50 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND SSDCard IS Good AND Price IS Cheap THEN Gaming IS Good;
+    RULE 50 : IF RAMCapacity IS Good AND StorageCapacity IS Good AND SpeakersWattPower IS Good AND PowerSupplyWattPower IS Good AND GraphicsCardSpeed IS Good AND FanAirFlowCapacity IS Good AND Price IS Cheap THEN Gaming IS Good;
 
 END_RULEBLOCK
 

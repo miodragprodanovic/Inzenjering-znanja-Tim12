@@ -16,7 +16,6 @@ import unbbayes.prs.bn.ProbabilisticNetwork;
 import unbbayes.prs.bn.ProbabilisticNode;
 import unbbayes.util.extension.bn.inference.IInferenceAlgorithm;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
@@ -25,11 +24,7 @@ import java.util.List;
 import java.util.Objects;
 
 
-
-
-
-@RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@RestController @CrossOrigin(origins = "http://localhost:4200")
 public class ControllerForApp {
     private static final DecimalFormat df = new DecimalFormat("0.00");
 
@@ -379,35 +374,35 @@ public class ControllerForApp {
         int FanAirFlowCapacity = 0;
         int SpeakersWattPower = 0;
         int Price = 0;
-        if(getBetterComponentBody.getRAM() != null){
+        if (getBetterComponentBody.getRAM() != null) {
              RAMCapacity = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getRAM().toString(),"RAMCapacityString").split("G")[0]);
              Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getRAM().toString(),"Price"));
         }
-        if(getBetterComponentBody.getDedicated() == null){
-            if(getBetterComponentBody.getIntegrated() != null){
+        if (getBetterComponentBody.getDedicated() == null) {
+            if (getBetterComponentBody.getIntegrated() != null) {
                 GraphicsCardSpeed = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getIntegrated().toString(),"GraphicsCardSpeedString").split("M")[0]);
                 Price += 0;
             }
         }
-        else if(getBetterComponentBody.getDedicated() != null){
+        else if (getBetterComponentBody.getDedicated() != null) {
             GraphicsCardSpeed = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getDedicated().toString(),"GraphicsCardSpeedString").split("M")[0]);
             Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getDedicated().toString(),"Price"));
         }
-        if(getBetterComponentBody.getStorages() != null){
-            for(Storage s: getBetterComponentBody.getStorages()) {
+        if (getBetterComponentBody.getStorages() != null) {
+            for (Storage s: getBetterComponentBody.getStorages()) {
                 StorageCapacity  += Integer.parseInt(getComponentDataTypes(s.toString(), "StorageCapacityString").split("G")[0]);
                 Price += Integer.parseInt(getComponentDataTypes(s.toString(), "Price"));
             }
         }
-        if(getBetterComponentBody.getPowerSupply() != null){
+        if (getBetterComponentBody.getPowerSupply() != null) {
             PowerSupplyWattPower = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getPowerSupply().toString(),"PowerSupplyWattPower"));
             Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getPowerSupply().toString(),"Price"));
         }
-        if(getBetterComponentBody.getFan() != null){
+        if (getBetterComponentBody.getFan() != null) {
             FanAirFlowCapacity = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getFan().toString(),"FanAirFlowCapacityString").split("C")[0]);
             Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getFan().toString(),"Price"));
         }
-        if(getBetterComponentBody.getSpeakers() != null){
+        if (getBetterComponentBody.getSpeakers() != null) {
             SpeakersWattPower = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"SpeakersWattPower"));
             Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"Price"));
         }
@@ -489,8 +484,8 @@ public class ControllerForApp {
 
     @PostMapping("/getComputerError")
     public ResponseEntity<ArrayList<String>> getComputerError(@RequestBody GetBetterComponent getBetterComponentBody) throws IOException {
-        List<String> simptomi = new ArrayList<String>();
-        for(String s : getBetterComponentBody.getWhatToUpgrade().split(";")){
+        List<String> simptomi = new ArrayList<>();
+        for (String s : getBetterComponentBody.getWhatToUpgrade().split(";")) {
             simptomi.add(s);
         }
         int RAMCapacity = 0;

@@ -345,7 +345,7 @@ public class ControllerForApp {
         body.setPresentationSoftwares(presentationSoftwares);
         body.setProcessor(Processor.Processor_i5_6400);
         body.setProgramTranslator(ProgramTranslator.ProgramTranslator_Asembler);
-        body.setRAM(RAM.DDR3_64GB);
+        body.setRAM(RAM.DDR3_16GB);
         body.setSoundCard(SoundCard.SoundCard_FAST_ASIA_USB_7_1);
         body.setSpeakers(Speakers.Speakers_Z313);
         body.setSpreadsheetSoftwares(spreadsheetSoftwares);
@@ -375,9 +375,18 @@ public class ControllerForApp {
         int FanAirFlowCapacity = 0;
         int SpeakersWattPower = 0;
         int Price = 0;
+
+        int ramPrice = 0;
+        int graphicsCardPrice = 0;
+        int storagePrice = 0;
+        int powerSupplyPrice = 0;
+        int fanPrice = 0;
+        int speakersPrice = 0;
+
         if (getBetterComponentBody.getRAM() != null) {
              RAMCapacity = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getRAM().toString(),"RAMCapacityString").split("G")[0]);
-             Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getRAM().toString(),"Price"));
+             ramPrice = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getRAM().toString(),"Price"));
+             Price += ramPrice;
         }
         if (getBetterComponentBody.getDedicated() == null) {
             if (getBetterComponentBody.getIntegrated() != null) {
@@ -387,25 +396,30 @@ public class ControllerForApp {
         }
         else if (getBetterComponentBody.getDedicated() != null) {
             GraphicsCardSpeed = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getDedicated().toString(),"GraphicsCardSpeedString").split("M")[0]);
-            Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getDedicated().toString(),"Price"));
+            graphicsCardPrice = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getDedicated().toString(),"Price"));
+            Price += graphicsCardPrice;
         }
         if (getBetterComponentBody.getStorages() != null) {
             for (Storage s: getBetterComponentBody.getStorages()) {
                 StorageCapacity  += Integer.parseInt(getComponentDataTypes(s.toString(), "StorageCapacityString").split("G")[0]);
-                Price += Integer.parseInt(getComponentDataTypes(s.toString(), "Price"));
+                storagePrice = Integer.parseInt(getComponentDataTypes(s.toString(), "Price"));
+                Price += storagePrice;
             }
         }
         if (getBetterComponentBody.getPowerSupply() != null) {
             PowerSupplyWattPower = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getPowerSupply().toString(),"PowerSupplyWattPower"));
-            Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getPowerSupply().toString(),"Price"));
+            powerSupplyPrice = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getPowerSupply().toString(),"Price"));
+            Price += powerSupplyPrice;
         }
         if (getBetterComponentBody.getFan() != null) {
             FanAirFlowCapacity = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getFan().toString(),"FanAirFlowCapacityString").split("C")[0]);
-            Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getFan().toString(),"Price"));
+            fanPrice = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getFan().toString(),"Price"));
+            Price += fanPrice;
         }
         if (getBetterComponentBody.getSpeakers() != null) {
             SpeakersWattPower = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"SpeakersWattPower"));
-            Price += Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"Price"));
+            speakersPrice = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"Price"));
+            Price += speakersPrice;
         }
 
         FIS fis = FIS.load("fl.fcl", true);
@@ -453,7 +467,24 @@ public class ControllerForApp {
         if (Price != 0) {
             fis.setVariable("Price", Price);
         }
-
+        if (ramPrice != 0) {
+            fis.setVariable("RamPrice", ramPrice);
+        }
+        if (graphicsCardPrice != 0) {
+            fis.setVariable("GraphicsCardPrice", graphicsCardPrice);
+        }
+        if (storagePrice != 0) {
+            fis.setVariable("StoragePrice", storagePrice);
+        }
+        if (powerSupplyPrice != 0) {
+            fis.setVariable("PowerSupplyPrice", powerSupplyPrice);
+        }
+        if (fanPrice != 0) {
+            fis.setVariable("FanPrice", fanPrice);
+        }
+        if (speakersPrice != 0) {
+            fis.setVariable("SpeakersPrice", speakersPrice);
+        }
 
         fis.evaluate();
 
@@ -473,14 +504,14 @@ public class ControllerForApp {
         System.out.println("Hosting: " + Hosting.getValue()/100);
         System.out.println("Mining: " + Mining.getValue()/100);
 
-        ArrayList<String> respo = new ArrayList<>();
-        respo.add("Home: " + df.format(Home.getValue()/100));
-        respo.add("Work: " + df.format(Work.getValue()/100));
-        respo.add("Gaming: " + df.format(Gaming.getValue()/100));
-        respo.add("Hosting: " + df.format(Hosting.getValue()/100));
-        respo.add("Mining: " + df.format(Mining.getValue()/100));
+        ArrayList<String> response = new ArrayList<>();
+        response.add("Home: " + df.format(Home.getValue()/100));
+        response.add("Work: " + df.format(Work.getValue()/100));
+        response.add("Gaming: " + df.format(Gaming.getValue()/100));
+        response.add("Hosting: " + df.format(Hosting.getValue()/100));
+        response.add("Mining: " + df.format(Mining.getValue()/100));
 
-        return new ResponseEntity<>(respo, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @PostMapping("/getComputerError")

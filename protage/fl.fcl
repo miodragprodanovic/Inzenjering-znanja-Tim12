@@ -327,6 +327,60 @@ RULEBLOCK blok1
 
     RULE 111 : IF SpeakersWattPower IS Average AND Price IS Cheap THEN Gaming IS Average;
 
+    RULE 112 : IF GraphicsCardSpeed IS Bad AND Price IS Cheap THEN Home IS Bad;
+
+    RULE 113 : IF GraphicsCardSpeed IS Bad AND Price IS Average THEN Work IS Bad;
+
+    RULE 114 : IF GraphicsCardSpeed IS Average AND Price IS Expensive THEN Mining IS Good;
+
+    RULE 115 : IF GraphicsCardSpeed IS Good AND Price IS Expensive THEN Gaming IS Good;
+
+    RULE 116 : IF RAMCapacity IS Bad AND GraphicsCardSpeed IS Bad AND Price IS Cheap THEN Home IS Bad;
+
+    RULE 117 : IF RAMCapacity IS Bad AND GraphicsCardSpeed IS Average AND Price IS Average THEN Work IS Bad;
+
+    RULE 118 : IF RAMCapacity IS Average AND GraphicsCardSpeed IS Average AND Price IS Cheap THEN Hosting IS Average;
+
+    RULE 119 : IF RAMCapacity IS Average AND GraphicsCardSpeed IS Good AND Price IS Expensive THEN Gaming IS Good;
+
+    RULE 120 : IF RAMCapacity IS Average AND GraphicsCardSpeed IS Bad AND Price IS Average THEN Mining IS Bad;
+
+    RULE 121 : IF RAMCapacity IS Good AND GraphicsCardSpeed IS Bad AND Price IS Average THEN Work IS Average;
+
+    RULE 122 : IF RAMCapacity IS Bad AND GraphicsCardSpeed IS Average AND Price IS Cheap THEN Work IS Bad;
+
+    RULE 123 : IF RAMCapacity IS Average AND GraphicsCardSpeed IS Average AND Price IS Expensive THEN Work IS Good;
+
+    RULE 124 : IF RAMCapacity IS Average AND GraphicsCardSpeed IS Average AND Price IS Average THEN Mining IS Good;
+
+    RULE 125 : IF RAMCapacity IS Average AND GraphicsCardSpeed IS Average AND Price IS Cheap THEN Gaming IS Average;
+
+    RULE 126 : IF RAMCapacity IS Bad AND GraphicsCardSpeed IS Average AND Price IS Average THEN Home IS Good;
+
+    RULE 127 : IF RAMCapacity IS Average AND GraphicsCardSpeed IS Bad AND Price IS Average THEN Gaming IS Average;
+
+    RULE 128 : IF RAMCapacity IS Bad AND GraphicsCardSpeed IS Bad AND PowerSupplyWattPower IS Bad AND Price IS Average THEN Home IS Average;
+
+    RULE 129 : IF RAMCapacity IS Bad AND GraphicsCardSpeed IS Average AND PowerSupplyWattPower IS Average AND Price IS Average THEN Mining IS Average;
+
+    RULE 130 : IF RAMCapacity IS Average AND GraphicsCardSpeed IS Bad AND PowerSupplyWattPower IS Average AND Price IS Average THEN Hosting IS Average;
+
+    RULE 131 : IF RAMCapacity IS Bad AND GraphicsCardSpeed IS Good AND PowerSupplyWattPower IS Average AND Price IS Expensive THEN Gaming IS Good;
+
+    RULE 132 : IF RAMCapacity IS Average AND GraphicsCardSpeed IS Bad AND PowerSupplyWattPower IS Average AND Price IS Cheap THEN Home IS Good;
+
+    RULE 133 : IF RAMCapacity IS Good AND GraphicsCardSpeed IS Average AND PowerSupplyWattPower IS Good AND Price IS Average THEN Work IS Good;
+
+    RULE 134 : IF RAMCapacity IS Bad AND GraphicsCardSpeed IS Bad AND PowerSupplyWattPower IS Average AND Price IS Cheap THEN Mining IS Bad;
+
+    RULE 135 : IF RAMCapacity IS Average AND GraphicsCardSpeed IS Good AND PowerSupplyWattPower IS Good AND Price IS Expensive THEN Hosting IS Good;
+
+    RULE 136 : IF RAMCapacity IS Bad AND GraphicsCardSpeed IS Good AND PowerSupplyWattPower IS Bad AND Price IS Average THEN Work IS Bad;
+
+    RULE 137 : IF RAMCapacity IS Bad AND GraphicsCardSpeed IS Bad AND PowerSupplyWattPower IS Good AND Price IS Expensive THEN Home IS Good;
+
+    RULE 138 : IF RAMCapacity IS Average AND GraphicsCardSpeed IS Average AND PowerSupplyWattPower IS Good AND Price IS Expensive THEN Mining IS Good;
+
 END_RULEBLOCK
 
 END_FUNCTION_BLOCK

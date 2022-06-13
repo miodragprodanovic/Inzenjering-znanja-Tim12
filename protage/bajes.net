@@ -171,7 +171,7 @@ node Nema_zvuka
 node Speaker
 {
      label = "C6";
-     position = (1545 333);
+     position = (1545 358);
      states = ("Bad" "Average" "Good");
 }
 

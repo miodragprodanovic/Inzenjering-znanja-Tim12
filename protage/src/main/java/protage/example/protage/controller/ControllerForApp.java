@@ -551,6 +551,7 @@ public class ControllerForApp {
         ProbabilisticNode Nema_slike = (ProbabilisticNode)net.getNode("Nema_slike");
         ProbabilisticNode Speakers = (ProbabilisticNode)net.getNode("Speakers");
         ProbabilisticNode Nema_zvuka = (ProbabilisticNode)net.getNode("Nema_zvuka");
+        ProbabilisticNode Javljaju_se_sumovi = (ProbabilisticNode)net.getNode("Javljaju_se_sumovi");
 
         Motherboard.getProbabilityFunction().setValue(0,0);
         Motherboard.getProbabilityFunction().setValue(1,1);
@@ -681,6 +682,10 @@ public class ControllerForApp {
         Slika_je_mutna.getProbabilityFunction().setValue(1, 1);
         Nema_slike.getProbabilityFunction().setValue(0,0);
         Nema_slike.getProbabilityFunction().setValue(1,1);
+        Nema_zvuka.getProbabilityFunction().setValue(0,0);
+        Nema_zvuka.getProbabilityFunction().setValue(1,1);
+        Javljaju_se_sumovi.getProbabilityFunction().setValue(0,0);
+        Javljaju_se_sumovi.getProbabilityFunction().setValue(1,1);
 
         for (String ss: simptomi) {
             switch (ss) {
@@ -719,6 +724,10 @@ public class ControllerForApp {
                 case "Nema_zvuka":
                     Nema_zvuka.getProbabilityFunction().setValue(0,1);
                     Nema_zvuka.getProbabilityFunction().setValue(1,0);
+                    break;
+                case "Javljaju_se_sumovi":
+                    Javljaju_se_sumovi.getProbabilityFunction().setValue(0,1);
+                    Javljaju_se_sumovi.getProbabilityFunction().setValue(1,0);
                     break;
             }
         }

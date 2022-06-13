@@ -10,14 +10,14 @@ net
 node Nece_da_se_upali
 {
      label = "C1";
-     position = (17 11);
+     position = (16 0);
      states = ("Da" "Ne");
 }
 
 node Upali_se_ali_ne_radi
 {
      label = "C2";
-     position = (182 13);
+     position = (183 14);
      states = ("Da" "Ne");
 }
 
@@ -52,21 +52,21 @@ node Blue_screen
 node Power_supply_error
 {
      label = "C8";
-     position = (245 170);
+     position = (240 145);
      states = ("Da" "Ne");
 }
 
 node Motherboard_error
 {
      label = "C9";
-     position = (0 260);
+     position = (81 239);
      states = ("Da" "Ne");
 }
 
 node Motherboard
 {
      label = "C10";
-     position = (0 446);
+     position = (80 446);
      states = ("Bad" "Average" "Good");
 }
 
@@ -101,7 +101,7 @@ node RAM_error
 node Graphics_card_error
 {
      label = "C15";
-     position = (560 370);
+     position = (561 371);
      states = ("Da" "Ne");
 }
 
@@ -130,6 +130,62 @@ node Fan_error
 {
      label = "C19";
      position = (1027 200);
+     states = ("Da" "Ne");
+}
+
+node Display_error
+{
+     label = "C1";
+     position = (1277 233);
+     states = ("Da" "Ne");
+}
+
+node Display
+{
+     label = "C2";
+     position = (1278 358);
+     states = ("Bad" "Average" "Good");
+}
+
+node Slika_je_mutna
+{
+     label = "C3";
+     position = (1133 99);
+     states = ("Da" "Ne");
+}
+
+node Speaker_error
+{
+     label = "C4";
+     position = (1530 214);
+     states = ("Da" "Ne");
+}
+
+node Nema_zvuka
+{
+     label = "C5";
+     position = (1445 108);
+     states = ("Da" "Ne");
+}
+
+node Speaker
+{
+     label = "C6";
+     position = (1545 333);
+     states = ("Bad" "Average" "Good");
+}
+
+node Nema_slike
+{
+     label = "C8";
+     position = (1283 101);
+     states = ("Da" "Ne");
+}
+
+node Javljaju_se_sumovi
+{
+     label = "C10";
+     position = (1613 108);
      states = ("Da" "Ne");
 }
 
@@ -287,5 +343,103 @@ potential (Fan_error | Blue_screen Display_se_zamrzne Fan)
 (( 0.0 1.0 )
 ( 0.0 1.0 )
 ( 0.0 1.0 ))));
+}
+
+potential (Display_error | Blue_screen Display_se_zamrzne Nema_slike Slika_je_mutna Display)
+{
+ data = (((((( 1.0 0.0 )
+( 1.0 0.0 )
+( 1.0 0.0 ))
+(( 0.98 0.02 )
+( 0.93 0.07 )
+( 0.89 0.11 )))
+((( 0.97 0.03 )
+( 0.92 0.08 )
+( 0.87 0.13 ))
+(( 0.9 0.1 )
+( 0.85 0.15 )
+( 0.8 0.2 ))))
+(((( 0.96 0.04 )
+( 0.93 0.07 )
+( 0.9 0.1 ))
+(( 0.87 0.13 )
+( 0.8 0.2 )
+( 0.73 0.27 )))
+((( 0.87 0.13 )
+( 0.8 0.2 )
+( 0.73 0.27 ))
+(( 0.8 0.2 )
+( 0.7 0.3 )
+( 0.6 0.4 )))))
+((((( 0.96 0.04 )
+( 0.92 0.08 )
+( 0.88 0.12 ))
+(( 0.91 0.09 )
+( 0.84 0.16 )
+( 0.77 0.23 )))
+((( 0.93 0.07 )
+( 0.9 0.1 )
+( 0.87 0.13 ))
+(( 0.8 0.2 )
+( 0.7 0.3 )
+( 0.6 0.4 ))))
+(((( 0.9 0.1 )
+( 0.86 0.14 )
+( 0.82 0.18 ))
+(( 0.7 0.3 )
+( 0.65 0.35 )
+( 0.6 0.4 )))
+((( 0.65 0.35 )
+( 0.6 0.4 )
+( 0.55 0.45 ))
+(( 0.0 1.0 )
+( 0.0 1.0 )
+( 0.0 1.0 ))))));
+}
+
+potential (Display)
+{
+ data = ( 0.33333334 0.33333334 0.33333334 );
+}
+
+potential (Slika_je_mutna)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Speaker_error | Javljaju_se_sumovi Speaker Nema_zvuka)
+{
+ data = (((( 1.0 0.0 )
+( 0.8 0.2 ))
+(( 1.0 0.0 )
+( 0.7 0.3 ))
+(( 1.0 0.0 )
+( 0.6 0.4 )))
+((( 0.9 0.1 )
+( 0.0 1.0 ))
+(( 0.8 0.2 )
+( 0.0 1.0 ))
+(( 0.7 0.3 )
+( 0.0 1.0 ))));
+}
+
+potential (Nema_zvuka)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Speaker)
+{
+ data = ( 0.33333334 0.33333334 0.33333334 );
+}
+
+potential (Nema_slike)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Javljaju_se_sumovi)
+{
+ data = ( 0.5 0.5 );
 }
 

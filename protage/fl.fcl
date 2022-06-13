@@ -513,6 +513,170 @@ RULEBLOCK blok1
 
     RULE 183 : IF RAMCapacity IS Average AND GraphicsCardSpeed IS Average AND PowerSupplyWattPower IS Good AND Price IS Expensive THEN Mining IS Good;
 
+    RULE 184: IF FanAirFlowCapacity IS Good THEN Mining IS Good;
+
+    RULE 185: IF FanAirFlowCapacity IS Good AND FanPrice IS Expensive THEN Gaming IS Average;
+
+    RULE 186: IF FanAirFlowCapacity IS Good AND FanPrice IS Average THEN Gaming IS Good;
+
+    RULE 187: IF FanAirFlowCapacity IS Good AND FanPrice IS Cheap THEN Gaming IS Good;
+
+    RULE 188: IF FanAirFlowCapacity IS Good AND FanPrice IS Expensive THEN Hosting IS Bad;
+
+    RULE 189: IF FanAirFlowCapacity IS Good AND FanPrice IS Average THEN Hosting IS Average;
+
+    RULE 190: IF FanAirFlowCapacity IS Good AND FanPrice IS Cheap THEN Hosting IS Average;
+
+    RULE 191: IF FanAirFlowCapacity IS Good AND FanPrice IS Expensive THEN Home IS Bad;
+
+    RULE 192: IF FanAirFlowCapacity IS Good AND FanPrice IS Average THEN Home IS Bad;
+
+    RULE 193: IF FanAirFlowCapacity IS Good AND FanPrice IS Cheap THEN Home IS Average;
+
+    RULE 194: IF FanAirFlowCapacity IS Good AND FanPrice IS Expensive THEN Work IS Average;
+
+    RULE 195: IF FanAirFlowCapacity IS Good AND FanPrice IS Average THEN Work IS Average;
+
+    RULE 196: IF FanAirFlowCapacity IS Good AND FanPrice IS Cheap THEN Work IS Good;
+
+    RULE 197: IF FanAirFlowCapacity IS Average AND FanPrice IS Expensive THEN Mining IS Bad;
+
+    RULE 198: IF FanAirFlowCapacity IS Average AND FanPrice IS Average THEN Mining IS Average;
+
+    RULE 199: IF FanAirFlowCapacity IS Average AND FanPrice IS Cheap THEN Mining IS Average;
+
+    RULE 200: IF FanAirFlowCapacity IS Average AND FanPrice IS Expensive THEN Gaming IS Bad;
+
+    RULE 201: IF FanAirFlowCapacity IS Average AND FanPrice IS Average THEN Gaming IS Average;
+
+    RULE 202: IF FanAirFlowCapacity IS Average AND FanPrice IS Cheap THEN Gaming IS Good;
+
+    RULE 203: IF FanAirFlowCapacity IS Average AND FanPrice IS Expensive THEN Hosting IS Bad;
+
+    RULE 204: IF FanAirFlowCapacity IS Average AND FanPrice IS Average THEN Hosting IS Bad;
+
+    RULE 205: IF FanAirFlowCapacity IS Average AND FanPrice IS Cheap THEN Hosting IS Good;
+
+    RULE 206: IF FanAirFlowCapacity IS Average AND FanPrice IS Expensive THEN Home IS Bad;
+
+    RULE 207: IF FanAirFlowCapacity IS Average AND FanPrice IS Average THEN Home IS Bad;
+
+    RULE 208: IF FanAirFlowCapacity IS Average AND FanPrice IS Cheap THEN Home IS Average;
+
+    RULE 209: IF FanAirFlowCapacity IS Average AND FanPrice IS Expensive THEN Work IS Bad;
+
+    RULE 210: IF FanAirFlowCapacity IS Average AND FanPrice IS Average THEN Work IS Average;
+
+    RULE 211: IF FanAirFlowCapacity IS Average AND FanPrice IS Cheap THEN Work IS Good;
+
+    RULE 212: IF FanAirFlowCapacity IS Bad THEN Mining IS Bad;
+
+    RULE 213: IF FanAirFlowCapacity IS Bad AND FanPrice IS Expensive THEN Gaming IS Bad;
+
+    RULE 214: IF FanAirFlowCapacity IS Bad AND FanPrice IS Average THEN Gaming IS Bad;
+
+    RULE 215: IF FanAirFlowCapacity IS Bad AND FanPrice IS Cheap THEN Gaming IS Average;
+
+    RULE 216: IF FanAirFlowCapacity IS Bad AND FanPrice IS Expensive THEN Hosting IS Bad;
+
+    RULE 217: IF FanAirFlowCapacity IS Bad AND FanPrice IS Average THEN Hosting IS Average;
+
+    RULE 218: IF FanAirFlowCapacity IS Bad AND FanPrice IS Cheap THEN Hosting IS Average;
+
+    RULE 219: IF FanAirFlowCapacity IS Bad AND FanPrice IS Expensive THEN Home IS Bad;
+
+    RULE 220: IF FanAirFlowCapacity IS Bad AND FanPrice IS Average THEN Home IS Average;
+
+    RULE 221: IF FanAirFlowCapacity IS Bad AND FanPrice IS Cheap THEN Home IS Good;
+
+    RULE 222: IF FanAirFlowCapacity IS Bad AND FanPrice IS Expensive THEN Work IS Bad;
+
+    RULE 223: IF FanAirFlowCapacity IS Bad AND FanPrice IS Average THEN Work IS Bad;
+
+    RULE 224: IF FanAirFlowCapacity IS Bad AND FanPrice IS Cheap THEN Work IS Average;
+
+    RULE 225: IF PowerSupplyWattPower IS Good THEN Hosting IS Good;
+
+    RULE 226: IF PowerSupplyWattPower IS Good AND FanPrice IS Expensive THEN Gaming IS Average;
+
+    RULE 227: IF PowerSupplyWattPower IS Good AND FanPrice IS Average THEN Gaming IS Good;
+
+    RULE 228: IF PowerSupplyWattPower IS Good AND FanPrice IS Cheap THEN Gaming IS Good;
+
+    RULE 229: IF PowerSupplyWattPower IS Good AND FanPrice IS Expensive THEN Mining IS Bad;
+
+    RULE 230: IF PowerSupplyWattPower IS Good AND FanPrice IS Average THEN Mining IS Average;
+
+    RULE 231: IF PowerSupplyWattPower IS Good AND FanPrice IS Cheap THEN Mining IS Average;
+
+    RULE 232: IF PowerSupplyWattPower IS Good AND FanPrice IS Expensive THEN Home IS Bad;
+
+    RULE 233: IF PowerSupplyWattPower IS Good AND FanPrice IS Average THEN Home IS Bad;
+
+    RULE 234: IF PowerSupplyWattPower IS Good AND FanPrice IS Cheap THEN Home IS Average;
+
+    RULE 235: IF PowerSupplyWattPower IS Good AND FanPrice IS Expensive THEN Work IS Average;
+
+    RULE 236: IF PowerSupplyWattPower IS Good AND FanPrice IS Average THEN Work IS Good;
+
+    RULE 237: IF PowerSupplyWattPower IS Good AND FanPrice IS Cheap THEN Work IS Good;
+
+    RULE 238: IF PowerSupplyWattPower IS Average AND FanPrice IS Expensive THEN Hosting IS Average;
+
+    RULE 239: IF PowerSupplyWattPower IS Average AND FanPrice IS Average THEN Hosting IS Average;
+
+    RULE 240: IF PowerSupplyWattPower IS Average AND FanPrice IS Cheap THEN Hosting IS Good;
+
+    RULE 241: IF PowerSupplyWattPower IS Average AND FanPrice IS Expensive THEN Gaming IS Bad;
+
+    RULE 242: IF PowerSupplyWattPower IS Average AND FanPrice IS Average THEN Gaming IS Average;
+
+    RULE 243: IF PowerSupplyWattPower IS Average AND FanPrice IS Cheap THEN Gaming IS Good;
+
+    RULE 244: IF PowerSupplyWattPower IS Average AND FanPrice IS Expensive THEN Mining IS Average;
+
+    RULE 245: IF PowerSupplyWattPower IS Average AND FanPrice IS Average THEN Mining IS Good;
+
+    RULE 246: IF PowerSupplyWattPower IS Average AND FanPrice IS Cheap THEN Mining IS Good;
+
+    RULE 247: IF PowerSupplyWattPower IS Average AND FanPrice IS Expensive THEN Home IS Bad;
+
+    RULE 248: IF PowerSupplyWattPower IS Average AND FanPrice IS Average THEN Home IS Average;
+
+    RULE 249: IF PowerSupplyWattPower IS Average AND FanPrice IS Cheap THEN Home IS Average;
+
+    RULE 250: IF PowerSupplyWattPower IS Average AND FanPrice IS Expensive THEN Work IS Average;
+
+    RULE 251: IF PowerSupplyWattPower IS Average AND FanPrice IS Average THEN Work IS Good;
+
+    RULE 252: IF PowerSupplyWattPower IS Average AND FanPrice IS Cheap THEN Work IS Good;
+
+    RULE 253: IF PowerSupplyWattPower IS Bad THEN Hosting IS Bad;
+
+    RULE 254: IF PowerSupplyWattPower IS Bad AND FanPrice IS Expensive THEN Gaming IS Bad;
+
+    RULE 255: IF PowerSupplyWattPower IS Bad AND FanPrice IS Average THEN Gaming IS Bad;
+
+    RULE 256: IF PowerSupplyWattPower IS Bad AND FanPrice IS Cheap THEN Gaming IS Average;
+
+    RULE 257: IF PowerSupplyWattPower IS Bad AND FanPrice IS Expensive THEN Mining IS Bad;
+
+    RULE 258: IF PowerSupplyWattPower IS Bad AND FanPrice IS Average THEN Mining IS Bad;
+
+    RULE 259: IF PowerSupplyWattPower IS Bad AND FanPrice IS Cheap THEN Mining IS Average;
+
+    RULE 260: IF PowerSupplyWattPower IS Bad AND FanPrice IS Expensive THEN Home IS Bad;
+
+    RULE 261: IF PowerSupplyWattPower IS Bad AND FanPrice IS Average THEN Home IS Average;
+
+    RULE 262: IF PowerSupplyWattPower IS Bad AND FanPrice IS Cheap THEN Home IS Good;
+
+    RULE 263: IF PowerSupplyWattPower IS Bad AND FanPrice IS Expensive THEN Work IS Bad;
+
+    RULE 364: IF PowerSupplyWattPower IS Bad AND FanPrice IS Average THEN Work IS Average;
+
+    RULE 265: IF PowerSupplyWattPower IS Bad AND FanPrice IS Cheap THEN Work IS Average;
+
 END_RULEBLOCK
 
 END_FUNCTION_BLOCK

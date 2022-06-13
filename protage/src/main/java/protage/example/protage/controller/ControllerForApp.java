@@ -613,12 +613,12 @@ public class ControllerForApp {
             Power_supply.getProbabilityFunction().setValue(1,0);
             Power_supply.getProbabilityFunction().setValue(2,0);
         }
-        else if (PowerSupplyWattPower >= 326 && PowerSupplyWattPower <= 625) {
+        else if (PowerSupplyWattPower <= 625) {
             Power_supply.getProbabilityFunction().setValue(0,0);
             Power_supply.getProbabilityFunction().setValue(1,1);
             Power_supply.getProbabilityFunction().setValue(2,0);
         }
-        else if (PowerSupplyWattPower >= 626) {
+        else {
             Power_supply.getProbabilityFunction().setValue(0,0);
             Power_supply.getProbabilityFunction().setValue(1,0);
             Power_supply.getProbabilityFunction().setValue(2,1);
@@ -628,12 +628,12 @@ public class ControllerForApp {
             RAM.getProbabilityFunction().setValue(1,0);
             RAM.getProbabilityFunction().setValue(2,0);
         }
-        else if (RAMCapacity >= 22 && RAMCapacity <= 46) {
+        else if (RAMCapacity <= 46) {
             RAM.getProbabilityFunction().setValue(0,0);
             RAM.getProbabilityFunction().setValue(1,1);
             RAM.getProbabilityFunction().setValue(2,0);
         }
-        else if (RAMCapacity >= 47) {
+        else {
             RAM.getProbabilityFunction().setValue(0,0);
             RAM.getProbabilityFunction().setValue(1,0);
             RAM.getProbabilityFunction().setValue(2,1);
@@ -643,12 +643,12 @@ public class ControllerForApp {
             Graphics_card.getProbabilityFunction().setValue(1,0);
             Graphics_card.getProbabilityFunction().setValue(2,0);
         }
-        else if (GraphicsCardSpeed >= 701 && GraphicsCardSpeed <= 1400) {
+        else if (GraphicsCardSpeed <= 1400) {
             Graphics_card.getProbabilityFunction().setValue(0,0);
             Graphics_card.getProbabilityFunction().setValue(1,1);
             Graphics_card.getProbabilityFunction().setValue(2,0);
         }
-        else if (GraphicsCardSpeed >= 1401) {
+        else {
             Graphics_card.getProbabilityFunction().setValue(0,0);
             Graphics_card.getProbabilityFunction().setValue(1,0);
             Graphics_card.getProbabilityFunction().setValue(2,1);
@@ -658,12 +658,12 @@ public class ControllerForApp {
             Storage.getProbabilityFunction().setValue(1,0);
             Storage.getProbabilityFunction().setValue(2,0);
         }
-        else if (StorageCapacity >= 326 && StorageCapacity <= 625) {
+        else if (StorageCapacity <= 625) {
             Storage.getProbabilityFunction().setValue(0,0);
             Storage.getProbabilityFunction().setValue(1,1);
             Storage.getProbabilityFunction().setValue(2,0);
         }
-        else if (StorageCapacity >= 626) {
+        else {
             Storage.getProbabilityFunction().setValue(0,0);
             Storage.getProbabilityFunction().setValue(1,0);
             Storage.getProbabilityFunction().setValue(2,1);
@@ -673,59 +673,59 @@ public class ControllerForApp {
             Fan.getProbabilityFunction().setValue(1,0);
             Fan.getProbabilityFunction().setValue(2,0);
         }
-        else if (FanAirFlowCapacity >= 23 && FanAirFlowCapacity <= 42) {
+        else if (FanAirFlowCapacity <= 42) {
             Fan.getProbabilityFunction().setValue(0,0);
             Fan.getProbabilityFunction().setValue(1,1);
             Fan.getProbabilityFunction().setValue(2,0);
         }
-        else if (FanAirFlowCapacity >= 43) {
+        else {
             Fan.getProbabilityFunction().setValue(0,0);
             Fan.getProbabilityFunction().setValue(1,0);
             Fan.getProbabilityFunction().setValue(2,1);
         }
-        if(DisplayResolution.equals("1920 x 1080")) {
-            Display.getProbabilityFunction().setValue(0,1);
-            Display.getProbabilityFunction().setValue(1,0);
-            Display.getProbabilityFunction().setValue(2,0);
+        switch (DisplayResolution) {
+            case "1920 x 1080":
+                Display.getProbabilityFunction().setValue(0, 1);
+                Display.getProbabilityFunction().setValue(1, 0);
+                Display.getProbabilityFunction().setValue(2, 0);
+                break;
+            case "2560 x 1440":
+                Display.getProbabilityFunction().setValue(0, 0);
+                Display.getProbabilityFunction().setValue(1, 1);
+                Display.getProbabilityFunction().setValue(2, 0);
+                break;
+            case "3440 x 1440":
+                Display.getProbabilityFunction().setValue(0, 0);
+                Display.getProbabilityFunction().setValue(1, 0);
+                Display.getProbabilityFunction().setValue(2, 1);
+                break;
         }
-        else if(DisplayResolution.equals("2560 x 1440"))
-        {
-            Display.getProbabilityFunction().setValue(0,0);
-            Display.getProbabilityFunction().setValue(1,1);
-            Display.getProbabilityFunction().setValue(2,0);
-        }
-        else if(DisplayResolution.equals("3440 x 1440"))
-        {
-            Display.getProbabilityFunction().setValue(0,0);
-            Display.getProbabilityFunction().setValue(1,0);
-            Display.getProbabilityFunction().setValue(2,1);
-        }
-        if(SpeakersWattPower <= 30) {
+        if (SpeakersWattPower <= 30) {
             Speakers.getProbabilityFunction().setValue(0,1);
             Speakers.getProbabilityFunction().setValue(1,0);
             Speakers.getProbabilityFunction().setValue(2,0);
         }
-        else if(SpeakersWattPower > 30 && SpeakersWattPower <= 60) {
+        else if (SpeakersWattPower <= 60) {
             Speakers.getProbabilityFunction().setValue(0,0);
             Speakers.getProbabilityFunction().setValue(1,1);
             Speakers.getProbabilityFunction().setValue(2,0);
         }
-        else if(SpeakersWattPower > 60) {
+        else {
             Speakers.getProbabilityFunction().setValue(0,0);
             Speakers.getProbabilityFunction().setValue(1,0);
             Speakers.getProbabilityFunction().setValue(2,1);
         }
-        if(ProcessorCores <= 2) {
+        if (ProcessorCores <= 2) {
             Processor.getProbabilityFunction().setValue(0,1);
             Processor.getProbabilityFunction().setValue(1,0);
             Processor.getProbabilityFunction().setValue(2,0);
         }
-        else if(ProcessorCores > 2 && ProcessorCores <= 4) {
+        else if (ProcessorCores <= 4) {
             Processor.getProbabilityFunction().setValue(0,0);
             Processor.getProbabilityFunction().setValue(1,1);
             Processor.getProbabilityFunction().setValue(2,0);
         }
-        else if(ProcessorCores > 4) {
+        else {
             Processor.getProbabilityFunction().setValue(0,0);
             Processor.getProbabilityFunction().setValue(1,0);
             Processor.getProbabilityFunction().setValue(2,1);
@@ -761,7 +761,6 @@ public class ControllerForApp {
         Kompjuter_se_spontano_gasi.getProbabilityFunction().setValue(1,1);
         Operativni_sistem_ne_radi.getProbabilityFunction().setValue(0,0);
         Operativni_sistem_ne_radi.getProbabilityFunction().setValue(1,1);
-
         Pointer_se_ne_prikazuje.getProbabilityFunction().setValue(0,0);
         Pointer_se_ne_prikazuje.getProbabilityFunction().setValue(1,1);
         Kamera_prikazuje_crnu_sliku.getProbabilityFunction().setValue(0,0);
@@ -882,7 +881,7 @@ public class ControllerForApp {
             System.out.println(e.getMessage());
         }
         ArrayList<Float> procenti = new ArrayList<>();
-        ArrayList<String> respo = new ArrayList<>();
+        ArrayList<String> response = new ArrayList<>();
         for (Node node : net.getNodes()) {
             if (node.getName().equals("Motherboard_error")
                     || node.getName().equals("Power_supply_error")
@@ -941,13 +940,13 @@ public class ControllerForApp {
                     || net.getNodes().get(i).getName().equals("Keyboard_error")
                     || net.getNodes().get(i).getName().equals("Maliciozni_softver")
                     || net.getNodes().get(i).getName().equals("Podesavanja_racunara_nisu_dobro_postavljena")) {
-                respo.add(net.getNodes().get(i).getName());
-                respo.add(procenti.get(pro) + "%");
+                response.add(net.getNodes().get(i).getName());
+                response.add(procenti.get(pro) + "%");
                 pro = pro + 1;
             }
         }
 
-        return new ResponseEntity<>(respo, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
 }

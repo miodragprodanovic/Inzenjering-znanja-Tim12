@@ -150,7 +150,7 @@ node Display
 node Slika_je_mutna
 {
      label = "C3";
-     position = (1133 99);
+     position = (1161 60);
      states = ("Da" "Ne");
 }
 
@@ -164,11 +164,11 @@ node Speaker_error
 node Nema_zvuka
 {
      label = "C5";
-     position = (1445 108);
+     position = (1482 73);
      states = ("Da" "Ne");
 }
 
-node Speaker
+node Speakers
 {
      label = "C6";
      position = (1545 358);
@@ -178,14 +178,56 @@ node Speaker
 node Nema_slike
 {
      label = "C8";
-     position = (1283 101);
+     position = (1304 62);
      states = ("Da" "Ne");
 }
 
 node Javljaju_se_sumovi
 {
      label = "C10";
-     position = (1613 108);
+     position = (1595 75);
+     states = ("Da" "Ne");
+}
+
+node Processor
+{
+     label = "C11";
+     position = (1382 694);
+     states = ("Bad" "Average" "Good");
+}
+
+node Processor_error
+{
+     label = "C12";
+     position = (1321 593);
+     states = ("Da" "Ne");
+}
+
+node Kompjuter_je_usporen
+{
+     label = "C13";
+     position = (1116 475);
+     states = ("Da" "Ne");
+}
+
+node Kompjuter_se_jako_zagreva
+{
+     label = "C14";
+     position = (1282 475);
+     states = ("Da" "Ne");
+}
+
+node Kompjuter_se_spontano_gasi
+{
+     label = "C15";
+     position = (1484 471);
+     states = ("Da" "Ne");
+}
+
+node Operativni_sistem_ne_radi
+{
+     label = "C16";
+     position = (1676 473);
      states = ("Da" "Ne");
 }
 
@@ -407,7 +449,7 @@ potential (Slika_je_mutna)
  data = ( 0.5 0.5 );
 }
 
-potential (Speaker_error | Javljaju_se_sumovi Speaker Nema_zvuka)
+potential (Speaker_error | Javljaju_se_sumovi Speakers Nema_zvuka)
 {
  data = (((( 1.0 0.0 )
 ( 0.8 0.2 ))
@@ -428,7 +470,7 @@ potential (Nema_zvuka)
  data = ( 0.5 0.5 );
 }
 
-potential (Speaker)
+potential (Speakers)
 {
  data = ( 0.33333334 0.33333334 0.33333334 );
 }
@@ -439,6 +481,83 @@ potential (Nema_slike)
 }
 
 potential (Javljaju_se_sumovi)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Processor)
+{
+ data = ( 0.33333334 0.33333334 0.33333334 );
+}
+
+potential (Processor_error | Operativni_sistem_ne_radi Kompjuter_se_spontano_gasi Kompjuter_se_jako_zagreva Kompjuter_je_usporen Processor)
+{
+ data = (((((( 1.0 0.0 )
+( 1.0 0.0 )
+( 1.0 0.0 ))
+(( 0.99 0.01 )
+( 0.98 0.02 )
+( 0.97 0.03 )))
+((( 0.98 0.02 )
+( 0.96 0.04 )
+( 0.94 0.06 ))
+(( 0.94 0.06 )
+( 0.88 0.12 )
+( 0.82 0.18 ))))
+(((( 0.94 0.06 )
+( 0.91 0.09 )
+( 0.88 0.12 ))
+(( 0.9 0.1 )
+( 0.85 0.15 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.82 0.18 )
+( 0.74 0.26 ))
+(( 0.82 0.18 )
+( 0.7 0.3 )
+( 0.58 0.42 )))))
+((((( 0.98 0.02 )
+( 0.96 0.04 )
+( 0.94 0.06 ))
+(( 0.92 0.08 )
+( 0.88 0.12 )
+( 0.84 0.16 )))
+((( 0.9 0.1 )
+( 0.85 0.15 )
+( 0.8 0.2 ))
+(( 0.87 0.13 )
+( 0.72 0.28 )
+( 0.57 0.43 ))))
+(((( 0.9 0.1 )
+( 0.84 0.16 )
+( 0.78 0.22 ))
+(( 0.89 0.11 )
+( 0.74 0.26 )
+( 0.59 0.41 )))
+((( 0.84 0.16 )
+( 0.76 0.24 )
+( 0.68 0.32 ))
+(( 0.0 1.0 )
+( 0.0 1.0 )
+( 0.0 1.0 ))))));
+}
+
+potential (Kompjuter_je_usporen)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Kompjuter_se_jako_zagreva)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Kompjuter_se_spontano_gasi)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Operativni_sistem_ne_radi)
 {
  data = ( 0.5 0.5 );
 }

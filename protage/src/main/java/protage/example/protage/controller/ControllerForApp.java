@@ -496,6 +496,7 @@ public class ControllerForApp {
         int FanAirFlowCapacity = 0;
         int SpeakersWattPower = 0;
         String DisplayResolution = "";
+        int ProcessorCores = 0;
 
         if (getBetterComponentBody.getRAM() != null) {
             RAMCapacity = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getRAM().toString(),"RAMCapacityString").split("G")[0]);
@@ -525,6 +526,9 @@ public class ControllerForApp {
         if (getBetterComponentBody.getDisplay() != null) {
             DisplayResolution = getComponentDataTypes(getBetterComponentBody.getDisplay().toString(),"DisplayResolution");
         }
+        if (getBetterComponentBody.getProcessor() != null) {
+            ProcessorCores = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getDisplay().toString(),"ProcessorCores"));
+        }
 
         ProbabilisticNetwork net = null;
         try {
@@ -552,6 +556,11 @@ public class ControllerForApp {
         ProbabilisticNode Speakers = (ProbabilisticNode)net.getNode("Speakers");
         ProbabilisticNode Nema_zvuka = (ProbabilisticNode)net.getNode("Nema_zvuka");
         ProbabilisticNode Javljaju_se_sumovi = (ProbabilisticNode)net.getNode("Javljaju_se_sumovi");
+        ProbabilisticNode Processor = (ProbabilisticNode)net.getNode("Processor");
+        ProbabilisticNode Kompjuter_je_usporen = (ProbabilisticNode)net.getNode("Kompjuter_je_usporen");
+        ProbabilisticNode Kompjuter_se_jako_zagreva = (ProbabilisticNode)net.getNode("Kompjuter_se_jako_zagreva");
+        ProbabilisticNode Kompjuter_se_spontano_gasi = (ProbabilisticNode)net.getNode("Kompjuter_se_spontano_gasi");
+        ProbabilisticNode Operativni_sistem_ne_radi = (ProbabilisticNode)net.getNode("Operativni_sistem_ne_radi");
 
         Motherboard.getProbabilityFunction().setValue(0,0);
         Motherboard.getProbabilityFunction().setValue(1,1);
@@ -663,6 +672,21 @@ public class ControllerForApp {
             Speakers.getProbabilityFunction().setValue(1,0);
             Speakers.getProbabilityFunction().setValue(2,1);
         }
+        if(ProcessorCores <= 2) {
+            Processor.getProbabilityFunction().setValue(0,1);
+            Processor.getProbabilityFunction().setValue(1,0);
+            Processor.getProbabilityFunction().setValue(2,0);
+        }
+        else if(ProcessorCores > 2 && ProcessorCores <= 4) {
+            Processor.getProbabilityFunction().setValue(0,0);
+            Processor.getProbabilityFunction().setValue(1,1);
+            Processor.getProbabilityFunction().setValue(2,0);
+        }
+        else if(ProcessorCores > 4) {
+            Processor.getProbabilityFunction().setValue(0,0);
+            Processor.getProbabilityFunction().setValue(1,0);
+            Processor.getProbabilityFunction().setValue(2,1);
+        }
 
         Nece_da_se_upali.getProbabilityFunction().setValue(0,0);
         Nece_da_se_upali.getProbabilityFunction().setValue(1,1);
@@ -686,6 +710,14 @@ public class ControllerForApp {
         Nema_zvuka.getProbabilityFunction().setValue(1,1);
         Javljaju_se_sumovi.getProbabilityFunction().setValue(0,0);
         Javljaju_se_sumovi.getProbabilityFunction().setValue(1,1);
+        Kompjuter_je_usporen.getProbabilityFunction().setValue(0,0);
+        Kompjuter_je_usporen.getProbabilityFunction().setValue(1,1);
+        Kompjuter_se_jako_zagreva.getProbabilityFunction().setValue(0,0);
+        Kompjuter_se_jako_zagreva.getProbabilityFunction().setValue(1,1);
+        Kompjuter_se_spontano_gasi.getProbabilityFunction().setValue(0,0);
+        Kompjuter_se_spontano_gasi.getProbabilityFunction().setValue(1,1);
+        Operativni_sistem_ne_radi.getProbabilityFunction().setValue(0,0);
+        Operativni_sistem_ne_radi.getProbabilityFunction().setValue(1,1);
 
         for (String ss: simptomi) {
             switch (ss) {
@@ -729,6 +761,22 @@ public class ControllerForApp {
                     Javljaju_se_sumovi.getProbabilityFunction().setValue(0,1);
                     Javljaju_se_sumovi.getProbabilityFunction().setValue(1,0);
                     break;
+                case "Kompjuter_je_usporen":
+                    Kompjuter_je_usporen.getProbabilityFunction().setValue(0,1);
+                    Kompjuter_je_usporen.getProbabilityFunction().setValue(1,0);
+                    break;
+                case "Kompjuter_se_jako_zagreva":
+                    Kompjuter_se_jako_zagreva.getProbabilityFunction().setValue(0,1);
+                    Kompjuter_se_jako_zagreva.getProbabilityFunction().setValue(1,0);
+                    break;
+                case "Kompjuter_se_spontano_gasi":
+                    Kompjuter_se_spontano_gasi.getProbabilityFunction().setValue(0,1);
+                    Kompjuter_se_spontano_gasi.getProbabilityFunction().setValue(1,0);
+                    break;
+                case "Operativni_sistem_ne_radi":
+                    Operativni_sistem_ne_radi.getProbabilityFunction().setValue(0,1);
+                    Operativni_sistem_ne_radi.getProbabilityFunction().setValue(1,0);
+                    break;
             }
         }
 
@@ -751,7 +799,8 @@ public class ControllerForApp {
                     || node.getName().equals("Storage_error")
                     || node.getName().equals("Fan_error")
                     || node.getName().equals("Display_error")
-                    || node.getName().equals("Speaker_error")) {
+                    || node.getName().equals("Speaker_error")
+                    || node.getName().equals("Processor_error")) {
                 System.out.println(node.getName());
                 for (int i = 0; i < node.getStatesSize(); i++) {
                     if (node.getStateAt(i).contains("Da")) {
@@ -786,7 +835,8 @@ public class ControllerForApp {
                     || net.getNodes().get(i).getName().equals("Storage_error")
                     || net.getNodes().get(i).getName().equals("Fan_error")
                     || net.getNodes().get(i).getName().equals("Display_error")
-                    || net.getNodes().get(i).getName().equals("Speaker_error")) {
+                    || net.getNodes().get(i).getName().equals("Speaker_error")
+                    || net.getNodes().get(i).getName().equals("Processor_error")) {
                 respo.add(net.getNodes().get(i).getName());
                 respo.add(procenti.get(pro) + "%");
                 pro = pro + 1;

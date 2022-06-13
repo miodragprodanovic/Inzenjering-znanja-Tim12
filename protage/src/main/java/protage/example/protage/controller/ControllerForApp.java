@@ -526,6 +526,7 @@ public class ControllerForApp {
         int PowerSupplyWattPower = 0;
         int FanAirFlowCapacity = 0;
         int SpeakersWattPower = 0;
+        String DisplayResolution = "";
 
         if (getBetterComponentBody.getRAM() != null) {
             RAMCapacity = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getRAM().toString(),"RAMCapacityString").split("G")[0]);
@@ -552,6 +553,9 @@ public class ControllerForApp {
         if (getBetterComponentBody.getSpeakers() != null) {
             SpeakersWattPower = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"SpeakersWattPower"));
         }
+        if (getBetterComponentBody.getDisplay() != null) {
+            DisplayResolution = getComponentDataTypes(getBetterComponentBody.getDisplay().toString(),"DisplayResolution");
+        }
 
         ProbabilisticNetwork net = null;
         try {
@@ -573,6 +577,12 @@ public class ControllerForApp {
         ProbabilisticNode Graphics_card = (ProbabilisticNode)net.getNode("Graphics_card");
         ProbabilisticNode Storage = (ProbabilisticNode)net.getNode("Storage");
         ProbabilisticNode Fan = (ProbabilisticNode)net.getNode("Fan");
+        ProbabilisticNode Display = (ProbabilisticNode)net.getNode("Display");
+        ProbabilisticNode Slika_je_mutna = (ProbabilisticNode)net.getNode("Slika_je_mutna");
+        ProbabilisticNode Nema_slike = (ProbabilisticNode)net.getNode("Nema_slike");
+        ProbabilisticNode Speakers = (ProbabilisticNode)net.getNode("Speakers");
+        ProbabilisticNode Nema_zvuka = (ProbabilisticNode)net.getNode("Nema_zvuka");
+        ProbabilisticNode Javljaju_se_sumovi = (ProbabilisticNode)net.getNode("Javljaju_se_sumovi");
 
         Motherboard.getProbabilityFunction().setValue(0,0);
         Motherboard.getProbabilityFunction().setValue(1,1);
@@ -652,6 +662,38 @@ public class ControllerForApp {
             Fan.getProbabilityFunction().setValue(1,0);
             Fan.getProbabilityFunction().setValue(2,1);
         }
+        if(DisplayResolution.equals("1920 x 1080")) {
+            Display.getProbabilityFunction().setValue(0,1);
+            Display.getProbabilityFunction().setValue(1,0);
+            Display.getProbabilityFunction().setValue(2,0);
+        }
+        else if(DisplayResolution.equals("2560 x 1440"))
+        {
+            Display.getProbabilityFunction().setValue(0,0);
+            Display.getProbabilityFunction().setValue(1,1);
+            Display.getProbabilityFunction().setValue(2,0);
+        }
+        else if(DisplayResolution.equals("3440 x 1440"))
+        {
+            Display.getProbabilityFunction().setValue(0,0);
+            Display.getProbabilityFunction().setValue(1,0);
+            Display.getProbabilityFunction().setValue(2,1);
+        }
+        if(SpeakersWattPower <= 30) {
+            Speakers.getProbabilityFunction().setValue(0,1);
+            Speakers.getProbabilityFunction().setValue(1,0);
+            Speakers.getProbabilityFunction().setValue(2,0);
+        }
+        else if(SpeakersWattPower > 30 && SpeakersWattPower <= 60) {
+            Speakers.getProbabilityFunction().setValue(0,0);
+            Speakers.getProbabilityFunction().setValue(1,1);
+            Speakers.getProbabilityFunction().setValue(2,0);
+        }
+        else if(SpeakersWattPower > 60) {
+            Speakers.getProbabilityFunction().setValue(0,0);
+            Speakers.getProbabilityFunction().setValue(1,0);
+            Speakers.getProbabilityFunction().setValue(2,1);
+        }
 
         Nece_da_se_upali.getProbabilityFunction().setValue(0,0);
         Nece_da_se_upali.getProbabilityFunction().setValue(1,1);
@@ -667,6 +709,14 @@ public class ControllerForApp {
         Upali_se_ali_ne_radi.getProbabilityFunction().setValue(1,1);
         Blue_screen.getProbabilityFunction().setValue(0,0);
         Blue_screen.getProbabilityFunction().setValue(1,1);
+        Slika_je_mutna.getProbabilityFunction().setValue(0,0);
+        Slika_je_mutna.getProbabilityFunction().setValue(1, 1);
+        Nema_slike.getProbabilityFunction().setValue(0,0);
+        Nema_slike.getProbabilityFunction().setValue(1,1);
+        Nema_zvuka.getProbabilityFunction().setValue(0,0);
+        Nema_zvuka.getProbabilityFunction().setValue(1,1);
+        Javljaju_se_sumovi.getProbabilityFunction().setValue(0,0);
+        Javljaju_se_sumovi.getProbabilityFunction().setValue(1,1);
 
         for (String ss: simptomi) {
             switch (ss) {
@@ -694,6 +744,22 @@ public class ControllerForApp {
                     Blue_screen.getProbabilityFunction().setValue(0, 1);
                     Blue_screen.getProbabilityFunction().setValue(1, 0);
                     break;
+                case "Slika_je_mutna":
+                    Slika_je_mutna.getProbabilityFunction().setValue(0,1);
+                    Slika_je_mutna.getProbabilityFunction().setValue(1,0);
+                    break;
+                case "Nema_slike":
+                    Nema_slike.getProbabilityFunction().setValue(0,1);
+                    Nema_slike.getProbabilityFunction().setValue(1,0);
+                    break;
+                case "Nema_zvuka":
+                    Nema_zvuka.getProbabilityFunction().setValue(0,1);
+                    Nema_zvuka.getProbabilityFunction().setValue(1,0);
+                    break;
+                case "Javljaju_se_sumovi":
+                    Javljaju_se_sumovi.getProbabilityFunction().setValue(0,1);
+                    Javljaju_se_sumovi.getProbabilityFunction().setValue(1,0);
+                    break;
             }
         }
 
@@ -714,7 +780,9 @@ public class ControllerForApp {
                     || node.getName().equals("RAM_error")
                     || node.getName().equals("Graphics_card_error")
                     || node.getName().equals("Storage_error")
-                    || node.getName().equals("Fan_error")) {
+                    || node.getName().equals("Fan_error")
+                    || node.getName().equals("Display_error")
+                    || node.getName().equals("Speaker_error")) {
                 System.out.println(node.getName());
                 for (int i = 0; i < node.getStatesSize(); i++) {
                     if (node.getStateAt(i).contains("Da")) {
@@ -747,7 +815,9 @@ public class ControllerForApp {
                     || net.getNodes().get(i).getName().equals("RAM_error")
                     || net.getNodes().get(i).getName().equals("Graphics_card_error")
                     || net.getNodes().get(i).getName().equals("Storage_error")
-                    || net.getNodes().get(i).getName().equals("Fan_error")) {
+                    || net.getNodes().get(i).getName().equals("Fan_error")
+                    || net.getNodes().get(i).getName().equals("Display_error")
+                    || net.getNodes().get(i).getName().equals("Speaker_error")) {
                 respo.add(net.getNodes().get(i).getName());
                 respo.add(procenti.get(pro) + "%");
                 pro = pro + 1;

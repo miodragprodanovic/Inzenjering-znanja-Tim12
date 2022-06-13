@@ -1255,6 +1255,12 @@
                 rdfs:range xsd:int .
 
 
+###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCoresString
+:ProcessorCoresString rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Processor ;
+                      rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency
 :ProcessorFrequency rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Processor ;

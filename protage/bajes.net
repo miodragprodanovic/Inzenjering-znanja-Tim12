@@ -2,7 +2,7 @@ net
 {
      node_size = (0 0);
      name = "New BN";
-     tree = "(C1,C2,C3,C4,C5,C6,C8,C9,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19)";
+     tree = "(C1,C2,C3,C4,C5,C6,C8,C9,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C7,C20,C21,C22,C23,C24,C25,C26,C27,C28,C29,C30,C31,C32,C33,C34,C35,C36,C37,C38,C39,C40,C41,C42,C43,C44,C45,C46)";
      UnBBayes_Color_Probabilistic_Description = "-256";
      UnBBayes_Color_Probabilistic_Explanation = "-16711936";
 }
@@ -10,224 +10,322 @@ net
 node Nece_da_se_upali
 {
      label = "C1";
-     position = (16 0);
+     position = (1 2);
      states = ("Da" "Ne");
 }
 
 node Upali_se_ali_ne_radi
 {
      label = "C2";
-     position = (183 14);
+     position = (145 3);
      states = ("Da" "Ne");
 }
 
 node Display_se_zamrzne
 {
      label = "C3";
-     position = (348 15);
+     position = (303 6);
      states = ("Da" "Ne");
 }
 
 node Nema_dovoljno_memorije
 {
      label = "C4";
-     position = (513 21);
+     position = (455 4);
      states = ("Da" "Ne");
 }
 
 node Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan
 {
      label = "C5";
-     position = (663 8);
+     position = (915 0);
      states = ("Da" "Ne");
 }
 
 node Blue_screen
 {
      label = "C6";
-     position = (997 12);
+     position = (664 60);
      states = ("Da" "Ne");
 }
 
 node Power_supply_error
 {
-     label = "C8";
+     label = "C7";
      position = (240 145);
      states = ("Da" "Ne");
 }
 
 node Motherboard_error
 {
-     label = "C9";
+     label = "C8";
      position = (81 239);
      states = ("Da" "Ne");
 }
 
 node Motherboard
 {
-     label = "C10";
-     position = (80 446);
+     label = "C9";
+     position = (96 412);
      states = ("Bad" "Average" "Good");
 }
 
 node Power_supply
 {
-     label = "C11";
-     position = (252 366);
+     label = "C10";
+     position = (253 417);
      states = ("Bad" "Average" "Good");
 }
 
 node RAM
 {
-     label = "C12";
-     position = (431 471);
+     label = "C11";
+     position = (448 255);
      states = ("Bad" "Average" "Good");
 }
 
 node Graphics_card
 {
-     label = "C13";
-     position = (736 475);
+     label = "C12";
+     position = (80 168);
      states = ("Bad" "Average" "Good");
 }
 
 node RAM_error
 {
-     label = "C14";
-     position = (499 252);
+     label = "C13";
+     position = (428 185);
      states = ("Da" "Ne");
 }
 
 node Graphics_card_error
 {
-     label = "C15";
-     position = (561 371);
+     label = "C14";
+     position = (93 115);
      states = ("Da" "Ne");
 }
 
 node Storage_error
 {
-     label = "C16";
-     position = (810 278);
+     label = "C15";
+     position = (1150 268);
      states = ("Da" "Ne");
 }
 
 node Storage
 {
-     label = "C17";
-     position = (999 477);
+     label = "C16";
+     position = (1194 406);
      states = ("Bad" "Average" "Good");
 }
 
 node Fan
 {
-     label = "C18";
-     position = (1050 360);
+     label = "C17";
+     position = (1096 362);
      states = ("Bad" "Average" "Good");
 }
 
 node Fan_error
 {
-     label = "C19";
-     position = (1027 200);
+     label = "C18";
+     position = (1029 221);
      states = ("Da" "Ne");
 }
 
 node Display_error
 {
-     label = "C1";
+     label = "C19";
      position = (1277 233);
      states = ("Da" "Ne");
 }
 
 node Display
 {
-     label = "C2";
-     position = (1278 358);
+     label = "C20";
+     position = (1366 349);
      states = ("Bad" "Average" "Good");
 }
 
 node Slika_je_mutna
 {
-     label = "C3";
-     position = (1161 60);
+     label = "C21";
+     position = (1303 78);
      states = ("Da" "Ne");
 }
 
 node Speaker_error
 {
-     label = "C4";
+     label = "C22";
      position = (1530 214);
      states = ("Da" "Ne");
 }
 
 node Nema_zvuka
 {
-     label = "C5";
+     label = "C23";
      position = (1482 73);
      states = ("Da" "Ne");
 }
 
 node Speakers
 {
-     label = "C6";
+     label = "C24";
      position = (1545 358);
      states = ("Bad" "Average" "Good");
 }
 
 node Nema_slike
 {
-     label = "C8";
-     position = (1304 62);
+     label = "C25";
+     position = (1380 132);
      states = ("Da" "Ne");
 }
 
 node Javljaju_se_sumovi
 {
-     label = "C10";
+     label = "C26";
      position = (1595 75);
      states = ("Da" "Ne");
 }
 
 node Processor
 {
-     label = "C11";
+     label = "C27";
      position = (1382 694);
      states = ("Bad" "Average" "Good");
 }
 
 node Processor_error
 {
-     label = "C12";
+     label = "C28";
      position = (1321 593);
      states = ("Da" "Ne");
 }
 
 node Kompjuter_je_usporen
 {
-     label = "C13";
+     label = "C29";
      position = (1116 475);
      states = ("Da" "Ne");
 }
 
 node Kompjuter_se_jako_zagreva
 {
-     label = "C14";
+     label = "C30";
      position = (1282 475);
      states = ("Da" "Ne");
 }
 
 node Kompjuter_se_spontano_gasi
 {
-     label = "C15";
+     label = "C31";
      position = (1484 471);
      states = ("Da" "Ne");
 }
 
 node Operativni_sistem_ne_radi
 {
-     label = "C16";
+     label = "C32";
      position = (1676 473);
+     states = ("Da" "Ne");
+}
+
+node Maliciozni_softver
+{
+     label = "C33";
+     position = (80 354);
+     states = ("Da" "Ne");
+}
+
+node Mouse_error
+{
+     label = "C34";
+     position = (929 71);
+     states = ("Da" "Ne");
+}
+
+node Keyboard_error
+{
+     label = "C35";
+     position = (335 309);
+     states = ("Da" "Ne");
+}
+
+node Microphone_error
+{
+     label = "C36";
+     position = (827 496);
+     states = ("Da" "Ne");
+}
+
+node Camera_error
+{
+     label = "C37";
+     position = (506 351);
+     states = ("Da" "Ne");
+}
+
+node Podesavanja_racunara_nisu_dobro_postavljena
+{
+     label = "C38";
+     position = (693 276);
+     states = ("Da" "Ne");
+}
+
+node Pointer_se_ne_prikazuje
+{
+     label = "C39";
+     position = (1119 54);
+     states = ("Da" "Ne");
+}
+
+node Kamera_prikazuje_crnu_sliku
+{
+     label = "C40";
+     position = (495 120);
+     states = ("Da" "Ne");
+}
+
+node Na_skype_poziv_ne_mogu_ukljuciti_kameru
+{
+     label = "C41";
+     position = (661 168);
+     states = ("Da" "Ne");
+}
+
+node Na_skype_poziv_ne_mogu_ukljuciti_mikrofon
+{
+     label = "C42";
+     position = (740 376);
+     states = ("Da" "Ne");
+}
+
+node Pritisak_tastera_F12_ne_radi
+{
+     label = "C43";
+     position = (472 459);
+     states = ("Da" "Ne");
+}
+
+node Nece_da_otvori_fajl
+{
+     label = "C44";
+     position = (256 559);
+     states = ("Da" "Ne");
+}
+
+node Iskacuci_pop_up_prozori
+{
+     label = "C45";
+     position = (452 556);
+     states = ("Da" "Ne");
+}
+
+node Instalira_mi_se_nezeljena_aplikacija
+{
+     label = "C46";
+     position = (27 578);
      states = ("Da" "Ne");
 }
 
@@ -351,14 +449,20 @@ potential (Graphics_card_error | Upali_se_ali_ne_radi Graphics_card)
 ( 0.0 1.0 )));
 }
 
-potential (Storage_error | Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan Storage)
+potential (Storage_error | Nece_da_otvori_fajl Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan Storage)
 {
- data = ((( 1.0 0.0 )
+ data = (((( 1.0 0.0 )
+( 1.0 0.0 )
+( 1.0 0.0 ))
+(( 0.6 0.4 )
+( 0.4 0.6 )
+( 0.2 0.8 )))
+((( 1.0 0.0 )
 ( 1.0 0.0 )
 ( 1.0 0.0 ))
 (( 0.0 1.0 )
 ( 0.0 1.0 )
-( 0.0 1.0 )));
+( 0.0 1.0 ))));
 }
 
 potential (Storage)
@@ -387,9 +491,57 @@ potential (Fan_error | Blue_screen Display_se_zamrzne Fan)
 ( 0.0 1.0 ))));
 }
 
-potential (Display_error | Blue_screen Display_se_zamrzne Nema_slike Slika_je_mutna Display)
+potential (Display_error | Pointer_se_ne_prikazuje Blue_screen Display_se_zamrzne Nema_slike Slika_je_mutna Display)
 {
- data = (((((( 1.0 0.0 )
+ data = ((((((( 1.0 0.0 )
+( 1.0 0.0 )
+( 1.0 0.0 ))
+(( 0.98 0.02 )
+( 0.93 0.07 )
+( 0.89 0.11 )))
+((( 0.97 0.03 )
+( 0.92 0.08 )
+( 0.87 0.13 ))
+(( 0.9 0.1 )
+( 0.85 0.15 )
+( 0.8 0.2 ))))
+(((( 0.96 0.04 )
+( 0.93 0.07 )
+( 0.9 0.1 ))
+(( 0.87 0.13 )
+( 0.8 0.2 )
+( 0.73 0.27 )))
+((( 0.87 0.13 )
+( 0.8 0.2 )
+( 0.73 0.27 ))
+(( 0.8 0.2 )
+( 0.7 0.3 )
+( 0.6 0.4 )))))
+((((( 0.96 0.04 )
+( 0.92 0.08 )
+( 0.88 0.12 ))
+(( 0.91 0.09 )
+( 0.84 0.16 )
+( 0.77 0.23 )))
+((( 0.93 0.07 )
+( 0.9 0.1 )
+( 0.87 0.13 ))
+(( 0.8 0.2 )
+( 0.7 0.3 )
+( 0.6 0.4 ))))
+(((( 0.9 0.1 )
+( 0.86 0.14 )
+( 0.82 0.18 ))
+(( 0.7 0.3 )
+( 0.65 0.35 )
+( 0.6 0.4 )))
+((( 0.65 0.35 )
+( 0.6 0.4 )
+( 0.55 0.45 ))
+(( 0.35 0.65 )
+( 0.3 0.7 )
+( 0.25 0.75 ))))))
+(((((( 1.0 0.0 )
 ( 1.0 0.0 )
 ( 1.0 0.0 ))
 (( 0.98 0.02 )
@@ -436,7 +588,7 @@ potential (Display_error | Blue_screen Display_se_zamrzne Nema_slike Slika_je_mu
 ( 0.55 0.45 ))
 (( 0.0 1.0 )
 ( 0.0 1.0 )
-( 0.0 1.0 ))))));
+( 0.0 1.0 )))))));
 }
 
 potential (Display)
@@ -558,6 +710,112 @@ potential (Kompjuter_se_spontano_gasi)
 }
 
 potential (Operativni_sistem_ne_radi)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Maliciozni_softver | Instalira_mi_se_nezeljena_aplikacija Iskacuci_pop_up_prozori Nece_da_otvori_fajl Nece_da_se_upali)
+{
+ data = ((((( 1.0 0.0 )
+( 1.0 0.0 ))
+(( 0.85 0.15 )
+( 0.75 0.25 )))
+((( 0.88 0.12 )
+( 0.72 0.28 ))
+(( 0.68 0.32 )
+( 0.6 0.4 ))))
+(((( 0.66 0.34 )
+( 0.54 0.46 ))
+(( 0.57 0.43 )
+( 0.5 0.5 )))
+((( 0.45 0.55 )
+( 0.37 0.63 ))
+(( 0.17 0.83 )
+( 0.0 1.0 )))));
+}
+
+potential (Mouse_error | Pointer_se_ne_prikazuje)
+{
+ data = (( 1.0 0.0 )
+( 0.0 1.0 ));
+}
+
+potential (Keyboard_error | Pritisak_tastera_F12_ne_radi)
+{
+ data = (( 1.0 0.0 )
+( 0.0 1.0 ));
+}
+
+potential (Microphone_error | Na_skype_poziv_ne_mogu_ukljuciti_mikrofon)
+{
+ data = (( 1.0 0.0 )
+( 0.0 1.0 ));
+}
+
+potential (Camera_error | Na_skype_poziv_ne_mogu_ukljuciti_kameru Kamera_prikazuje_crnu_sliku)
+{
+ data = ((( 1.0 0.0 )
+( 0.7 0.3 ))
+(( 0.8 0.2 )
+( 0.0 1.0 )));
+}
+
+potential (Podesavanja_racunara_nisu_dobro_postavljena | Pritisak_tastera_F12_ne_radi Na_skype_poziv_ne_mogu_ukljuciti_mikrofon Na_skype_poziv_ne_mogu_ukljuciti_kameru Pointer_se_ne_prikazuje)
+{
+ data = ((((( 1.0 0.0 )
+( 0.87 0.13 ))
+(( 0.85 0.15 )
+( 0.74 0.26 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.84 0.16 )
+( 0.81 0.19 ))))
+(((( 0.94 0.06 )
+( 0.82 0.18 ))
+(( 0.87 0.13 )
+( 0.71 0.29 )))
+((( 0.89 0.11 )
+( 0.78 0.22 ))
+(( 0.7 0.3 )
+( 0.0 1.0 )))));
+}
+
+potential (Pointer_se_ne_prikazuje)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Kamera_prikazuje_crnu_sliku)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Na_skype_poziv_ne_mogu_ukljuciti_kameru)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Na_skype_poziv_ne_mogu_ukljuciti_mikrofon)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Pritisak_tastera_F12_ne_radi)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Nece_da_otvori_fajl)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Iskacuci_pop_up_prozori)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Instalira_mi_se_nezeljena_aplikacija)
 {
  data = ( 0.5 0.5 );
 }

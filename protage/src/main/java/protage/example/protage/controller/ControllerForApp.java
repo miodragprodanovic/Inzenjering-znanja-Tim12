@@ -558,7 +558,7 @@ public class ControllerForApp {
             DisplayResolution = getComponentDataTypes(getBetterComponentBody.getDisplay().toString(),"DisplayResolution");
         }
         if (getBetterComponentBody.getProcessor() != null) {
-            ProcessorCores = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getDisplay().toString(),"ProcessorCores"));
+            ProcessorCores = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getProcessor().toString(),"ProcessorCoresString"));
         }
 
         ProbabilisticNetwork net = null;
@@ -575,6 +575,25 @@ public class ControllerForApp {
         ProbabilisticNode Nema_dovoljno_memorije = (ProbabilisticNode)net.getNode("Nema_dovoljno_memorije");
         ProbabilisticNode Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan = (ProbabilisticNode)net.getNode("Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan");
         ProbabilisticNode Blue_screen = (ProbabilisticNode)net.getNode("Blue_screen");
+        ProbabilisticNode Kompjuter_je_usporen = (ProbabilisticNode)net.getNode("Kompjuter_je_usporen");
+        ProbabilisticNode Kompjuter_se_jako_zagreva = (ProbabilisticNode)net.getNode("Kompjuter_se_jako_zagreva");
+        ProbabilisticNode Kompjuter_se_spontano_gasi = (ProbabilisticNode)net.getNode("Kompjuter_se_spontano_gasi");
+        ProbabilisticNode Operativni_sistem_ne_radi = (ProbabilisticNode)net.getNode("Operativni_sistem_ne_radi");
+        ProbabilisticNode Nema_zvuka = (ProbabilisticNode)net.getNode("Nema_zvuka");
+        ProbabilisticNode Javljaju_se_sumovi = (ProbabilisticNode)net.getNode("Javljaju_se_sumovi");
+        ProbabilisticNode Slika_je_mutna = (ProbabilisticNode)net.getNode("Slika_je_mutna");
+        ProbabilisticNode Nema_slike = (ProbabilisticNode)net.getNode("Nema_slike");
+
+        ProbabilisticNode Pointer_se_ne_prikazuje = (ProbabilisticNode)net.getNode("Pointer_se_ne_prikazuje");
+        ProbabilisticNode Kamera_prikazuje_crnu_sliku = (ProbabilisticNode)net.getNode("Kamera_prikazuje_crnu_sliku");
+        ProbabilisticNode Na_skype_poziv_ne_mogu_ukljuciti_kameru = (ProbabilisticNode)net.getNode("Na_skype_poziv_ne_mogu_ukljuciti_kameru");
+        ProbabilisticNode Na_skype_poziv_ne_mogu_ukljuciti_mikrofon = (ProbabilisticNode)net.getNode("Na_skype_poziv_ne_mogu_ukljuciti_mikrofon");
+        ProbabilisticNode Pritisak_tastera_F12_ne_radi = (ProbabilisticNode)net.getNode("Pritisak_tastera_F12_ne_radi");
+        ProbabilisticNode Nece_da_otvori_fajl = (ProbabilisticNode)net.getNode("Nece_da_otvori_fajl");
+        ProbabilisticNode Iskacuci_pop_up_prozori = (ProbabilisticNode)net.getNode("Iskacuci_pop_up_prozori");
+        ProbabilisticNode Instalira_mi_se_nezeljena_aplikacija = (ProbabilisticNode)net.getNode("Instalira_mi_se_nezeljena_aplikacija");
+
+
         ProbabilisticNode Motherboard = (ProbabilisticNode)net.getNode("Motherboard");
         ProbabilisticNode Power_supply = (ProbabilisticNode)net.getNode("Power_supply");
         ProbabilisticNode RAM = (ProbabilisticNode)net.getNode("RAM");
@@ -582,16 +601,9 @@ public class ControllerForApp {
         ProbabilisticNode Storage = (ProbabilisticNode)net.getNode("Storage");
         ProbabilisticNode Fan = (ProbabilisticNode)net.getNode("Fan");
         ProbabilisticNode Display = (ProbabilisticNode)net.getNode("Display");
-        ProbabilisticNode Slika_je_mutna = (ProbabilisticNode)net.getNode("Slika_je_mutna");
-        ProbabilisticNode Nema_slike = (ProbabilisticNode)net.getNode("Nema_slike");
         ProbabilisticNode Speakers = (ProbabilisticNode)net.getNode("Speakers");
-        ProbabilisticNode Nema_zvuka = (ProbabilisticNode)net.getNode("Nema_zvuka");
-        ProbabilisticNode Javljaju_se_sumovi = (ProbabilisticNode)net.getNode("Javljaju_se_sumovi");
         ProbabilisticNode Processor = (ProbabilisticNode)net.getNode("Processor");
-        ProbabilisticNode Kompjuter_je_usporen = (ProbabilisticNode)net.getNode("Kompjuter_je_usporen");
-        ProbabilisticNode Kompjuter_se_jako_zagreva = (ProbabilisticNode)net.getNode("Kompjuter_se_jako_zagreva");
-        ProbabilisticNode Kompjuter_se_spontano_gasi = (ProbabilisticNode)net.getNode("Kompjuter_se_spontano_gasi");
-        ProbabilisticNode Operativni_sistem_ne_radi = (ProbabilisticNode)net.getNode("Operativni_sistem_ne_radi");
+
 
         Motherboard.getProbabilityFunction().setValue(0,0);
         Motherboard.getProbabilityFunction().setValue(1,1);
@@ -750,6 +762,23 @@ public class ControllerForApp {
         Operativni_sistem_ne_radi.getProbabilityFunction().setValue(0,0);
         Operativni_sistem_ne_radi.getProbabilityFunction().setValue(1,1);
 
+        Pointer_se_ne_prikazuje.getProbabilityFunction().setValue(0,0);
+        Pointer_se_ne_prikazuje.getProbabilityFunction().setValue(1,1);
+        Kamera_prikazuje_crnu_sliku.getProbabilityFunction().setValue(0,0);
+        Kamera_prikazuje_crnu_sliku.getProbabilityFunction().setValue(1,1);
+        Na_skype_poziv_ne_mogu_ukljuciti_kameru.getProbabilityFunction().setValue(0,0);
+        Na_skype_poziv_ne_mogu_ukljuciti_kameru.getProbabilityFunction().setValue(1,1);
+        Na_skype_poziv_ne_mogu_ukljuciti_mikrofon.getProbabilityFunction().setValue(0,0);
+        Na_skype_poziv_ne_mogu_ukljuciti_mikrofon.getProbabilityFunction().setValue(1,1);
+        Pritisak_tastera_F12_ne_radi.getProbabilityFunction().setValue(0,0);
+        Pritisak_tastera_F12_ne_radi.getProbabilityFunction().setValue(1,1);
+        Nece_da_otvori_fajl.getProbabilityFunction().setValue(0,0);
+        Nece_da_otvori_fajl.getProbabilityFunction().setValue(1,1);
+        Iskacuci_pop_up_prozori.getProbabilityFunction().setValue(0,0);
+        Iskacuci_pop_up_prozori.getProbabilityFunction().setValue(1,1);
+        Instalira_mi_se_nezeljena_aplikacija.getProbabilityFunction().setValue(0,0);
+        Instalira_mi_se_nezeljena_aplikacija.getProbabilityFunction().setValue(1,1);
+
         for (String ss: simptomi) {
             switch (ss) {
                 case "Nece_da_se_upali":
@@ -808,6 +837,38 @@ public class ControllerForApp {
                     Operativni_sistem_ne_radi.getProbabilityFunction().setValue(0,1);
                     Operativni_sistem_ne_radi.getProbabilityFunction().setValue(1,0);
                     break;
+                case "Pointer_se_ne_prikazuje":
+                    Pointer_se_ne_prikazuje.getProbabilityFunction().setValue(0,1);
+                    Pointer_se_ne_prikazuje.getProbabilityFunction().setValue(1,0);
+                    break;
+                case "Kamera_prikazuje_crnu_sliku":
+                    Kamera_prikazuje_crnu_sliku.getProbabilityFunction().setValue(0,1);
+                    Kamera_prikazuje_crnu_sliku.getProbabilityFunction().setValue(1,0);
+                    break;
+                case "Na_skype_poziv_ne_mogu_ukljuciti_kameru":
+                    Na_skype_poziv_ne_mogu_ukljuciti_kameru.getProbabilityFunction().setValue(0,1);
+                    Na_skype_poziv_ne_mogu_ukljuciti_kameru.getProbabilityFunction().setValue(1,0);
+                    break;
+                case "Na_skype_poziv_ne_mogu_ukljuciti_mikrofon":
+                    Na_skype_poziv_ne_mogu_ukljuciti_mikrofon.getProbabilityFunction().setValue(0,1);
+                    Na_skype_poziv_ne_mogu_ukljuciti_mikrofon.getProbabilityFunction().setValue(1,0);
+                    break;
+                case "Pritisak_tastera_F12_ne_radi":
+                    Pritisak_tastera_F12_ne_radi.getProbabilityFunction().setValue(0,1);
+                    Pritisak_tastera_F12_ne_radi.getProbabilityFunction().setValue(1,0);
+                    break;
+                case "Nece_da_otvori_fajl":
+                    Nece_da_otvori_fajl.getProbabilityFunction().setValue(0,1);
+                    Nece_da_otvori_fajl.getProbabilityFunction().setValue(1,0);
+                    break;
+                case "Iskacuci_pop_up_prozori":
+                    Iskacuci_pop_up_prozori.getProbabilityFunction().setValue(0,1);
+                    Iskacuci_pop_up_prozori.getProbabilityFunction().setValue(1,0);
+                    break;
+                case "Instalira_mi_se_nezeljena_aplikacija":
+                    Instalira_mi_se_nezeljena_aplikacija.getProbabilityFunction().setValue(0,1);
+                    Instalira_mi_se_nezeljena_aplikacija.getProbabilityFunction().setValue(1,0);
+                    break;
             }
         }
 
@@ -820,7 +881,7 @@ public class ControllerForApp {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        ArrayList<Float> procenti = new ArrayList<Float>();
+        ArrayList<Float> procenti = new ArrayList<>();
         ArrayList<String> respo = new ArrayList<>();
         for (Node node : net.getNodes()) {
             if (node.getName().equals("Motherboard_error")
@@ -831,7 +892,13 @@ public class ControllerForApp {
                     || node.getName().equals("Fan_error")
                     || node.getName().equals("Display_error")
                     || node.getName().equals("Speaker_error")
-                    || node.getName().equals("Processor_error")) {
+                    || node.getName().equals("Processor_error")
+                    || node.getName().equals("Camera_error")
+                    || node.getName().equals("Mouse_error")
+                    || node.getName().equals("Microphone_error")
+                    || node.getName().equals("Keyboard_error")
+                    || node.getName().equals("Maliciozni_softver")
+                    || node.getName().equals("Podesavanja_racunara_nisu_dobro_postavljena")) {
                 System.out.println(node.getName());
                 for (int i = 0; i < node.getStatesSize(); i++) {
                     if (node.getStateAt(i).contains("Da")) {
@@ -867,7 +934,13 @@ public class ControllerForApp {
                     || net.getNodes().get(i).getName().equals("Fan_error")
                     || net.getNodes().get(i).getName().equals("Display_error")
                     || net.getNodes().get(i).getName().equals("Speaker_error")
-                    || net.getNodes().get(i).getName().equals("Processor_error")) {
+                    || net.getNodes().get(i).getName().equals("Processor_error")
+                    || net.getNodes().get(i).getName().equals("Camera_error")
+                    || net.getNodes().get(i).getName().equals("Mouse_error")
+                    || net.getNodes().get(i).getName().equals("Microphone_error")
+                    || net.getNodes().get(i).getName().equals("Keyboard_error")
+                    || net.getNodes().get(i).getName().equals("Maliciozni_softver")
+                    || net.getNodes().get(i).getName().equals("Podesavanja_racunara_nisu_dobro_postavljena")) {
                 respo.add(net.getNodes().get(i).getName());
                 respo.add(procenti.get(pro) + "%");
                 pro = pro + 1;

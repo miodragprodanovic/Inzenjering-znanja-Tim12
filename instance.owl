@@ -1417,6 +1417,7 @@
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#Name> "Processor_i3_6100" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#Price> 130 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 2 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCoresString> "2"^^xsd:string ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> 37 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA1151" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> "true"^^xsd:boolean .
@@ -1430,6 +1431,7 @@
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#Name> "Processor_i5_6400" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#Price> 182 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 4 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCoresString> "4"^^xsd:string ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> 27 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA1151" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> "true"^^xsd:boolean .
@@ -1443,6 +1445,7 @@
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#Name> "Processor_i5_8400" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#Price> 190 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 6 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCoresString> "6"^^xsd:string ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> 28 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA1151" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> "true"^^xsd:boolean .
@@ -1456,6 +1459,7 @@
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#Name> "Processor_i7_8700" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#Price> 300 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCores> 6 ;
+                   <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorCoresString> "6"^^xsd:string ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorFrequency> 32 ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#ProcessorSocket> "LGA1151" ;
                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#processorHasIntegratedGraphicsCard> "true"^^xsd:boolean .

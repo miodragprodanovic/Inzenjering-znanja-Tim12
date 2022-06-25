@@ -1,0 +1,56 @@
+import { Adapter } from "./adapter";
+import { Camera } from "./camera";
+import { Dedicated } from "./dedicated";
+import { Display } from "./display";
+import { Driver } from "./driver";
+import { Fan } from "./fan";
+import { Headphones } from "./headphones";
+import { Integrated } from "./integrated";
+import { Joystick } from "./joystick";
+import { Keyboard } from "./keyboard";
+import { Microphone } from "./microphone";
+import { Motherboard } from "./motherboard";
+import { Mouse } from "./mouse";
+import { MultimediaSoftware } from "./multimedia-software";
+import { OperatingSystem } from "./operating-system";
+import { Port } from "./port";
+import { PowerSupply } from "./power-supply";
+import { PresentationSoftware } from "./presentation-software";
+import { Processor } from "./processor";
+import { ProgramTranslator } from "./program-translator";
+import { RAM } from "./ram";
+import { SoundCard } from "./sound-card";
+import { Speakers } from "./speakers";
+import { SpreadsheetSoftware } from "./spreadsheet-software";
+import { Utility } from "./utility";
+
+export class GetBetterComponent {
+    adapters: Array<Adapter>;
+    camera: Camera;
+    display: Display;
+    drivers: Array<Driver>;
+    fan: Fan;
+    dedicated: Dedicated;
+    integrated: Integrated;
+    headphones: Headphones;
+    keyboard: Keyboard;
+    microphone: Microphone;
+    mouse: Mouse;
+    joystick: Joystick;
+    motherboard: Motherboard;
+    multimediaSoftwares: MultimediaSoftware;
+    operatingSystem: OperatingSystem;
+    ports: Array<Port>;
+    powerSupply: PowerSupply;
+    presentationSoftware: PresentationSoftware;
+    processor: Processor;
+    programTranslator: ProgramTranslator;
+    ram: RAM;
+    soundCard: SoundCard;
+    speakers: Speakers;
+    spreadsheetSoftware: Array<SpreadsheetSoftware>;
+    storages: Array<Storage>;
+    utilities: Array<Utility>;
+    whatToUpgrade: String;
+
+}

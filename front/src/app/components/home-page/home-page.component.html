@@ -1,6 +1,1071 @@
-<div style="background-color: rgb(0, 255, 221);">
+<div style="background-color: rgba(255, 0, 247, 0.215);">
     <div class="row" style="text-align: center;"> 
-        <label style="font-size: 60px; margin-top: 20px;"> <b> Hello! </b></label>
+        <label style="font-size: 60px; margin-top: 60px;"> <b> Hello! </b></label>
     </div>
-    <div class="row" style="height: 100px;"></div>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-8">
+            <label style="margin-left: 120px; font-size: 20px; margin-top: 5px;"> Ukoliko želite da unapredite vaše komponente pritisnite dugme -> </label>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-warning" (click)="upgradeButtonPressed()"> Unapredite komponente </button>
+        </div>
+    </div>
+    <div *ngIf="upgradePressed">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-8">
+                <label style="margin-left: 120px; font-size: 20px;"> Unesite podatke o vašem računaru:  </label>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-2">
+                <label style="margin-left: 120px;">Procesor: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Kamera: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Monitor: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 100px;">Neintegrisana grafička: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 10px;">Integrisana grafička: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <select class="form-control" name="processor" id="processor:1" style="margin-left: 120px; width: 160px;" >
+                    <option value="0"> Processor_i3_6100 </option>
+                    <option value="1"> Processor_i7_8700 </option>
+                    <option value="2"> Processor_i5_8400 </option>
+                    <option value="3"> Processor_i5_6400 </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="camera" id="camera:1" style="margin-left: 100px; width: 200px;" >
+                    <option value="0"> Camera_Logitech_C505e </option>
+                    <option value="1"> Camera_Logitech_Rally_Plus </option>
+                    <option value="2"> Camera_Natec_Lori_Plus_NKI_1672 </option>
+                    <option value="3"> Camera_Trust_SpotLight_Pro </option>
+                    <option value="4"> Camera_Kiyo_RZ19 </option>
+                    <option value="5"> Camera_Trust_Iris_4k </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="display" id="display:1" style="margin-left: 100px; width: 170px;" >
+                    <option value="0"> Display_AW3423DW </option>
+                    <option value="1"> Display_V_Line </option>
+                    <option value="2"> Display_Sceptre </option>
+                    <option value="3"> Display_S2721DGF </option>
+                    <option value="4"> Display_CRG5 </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="dedicated" id="dedicated:1" style="margin-left: 100px; width: 230px;" >
+                    <option value="0"> GraphicsCard_NVIDIA_GeForce_GTX_1060 </option>
+                    <option value="1"> GraphicsCard_NVIDIA_GeForce_GTX_1060 </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="integrated" id="integrated:1" style="margin-left: 10px; width: 230px;" >
+                    <option value="0"> GraphicsCard_Intel_HD_Graphics_530 </option>
+                    <option value="1"> GraphicsCard_Intel_UHD_Graphics_630 </option>
+                </select>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-2">
+                <label style="margin-left: 120px;">Kuler: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Slušalice: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Džojstik: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 100px;"> Tastatura: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 10px;"> Miš: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <select class="form-control" name="fan" id="fan:1" style="margin-left: 120px; width: 160px;" >
+                    <option value="0"> Fan_ARCTICP12 </option>
+                    <option value="1"> Fan_CP3 </option>
+                    <option value="2"> Fan_DN120 </option>
+                    <option value="3"> Fan_Sahara </option>
+                    <option value="4"> Fan_KB23 </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="headphones" id="headphones:1" style="margin-left: 100px; width: 200px;" >
+                    <option value="0"> Headphones_Closed_Back_Beyerdynamic_DT_770_PRO </option>
+                    <option value="1"> Headphones_On_Ear_AKG_Y400 </option>
+                    <option value="2"> Headphones_Over_Ear_Sony_WH_1000XM4 </option>
+                    <option value="3"> Headphones_Open_Back_Philips_Fidelio_X2HR </option>
+                    <option value="4"> Headphones_Closed_Back_AKG_N700NC_M2 </option>
+                    <option value="5"> Headphones_Closed_Bose_QuietComfort_35 </option>
+                    <option value="6"> Headphones_On_Ear_Audio_Technica_ATH_M60x </option>
+                    <option value="7"> Headphones_On_Ear_JBL_Live_460NC_Wireless </option>
+                    <option value="8"> Headphones_Open_Back_Astro_A40_TR </option>
+                    <option value="9"> Headphones_Open_Back_Sennheiser_HD_800_S </option>
+                    <option value="10"> Headphones_Over_Ear_Anker_Soundcore_Life_Q30_Wireless </option>
+                    <option value="11"> Headphones_Over_Ear_HiFiMan_Edition_XS </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="joystick" id="joystick:1" style="margin-left: 100px; width: 170px;" >
+                    <option value="0"> Joystick_Logitech_943 </option>
+                    <option value="1"> Joystick_Logitech_Extreme_3D_Pro </option>
+                    <option value="2"> Joystick_THRUSTMASTER_FCS_Space_Sim_Duo </option>
+                    <option value="3"> Joystick_THRUSTMASTER_Hotas_Warthog_Flight_Stick </option>
+                    <option value="4"> Joystick_THRUSTMASTER_USB_2960623 </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="keyboard" id="keyboard:1" style="margin-left: 100px; width: 230px;" >
+                    <option value="0"> Keyboard_Ergonomic_Logitech_Ergo_K860 </option>
+                    <option value="1"> Keyboard_Flexible_Sungwoo_Black </option>
+                    <option value="2"> Keyboard_Gaming_Corsair_K100_RGB </option>
+                    <option value="3"> Keyboard_Membrane_Razer_Cynosa_v2 </option>
+                    <option value="4"> Keyboard_Mechanical_Ducky_Shine_7_Gunmetal_RGB_LED_Double_Shot_PBT </option>
+                    <option value="5"> Keyboard_Ergonomic_Kinesis_Freestyle_Edge_RGB </option>
+                    <option value="6"> Keyboard_Flexible_Fly_Way </option>
+                    <option value="7"> Keyboard_Gaming_EVGA_Z12 </option>
+                    <option value="8"> Keyboard_Mechanical_SteelSeries_Apex_Pro </option>
+                    <option value="9"> Keyboard_Membrane_Logitech_G213 </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="mouse" id="mouse:1" style="margin-left: 10px; width: 230px;" >
+                    <option value="0"> Mouse_Ergonomic_Logitech_MX_Master_2S </option>
+                    <option value="1"> Mouse_Gaming_Corsair_SABRE_RGB_PRO </option>
+                    <option value="2"> Mouse_Laser_Lenovo_Yoga </option>
+                    <option value="3"> Mouse_Logitech_M510 </option>
+                    <option value="4"> Mouse_Pro_X </option>
+                    <option value="5"> Mouse_Optical_Microsoft_Classic_Intelli </option>
+                    <option value="6"> Mouse_Optical_Razer_Pro_Click </option>
+                    <option value="7"> Mouse_Logitech_MX_Master_3 </option>
+                </select>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-2">
+                <label style="margin-left: 120px;">Mikrofon: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Napajanje: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">RAM: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 100px;"> Zvučna kartica: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 10px;"> Zvučnici: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <select class="form-control" name="microphone" id="microphone:1" style="margin-left: 120px; width: 160px;" >
+                    <option value="0"> Microphone_Boya_BY_PM300 </option>
+                    <option value="1"> Microphone_Boya_BY_WM6S </option>
+                    <option value="2"> Microphone_Razer_Seiren_Elite_RZ19 </option>
+                    <option value="3"> Microphone_Razer_Seiren_Emote_RZ19 </option>
+                    <option value="4"> Microphone_TRUST_GXT_239 </option>
+                    <option value="5"> Microphone_TRUST_STARZZ_21671 </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="powerSupply" id="powerSupply:1" style="margin-left: 100px; width: 200px;" >
+                    <option value="0"> PowerSupply_HU180 </option>
+                    <option value="1"> PowerSupply_ITXAK_L1 </option>
+                    <option value="2"> PowerSupply_XPS8500 </option>
+                    <option value="3"> PowerSupply_RM850 </option>
+                    <option value="4"> PowerSupply_L280E </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="ram" id="ram:1" style="margin-left: 100px; width: 170px;" >
+                    <option value="0"> DDR3_16GB </option>
+                    <option value="1"> DDR3_64GB </option>
+                    <option value="2"> DDR3_8GB </option>
+                    <option value="3"> DDR4_16GB </option>
+                    <option value="4"> DDR4_8GB </option>
+                    <option value="5"> DDR4_64GB </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="soundCard" id="soundCard:1" style="margin-left: 100px; width: 230px;" >
+                    <option value="0"> SoundCard_Asus_5_1_Xonar_SE </option>
+                    <option value="1"> SoundCard_S_Box_USB </option>
+                    <option value="2"> SoundCard_X_Wave_Bluetooth_Transmitter </option>
+                    <option value="3"> SoundCard_AUDIOQUEST_USB_Dragonfly </option>
+                    <option value="4"> SoundCard_AUDIOQUEST_USB_Dragonfly_24_bit </option>
+                    <option value="5"> SoundCard_Creative_Sound_Blaster_Z </option>
+                    <option value="6"> SoundCard_EVGA_NU_Audio_Card </option>
+                    <option value="7"> SoundCard_FAST_ASIA_USB_7_1 </option>
+                    <option value="8"> SoundCard_Gembird_USB_5_1_3D </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="speakers" id="speakers:1" style="margin-left: 10px; width: 230px;" >
+                    <option value="0"> Speakers_JBLQuantum </option>
+                    <option value="1"> Speakers_Z333 </option>
+                    <option value="2"> Speakers_Z313 </option>
+                    <option value="3"> Speakers_Tytan21 </option>
+                    <option value="4"> Speakers_Z240 </option>
+                </select>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-6">
+                <label style="margin-left: 120px;">Portovi: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2" style="margin-left: 120px; margin-top: 20px;">
+                        <input type="checkbox" id="HDMIPort:1" name="HDMIPort" value="0">
+                        <label for="HDMIPort"> HDMIPort</label><br>
+                    </div>
+                    <div class="col-2" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_2x1:1" name="USBPort_2x1" value="1">
+                        <label for="USBPort_2x1"> USBPort_2x1</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="HeadphonesPort:1" name="HeadphonesPort" value="2">
+                        <label for="HeadphonesPort"> HeadphonesPort</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="MicrophonePort:1" name="MicrophonePort" value="3">
+                        <label for="MicrophonePort"> MicrophonePort</label><br>
+                    </div>  
+                    <div class="col-2" style="margin-top: 20px; margin-left: 120px;">
+                        <input type="checkbox" id="USBPort_2x2:1" name="USBPort_2x2" value="4">
+                        <label for="USBPort_2x2"> USBPort_2x2</label><br>
+                    </div>     
+                    <div class="col-2" style=" margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_2x3:1" name="USBPort_2x3" value="5">
+                        <label for="USBPort_2x3"> USBPort_2x3</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x1:1" name="USBPort_32x1" value="6">
+                        <label for="USBPort_32x1"> USBPort_32x1</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x2:1" name="USBPort_32x2" value="7">
+                        <label for="USBPort_32x2"> USBPort_32x2</label><br>
+                    </div>
+                    <div class="col-2" style="margin-top: 20px; margin-left: 120px;">
+                        <input type="checkbox" id="USBPort_2x4:1" name="USBPort_2x4" value="8">
+                        <label for="USBPort_2x4"> USBPort_2x4</label><br>
+                    </div>  
+                    <div class="col-2" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_2x5:1" name="USBPort_2x5" value="9">
+                        <label for="USBPort_2x5"> USBPort_2x5</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x3:1" name="USBPort_32x3" value="10">
+                        <label for="USBPort_32x3"> USBPort_32x3</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x4:1" name="USBPort_32x4" value="11">
+                        <label for="USBPort_32x4"> USBPort_32x4</label><br>
+                    </div>
+                    <div class="col-2" style="margin-top: 20px; margin-left: 120px;">
+                        <input type="checkbox" id="USBPort_2x6:1" name="USBPort_2x6" value="12">
+                        <label for="USBPort_2x6"> USBPort_2x6</label><br>
+                    </div> 
+                    <div class="col-2" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x5:1" name="USBPort_32x5" value="13">
+                        <label for="USBPort_32x5"> USBPort_32x5</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x6:1" name="USBPort_32x6" value="14">
+                        <label for="USBPort_32x6"> USBPort_32x6</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x7:1" name="USBPort_32x7" value="15">
+                        <label for="USBPort_32x7"> USBPort_32x7</label><br>
+                    </div>       
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-6">
+                <label style="margin-left: 120px;">Kapacitet: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2" style="margin-left: 120px; margin-top: 20px;">
+                        <input type="checkbox" id="HDD_128GB:1" name="HDD_128GB" value="0">
+                        <label for="HDD_128GB"> HDD_128GB</label><br>
+                    </div>
+                    <div class="col-2" style="margin-top: 20px;">
+                        <input type="checkbox" id="HDD_256GB:1" name="HDD_256GB" value="1">
+                        <label for="HDD_256GB"> HDD_256GB</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="HDD_512GB:1" name="HDD_512GB" value="2">
+                        <label for="HDD_512GB"> HDD_512GB</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="HDD_64GB:1" name="HDD_64GB" value="3">
+                        <label for="HDD_64GB"> HDD_64GB</label><br>
+                    </div>  
+                    <div class="col-2" style="margin-top: 20px; margin-left: 120px;">
+                        <input type="checkbox" id="SSD_128GB:1" name="SSD_128GB" value="4">
+                        <label for="SSD_128GB"> SSD_128GB</label><br>
+                    </div>     
+                    <div class="col-2" style=" margin-top: 20px;">
+                        <input type="checkbox" id="SSD_64GB:1" name="SSD_64GB" value="5">
+                        <label for="SSD_64GB"> SSD_64GB</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="SSD_512GB:1" name="SSD_512GB" value="6">
+                        <label for="SSD_512GB"> SSD_512GB</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="SSD_256GB:1" name="SSD_256GB" value="7">
+                        <label for="SSD_256GB"> SSD_256GB</label><br>
+                    </div>      
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 40px; margin-bottom: 50px;">
+            <div class="col-4">
+                <label style="margin-left: 120px; margin-top: 8px;">Koju komponentu želite da unapredite: </label>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="upgradeComponent" id="upgradeComponent" style="margin-left: 10px; width: 200px;" >
+                    <option value="camera"> Kamera </option>
+                    <option value="display"> Monitor </option>
+                    <option value="fan"> Kuler </option>
+                    <option value="dedicated"> Neintegrisana grafička </option>
+                    <option value="integrated"> Integrisana grafička </option>
+                    <option value="headphones"> Slušalice </option>
+                    <option value="joystick"> Džojstik </option>
+                    <option value="keyboard"> Tastatura </option>
+                    <option value="microphone"> Mikrofon </option>
+                    <option value="mouse"> Miš </option>
+                    <option value="powerSupply"> Napajanje </option>
+                    <option value="port"> Port </option>
+                    <option value="soundCard"> Zvučna kartica </option>
+                    <option value="speakers"> Zvučnici </option>
+                    <option value="storage"> Kapacitet </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-secondary" (click)="findComponentsForUpgrade()"> Pronadji </button>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-8">
+            <label style="margin-left: 120px; font-size: 20px; margin-top: 5px;"> Ukoliko želite da proverite valjanost komponenti za odredjenu namenu pritisnite dugme -> </label>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-warning" (click)="estimateButtonPressed()"> Proceni valjanost </button>
+        </div>
+    </div>
+    <div *ngIf="estimatePressed">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-8">
+                <label style="margin-left: 120px; font-size: 20px;"> Unesite podatke o vašem računaru:  </label>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-2">
+                <label style="margin-left: 120px;">Procesor: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Kamera: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Monitor: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 100px;">Neintegrisana grafička: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 10px;">Integrisana grafička: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <select class="form-control" name="processor" id="processor:2" style="margin-left: 120px; width: 160px;" >
+                    <option value="0"> Processor_i3_6100 </option>
+                    <option value="1"> Processor_i7_8700 </option>
+                    <option value="2"> Processor_i5_8400 </option>
+                    <option value="3"> Processor_i5_6400 </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="camera" id="camera:2" style="margin-left: 100px; width: 200px;" >
+                    <option value="0"> Camera_Logitech_C505e </option>
+                    <option value="1"> Camera_Logitech_Rally_Plus </option>
+                    <option value="2"> Camera_Natec_Lori_Plus_NKI_1672 </option>
+                    <option value="3"> Camera_Trust_SpotLight_Pro </option>
+                    <option value="4"> Camera_Kiyo_RZ19 </option>
+                    <option value="5"> Camera_Trust_Iris_4k </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="display" id="display:2" style="margin-left: 100px; width: 170px;" >
+                    <option value="0"> Display_AW3423DW </option>
+                    <option value="1"> Display_V_Line </option>
+                    <option value="2"> Display_Sceptre </option>
+                    <option value="3"> Display_S2721DGF </option>
+                    <option value="4"> Display_CRG5 </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="dedicated" id="dedicated:2" style="margin-left: 100px; width: 230px;" >
+                    <option value="0"> GraphicsCard_NVIDIA_GeForce_GTX_1060 </option>
+                    <option value="1"> GraphicsCard_NVIDIA_GeForce_GTX_1060 </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="integrated" id="integrated:2" style="margin-left: 10px; width: 230px;" >
+                    <option value="0"> GraphicsCard_Intel_HD_Graphics_530 </option>
+                    <option value="1"> GraphicsCard_Intel_UHD_Graphics_630 </option>
+                </select>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-2">
+                <label style="margin-left: 120px;">Kuler: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Slušalice: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Džojstik: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 100px;"> Tastatura: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 10px;"> Miš: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <select class="form-control" name="fan" id="fan:2" style="margin-left: 120px; width: 160px;" >
+                    <option value="0"> Fan_ARCTICP12 </option>
+                    <option value="1"> Fan_CP3 </option>
+                    <option value="2"> Fan_DN120 </option>
+                    <option value="3"> Fan_Sahara </option>
+                    <option value="4"> Fan_KB23 </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="headphones" id="headphones:2" style="margin-left: 100px; width: 200px;" >
+                    <option value="0"> Headphones_Closed_Back_Beyerdynamic_DT_770_PRO </option>
+                    <option value="1"> Headphones_On_Ear_AKG_Y400 </option>
+                    <option value="2"> Headphones_Over_Ear_Sony_WH_1000XM4 </option>
+                    <option value="3"> Headphones_Open_Back_Philips_Fidelio_X2HR </option>
+                    <option value="4"> Headphones_Closed_Back_AKG_N700NC_M2 </option>
+                    <option value="5"> Headphones_Closed_Bose_QuietComfort_35 </option>
+                    <option value="6"> Headphones_On_Ear_Audio_Technica_ATH_M60x </option>
+                    <option value="7"> Headphones_On_Ear_JBL_Live_460NC_Wireless </option>
+                    <option value="8"> Headphones_Open_Back_Astro_A40_TR </option>
+                    <option value="9"> Headphones_Open_Back_Sennheiser_HD_800_S </option>
+                    <option value="10"> Headphones_Over_Ear_Anker_Soundcore_Life_Q30_Wireless </option>
+                    <option value="11"> Headphones_Over_Ear_HiFiMan_Edition_XS </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="joystick" id="joystick:2" style="margin-left: 100px; width: 170px;" >
+                    <option value="0"> Joystick_Logitech_943 </option>
+                    <option value="1"> Joystick_Logitech_Extreme_3D_Pro </option>
+                    <option value="2"> Joystick_THRUSTMASTER_FCS_Space_Sim_Duo </option>
+                    <option value="3"> Joystick_THRUSTMASTER_Hotas_Warthog_Flight_Stick </option>
+                    <option value="4"> Joystick_THRUSTMASTER_USB_2960623 </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="keyboard" id="keyboard:2" style="margin-left: 100px; width: 230px;" >
+                    <option value="0"> Keyboard_Ergonomic_Logitech_Ergo_K860 </option>
+                    <option value="1"> Keyboard_Flexible_Sungwoo_Black </option>
+                    <option value="2"> Keyboard_Gaming_Corsair_K100_RGB </option>
+                    <option value="3"> Keyboard_Membrane_Razer_Cynosa_v2 </option>
+                    <option value="4"> Keyboard_Mechanical_Ducky_Shine_7_Gunmetal_RGB_LED_Double_Shot_PBT </option>
+                    <option value="5"> Keyboard_Ergonomic_Kinesis_Freestyle_Edge_RGB </option>
+                    <option value="6"> Keyboard_Flexible_Fly_Way </option>
+                    <option value="7"> Keyboard_Gaming_EVGA_Z12 </option>
+                    <option value="8"> Keyboard_Mechanical_SteelSeries_Apex_Pro </option>
+                    <option value="9"> Keyboard_Membrane_Logitech_G213 </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="mouse" id="mouse:2" style="margin-left: 10px; width: 230px;" >
+                    <option value="0"> Mouse_Ergonomic_Logitech_MX_Master_2S </option>
+                    <option value="1"> Mouse_Gaming_Corsair_SABRE_RGB_PRO </option>
+                    <option value="2"> Mouse_Laser_Lenovo_Yoga </option>
+                    <option value="3"> Mouse_Logitech_M510 </option>
+                    <option value="4"> Mouse_Pro_X </option>
+                    <option value="5"> Mouse_Optical_Microsoft_Classic_Intelli </option>
+                    <option value="6"> Mouse_Optical_Razer_Pro_Click </option>
+                    <option value="7"> Mouse_Logitech_MX_Master_3 </option>
+                </select>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-2">
+                <label style="margin-left: 120px;">Mikrofon: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Napajanje: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">RAM: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 100px;"> Zvučna kartica: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 10px;"> Zvučnici: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <select class="form-control" name="microphone" id="microphone:2" style="margin-left: 120px; width: 160px;" >
+                    <option value="0"> Microphone_Boya_BY_PM300 </option>
+                    <option value="1"> Microphone_Boya_BY_WM6S </option>
+                    <option value="2"> Microphone_Razer_Seiren_Elite_RZ19 </option>
+                    <option value="3"> Microphone_Razer_Seiren_Emote_RZ19 </option>
+                    <option value="4"> Microphone_TRUST_GXT_239 </option>
+                    <option value="5"> Microphone_TRUST_STARZZ_21671 </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="powerSupply" id="powerSupply:2" style="margin-left: 100px; width: 200px;" >
+                    <option value="0"> PowerSupply_HU180 </option>
+                    <option value="1"> PowerSupply_ITXAK_L1 </option>
+                    <option value="2"> PowerSupply_XPS8500 </option>
+                    <option value="3"> PowerSupply_RM850 </option>
+                    <option value="4"> PowerSupply_L280E </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="ram" id="ram:2" style="margin-left: 100px; width: 170px;" >
+                    <option value="0"> DDR3_16GB </option>
+                    <option value="1"> DDR3_64GB </option>
+                    <option value="2"> DDR3_8GB </option>
+                    <option value="3"> DDR4_16GB </option>
+                    <option value="4"> DDR4_8GB </option>
+                    <option value="5"> DDR4_64GB </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="soundCard" id="soundCard:2" style="margin-left: 100px; width: 230px;" >
+                    <option value="0"> SoundCard_Asus_5_1_Xonar_SE </option>
+                    <option value="1"> SoundCard_S_Box_USB </option>
+                    <option value="2"> SoundCard_X_Wave_Bluetooth_Transmitter </option>
+                    <option value="3"> SoundCard_AUDIOQUEST_USB_Dragonfly </option>
+                    <option value="4"> SoundCard_AUDIOQUEST_USB_Dragonfly_24_bit </option>
+                    <option value="5"> SoundCard_Creative_Sound_Blaster_Z </option>
+                    <option value="6"> SoundCard_EVGA_NU_Audio_Card </option>
+                    <option value="7"> SoundCard_FAST_ASIA_USB_7_1 </option>
+                    <option value="8"> SoundCard_Gembird_USB_5_1_3D </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="speakers" id="speakers:2" style="margin-left: 10px; width: 230px;" >
+                    <option value="0"> Speakers_JBLQuantum </option>
+                    <option value="1"> Speakers_Z333 </option>
+                    <option value="2"> Speakers_Z313 </option>
+                    <option value="3"> Speakers_Tytan21 </option>
+                    <option value="4"> Speakers_Z240 </option>
+                </select>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-6">
+                <label style="margin-left: 120px;">Portovi: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2" style="margin-left: 120px; margin-top: 20px;">
+                        <input type="checkbox" id="HDMIPort:2" name="HDMIPort" value="0">
+                        <label for="HDMIPort"> HDMIPort</label><br>
+                    </div>
+                    <div class="col-2" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_2x1:2" name="USBPort_2x1" value="1">
+                        <label for="USBPort_2x1"> USBPort_2x1</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="HeadphonesPort:2" name="HeadphonesPort" value="2">
+                        <label for="HeadphonesPort"> HeadphonesPort</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="MicrophonePort:2" name="MicrophonePort" value="3">
+                        <label for="MicrophonePort"> MicrophonePort</label><br>
+                    </div>  
+                    <div class="col-2" style="margin-top: 20px; margin-left: 120px;">
+                        <input type="checkbox" id="USBPort_2x2:2" name="USBPort_2x2" value="4">
+                        <label for="USBPort_2x2"> USBPort_2x2</label><br>
+                    </div>     
+                    <div class="col-2" style=" margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_2x3:2" name="USBPort_2x3" value="5">
+                        <label for="USBPort_2x3"> USBPort_2x3</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x1:2" name="USBPort_32x1" value="6">
+                        <label for="USBPort_32x1"> USBPort_32x1</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x2:2" name="USBPort_32x2" value="7">
+                        <label for="USBPort_32x2"> USBPort_32x2</label><br>
+                    </div>
+                    <div class="col-2" style="margin-top: 20px; margin-left: 120px;">
+                        <input type="checkbox" id="USBPort_2x4:2" name="USBPort_2x4" value="8">
+                        <label for="USBPort_2x4"> USBPort_2x4</label><br>
+                    </div>  
+                    <div class="col-2" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_2x5:2" name="USBPort_2x5" value="9">
+                        <label for="USBPort_2x5"> USBPort_2x5</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x3:2" name="USBPort_32x3" value="10">
+                        <label for="USBPort_32x3"> USBPort_32x3</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x4:2" name="USBPort_32x4" value="11">
+                        <label for="USBPort_32x4"> USBPort_32x4</label><br>
+                    </div>
+                    <div class="col-2" style="margin-top: 20px; margin-left: 120px;">
+                        <input type="checkbox" id="USBPort_2x6:2" name="USBPort_2x6" value="12">
+                        <label for="USBPort_2x6"> USBPort_2x6</label><br>
+                    </div> 
+                    <div class="col-2" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x5:2" name="USBPort_32x5" value="13">
+                        <label for="USBPort_32x5"> USBPort_32x5</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x6:2" name="USBPort_32x6" value="14">
+                        <label for="USBPort_32x6"> USBPort_32x6</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x7:2" name="USBPort_32x7" value="15">
+                        <label for="USBPort_32x7"> USBPort_32x7</label><br>
+                    </div>       
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-6">
+                <label style="margin-left: 120px;">Kapacitet: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2" style="margin-left: 120px; margin-top: 20px;">
+                        <input type="checkbox" id="HDD_128GB:2" name="HDD_128GB" value="0">
+                        <label for="HDD_128GB"> HDD_128GB</label><br>
+                    </div>
+                    <div class="col-2" style="margin-top: 20px;">
+                        <input type="checkbox" id="HDD_256GB:2" name="HDD_256GB" value="1">
+                        <label for="HDD_256GB"> HDD_256GB</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="HDD_512GB:2" name="HDD_512GB" value="2">
+                        <label for="HDD_512GB"> HDD_512GB</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="HDD_64GB:2" name="HDD_64GB" value="3">
+                        <label for="HDD_64GB"> HDD_64GB</label><br>
+                    </div>  
+                    <div class="col-2" style="margin-top: 20px; margin-left: 120px;">
+                        <input type="checkbox" id="SSD_128GB:2" name="SSD_128GB" value="4">
+                        <label for="SSD_128GB"> SSD_128GB</label><br>
+                    </div>     
+                    <div class="col-2" style=" margin-top: 20px;">
+                        <input type="checkbox" id="SSD_64GB:2" name="SSD_64GB" value="5">
+                        <label for="SSD_64GB"> SSD_64GB</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="SSD_512GB:2" name="SSD_512GB" value="6">
+                        <label for="SSD_512GB"> SSD_512GB</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="SSD_256GB:2" name="SSD_256GB" value="7">
+                        <label for="SSD_256GB"> SSD_256GB</label><br>
+                    </div>      
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 40px; margin-bottom: 50px;">
+            <div class="col-4">
+                <button class="btn btn-secondary" style="margin-left: 120px;" (click)="estimateComponents()"> Proceni </button>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-8">
+            <label style="margin-left: 120px; font-size: 20px; margin-top: 5px;"> Ukoliko želite da proverite verovatnoću uzroka kvara odredjenih komponenti pritisnite dugme -> </label>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-warning" (click)="chooseButtonPressed()"> Proveri verovatnoću </button>
+        </div>
+    </div>
+    <div *ngIf="choosePressed">
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-8">
+                <label style="margin-left: 120px; font-size: 20px;"> Unesite podatke o vašem računaru:  </label>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-2">
+                <label style="margin-left: 120px;">Procesor: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Kamera: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Monitor: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 100px;">Neintegrisana grafička: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 10px;">Integrisana grafička: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <select class="form-control" name="processor" id="processor:3" style="margin-left: 120px; width: 160px;" >
+                    <option value="0"> Processor_i3_6100 </option>
+                    <option value="1"> Processor_i7_8700 </option>
+                    <option value="2"> Processor_i5_8400 </option>
+                    <option value="3"> Processor_i5_6400 </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="camera" id="camera:3" style="margin-left: 100px; width: 200px;" >
+                    <option value="0"> Camera_Logitech_C505e </option>
+                    <option value="1"> Camera_Logitech_Rally_Plus </option>
+                    <option value="2"> Camera_Natec_Lori_Plus_NKI_1672 </option>
+                    <option value="3"> Camera_Trust_SpotLight_Pro </option>
+                    <option value="4"> Camera_Kiyo_RZ19 </option>
+                    <option value="5"> Camera_Trust_Iris_4k </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="display" id="display:3" style="margin-left: 100px; width: 170px;" >
+                    <option value="0"> Display_AW3423DW </option>
+                    <option value="1"> Display_V_Line </option>
+                    <option value="2"> Display_Sceptre </option>
+                    <option value="3"> Display_S2721DGF </option>
+                    <option value="4"> Display_CRG5 </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="dedicated" id="dedicated:3" style="margin-left: 100px; width: 230px;" >
+                    <option value="0"> GraphicsCard_NVIDIA_GeForce_GTX_1060 </option>
+                    <option value="1"> GraphicsCard_NVIDIA_GeForce_GTX_1060 </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="integrated" id="integrated:3" style="margin-left: 10px; width: 230px;" >
+                    <option value="0"> GraphicsCard_Intel_HD_Graphics_530 </option>
+                    <option value="1"> GraphicsCard_Intel_UHD_Graphics_630 </option>
+                </select>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-2">
+                <label style="margin-left: 120px;">Kuler: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Slušalice: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Džojstik: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 100px;"> Tastatura: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 10px;"> Miš: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <select class="form-control" name="fan" id="fan:3" style="margin-left: 120px; width: 160px;" >
+                    <option value="0"> Fan_ARCTICP12 </option>
+                    <option value="1"> Fan_CP3 </option>
+                    <option value="2"> Fan_DN120 </option>
+                    <option value="3"> Fan_Sahara </option>
+                    <option value="4"> Fan_KB23 </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="headphones" id="headphones:3" style="margin-left: 100px; width: 200px;" >
+                    <option value="0"> Headphones_Closed_Back_Beyerdynamic_DT_770_PRO </option>
+                    <option value="1"> Headphones_On_Ear_AKG_Y400 </option>
+                    <option value="2"> Headphones_Over_Ear_Sony_WH_1000XM4 </option>
+                    <option value="3"> Headphones_Open_Back_Philips_Fidelio_X2HR </option>
+                    <option value="4"> Headphones_Closed_Back_AKG_N700NC_M2 </option>
+                    <option value="5"> Headphones_Closed_Bose_QuietComfort_35 </option>
+                    <option value="6"> Headphones_On_Ear_Audio_Technica_ATH_M60x </option>
+                    <option value="7"> Headphones_On_Ear_JBL_Live_460NC_Wireless </option>
+                    <option value="8"> Headphones_Open_Back_Astro_A40_TR </option>
+                    <option value="9"> Headphones_Open_Back_Sennheiser_HD_800_S </option>
+                    <option value="10"> Headphones_Over_Ear_Anker_Soundcore_Life_Q30_Wireless </option>
+                    <option value="11"> Headphones_Over_Ear_HiFiMan_Edition_XS </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="joystick" id="joystick:3" style="margin-left: 100px; width: 170px;" >
+                    <option value="0"> Joystick_Logitech_943 </option>
+                    <option value="1"> Joystick_Logitech_Extreme_3D_Pro </option>
+                    <option value="2"> Joystick_THRUSTMASTER_FCS_Space_Sim_Duo </option>
+                    <option value="3"> Joystick_THRUSTMASTER_Hotas_Warthog_Flight_Stick </option>
+                    <option value="4"> Joystick_THRUSTMASTER_USB_2960623 </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="keyboard" id="keyboard:3" style="margin-left: 100px; width: 230px;" >
+                    <option value="0"> Keyboard_Ergonomic_Logitech_Ergo_K860 </option>
+                    <option value="1"> Keyboard_Flexible_Sungwoo_Black </option>
+                    <option value="2"> Keyboard_Gaming_Corsair_K100_RGB </option>
+                    <option value="3"> Keyboard_Membrane_Razer_Cynosa_v2 </option>
+                    <option value="4"> Keyboard_Mechanical_Ducky_Shine_7_Gunmetal_RGB_LED_Double_Shot_PBT </option>
+                    <option value="5"> Keyboard_Ergonomic_Kinesis_Freestyle_Edge_RGB </option>
+                    <option value="6"> Keyboard_Flexible_Fly_Way </option>
+                    <option value="7"> Keyboard_Gaming_EVGA_Z12 </option>
+                    <option value="8"> Keyboard_Mechanical_SteelSeries_Apex_Pro </option>
+                    <option value="9"> Keyboard_Membrane_Logitech_G213 </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="mouse" id="mouse:3" style="margin-left: 10px; width: 230px;" >
+                    <option value="0"> Mouse_Ergonomic_Logitech_MX_Master_2S </option>
+                    <option value="1"> Mouse_Gaming_Corsair_SABRE_RGB_PRO </option>
+                    <option value="2"> Mouse_Laser_Lenovo_Yoga </option>
+                    <option value="3"> Mouse_Logitech_M510 </option>
+                    <option value="4"> Mouse_Pro_X </option>
+                    <option value="5"> Mouse_Optical_Microsoft_Classic_Intelli </option>
+                    <option value="6"> Mouse_Optical_Razer_Pro_Click </option>
+                    <option value="7"> Mouse_Logitech_MX_Master_3 </option>
+                </select>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-2">
+                <label style="margin-left: 120px;">Mikrofon: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">Napajanje: </label>
+            </div>
+            <div class="col-2">
+                <label style="margin-left: 100px;">RAM: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 100px;"> Zvučna kartica: </label>
+            </div>
+            <div class="col-3">
+                <label style="margin-left: 10px;"> Zvučnici: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <select class="form-control" name="microphone" id="microphone:3" style="margin-left: 120px; width: 160px;" >
+                    <option value="0"> Microphone_Boya_BY_PM300 </option>
+                    <option value="1"> Microphone_Boya_BY_WM6S </option>
+                    <option value="2"> Microphone_Razer_Seiren_Elite_RZ19 </option>
+                    <option value="3"> Microphone_Razer_Seiren_Emote_RZ19 </option>
+                    <option value="4"> Microphone_TRUST_GXT_239 </option>
+                    <option value="5"> Microphone_TRUST_STARZZ_21671 </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="powerSupply" id="powerSupply:3" style="margin-left: 100px; width: 200px;" >
+                    <option value="0"> PowerSupply_HU180 </option>
+                    <option value="1"> PowerSupply_ITXAK_L1 </option>
+                    <option value="2"> PowerSupply_XPS8500 </option>
+                    <option value="3"> PowerSupply_RM850 </option>
+                    <option value="4"> PowerSupply_L280E </option>
+                </select>
+            </div>
+            <div class="col-2">
+                <select class="form-control" name="ram" id="ram:3" style="margin-left: 100px; width: 170px;" >
+                    <option value="0"> DDR3_16GB </option>
+                    <option value="1"> DDR3_64GB </option>
+                    <option value="2"> DDR3_8GB </option>
+                    <option value="3"> DDR4_16GB </option>
+                    <option value="4"> DDR4_8GB </option>
+                    <option value="5"> DDR4_64GB </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="soundCard" id="soundCard:3" style="margin-left: 100px; width: 230px;" >
+                    <option value="0"> SoundCard_Asus_5_1_Xonar_SE </option>
+                    <option value="1"> SoundCard_S_Box_USB </option>
+                    <option value="2"> SoundCard_X_Wave_Bluetooth_Transmitter </option>
+                    <option value="3"> SoundCard_AUDIOQUEST_USB_Dragonfly </option>
+                    <option value="4"> SoundCard_AUDIOQUEST_USB_Dragonfly_24_bit </option>
+                    <option value="5"> SoundCard_Creative_Sound_Blaster_Z </option>
+                    <option value="6"> SoundCard_EVGA_NU_Audio_Card </option>
+                    <option value="7"> SoundCard_FAST_ASIA_USB_7_1 </option>
+                    <option value="8"> SoundCard_Gembird_USB_5_1_3D </option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select class="form-control" name="speakers" id="speakers:3" style="margin-left: 10px; width: 230px;" >
+                    <option value="0"> Speakers_JBLQuantum </option>
+                    <option value="1"> Speakers_Z333 </option>
+                    <option value="2"> Speakers_Z313 </option>
+                    <option value="3"> Speakers_Tytan21 </option>
+                    <option value="4"> Speakers_Z240 </option>
+                </select>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-6">
+                <label style="margin-left: 120px;">Portovi: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2" style="margin-left: 120px; margin-top: 20px;">
+                        <input type="checkbox" id="HDMIPort:3" name="HDMIPort" value="0">
+                        <label for="HDMIPort"> HDMIPort</label><br>
+                    </div>
+                    <div class="col-2" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_2x1:3" name="USBPort_2x1" value="1">
+                        <label for="USBPort_2x1"> USBPort_2x1</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="HeadphonesPort:3" name="HeadphonesPort" value="2">
+                        <label for="HeadphonesPort"> HeadphonesPort</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="MicrophonePort:3" name="MicrophonePort" value="3">
+                        <label for="MicrophonePort"> MicrophonePort</label><br>
+                    </div>  
+                    <div class="col-2" style="margin-top: 20px; margin-left: 120px;">
+                        <input type="checkbox" id="USBPort_2x2:3" name="USBPort_2x2" value="4">
+                        <label for="USBPort_2x2"> USBPort_2x2</label><br>
+                    </div>     
+                    <div class="col-2" style=" margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_2x3:3" name="USBPort_2x3" value="5">
+                        <label for="USBPort_2x3"> USBPort_2x3</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x1:3" name="USBPort_32x1" value="6">
+                        <label for="USBPort_32x1"> USBPort_32x1</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x2:3" name="USBPort_32x2" value="7">
+                        <label for="USBPort_32x2"> USBPort_32x2</label><br>
+                    </div>
+                    <div class="col-2" style="margin-top: 20px; margin-left: 120px;">
+                        <input type="checkbox" id="USBPort_2x4:3" name="USBPort_2x4" value="8">
+                        <label for="USBPort_2x4"> USBPort_2x4</label><br>
+                    </div>  
+                    <div class="col-2" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_2x5:3" name="USBPort_2x5" value="9">
+                        <label for="USBPort_2x5"> USBPort_2x5</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x3:3" name="USBPort_32x3" value="10">
+                        <label for="USBPort_32x3"> USBPort_32x3</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x4:3" name="USBPort_32x4" value="11">
+                        <label for="USBPort_32x4"> USBPort_32x4</label><br>
+                    </div>
+                    <div class="col-2" style="margin-top: 20px; margin-left: 120px;">
+                        <input type="checkbox" id="USBPort_2x6:3" name="USBPort_2x6" value="12">
+                        <label for="USBPort_2x6"> USBPort_2x6</label><br>
+                    </div> 
+                    <div class="col-2" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x5:3" name="USBPort_32x5" value="13">
+                        <label for="USBPort_32x5"> USBPort_32x5</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x6:3" name="USBPort_32x6" value="14">
+                        <label for="USBPort_32x6"> USBPort_32x6</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="USBPort_32x7:3" name="USBPort_32x7" value="15">
+                        <label for="USBPort_32x7"> USBPort_32x7</label><br>
+                    </div>       
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-6">
+                <label style="margin-left: 120px;">Kapacitet: </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2" style="margin-left: 120px; margin-top: 20px;">
+                        <input type="checkbox" id="HDD_128GB:3" name="HDD_128GB" value="0">
+                        <label for="HDD_128GB"> HDD_128GB</label><br>
+                    </div>
+                    <div class="col-2" style="margin-top: 20px;">
+                        <input type="checkbox" id="HDD_256GB:3" name="HDD_256GB" value="1">
+                        <label for="HDD_256GB"> HDD_256GB</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="HDD_512GB:3" name="HDD_512GB" value="2">
+                        <label for="HDD_512GB"> HDD_512GB</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="HDD_64GB:3" name="HDD_64GB" value="3">
+                        <label for="HDD_64GB"> HDD_64GB</label><br>
+                    </div>  
+                    <div class="col-2" style="margin-top: 20px; margin-left: 120px;">
+                        <input type="checkbox" id="SSD_128GB:3" name="SSD_128GB" value="4">
+                        <label for="SSD_128GB"> SSD_128GB</label><br>
+                    </div>     
+                    <div class="col-2" style=" margin-top: 20px;">
+                        <input type="checkbox" id="SSD_64GB:3" name="SSD_64GB" value="5">
+                        <label for="SSD_64GB"> SSD_64GB</label><br>
+                    </div>
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="SSD_512GB:3" name="SSD_512GB" value="6">
+                        <label for="SSD_512GB"> SSD_512GB</label><br>
+                    </div> 
+                    <div class="col-3" style="margin-top: 20px;">
+                        <input type="checkbox" id="SSD_256GB:3" name="SSD_256GB" value="7">
+                        <label for="SSD_256GB"> SSD_256GB</label><br>
+                    </div>      
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 40px; margin-bottom: 50px;">
+            <div class="col-4">
+                <button class="btn btn-secondary" style="margin-left: 120px;" (click)="findError()"> Pronadji uzrok kvara </button>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-8">
+            <label style="margin-left: 120px; font-size: 20px; margin-top: 5px;"> Ukoliko želite da pronadjete računar najsličniji vašem računaru pritisnite dugme -> </label>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-warning" (click)="findButtonPressed()"> Pronadji računar </button>
+        </div>
+    </div>
+    <div class="row" style="height: 250px;"></div>
 </div>

@@ -183,53 +183,53 @@ export class HomePageComponent implements OnInit {
   estimateComponents() {
     let component = new GetBetterComponent();
 
-    let processor = document.getElementById('processor:1') as HTMLSelectElement;
+    let processor = document.getElementById('processor:2') as HTMLSelectElement;
     component.processor = Processor[processor.value]
-    let camera = document.getElementById('camera:1') as HTMLSelectElement;
+    let camera = document.getElementById('camera:2') as HTMLSelectElement;
     component.camera = Camera[camera.value]
-    let display = document.getElementById('display:1') as HTMLSelectElement;
+    let display = document.getElementById('display:2') as HTMLSelectElement;
     component.display = Display[display.value]
-    let dedicated = document.getElementById('dedicated:1') as HTMLSelectElement;
+    let dedicated = document.getElementById('dedicated:2') as HTMLSelectElement;
     component.dedicated = Dedicated[dedicated.value]
-    let integrated = document.getElementById('integrated:1') as HTMLSelectElement;
+    let integrated = document.getElementById('integrated:2') as HTMLSelectElement;
     component.integrated = Integrated[integrated.value]
-    let fan = document.getElementById('fan:1') as HTMLSelectElement;
+    let fan = document.getElementById('fan:2') as HTMLSelectElement;
     component.fan = Fan[fan.value]
-    let headphones = document.getElementById('headphones:1') as HTMLSelectElement;
+    let headphones = document.getElementById('headphones:2') as HTMLSelectElement;
     component.headphones = Headphones[headphones.value]
-    let joystick = document.getElementById('joystick:1') as HTMLSelectElement;
+    let joystick = document.getElementById('joystick:2') as HTMLSelectElement;
     component.joystick = Joystick[joystick.value]
-    let keyboard = document.getElementById('keyboard:1') as HTMLSelectElement;
+    let keyboard = document.getElementById('keyboard:2') as HTMLSelectElement;
     component.keyboard = Keyboard[keyboard.value]
-    let mouse = document.getElementById('mouse:1') as HTMLSelectElement;
+    let mouse = document.getElementById('mouse:2') as HTMLSelectElement;
     component.mouse = Mouse[mouse.value]
-    let microphone = document.getElementById('microphone:1') as HTMLSelectElement;
+    let microphone = document.getElementById('microphone:2') as HTMLSelectElement;
     component.microphone = Microphone[microphone.value]
-    let powerSupply = document.getElementById('powerSupply:1') as HTMLSelectElement;
+    let powerSupply = document.getElementById('powerSupply:2') as HTMLSelectElement;
     component.powerSupply = PowerSupply[powerSupply.value]
-    let ram = document.getElementById('ram:1') as HTMLSelectElement;
+    let ram = document.getElementById('ram:2') as HTMLSelectElement;
     component.ram = RAM[ram.value]
-    let soundCard = document.getElementById('soundCard:1') as HTMLSelectElement;
+    let soundCard = document.getElementById('soundCard:2') as HTMLSelectElement;
     component.soundCard = SoundCard[soundCard.value]
-    let speakers = document.getElementById('speakers:1') as HTMLSelectElement;
+    let speakers = document.getElementById('speakers:2') as HTMLSelectElement;
     component.speakers = Speakers[speakers.value]
 
-    let port1 = document.getElementById('HDMIPort:1') as HTMLInputElement;
-    let port2 = document.getElementById('USBPort_2x1:1') as HTMLInputElement;
-    let port3 = document.getElementById('HeadphonesPort:1') as HTMLInputElement;
-    let port4 = document.getElementById('MicrophonePort:1') as HTMLInputElement;
-    let port5 = document.getElementById('USBPort_2x2:1') as HTMLInputElement;
-    let port6 = document.getElementById('USBPort_2x3:1') as HTMLInputElement;
-    let port7 = document.getElementById('USBPort_32x1:1') as HTMLInputElement;
-    let port8 = document.getElementById('USBPort_32x2:1') as HTMLInputElement;
-    let port9 = document.getElementById('USBPort_2x4:1') as HTMLInputElement;
-    let port10 = document.getElementById('USBPort_2x5:1') as HTMLInputElement;
-    let port11 = document.getElementById('USBPort_32x3:1') as HTMLInputElement;
-    let port12 = document.getElementById('USBPort_32x4:1') as HTMLInputElement;
-    let port13 = document.getElementById('USBPort_2x6:1') as HTMLInputElement;
-    let port14 = document.getElementById('USBPort_32x5:1') as HTMLInputElement;
-    let port15 = document.getElementById('USBPort_32x6:1') as HTMLInputElement;
-    let port16 = document.getElementById('USBPort_32x7:1') as HTMLInputElement;
+    let port1 = document.getElementById('HDMIPort:2') as HTMLInputElement;
+    let port2 = document.getElementById('USBPort_2x1:2') as HTMLInputElement;
+    let port3 = document.getElementById('HeadphonesPort:2') as HTMLInputElement;
+    let port4 = document.getElementById('MicrophonePort:2') as HTMLInputElement;
+    let port5 = document.getElementById('USBPort_2x2:2') as HTMLInputElement;
+    let port6 = document.getElementById('USBPort_2x3:2') as HTMLInputElement;
+    let port7 = document.getElementById('USBPort_32x1:2') as HTMLInputElement;
+    let port8 = document.getElementById('USBPort_32x2:2') as HTMLInputElement;
+    let port9 = document.getElementById('USBPort_2x4:2') as HTMLInputElement;
+    let port10 = document.getElementById('USBPort_2x5:2') as HTMLInputElement;
+    let port11 = document.getElementById('USBPort_32x3:2') as HTMLInputElement;
+    let port12 = document.getElementById('USBPort_32x4:2') as HTMLInputElement;
+    let port13 = document.getElementById('USBPort_2x6:2') as HTMLInputElement;
+    let port14 = document.getElementById('USBPort_32x5:2') as HTMLInputElement;
+    let port15 = document.getElementById('USBPort_32x6:2') as HTMLInputElement;
+    let port16 = document.getElementById('USBPort_32x7:2') as HTMLInputElement;
 
     if(port1.checked)
       component.ports.push(Port[port1.value])
@@ -264,14 +264,14 @@ export class HomePageComponent implements OnInit {
     if(port16.checked)
       component.ports.push(Port[port16.value])
 
-    let storage1 = document.getElementById('HDD_128GB:1') as HTMLInputElement;
-    let storage2 = document.getElementById('HDD_256GB:1') as HTMLInputElement;
-    let storage3 = document.getElementById('HDD_512GB:1') as HTMLInputElement;
-    let storage4 = document.getElementById('HDD_64GB:1') as HTMLInputElement;
-    let storage5 = document.getElementById('SSD_128GB:1') as HTMLInputElement;
-    let storage6 = document.getElementById('SSD_64GB:1') as HTMLInputElement;
-    let storage7 = document.getElementById('SSD_512GB:1') as HTMLInputElement;
-    let storage8 = document.getElementById('SSD_256GB:1') as HTMLInputElement;
+    let storage1 = document.getElementById('HDD_128GB:2') as HTMLInputElement;
+    let storage2 = document.getElementById('HDD_256GB:2') as HTMLInputElement;
+    let storage3 = document.getElementById('HDD_512GB:2') as HTMLInputElement;
+    let storage4 = document.getElementById('HDD_64GB:2') as HTMLInputElement;
+    let storage5 = document.getElementById('SSD_128GB:2') as HTMLInputElement;
+    let storage6 = document.getElementById('SSD_64GB:2') as HTMLInputElement;
+    let storage7 = document.getElementById('SSD_512GB:2') as HTMLInputElement;
+    let storage8 = document.getElementById('SSD_256GB:2') as HTMLInputElement;
 
     if(storage1.checked)
       component.storages.push(Storage[storage1.value])
@@ -298,53 +298,53 @@ export class HomePageComponent implements OnInit {
   findError() {
     let component = new GetBetterComponent();
 
-    let processor = document.getElementById('processor:1') as HTMLSelectElement;
+    let processor = document.getElementById('processor:3') as HTMLSelectElement;
     component.processor = Processor[processor.value]
-    let camera = document.getElementById('camera:1') as HTMLSelectElement;
+    let camera = document.getElementById('camera:3') as HTMLSelectElement;
     component.camera = Camera[camera.value]
-    let display = document.getElementById('display:1') as HTMLSelectElement;
+    let display = document.getElementById('display:3') as HTMLSelectElement;
     component.display = Display[display.value]
-    let dedicated = document.getElementById('dedicated:1') as HTMLSelectElement;
+    let dedicated = document.getElementById('dedicated:3') as HTMLSelectElement;
     component.dedicated = Dedicated[dedicated.value]
-    let integrated = document.getElementById('integrated:1') as HTMLSelectElement;
+    let integrated = document.getElementById('integrated:3') as HTMLSelectElement;
     component.integrated = Integrated[integrated.value]
-    let fan = document.getElementById('fan:1') as HTMLSelectElement;
+    let fan = document.getElementById('fan:3') as HTMLSelectElement;
     component.fan = Fan[fan.value]
-    let headphones = document.getElementById('headphones:1') as HTMLSelectElement;
+    let headphones = document.getElementById('headphones:3') as HTMLSelectElement;
     component.headphones = Headphones[headphones.value]
-    let joystick = document.getElementById('joystick:1') as HTMLSelectElement;
+    let joystick = document.getElementById('joystick:3') as HTMLSelectElement;
     component.joystick = Joystick[joystick.value]
-    let keyboard = document.getElementById('keyboard:1') as HTMLSelectElement;
+    let keyboard = document.getElementById('keyboard:3') as HTMLSelectElement;
     component.keyboard = Keyboard[keyboard.value]
-    let mouse = document.getElementById('mouse:1') as HTMLSelectElement;
+    let mouse = document.getElementById('mouse:3') as HTMLSelectElement;
     component.mouse = Mouse[mouse.value]
-    let microphone = document.getElementById('microphone:1') as HTMLSelectElement;
+    let microphone = document.getElementById('microphone:3') as HTMLSelectElement;
     component.microphone = Microphone[microphone.value]
-    let powerSupply = document.getElementById('powerSupply:1') as HTMLSelectElement;
+    let powerSupply = document.getElementById('powerSupply:3') as HTMLSelectElement;
     component.powerSupply = PowerSupply[powerSupply.value]
-    let ram = document.getElementById('ram:1') as HTMLSelectElement;
+    let ram = document.getElementById('ram:3') as HTMLSelectElement;
     component.ram = RAM[ram.value]
-    let soundCard = document.getElementById('soundCard:1') as HTMLSelectElement;
+    let soundCard = document.getElementById('soundCard:3') as HTMLSelectElement;
     component.soundCard = SoundCard[soundCard.value]
-    let speakers = document.getElementById('speakers:1') as HTMLSelectElement;
+    let speakers = document.getElementById('speakers:3') as HTMLSelectElement;
     component.speakers = Speakers[speakers.value]
 
-    let port1 = document.getElementById('HDMIPort:1') as HTMLInputElement;
-    let port2 = document.getElementById('USBPort_2x1:1') as HTMLInputElement;
-    let port3 = document.getElementById('HeadphonesPort:1') as HTMLInputElement;
-    let port4 = document.getElementById('MicrophonePort:1') as HTMLInputElement;
-    let port5 = document.getElementById('USBPort_2x2:1') as HTMLInputElement;
-    let port6 = document.getElementById('USBPort_2x3:1') as HTMLInputElement;
-    let port7 = document.getElementById('USBPort_32x1:1') as HTMLInputElement;
-    let port8 = document.getElementById('USBPort_32x2:1') as HTMLInputElement;
-    let port9 = document.getElementById('USBPort_2x4:1') as HTMLInputElement;
-    let port10 = document.getElementById('USBPort_2x5:1') as HTMLInputElement;
-    let port11 = document.getElementById('USBPort_32x3:1') as HTMLInputElement;
-    let port12 = document.getElementById('USBPort_32x4:1') as HTMLInputElement;
-    let port13 = document.getElementById('USBPort_2x6:1') as HTMLInputElement;
-    let port14 = document.getElementById('USBPort_32x5:1') as HTMLInputElement;
-    let port15 = document.getElementById('USBPort_32x6:1') as HTMLInputElement;
-    let port16 = document.getElementById('USBPort_32x7:1') as HTMLInputElement;
+    let port1 = document.getElementById('HDMIPort:3') as HTMLInputElement;
+    let port2 = document.getElementById('USBPort_2x1:3') as HTMLInputElement;
+    let port3 = document.getElementById('HeadphonesPort:3') as HTMLInputElement;
+    let port4 = document.getElementById('MicrophonePort:3') as HTMLInputElement;
+    let port5 = document.getElementById('USBPort_2x2:3') as HTMLInputElement;
+    let port6 = document.getElementById('USBPort_2x3:3') as HTMLInputElement;
+    let port7 = document.getElementById('USBPort_32x1:3') as HTMLInputElement;
+    let port8 = document.getElementById('USBPort_32x2:3') as HTMLInputElement;
+    let port9 = document.getElementById('USBPort_2x4:3') as HTMLInputElement;
+    let port10 = document.getElementById('USBPort_2x5:3') as HTMLInputElement;
+    let port11 = document.getElementById('USBPort_32x3:3') as HTMLInputElement;
+    let port12 = document.getElementById('USBPort_32x4:3') as HTMLInputElement;
+    let port13 = document.getElementById('USBPort_2x6:3') as HTMLInputElement;
+    let port14 = document.getElementById('USBPort_32x5:3') as HTMLInputElement;
+    let port15 = document.getElementById('USBPort_32x6:3') as HTMLInputElement;
+    let port16 = document.getElementById('USBPort_32x7:3') as HTMLInputElement;
 
     if(port1.checked)
       component.ports.push(Port[port1.value])
@@ -379,14 +379,14 @@ export class HomePageComponent implements OnInit {
     if(port16.checked)
       component.ports.push(Port[port16.value])
 
-    let storage1 = document.getElementById('HDD_128GB:1') as HTMLInputElement;
-    let storage2 = document.getElementById('HDD_256GB:1') as HTMLInputElement;
-    let storage3 = document.getElementById('HDD_512GB:1') as HTMLInputElement;
-    let storage4 = document.getElementById('HDD_64GB:1') as HTMLInputElement;
-    let storage5 = document.getElementById('SSD_128GB:1') as HTMLInputElement;
-    let storage6 = document.getElementById('SSD_64GB:1') as HTMLInputElement;
-    let storage7 = document.getElementById('SSD_512GB:1') as HTMLInputElement;
-    let storage8 = document.getElementById('SSD_256GB:1') as HTMLInputElement;
+    let storage1 = document.getElementById('HDD_128GB:3') as HTMLInputElement;
+    let storage2 = document.getElementById('HDD_256GB:3') as HTMLInputElement;
+    let storage3 = document.getElementById('HDD_512GB:3') as HTMLInputElement;
+    let storage4 = document.getElementById('HDD_64GB:3') as HTMLInputElement;
+    let storage5 = document.getElementById('SSD_128GB:3') as HTMLInputElement;
+    let storage6 = document.getElementById('SSD_64GB:3') as HTMLInputElement;
+    let storage7 = document.getElementById('SSD_512GB:3') as HTMLInputElement;
+    let storage8 = document.getElementById('SSD_256GB:3') as HTMLInputElement;
 
     if(storage1.checked)
       component.storages.push(Storage[storage1.value])

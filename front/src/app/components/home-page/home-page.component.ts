@@ -9,6 +9,7 @@ import { Integrated } from 'src/app/model/integrated';
 import { Joystick } from 'src/app/model/joystick';
 import { Keyboard } from 'src/app/model/keyboard';
 import { Microphone } from 'src/app/model/microphone';
+import { Motherboard } from 'src/app/model/motherboard';
 import { Mouse } from 'src/app/model/mouse';
 import { Port } from 'src/app/model/port';
 import { PowerSupply } from 'src/app/model/power-supply';
@@ -95,6 +96,8 @@ export class HomePageComponent implements OnInit {
     component.soundCard = SoundCard[soundCard.value]
     let speakers = document.getElementById('speakers:1') as HTMLSelectElement;
     component.speakers = Speakers[speakers.value]
+    let motherboard = document.getElementById('motherboard:1') as HTMLSelectElement;
+    component.motherboard = Motherboard[motherboard.value]
 
     let port1 = document.getElementById('HDMIPort:1') as HTMLInputElement;
     let port2 = document.getElementById('USBPort_2x1:1') as HTMLInputElement;
@@ -176,7 +179,7 @@ export class HomePageComponent implements OnInit {
     component.whatToUpgrade = upgradeComponent.value;
 
     this.appService.getBetterComponent(component).subscribe(ret => {
-
+      alert(ret);
     })
   }
   
@@ -213,6 +216,8 @@ export class HomePageComponent implements OnInit {
     component.soundCard = SoundCard[soundCard.value]
     let speakers = document.getElementById('speakers:2') as HTMLSelectElement;
     component.speakers = Speakers[speakers.value]
+    let motherboard = document.getElementById('motherboard:2') as HTMLSelectElement;
+    component.motherboard = Motherboard[motherboard.value]
 
     let port1 = document.getElementById('HDMIPort:2') as HTMLInputElement;
     let port2 = document.getElementById('USBPort_2x1:2') as HTMLInputElement;
@@ -291,7 +296,7 @@ export class HomePageComponent implements OnInit {
       component.storages.push(Storage[storage8.value])
 
     this.appService.getComputerPurpose(component).subscribe(ret => {
-
+      alert(ret);
     })
   }
 
@@ -328,6 +333,8 @@ export class HomePageComponent implements OnInit {
     component.soundCard = SoundCard[soundCard.value]
     let speakers = document.getElementById('speakers:3') as HTMLSelectElement;
     component.speakers = Speakers[speakers.value]
+    let motherboard = document.getElementById('motherboard:3') as HTMLSelectElement;
+    component.motherboard = Motherboard[motherboard.value]
 
     let port1 = document.getElementById('HDMIPort:3') as HTMLInputElement;
     let port2 = document.getElementById('USBPort_2x1:3') as HTMLInputElement;
@@ -405,8 +412,84 @@ export class HomePageComponent implements OnInit {
     if(storage8.checked)
       component.storages.push(Storage[storage8.value])
 
-    this.appService.getComputerError(component).subscribe(ret => {
+    let Nece_da_se_upali = document.getElementById('Nece_da_se_upali') as HTMLInputElement;
+    let Upali_se_ali_ne_radi = document.getElementById('Upali_se_ali_ne_radi') as HTMLInputElement;
+    let Display_se_zamrzne = document.getElementById('Display_se_zamrzne') as HTMLInputElement;
+    let Nema_dovoljno_memorije = document.getElementById('Nema_dovoljno_memorije') as HTMLInputElement;
+    let Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan = document.getElementById('Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan') as HTMLInputElement;
+    let Blue_screen = document.getElementById('Blue_screen') as HTMLInputElement;
+    let Kompjuter_je_usporen = document.getElementById('Kompjuter_je_usporen') as HTMLInputElement;
+    let Kompjuter_se_jako_zagreva = document.getElementById('Kompjuter_se_jako_zagreva') as HTMLInputElement;
+    let Kompjuter_se_spontano_gasi = document.getElementById('Kompjuter_se_spontano_gasi') as HTMLInputElement;
+    let Operativni_sistem_ne_radi = document.getElementById('Operativni_sistem_ne_radi') as HTMLInputElement;
+    let Nema_zvuka = document.getElementById('Nema_zvuka') as HTMLInputElement;
+    let Javljaju_se_sumovi = document.getElementById('Javljaju_se_sumovi') as HTMLInputElement;
+    let Slika_je_mutna = document.getElementById('Slika_je_mutna') as HTMLInputElement;
+    let Nema_slike = document.getElementById('Nema_slike') as HTMLInputElement;
+    let Pointer_se_ne_prikazuje = document.getElementById('Pointer_se_ne_prikazuje') as HTMLInputElement;
+    let Kamera_prikazuje_crnu_sliku = document.getElementById('Kamera_prikazuje_crnu_sliku') as HTMLInputElement;
+    let Na_skype_poziv_ne_mogu_ukljuciti_kameru = document.getElementById('Na_skype_poziv_ne_mogu_ukljuciti_kameru') as HTMLInputElement;
+    let Na_skype_poziv_ne_mogu_ukljuciti_mikrofon = document.getElementById('Na_skype_poziv_ne_mogu_ukljuciti_mikrofon') as HTMLInputElement;
+    let Pritisak_tastera_F12_ne_radi = document.getElementById('Pritisak_tastera_F12_ne_radi') as HTMLInputElement;
+    let Nece_da_otvori_fajl = document.getElementById('Nece_da_otvori_fajl') as HTMLInputElement;
+    let Iskacuci_pop_up_prozori = document.getElementById('Iskacuci_pop_up_prozori') as HTMLInputElement;
+    let Instalira_mi_se_nezeljena_aplikacija = document.getElementById('Instalira_mi_se_nezeljena_aplikacija') as HTMLInputElement;
+  
+    let simptomi = "";
 
+    if(Nece_da_se_upali.checked)
+      simptomi += Nece_da_se_upali.value + ";";
+    if(Upali_se_ali_ne_radi.checked)
+      simptomi += Upali_se_ali_ne_radi.value + ";";
+    if(Display_se_zamrzne.checked)
+      simptomi += Display_se_zamrzne.value + ";";
+    if(Nema_dovoljno_memorije.checked)
+      simptomi += Nema_dovoljno_memorije.value + ";";
+    if(Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan.checked)
+      simptomi += Operativni_sistem_ne_postoji_ili_cvrsti_disk_nije_ucitan.value + ";";
+    if(Blue_screen.checked)
+      simptomi += Blue_screen.value + ";";
+    if(Kompjuter_je_usporen.checked)
+      simptomi += Kompjuter_je_usporen.value + ";";
+    if(Kompjuter_se_jako_zagreva.checked)
+      simptomi += Kompjuter_se_jako_zagreva.value + ";";
+    if(Kompjuter_se_spontano_gasi.checked)
+      simptomi += Kompjuter_se_spontano_gasi.value + ";";
+    if(Operativni_sistem_ne_radi.checked)
+      simptomi += Operativni_sistem_ne_radi.value + ";";
+    if(Nema_zvuka.checked)
+      simptomi += Nema_zvuka.value + ";";
+    if(Javljaju_se_sumovi.checked)
+      simptomi += Javljaju_se_sumovi.value + ";";
+    if(Slika_je_mutna.checked)
+      simptomi += Slika_je_mutna.value + ";";
+    if(Nema_slike.checked)
+      simptomi += Nema_slike.value + ";";
+    if(Pointer_se_ne_prikazuje.checked)
+      simptomi += Pointer_se_ne_prikazuje.value + ";";
+    if(Kamera_prikazuje_crnu_sliku.checked)
+      simptomi += Kamera_prikazuje_crnu_sliku.value + ";";
+    if(Na_skype_poziv_ne_mogu_ukljuciti_kameru.checked)
+      simptomi += Na_skype_poziv_ne_mogu_ukljuciti_kameru.value + ";";
+    if(Na_skype_poziv_ne_mogu_ukljuciti_mikrofon.checked)
+      simptomi += Na_skype_poziv_ne_mogu_ukljuciti_mikrofon.value + ";";
+    if(Pritisak_tastera_F12_ne_radi.checked)
+      simptomi += Pritisak_tastera_F12_ne_radi.value + ";";
+    if(Nece_da_otvori_fajl.checked)
+      simptomi += Nece_da_otvori_fajl.value + ";";
+    if(Iskacuci_pop_up_prozori.checked)
+      simptomi += Iskacuci_pop_up_prozori.value + ";";
+    if(Instalira_mi_se_nezeljena_aplikacija.checked)
+      simptomi += Instalira_mi_se_nezeljena_aplikacija.value + ";";
+
+    if (simptomi.length > 0) {
+      simptomi = simptomi.substring(0, simptomi.length - 1);
+    }
+
+    component.whatToUpgrade = simptomi;
+    
+    this.appService.getComputerError(component).subscribe(ret => {
+      alert(ret);
     })
   }
 }

@@ -75,6 +75,7 @@ public class ControllerForApp {
             return new ResponseEntity<>(result, HttpStatus.OK);
         }
         else if (getBetterComponentBody.getWhatToUpgrade().equals("dedicated")) {
+            System.out.println(getBetterComponentBody.getDedicated().toString());
             ArrayList<String> faster = makeQuery("isGraphicsCardFasterThan",getBetterComponentBody.getDedicated().toString(),"isMotherboardAndDedicatedGraphicsCardCompatible",getBetterComponentBody.getMotherboard().toString(),"isPowerSupplyAndGraphicsCardCompatible",getBetterComponentBody.getPowerSupply().toString());
             ArrayList<String> preferable = makeQuery("isGraphicsCardPreferableThan",getBetterComponentBody.getDedicated().toString(),"isMotherboardAndDedicatedGraphicsCardCompatible",getBetterComponentBody.getMotherboard().toString(),"isPowerSupplyAndGraphicsCardCompatible",getBetterComponentBody.getPowerSupply().toString());
             ArrayList<String> memory = makeQuery("isGraphicsCardMemoryMoreThan",getBetterComponentBody.getDedicated().toString(),"isMotherboardAndDedicatedGraphicsCardCompatible",getBetterComponentBody.getMotherboard().toString(),"isPowerSupplyAndGraphicsCardCompatible",getBetterComponentBody.getPowerSupply().toString());

@@ -36,6 +36,9 @@ public class ComputerCbrApplication implements StandardCBRApplication {
         simConfig = new NNConfig(); // KNN configuration
         simConfig.setDescriptionSimFunction(new Average());  // global similarity function = average
 
+        // TODO:
+        //  Promijeniti parametre ako je potrebno
+
         simConfig.addMapping(new Attribute("ramCapacity", ComputerCaseDescription.class), new Interval(64));
         simConfig.addMapping(new Attribute("storageCapacity", ComputerCaseDescription.class), new Interval(1028));
         simConfig.addMapping(new Attribute("graphicsCardSpeed", ComputerCaseDescription.class), new Interval(2200));
@@ -53,7 +56,10 @@ public class ComputerCbrApplication implements StandardCBRApplication {
         // EnumDistance - returns the similarity of two enum values as the their distance: sim(x,y) = |ord(x) - ord(y)|
         // EnumCyclicDistance - computes the similarity between two enum values as their cyclic distance
         // Table - uses a table to obtain the similarity between two values. Allowed values are Strings or Enums. The table is read from a text file.
-        // TableSimilarity(List<String> values).setSimilarity(value1,value2,similarity)
+
+        // TODO:
+        //  Dodati dio za TableSimilarity ako bude potrebno
+        //  TableSimilarity(List<String> values).setSimilarity(value1,value2,similarity)
     }
 
     public void cycle(CBRQuery query) throws ExecutionException {

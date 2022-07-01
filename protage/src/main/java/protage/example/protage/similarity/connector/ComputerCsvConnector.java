@@ -20,7 +20,14 @@ public class ComputerCsvConnector implements Connector {
         LinkedList<CBRCase> cases = new LinkedList<>();
 
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(FileIO.openFile("protage/example/protage/similarity/data/example.csv")));
+            // TODO:
+            //  Dok se ne popuni fajl computers.csv moze se testirati na probnom example.csv
+            //  Fajl computers.csv se popunjava u ContrllerForApp setData() metodi
+            //  Kad se popuni fajl computers.csv promijeniti i u putanji
+            //  String file = "protage/example/protage/similarity/data/computers.csv";
+
+            String file = "protage/example/protage/similarity/data/example.csv";
+            BufferedReader br = new BufferedReader(new InputStreamReader(FileIO.openFile(file)));
             if (br == null)
                 throw new Exception("Error opening file");
 

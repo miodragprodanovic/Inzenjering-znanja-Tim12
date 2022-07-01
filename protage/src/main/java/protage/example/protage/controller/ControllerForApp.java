@@ -21,6 +21,7 @@ import unbbayes.prs.bn.ProbabilisticNode;
 import unbbayes.util.extension.bn.inference.IInferenceAlgorithm;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -956,6 +957,8 @@ public class ControllerForApp {
 
     @PostMapping("/getSimilarComputers")
     public ResponseEntity<ArrayList<String>> getSimilarComputers(@RequestBody GetBetterComponent getBetterComponentBody) throws IOException {
+        setData();
+
         int ramCapacity = 0;
         int storageCapacity = 0;
         int graphicsCardSpeed = 0;
@@ -1009,8 +1012,9 @@ public class ControllerForApp {
             speakersPrice = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"Price"));
             price += speakersPrice;
         }
-
-        String csvRow = "#ram capacity;storage capacity;graphics card speed;power supply watt power;fan air flow capacity;speakers watt power;processor cores;price";
+        if (getBetterComponentBody.getProcessor() != null) {
+            processorCores = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getProcessor().toString(),"ProcessorCoresString"));
+        }
 
         ArrayList<String> response = new ArrayList<>();
 
@@ -1046,4 +1050,93 @@ public class ControllerForApp {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
+    private void setData() {
+        // TODO:
+        //  Ucitati sve instance racunara iz pratazea u listu computers
+        List<GetBetterComponent> computers = new ArrayList<>();
+
+        try {
+            String file = "./src/main/java/protage/example/protage/similarity/data/computers.csv";
+            FileWriter fileWriter = new FileWriter(file);
+
+            String csvHeader = "#ram capacity;storage capacity;graphics card speed;power supply watt power;fan air flow capacity;speakers watt power;processor cores;price";
+
+            fileWriter.append(csvHeader).append("\n");
+
+            for (GetBetterComponent computer : computers) {
+                int ramCapacity = 0;
+                int storageCapacity = 0;
+                int graphicsCardSpeed = 0;
+                int powerSupplyWattPower = 0;
+                int fanAirFlowCapacity = 0;
+                int speakersWattPower = 0;
+                int processorCores = 0;
+                int price = 0;
+
+                int ramPrice = 0;
+                int graphicsCardPrice = 0;
+                int storagePrice = 0;
+                int powerSupplyPrice = 0;
+                int fanPrice = 0;
+                int speakersPrice = 0;
+
+                if (computer.getRAM() != null) {
+                    ramCapacity = Integer.parseInt(getComponentDataTypes(computer.getRAM().toString(),"RAMCapacityString").split("G")[0]);
+                    ramPrice = Integer.parseInt(getComponentDataTypes(computer.getRAM().toString(),"Price"));
+                    price += ramPrice;
+                }
+                if (computer.getDedicated() == null) {
+                    if (computer.getIntegrated() != null) {
+                        graphicsCardSpeed = Integer.parseInt(getComponentDataTypes(computer.getIntegrated().toString(),"GraphicsCardSpeedString").split("M")[0]);
+                    }
+                }
+                else if (computer.getDedicated() != null) {
+                    graphicsCardSpeed = Integer.parseInt(getComponentDataTypes(computer.getDedicated().toString(),"GraphicsCardSpeedString").split("M")[0]);
+                    graphicsCardPrice = Integer.parseInt(getComponentDataTypes(computer.getDedicated().toString(),"Price"));
+                    price += graphicsCardPrice;
+                }
+                if (computer.getStorages() != null) {
+                    for (Storage s: computer.getStorages()) {
+                        storageCapacity  += Integer.parseInt(getComponentDataTypes(s.toString(), "StorageCapacityString").split("G")[0]);
+                        storagePrice = Integer.parseInt(getComponentDataTypes(s.toString(), "Price"));
+                        price += storagePrice;
+                    }
+                }
+                if (computer.getPowerSupply() != null) {
+                    powerSupplyWattPower = Integer.parseInt(getComponentDataTypes(computer.getPowerSupply().toString(),"PowerSupplyWattPower"));
+                    powerSupplyPrice = Integer.parseInt(getComponentDataTypes(computer.getPowerSupply().toString(),"Price"));
+                    price += powerSupplyPrice;
+                }
+                if (computer.getFan() != null) {
+                    fanAirFlowCapacity = Integer.parseInt(getComponentDataTypes(computer.getFan().toString(),"FanAirFlowCapacityString").split("C")[0]);
+                    fanPrice = Integer.parseInt(getComponentDataTypes(computer.getFan().toString(),"Price"));
+                    price += fanPrice;
+                }
+                if (computer.getSpeakers() != null) {
+                    speakersWattPower = Integer.parseInt(getComponentDataTypes(computer.getSpeakers().toString(),"SpeakersWattPower"));
+                    speakersPrice = Integer.parseInt(getComponentDataTypes(computer.getSpeakers().toString(),"Price"));
+                    price += speakersPrice;
+                }
+                if (computer.getProcessor() != null) {
+                    processorCores = Integer.parseInt(getComponentDataTypes(computer.getProcessor().toString(),"ProcessorCoresString"));
+                }
+
+                String computerRow = ramCapacity + ";" +
+                        storageCapacity + ";" +
+                        graphicsCardSpeed + ";" +
+                        powerSupplyWattPower + ";" +
+                        fanAirFlowCapacity + ";" +
+                        speakersWattPower + ";" +
+                        processorCores + ";" +
+                        price;
+
+                fileWriter.append(computerRow).append("\n");
+            }
+
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
+}

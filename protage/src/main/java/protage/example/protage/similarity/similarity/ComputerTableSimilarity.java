@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ComputerTableSimilarity implements LocalSimilarityFunction {
-    private double matrix[][];
+    private final double[][] matrix;
     List<String> categories;
 
     public ComputerTableSimilarity(List<String> categories) {
@@ -44,9 +44,7 @@ public class ComputerTableSimilarity implements LocalSimilarityFunction {
 
     @Override
     public boolean isApplicable(Object value1, Object value2) {
-        if (value1 instanceof String && value2 instanceof String)
-            return true;
-        return false;
+        return value1 instanceof String && value2 instanceof String;
     }
 
 }

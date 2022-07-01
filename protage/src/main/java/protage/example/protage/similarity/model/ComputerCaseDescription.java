@@ -79,7 +79,7 @@ public class ComputerCaseDescription implements CaseComponent {
 
     @Override
     public String toString() {
-        return "Computer {" +
+        return "Computer { " +
                 "ramCapacity = " + ramCapacity +
                 ", storageCapacity = " + storageCapacity +
                 ", graphicsCardSpeed = " + graphicsCardSpeed +
@@ -88,7 +88,7 @@ public class ComputerCaseDescription implements CaseComponent {
                 ", speakersWattPower = " + speakersWattPower +
                 ", processorCores = " + processorCores +
                 ", price = " + price +
-                '}';
+                " }";
     }
 
     @Override

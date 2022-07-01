@@ -1012,7 +1012,9 @@ public class ControllerForApp {
 
         String csvRow = "#ram capacity;storage capacity;graphics card speed;power supply watt power;fan air flow capacity;speakers watt power;processor cores;price";
 
-        StandardCBRApplication recommender = new ComputerCbrApplication();
+        ArrayList<String> response = new ArrayList<>();
+
+        ComputerCbrApplication recommender = new ComputerCbrApplication();
         try {
             recommender.configure();
 
@@ -1034,12 +1036,12 @@ public class ControllerForApp {
 
             recommender.cycle(query);
 
+            response = recommender.getResponse();
+
             recommender.postCycle();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        ArrayList<String> response = new ArrayList<>();
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

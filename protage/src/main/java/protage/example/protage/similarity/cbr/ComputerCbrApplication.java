@@ -1,5 +1,6 @@
 package protage.example.protage.similarity.cbr;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import protage.example.protage.similarity.model.ComputerCaseDescription;
@@ -24,6 +25,8 @@ public class ComputerCbrApplication implements StandardCBRApplication {
     CBRCaseBase _caseBase;  /** CaseBase object */
 
     NNConfig simConfig;  /** KNN configuration */
+
+    ArrayList<String> response = new ArrayList<>();
 
     public void configure() throws ExecutionException {
         _connector =  new ComputerCsvConnector();
@@ -56,9 +59,12 @@ public class ComputerCbrApplication implements StandardCBRApplication {
     public void cycle(CBRQuery query) throws ExecutionException {
         Collection<RetrievalResult> eval = NNScoringMethod.evaluateSimilarity(_caseBase.getCases(), query, simConfig);
         eval = SelectCases.selectTopKRR(eval, 5);
-        System.out.println("Retrieved cases:");
-        for (RetrievalResult nse : eval)
-            System.out.println(nse.get_case().getDescription() + " -> " + nse.getEval());
+
+        response.add("Retrieved cases:");
+        int i = 1;
+        for (RetrievalResult nse : eval) {
+            response.add(i++ + ". " + nse.get_case().getDescription() + " -> " + nse.getEval());
+        }
     }
 
     public void postCycle() throws ExecutionException {
@@ -71,5 +77,13 @@ public class ComputerCbrApplication implements StandardCBRApplication {
         for (CBRCase c: cases)
             System.out.println(c.getDescription());
         return _caseBase;
+    }
+
+    public ArrayList<String> getResponse() {
+        return response;
+    }
+
+    public void setResponse(ArrayList<String> response) {
+        this.response = response;
     }
 }

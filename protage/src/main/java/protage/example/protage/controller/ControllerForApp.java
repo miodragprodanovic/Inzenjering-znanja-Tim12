@@ -9,6 +9,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import protage.example.protage.Jena.Jena;
 import protage.example.protage.model.*;
+import protage.example.protage.similarity.cbr.ComputerCbrApplication;
+import protage.example.protage.similarity.model.ComputerCaseDescription;
+import ucm.gaia.jcolibri.cbraplications.StandardCBRApplication;
+import ucm.gaia.jcolibri.cbrcore.CBRQuery;
 import unbbayes.io.NetIO;
 import unbbayes.prs.Node;
 import unbbayes.prs.bn.JunctionTreeAlgorithm;
@@ -950,4 +954,94 @@ public class ControllerForApp {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-}
+    @PostMapping("/getSimilarComputers")
+    public ResponseEntity<ArrayList<String>> getSimilarComputers(@RequestBody GetBetterComponent getBetterComponentBody) throws IOException {
+        int ramCapacity = 0;
+        int storageCapacity = 0;
+        int graphicsCardSpeed = 0;
+        int powerSupplyWattPower = 0;
+        int fanAirFlowCapacity = 0;
+        int speakersWattPower = 0;
+        int processorCores = 0;
+        int price = 0;
+
+        int ramPrice = 0;
+        int graphicsCardPrice = 0;
+        int storagePrice = 0;
+        int powerSupplyPrice = 0;
+        int fanPrice = 0;
+        int speakersPrice = 0;
+
+        if (getBetterComponentBody.getRAM() != null) {
+            ramCapacity = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getRAM().toString(),"RAMCapacityString").split("G")[0]);
+            ramPrice = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getRAM().toString(),"Price"));
+            price += ramPrice;
+        }
+        if (getBetterComponentBody.getDedicated() == null) {
+            if (getBetterComponentBody.getIntegrated() != null) {
+                graphicsCardSpeed = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getIntegrated().toString(),"GraphicsCardSpeedString").split("M")[0]);
+            }
+        }
+        else if (getBetterComponentBody.getDedicated() != null) {
+            graphicsCardSpeed = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getDedicated().toString(),"GraphicsCardSpeedString").split("M")[0]);
+            graphicsCardPrice = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getDedicated().toString(),"Price"));
+            price += graphicsCardPrice;
+        }
+        if (getBetterComponentBody.getStorages() != null) {
+            for (Storage s: getBetterComponentBody.getStorages()) {
+                storageCapacity  += Integer.parseInt(getComponentDataTypes(s.toString(), "StorageCapacityString").split("G")[0]);
+                storagePrice = Integer.parseInt(getComponentDataTypes(s.toString(), "Price"));
+                price += storagePrice;
+            }
+        }
+        if (getBetterComponentBody.getPowerSupply() != null) {
+            powerSupplyWattPower = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getPowerSupply().toString(),"PowerSupplyWattPower"));
+            powerSupplyPrice = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getPowerSupply().toString(),"Price"));
+            price += powerSupplyPrice;
+        }
+        if (getBetterComponentBody.getFan() != null) {
+            fanAirFlowCapacity = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getFan().toString(),"FanAirFlowCapacityString").split("C")[0]);
+            fanPrice = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getFan().toString(),"Price"));
+            price += fanPrice;
+        }
+        if (getBetterComponentBody.getSpeakers() != null) {
+            speakersWattPower = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"SpeakersWattPower"));
+            speakersPrice = Integer.parseInt(getComponentDataTypes(getBetterComponentBody.getSpeakers().toString(),"Price"));
+            price += speakersPrice;
+        }
+
+        String csvRow = "#ram capacity;storage capacity;graphics card speed;power supply watt power;fan air flow capacity;speakers watt power;processor cores;price";
+
+        StandardCBRApplication recommender = new ComputerCbrApplication();
+        try {
+            recommender.configure();
+
+            recommender.preCycle();
+
+            CBRQuery query = new CBRQuery();
+            ComputerCaseDescription computerCaseDescription = new ComputerCaseDescription();
+
+            computerCaseDescription.setRamCapacity(ramCapacity);
+            computerCaseDescription.setStorageCapacity(storageCapacity);
+            computerCaseDescription.setGraphicsCardSpeed(graphicsCardSpeed);
+            computerCaseDescription.setPowerSupplyWattPower(powerSupplyWattPower);
+            computerCaseDescription.setFanAirFlowCapacity(fanAirFlowCapacity);
+            computerCaseDescription.setSpeakersWattPower(speakersWattPower);
+            computerCaseDescription.setProcessorCores(processorCores);
+            computerCaseDescription.setPrice(price);
+
+            query.setDescription( computerCaseDescription );
+
+            recommender.cycle(query);
+
+            recommender.postCycle();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        ArrayList<String> response = new ArrayList<>();
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    }

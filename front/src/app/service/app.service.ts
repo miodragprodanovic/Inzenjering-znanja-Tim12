@@ -11,11 +11,13 @@ export class AppService {
   private getBetterComponentUrl: string;
   private getComputerPurposeUrl: string;
   private getComputerErrorUrl: string;
+  private getSimilarComputersUrl: string;
 
   constructor(private http: HttpClient) { 
     this.getBetterComponentUrl = 'http://localhost:8080/getBetterComponent'
     this.getComputerPurposeUrl = 'http://localhost:8080/getComputerPurpose'
     this.getComputerErrorUrl = 'http://localhost:8080/getComputerError'
+    this.getSimilarComputersUrl = 'http://localhost:8080/getSimilarComputers'
   }
 
   public getBetterComponent(component: GetBetterComponent): Observable<Array<String>> {
@@ -34,5 +36,11 @@ export class AppService {
     let headers = new HttpHeaders();
     headers.append("Content-Type", "application/json");
     return this.http.post<Array<String>>(this.getComputerErrorUrl, component, {headers : headers});
+  }
+
+  public getSimilarComputers(component: GetBetterComponent): Observable<Array<String>> {
+    let headers = new HttpHeaders();
+    headers.append("Content-Type", "application/json");
+    return this.http.post<Array<String>>(this.getSimilarComputersUrl, component, {headers : headers});
   }
 }

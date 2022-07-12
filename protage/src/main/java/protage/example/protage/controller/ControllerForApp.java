@@ -4,6 +4,7 @@ import net.sourceforge.jFuzzyLogic.FIS;
 import net.sourceforge.jFuzzyLogic.FunctionBlock;
 import net.sourceforge.jFuzzyLogic.plot.JFuzzyChart;
 import net.sourceforge.jFuzzyLogic.rule.Variable;
+import org.apache.jena.base.Sys;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -1051,10 +1052,8 @@ public class ControllerForApp {
     }
 
     private void setData() {
-        // TODO:
-        //  Ucitati sve instance racunara iz pratazea u listu computers
         List<GetBetterComponent> computers = new ArrayList<>();
-
+        computers = getComputerComponentsFun();
         try {
             String file = "./src/main/java/protage/example/protage/similarity/data/computers.csv";
             FileWriter fileWriter = new FileWriter(file);
@@ -1139,4 +1138,77 @@ public class ControllerForApp {
         }
     }
 
+    private String getComputerComponents(String computer, String what) {
+        String queryString =
+                "PREFIX ins:<http://www.semanticweb.org/IZ/2022/Tim12/Instance#>" +
+                        "PREFIX kls:<http://www.semanticweb.org/IZ/2022/Tim12/Klase#>" +
+                        "SELECT ?param WHERE { ?x kls:Name \"" + computer + "\"^^<http://www.w3.org/2001/XMLSchema#string>." +
+                        "?x kls:" + what + " ?param .}";
+
+        return Jena.execQuery3(queryString, "param");
+    }
+
+    private List<GetBetterComponent> getComputerComponentsFun(){
+        List<GetBetterComponent> computers = new ArrayList<>();
+        List<String> strings = new ArrayList<>();
+        strings.add("PC_Alienware_Aurora_R5_DPCWXT01_Silver");
+        strings.add("PC_Alienware_Aurora_R7_AR7_0545_Silver");
+        strings.add("PC_DELL_Inspiron_3250_FDDOST315S_Black");
+        strings.add("PC_Fujitsu_ESPRIMO_D_D556E85_VFYD0556P75BOGB3YNBD_Black");
+        strings.add("PC_HP_OMEN_870_013no_X0Y81EA_Black");
+        strings.add("PC_HP_Pavilion_550_550230na_T1G76EA_Black");
+        for(String s : strings) {
+            GetBetterComponent computer1 = new GetBetterComponent();
+            String RAM = getComputerComponents(s, "hasRAM");
+            String Processor = getComputerComponents(s, "hasProcessor");
+            String Integrated = getComputerComponents(s, "hasIntegrated");
+            String Dedicated = getComputerComponents(s, "hasDedicated");
+            String HDD = getComputerComponents(s, "hasHDD");
+            String SDD = getComputerComponents(s, "hasSSD");
+            String PowerSupply = getComputerComponents(s, "hasPowerSupply");
+            String Fan = getComputerComponents(s, "hasFan");
+            String Speakers = getComputerComponents(s, "hasSpeakers");
+            if (!RAM.equals("null")) {
+                RAM = RAM.split(">")[0];
+                computer1.setRAM(protage.example.protage.model.RAM.valueOf(RAM));
+            }
+            if (!Processor.equals("null")) {
+                Processor = Processor.split(">")[0];
+                computer1.setProcessor(protage.example.protage.model.Processor.valueOf(Processor));
+            }
+            if (!Integrated.equals("null")) {
+                Integrated = Integrated.split(">")[0];
+                computer1.setIntegrated(protage.example.protage.model.Integrated.valueOf(Integrated));
+            }
+            if (!Dedicated.equals("null")) {
+                Dedicated = Dedicated.split(">")[0];
+                computer1.setDedicated(protage.example.protage.model.Dedicated.valueOf(Dedicated));
+            }
+            ArrayList<Storage> storages = new ArrayList<Storage>();
+            if (!HDD.equals("null")) {
+                HDD = HDD.split(">")[0];
+                storages.add(protage.example.protage.model.Storage.valueOf(HDD));
+            }
+            if (!SDD.equals("null")) {
+                SDD = SDD.split(">")[0];
+                storages.add(protage.example.protage.model.Storage.valueOf(SDD));
+            }
+            computer1.setStorages(storages);
+            if (!PowerSupply.equals("null")) {
+                PowerSupply = PowerSupply.split(">")[0];
+                computer1.setPowerSupply(protage.example.protage.model.PowerSupply.valueOf(PowerSupply));
+            }
+            if (!Fan.equals("null")) {
+                Fan = Fan.split(">")[0];
+                computer1.setFan(protage.example.protage.model.Fan.valueOf(Fan));
+            }
+            if (!Speakers.equals("null")) {
+                Speakers = Speakers.split(">")[0];
+                computer1.setSpeakers(protage.example.protage.model.Speakers.valueOf(Speakers));
+            }
+            computers.add(computer1);
+        }
+
+        return computers;
+    }
 }

@@ -1107,7 +1107,8 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSSD> :SSD_256GB ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort_2x6 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort_32x7 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFi_BluetoothCard_AC1200 .
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFi_BluetoothCard_AC1200 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#Name> "PC_Alienware_Aurora_R5_DPCWXT01_Silver" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Alienware_Aurora_R7_AR7_0545_Silver
@@ -1140,7 +1141,8 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort_2x6 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort_32x7 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasVA> :Display_CRG5 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFi_BluetoothCard_AX210 .
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFi_BluetoothCard_AX210 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#Name> "PC_Alienware_Aurora_R7_AR7_0545_Silver" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_DELL_Inspiron_3250_FDDOST315S_Black
@@ -1168,7 +1170,8 @@
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor_i5_6400 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort_2x4 ;
                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort_32x2 ;
-                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFi_BluetoothCard_AX3000 .
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFi_BluetoothCard_AX3000 ;
+                                        <http://www.semanticweb.org/IZ/2022/Tim12/Klase#Name> "PC_DELL_Inspiron_3250_FDDOST315S_Black" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_Fujitsu_ESPRIMO_D_D556E85_VFYD0556P75BOGB3YNBD_Black
@@ -1196,7 +1199,8 @@
                                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSSD> :SSD_128GB ;
                                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort_2x4 ;
                                                          <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort_32x4 ;
-                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFiCard_FS_N600 .
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFiCard_FS_N600 ;
+                                                         <http://www.semanticweb.org/IZ/2022/Tim12/Klase#Name> "PC_Fujitsu_ESPRIMO_D_D556E85_VFYD0556P75BOGB3YNBD_Black" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_HP_OMEN_870_013no_X0Y81EA_Black
@@ -1220,7 +1224,8 @@
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasProcessor> :Processor_i7_8700 ;
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSSD> :SSD_256GB ;
                                     <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasSoundCard> :SoundCard_Creative_Sound_Blaster_Z ;
-                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort_32x4 .
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort_32x4 ;
+                                    <http://www.semanticweb.org/IZ/2022/Tim12/Klase#Name> "PC_HP_OMEN_870_013no_X0Y81EA_Black" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PC_HP_Pavilion_550_550230na_T1G76EA_Black
@@ -1246,7 +1251,8 @@
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasTN> :Display_V_Line ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort2.0> :USBPort_2x2 ;
                                            <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasUSBPort3.2> :USBPort_32x4 ;
-                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFiCard_PCE_AC88 .
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#hasWi-FiCard> :WiFiCard_PCE_AC88 ;
+                                           <http://www.semanticweb.org/IZ/2022/Tim12/Klase#Name> "PC_HP_Pavilion_550_550230na_T1G76EA_Black" .
 
 
 ###  http://www.semanticweb.org/IZ/2022/Tim12/Instance#PowerSupply_HU180

@@ -20,8 +20,7 @@ public class ComputerCsvConnector implements Connector {
         LinkedList<CBRCase> cases = new LinkedList<>();
 
         try {
-
-            String file = "protage/example/protage/similarity/data/example.csv";
+            String file = "./src/main/java/protage/example/protage/similarity/data/computers.csv";
             BufferedReader br = new BufferedReader(new InputStreamReader(FileIO.openFile(file)));
             if (br == null)
                 throw new Exception("Error opening file");

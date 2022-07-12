@@ -18,6 +18,7 @@ import { RAM } from 'src/app/model/ram';
 import { SoundCard } from 'src/app/model/sound-card';
 import { Speakers } from 'src/app/model/speakers';
 import { AppService } from 'src/app/service/app.service';
+import { Storage } from 'src/app/model/storage';
 
 @Component({
   selector: 'app-home-page',
@@ -98,6 +99,8 @@ export class HomePageComponent implements OnInit {
     component.speakers = Speakers[speakers.value]
     let motherboard = document.getElementById('motherboard:1') as HTMLSelectElement;
     component.motherboard = Motherboard[motherboard.value]
+    component.storages = [];
+    component.ports = [];
 
     let port1 = document.getElementById('HDMIPort:1') as HTMLInputElement;
     let port2 = document.getElementById('USBPort_2x1:1') as HTMLInputElement;
@@ -218,6 +221,8 @@ export class HomePageComponent implements OnInit {
     component.speakers = Speakers[speakers.value]
     let motherboard = document.getElementById('motherboard:2') as HTMLSelectElement;
     component.motherboard = Motherboard[motherboard.value]
+    component.storages = [];
+    component.ports = [];
 
     let port1 = document.getElementById('HDMIPort:2') as HTMLInputElement;
     let port2 = document.getElementById('USBPort_2x1:2') as HTMLInputElement;
@@ -335,6 +340,8 @@ export class HomePageComponent implements OnInit {
     component.speakers = Speakers[speakers.value]
     let motherboard = document.getElementById('motherboard:3') as HTMLSelectElement;
     component.motherboard = Motherboard[motherboard.value]
+    component.storages = [];
+    component.ports = [];
 
     let port1 = document.getElementById('HDMIPort:3') as HTMLInputElement;
     let port2 = document.getElementById('USBPort_2x1:3') as HTMLInputElement;
@@ -528,6 +535,8 @@ export class HomePageComponent implements OnInit {
     component.speakers = Speakers[speakers.value]
     let motherboard = document.getElementById('motherboard:4') as HTMLSelectElement;
     component.motherboard = Motherboard[motherboard.value]
+    component.storages = [];
+    component.ports = [];
 
     let port1 = document.getElementById('HDMIPort:4') as HTMLInputElement;
     let port2 = document.getElementById('USBPort_2x1:4') as HTMLInputElement;

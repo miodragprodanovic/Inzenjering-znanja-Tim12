@@ -1,0 +1,2 @@
+U protage folderu se nalazi Spring Boot aplikacija, a u front folderu Angular aplikacija.
+U Spring Boot aplikaciju potrebno je dodati biblioteke iz lib i protage foldera.
